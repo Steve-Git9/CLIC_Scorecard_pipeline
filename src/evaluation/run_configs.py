@@ -128,6 +128,7 @@ def run_configuration(key: str, document: str, config: Config, out_root: Path, t
     run = json.loads(run_file.read_text(encoding="utf-8"))
     run["evaluation"] = {
         "document": document,
+        "run_file": str(run_file),
         "input": "docling_markdown" if key in MARKDOWN_INPUT else "pdf",
         "preparation": preparation,
         "runner_wall_clock_seconds": round(wall, 2),

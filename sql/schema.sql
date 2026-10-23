@@ -32,33 +32,110 @@ CREATE TABLE conversion_run (
     created_at    TEXT    NOT NULL
 );
 
+-- One batch of runs made together under one code version (version 2, 2026-10-23).
+CREATE TABLE run_batch (
+    batch_id           TEXT    PRIMARY KEY,
+    run_kind           TEXT    NOT NULL CHECK (run_kind IN ('development','evaluation','production')),
+    code_commit        TEXT    NOT NULL,                -- git commit of the code that ran
+    code_dirty         INTEGER NOT NULL CHECK (code_dirty IN (0,1)),
+    prompt_versions    TEXT    NOT NULL,                -- JSON: prompt or schema name to SHA 256
+    price_file         TEXT,
+    price_file_sha256  TEXT,
+    price_retrieved_on TEXT,                            -- JSON: provider and model to retrieval date
+    manifest_path      TEXT    NOT NULL,
+    started_at         TEXT    NOT NULL,
+    ended_at           TEXT
+);
+
+-- One row per extraction configuration. Prices are integers in millionths of a US dollar per
+-- million tokens, because API prices and run costs are fractions of a cent (version 2).
 CREATE TABLE model_config (
-    config_id        INTEGER PRIMARY KEY,
-    model_name       TEXT    NOT NULL,
-    provider         TEXT    NOT NULL,
-    is_local         INTEGER NOT NULL DEFAULT 0 CHECK (is_local IN (0,1)),
-    prompt_version   TEXT    NOT NULL,
-    parameters       TEXT,                           -- JSON, for example temperature
-    cost_in_per_mtok_cents  INTEGER NOT NULL DEFAULT 0,
-    cost_out_per_mtok_cents INTEGER NOT NULL DEFAULT 0,
-    created_at       TEXT    NOT NULL,
-    UNIQUE (model_name, prompt_version, parameters)
+    config_id                   INTEGER PRIMARY KEY,
+    config_name                 TEXT    NOT NULL,       -- for example B, multimodal_open
+    model_name                  TEXT    NOT NULL,
+    provider                    TEXT    NOT NULL,
+    is_local                    INTEGER NOT NULL DEFAULT 0 CHECK (is_local IN (0,1)),
+    prompt_version              TEXT    NOT NULL,       -- SHA 256 of the prompts the configuration uses
+    parameters                  TEXT    NOT NULL,       -- JSON: every setting of the configuration
+    price_in_usd_micros_mtok    INTEGER,
+    price_cached_usd_micros_mtok INTEGER,
+    price_out_usd_micros_mtok   INTEGER,
+    price_retrieved_on          TEXT,
+    created_at                  TEXT    NOT NULL,
+    UNIQUE (config_name, prompt_version, parameters)
 );
 
 CREATE TABLE extraction_run (
-    run_id          INTEGER PRIMARY KEY,
-    document_id     INTEGER NOT NULL REFERENCES document(document_id),
-    conversion_id   INTEGER NOT NULL REFERENCES conversion_run(conversion_id),
-    config_id       INTEGER NOT NULL REFERENCES model_config(config_id),
-    run_kind        TEXT    NOT NULL CHECK (run_kind IN ('development','evaluation','production')),
-    started_at      TEXT    NOT NULL,
-    duration_ms     INTEGER,
-    tokens_in       INTEGER,
-    tokens_out      INTEGER,
-    cost_cents      INTEGER,
-    attempts        INTEGER NOT NULL DEFAULT 1,      -- retries needed for valid JSON
-    schema_valid    INTEGER NOT NULL DEFAULT 0 CHECK (schema_valid IN (0,1)),
-    raw_output_path TEXT
+    run_id           INTEGER PRIMARY KEY,
+    batch_id         TEXT    REFERENCES run_batch(batch_id),
+    document_id      INTEGER NOT NULL REFERENCES document(document_id),
+    conversion_id    INTEGER REFERENCES conversion_run(conversion_id),  -- empty when the model reads the PDF
+    config_id        INTEGER NOT NULL REFERENCES model_config(config_id),
+    run_kind         TEXT    NOT NULL CHECK (run_kind IN ('development','evaluation','production')),
+    input_kind       TEXT    NOT NULL CHECK (input_kind IN ('markdown','pdf')),
+    repetition       INTEGER,
+    slot_attempt     INTEGER NOT NULL DEFAULT 1,      -- above 1 when repeated after a provider failure
+    is_final         INTEGER NOT NULL DEFAULT 1 CHECK (is_final IN (0,1)),
+    status           TEXT    NOT NULL CHECK (status IN ('ok','failed')),
+    error            TEXT,
+    started_at       TEXT    NOT NULL,
+    duration_ms      INTEGER,                         -- the configuration's own wall clock
+    end_to_end_ms    INTEGER,                         -- from file to final JSON, preparation included
+    model_ms         INTEGER,                         -- time inside model calls
+    calls            INTEGER,
+    failed_calls     INTEGER,
+    http_attempts    INTEGER,
+    retries          INTEGER,
+    context_splits   INTEGER NOT NULL DEFAULT 0,
+    tokens_in        INTEGER,
+    tokens_out       INTEGER,
+    tokens_reasoning INTEGER,
+    tokens_image     INTEGER,
+    tokens_cached    INTEGER,
+    cost_usd_micros  INTEGER,
+    schema_valid     INTEGER NOT NULL DEFAULT 0 CHECK (schema_valid IN (0,1)),
+    run_file_path    TEXT    NOT NULL UNIQUE,
+    output_path      TEXT,
+    replies_path     TEXT,
+    raw_output_path  TEXT
+);
+
+-- Every model call of a run, failed calls included, with the raw reply as returned.
+CREATE TABLE extraction_call (
+    call_id           INTEGER PRIMARY KEY,
+    run_id            INTEGER NOT NULL REFERENCES extraction_run(run_id),
+    call_index        INTEGER NOT NULL,
+    purpose           TEXT    NOT NULL CHECK (purpose IN ('extraction','page_pick')),
+    ok                INTEGER NOT NULL CHECK (ok IN (0,1)),
+    error             TEXT,
+    model_name        TEXT    NOT NULL,
+    provider          TEXT    NOT NULL,
+    model_reported    TEXT,
+    response_format   INTEGER NOT NULL CHECK (response_format IN (0,1)),
+    request_bytes     INTEGER,
+    duration_ms       INTEGER,
+    prompt_tokens     INTEGER,
+    completion_tokens INTEGER,
+    reasoning_tokens  INTEGER,
+    image_tokens      INTEGER,
+    cached_tokens     INTEGER,
+    cost_usd_micros   INTEGER,
+    finish_reason     TEXT,
+    usage_json        TEXT,                            -- the provider's usage object, unchanged
+    reply_text        TEXT,                            -- the reply exactly as returned
+    reasoning_text    TEXT,
+    UNIQUE (run_id, call_index)
+);
+
+-- Every HTTP attempt of a call: the first try and each retry.
+CREATE TABLE call_attempt (
+    attempt_id  INTEGER PRIMARY KEY,
+    call_id     INTEGER NOT NULL REFERENCES extraction_call(call_id),
+    attempt_no  INTEGER NOT NULL,
+    http_status INTEGER,
+    error       TEXT,
+    duration_ms INTEGER,
+    UNIQUE (call_id, attempt_no)
 );
 
 -- Field values as rows, so a new model or a new field needs no schema change.

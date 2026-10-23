@@ -247,7 +247,8 @@ def chat(arm, messages, schema, token, use_extras=True, timeout=600, max_attempt
     attempt_log: list[dict] = []
     entry = {"purpose": _call_purpose(messages), "model": arm.get("model"), "provider": arm.get("provider"),
              "response_format": schema is not None, "request_bytes": len(body), "ok": False,
-             "attempts": attempt_log, "error": None, "usage": None, **usage_details({})}
+             "attempts": attempt_log, "error": None, "usage": None, "reply": None, "reasoning": None,
+             **usage_details({})}
 
     def fail(message):
         entry.update(error=message, seconds=round(time.monotonic() - started, 2))
@@ -299,7 +300,8 @@ def chat(arm, messages, schema, token, use_extras=True, timeout=600, max_attempt
         content = choice["message"].get("content")
     except (KeyError, IndexError, TypeError):
         raise fail(f"unexpected response shape: {str(reply)[:300]}") from None
-    entry.update(ok=True, finish_reason=choice.get("finish_reason"))
+    reasoning = choice["message"].get("reasoning_content") or choice["message"].get("reasoning")
+    entry.update(ok=True, finish_reason=choice.get("finish_reason"), reply=content, reasoning=reasoning)
     _record(entry)
     prompt_tokens, completion_tokens = usage.get("prompt_tokens"), usage.get("completion_tokens")
     return {

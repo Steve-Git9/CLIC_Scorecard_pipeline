@@ -1,1 +1,0 @@
-# CLIC_Scorecard_pipeline

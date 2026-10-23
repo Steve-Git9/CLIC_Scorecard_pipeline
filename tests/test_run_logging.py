@@ -133,3 +133,48 @@ def test_summary_counts_calls_failures_retries_and_tokens():
 def test_pilot_choice_is_fixed_by_the_seed():
     docs = ["FICTA", "FICTB", "FICTC", "FICTD"]
     assert choose_document(docs, 7) == choose_document(list(reversed(docs)), 7)
+
+
+def _sse(*chunks, done=True) -> _Response:
+    lines = [f"data: {json.dumps(c)}\n\n" for c in chunks] + (["data: [DONE]\n\n"] if done else [])
+    return _Response(("".join(lines)).encode())
+
+
+STREAM = [
+    {"model": "fiction/model-1", "choices": [{"delta": {"reasoning_content": "Thinking about "}, "finish_reason": None}]},
+    {"choices": [{"delta": {"reasoning_content": "the table."}, "finish_reason": None}]},
+    {"choices": [{"delta": {"content": '{"a": '}, "finish_reason": None}]},
+    {"choices": [{"delta": {"content": "1}"}, "finish_reason": "stop"}]},
+    {"choices": [], "usage": REPLY["usage"]},
+]
+
+
+def test_streamed_reply_is_rebuilt_with_usage_and_reasoning():
+    with patch("urllib.request.urlopen", return_value=_sse(*STREAM)), backends.record_calls() as calls:
+        result = backends.chat(ARM, MESSAGES, None, "hf_fake")
+    assert result["content"] == '{"a": 1}'
+    assert result["reasoning"] == "Thinking about the table."
+    assert result["finish_reason"] == "stop" and result["prompt_tokens"] == 1000
+    assert calls[0]["reasoning_tokens"] == 150 and calls[0]["reply"] == '{"a": 1}'
+
+
+def test_request_asks_for_a_stream_with_usage():
+    body = backends.build_request(ARM, MESSAGES, None)
+    assert body["stream"] is True and body["stream_options"] == {"include_usage": True}
+
+
+def test_stream_error_or_early_end_is_retried_and_logged():
+    broken = _sse(STREAM[2], done=False)  # no finish reason, no [DONE]
+    with_error = _sse({"error": {"message": "fictional provider error"}})
+    with patch("urllib.request.urlopen", side_effect=[broken, with_error, _sse(*STREAM)]), patch("time.sleep"), \
+            backends.record_calls() as calls:
+        result = backends.chat(ARM, MESSAGES, None, "hf_fake")
+    assert result["content"] == '{"a": 1}'
+    errors = [a["error"] for a in calls[0]["attempts"]]
+    assert errors[0].startswith("stream error: the stream ended") and "fictional provider error" in errors[1]
+    assert errors[2] is None
+
+
+def test_stream_errors_count_as_provider_failures_for_the_batch():
+    from src.evaluation.run_batch import transient_failure
+    assert transient_failure({"status": "failed", "error": "stream error: the stream ended early"})

@@ -215,6 +215,11 @@ def build_request(arm, messages, schema, use_extras=True):
         "messages": messages,
         "temperature": 0,
         "max_tokens": arm.get("max_tokens", 8000),
+        # Streamed, so the answer flows while it is generated: the router ends any request whose
+        # complete answer takes more than 120 seconds (HTTP 504), which long documents exceed.
+        # include_usage asks for the token counts in the last streamed chunk.
+        "stream": True,
+        "stream_options": {"include_usage": True},
     }
     if schema is not None:
         payload["response_format"] = {
@@ -224,6 +229,52 @@ def build_request(arm, messages, schema, use_extras=True):
     if use_extras:
         payload.update(arm.get("extra_body", {}))
     return payload
+
+
+class StreamError(RuntimeError):
+    """A streamed reply that broke off or reported an error part way."""
+
+
+def read_reply(resp):
+    """Read a reply into the plain chat completion shape, whether it was streamed as server sent
+    events or returned in one piece (a provider may ignore the stream request)."""
+    first = resp.readline()
+    while first and not first.strip():
+        first = resp.readline()
+    if first.lstrip().startswith(b"{"):
+        return json.loads((first + resp.read()).decode("utf-8"))
+    content, reasoning = [], []
+    finish = model = usage = None
+    done = False
+    line = first
+    while line:
+        text = line.decode("utf-8", errors="replace").strip()
+        line = resp.readline()
+        if not text.startswith("data:"):
+            continue
+        data = text[5:].strip()
+        if data == "[DONE]":
+            done = True
+            break
+        chunk = json.loads(data)
+        if chunk.get("error"):
+            raise StreamError(str(chunk["error"])[:300])
+        model = chunk.get("model") or model
+        usage = chunk.get("usage") or usage
+        for choice in chunk.get("choices") or []:
+            delta = choice.get("delta") or {}
+            if delta.get("content"):
+                content.append(delta["content"])
+            part = delta.get("reasoning_content") or delta.get("reasoning")
+            if part:
+                reasoning.append(part)
+            finish = choice.get("finish_reason") or finish
+    if finish is None and not done:
+        raise StreamError("the stream ended before the answer was complete")
+    return {"model": model, "usage": usage,
+            "choices": [{"finish_reason": finish,
+                         "message": {"content": "".join(content) if content else None,
+                                     "reasoning_content": "".join(reasoning) or None}}]}
 
 
 def cost_usd(arm, prompt_tokens, completion_tokens):
@@ -260,7 +311,7 @@ def chat(arm, messages, schema, token, use_extras=True, timeout=600, max_attempt
         attempt_started = time.monotonic()
         try:
             with urllib.request.urlopen(req, timeout=timeout) as resp:
-                reply = json.loads(resp.read().decode("utf-8"))
+                reply = read_reply(resp)
             attempt_log.append({"attempt": attempt, "http_status": 200, "error": None,
                                 "seconds": round(time.monotonic() - attempt_started, 2)})
             break
@@ -283,6 +334,12 @@ def chat(arm, messages, schema, token, use_extras=True, timeout=600, max_attempt
             retry_after = exc.headers.get("Retry-After")
             if retry_after and retry_after.isdigit():
                 wait = min(int(retry_after), 60)
+        except (StreamError, json.JSONDecodeError) as exc:
+            last_error = f"stream error: {exc}"
+            attempt_log.append({"attempt": attempt, "http_status": 200, "error": last_error[:300],
+                                "seconds": round(time.monotonic() - attempt_started, 2)})
+            if attempt == max_attempts:
+                raise fail(last_error) from None
         except (urllib.error.URLError, TimeoutError, ConnectionError) as exc:
             last_error = f"network error: {exc}"
             attempt_log.append({"attempt": attempt, "http_status": None, "error": last_error[:300],

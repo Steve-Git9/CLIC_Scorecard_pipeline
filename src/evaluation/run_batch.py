@@ -50,7 +50,7 @@ RUNS_ROOT = Path("evaluation/runs")
 MAX_SLOT_ATTEMPTS = 3
 REQUEUE_DELAY_SECONDS = 60
 DOCUMENT_ORDER_SEED = 20261024
-_TRANSIENT = re.compile(r"^(HTTP (408|429|5\d\d)\b|network error|unexpected response shape)")
+_TRANSIENT = re.compile(r"^(HTTP (408|429|5\d\d)\b|network error|stream error|unexpected response shape)")
 
 
 def _utc() -> str:

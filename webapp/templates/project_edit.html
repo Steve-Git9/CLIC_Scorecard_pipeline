@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}{{ proposal.proposal_acronym if proposal else "Project" }} - CLIC extraction{% endblock %}
+{% block content %}
+<a href="/projects" class="text-sm text-slate-500 hover:text-slate-800">&larr; all projects</a>
+
+{% if not proposal %}
+<p class="mt-4 text-slate-600">No project found with that key.</p>
+{% else %}
+{% include "_project_form.html" %}
+{% endif %}
+{% endblock %}

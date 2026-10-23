@@ -1,0 +1,26 @@
+{
+  "proposal": {
+    "proposal_acronym": "H2-RURAL",
+    "proposal_title": "Sustainable Hydrogen Storage for Rural Microgrids",
+    "call_identifier": "HORIZON-CL5-2026-D3-01",
+    "submission_date": "2026-03-15"
+  },
+  "proposal_facts": {
+    "requested_total_cents": 220012500,
+    "trl_start": 3,
+    "trl_target": 6,
+    "mcrl_start": 2,
+    "mcrl_target": 4
+  },
+  "partners": [
+    {"partner_name": "GreenGrid Systems GmbH", "requested_cents": 59062500},
+    {"partner_name": "Universidad del Norte", "requested_cents": 81250000},
+    {"partner_name": "Helios Power AG", "requested_cents": 45000000},
+    {"partner_name": "Municipality of Kalmar", "requested_cents": 19700000},
+    {"partner_name": "Aurora Consulting", "requested_cents": 15000000}
+  ],
+  "metadata": {
+    "extraction_timestamp": null,
+    "source_file": "synthetic_proposal.md"
+  }
+}

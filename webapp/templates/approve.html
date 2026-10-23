@@ -1,0 +1,208 @@
+{% extends "base.html" %}
+{% block title %}Approve - CLIC extraction{% endblock %}
+{% block content %}
+<div class="flex items-center justify-between mb-1">
+    <h1 class="text-2xl font-semibold">Approve &amp; complete</h1>
+    <a href="/review/{{ arm }}/{{ stem }}" class="text-sm text-slate-500 hover:text-slate-800">&larr; back to review</a>
+</div>
+<p class="text-slate-600 mb-6">Every field below is required before this can be saved to the database, regardless of which columns the schema itself marks as optional. Edit anything that is wrong or missing, then save.</p>
+
+{% if error %}
+<div class="mb-6 rounded-md border border-red-300 bg-red-50 text-red-800 px-4 py-3 text-sm">{{ error }}</div>
+{% endif %}
+
+<form id="approve-form" action="/save/{{ arm }}/{{ stem }}" method="post" class="space-y-6">
+    <div class="bg-white border border-slate-200 rounded-lg p-5">
+        <h2 class="font-semibold text-slate-800 mb-4">Proposal</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <label class="block text-sm">
+                <span class="text-slate-600">Acronym</span>
+                <input required name="proposal_acronym" value="{{ proposal.get('proposal_acronym') or '' }}"
+                       class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+            </label>
+            <label class="block text-sm">
+                <span class="text-slate-600">Title</span>
+                <input required name="proposal_title" value="{{ proposal.get('proposal_title') or '' }}"
+                       class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+            </label>
+            <label class="block text-sm">
+                <span class="text-slate-600">Call identifier</span>
+                <input required name="call_identifier" value="{{ proposal.get('call_identifier') or '' }}"
+                       class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+            </label>
+            <label class="block text-sm">
+                <span class="text-slate-600">Submission date (ISO 8601, e.g. 2026-10-12)</span>
+                <input required name="submission_date" value="{{ proposal.get('submission_date') or '' }}"
+                       class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+            </label>
+        </div>
+    </div>
+
+    <div class="bg-white border border-slate-200 rounded-lg p-5">
+        <h2 class="font-semibold text-slate-800 mb-4">Decision &amp; programme</h2>
+        <p class="text-xs text-slate-500 mb-4">Not extracted from the document - this is the human-entered decision record.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <label class="block text-sm">
+                <span class="text-slate-600">Status</span>
+                <select id="status-select" required name="status" class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+                    {% for s in statuses %}
+                    <option value="{{ s }}" {{ "selected" if s == (proposal.get("status") or "Pending") else "" }}>{{ s }}</option>
+                    {% endfor %}
+                </select>
+            </label>
+            <label class="block text-sm">
+                <span class="text-slate-600">Decision date (required once Approved/Rejected)</span>
+                <input id="decision-date" name="decision_date" value="{{ proposal.get('decision_date') or '' }}"
+                       class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+            </label>
+            <label class="block text-sm">
+                <span class="text-slate-600">Programme name</span>
+                <input required name="programme_name" value="{{ proposal.get('programme_name') or '' }}"
+                       class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+            </label>
+            <label class="block text-sm">
+                <span class="text-slate-600">Funding source</span>
+                <select required name="funding_source" class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+                    <option value="" disabled {{ "selected" if not proposal.get("funding_source") else "" }}>Choose...</option>
+                    {% for f in funding_sources %}
+                    <option value="{{ f }}" {{ "selected" if f == proposal.get("funding_source") else "" }}>{{ f }}</option>
+                    {% endfor %}
+                </select>
+            </label>
+        </div>
+    </div>
+
+    <div class="bg-white border border-slate-200 rounded-lg p-5">
+        <h2 class="font-semibold text-slate-800 mb-4">Facts</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <label class="block text-sm">
+                <span class="text-slate-600">Requested total (EUR)</span>
+                <input required type="number" step="0.01" name="requested_total_eur"
+                       value="{{ facts.get('requested_total_eur') if facts.get('requested_total_eur') is not none else ('%.2f'|format(facts.get('requested_total_cents') / 100) if facts.get('requested_total_cents') is not none else '') }}"
+                       class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+            </label>
+            <label class="block text-sm">
+                <span class="text-slate-600">Granted total (EUR)</span>
+                <input required type="number" step="0.01" name="granted_total_eur"
+                       value="{{ facts.get('granted_total_eur') if facts.get('granted_total_eur') is not none else ('%.2f'|format(facts.get('granted_total_cents') / 100) if facts.get('granted_total_cents') is not none else '0.00') }}"
+                       class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+            </label>
+            <label class="block text-sm">
+                <span class="text-slate-600">Average TRL start</span>
+                <input required type="number" name="trl_start" value="{{ facts.get('trl_start') if facts.get('trl_start') is not none else '' }}"
+                       class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+            </label>
+            <label class="block text-sm">
+                <span class="text-slate-600">Average TRL target</span>
+                <input required type="number" name="trl_target" value="{{ facts.get('trl_target') if facts.get('trl_target') is not none else '' }}"
+                       class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+            </label>
+            <label class="block text-sm">
+                <span class="text-slate-600">MCRL start</span>
+                <input required type="number" name="mcrl_start" value="{{ facts.get('mcrl_start') if facts.get('mcrl_start') is not none else '' }}"
+                       class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+            </label>
+            <label class="block text-sm">
+                <span class="text-slate-600">MCRL target</span>
+                <input required type="number" name="mcrl_target" value="{{ facts.get('mcrl_target') if facts.get('mcrl_target') is not none else '' }}"
+                       class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+            </label>
+            <label class="block text-sm">
+                <span class="text-slate-600">Builds on a previous CLIC project</span>
+                <select required name="builds_on_previous" class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+                    <option value="" disabled {{ "selected" if facts.get("builds_on_previous") is none else "" }}>Choose...</option>
+                    <option value="yes" {{ "selected" if facts.get("builds_on_previous") in (1, "yes") else "" }}>Yes</option>
+                    <option value="no" {{ "selected" if facts.get("builds_on_previous") in (0, "no") else "" }}>No</option>
+                </select>
+            </label>
+            <label class="block text-sm">
+                <span class="text-slate-600">Demonstration activity count</span>
+                <input required type="number" min="0" name="demo_activity_count"
+                       value="{{ facts.get('demo_activity_count') if facts.get('demo_activity_count') is not none else '' }}"
+                       class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+            </label>
+        </div>
+    </div>
+
+    <div class="bg-white border border-slate-200 rounded-lg p-5">
+        <div class="flex items-center justify-between mb-4">
+            <h2 class="font-semibold text-slate-800">Partners ({{ partner_rows|length }})</h2>
+            <span class="text-xs text-slate-400">Match threshold {{ threshold }}%</span>
+        </div>
+        <table class="w-full text-sm">
+            <thead>
+                <tr class="text-left text-slate-500 border-b border-slate-200">
+                    <th class="py-2 pr-4">Extracted as</th>
+                    <th class="py-2 pr-4">Matched partner</th>
+                    <th class="py-2 pr-4">Requested (EUR)</th>
+                    <th class="py-2 pr-4">Granted (EUR)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in partner_rows %}
+                <tr class="border-b border-slate-100 {{ 'bg-amber-50' if row.flagged else '' }}">
+                    <td class="py-2 pr-4">{{ row.extracted_name }}{% if row.flagged %} <span class="text-amber-700 text-xs font-medium">low confidence</span>{% endif %}</td>
+                    <td class="py-2 pr-4">
+                        <select required name="partner_match" class="border border-slate-300 rounded-md px-2 py-1.5 w-full max-w-xs">
+                            {% for name in db_names %}
+                            <option value="{{ name }}" {{ "selected" if name == row.matched_partner else "" }}>{{ name }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                    <td class="py-2 pr-4">
+                        <input required type="number" step="0.01" name="partner_amount"
+                               value="{{ row.requested_eur if row.requested_eur is not none else '' }}"
+                               class="border border-slate-300 rounded-md px-2 py-1.5 w-32">
+                    </td>
+                    <td class="py-2 pr-4">
+                        <input required type="number" step="0.01" name="partner_granted"
+                               value="{{ row.granted_eur if row.granted_eur is not none else '0.00' }}"
+                               class="border border-slate-300 rounded-md px-2 py-1.5 w-32">
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <button id="save-button" type="submit" disabled
+            class="inline-flex items-center rounded-md bg-slate-900 text-white text-sm font-medium px-5 py-2.5 disabled:bg-slate-300 disabled:cursor-not-allowed hover:bg-slate-700">
+        Save to database
+    </button>
+    <span id="save-hint" class="text-sm text-slate-500 ml-2">Fill in every field to enable saving.</span>
+</form>
+
+<script>
+    (function () {
+        const form = document.getElementById("approve-form");
+        const button = document.getElementById("save-button");
+        const hint = document.getElementById("save-hint");
+        const statusSelect = document.getElementById("status-select");
+        const decisionDate = document.getElementById("decision-date");
+
+        function allFilled() {
+            const fields = form.querySelectorAll("input[required], select[required]");
+            for (const field of fields) {
+                if (!field.value || !field.value.trim()) return false;
+            }
+            return true;
+        }
+
+        function syncDecisionDate() {
+            const needsDate = statusSelect.value !== "Pending";
+            decisionDate.required = needsDate;
+        }
+
+        function refresh() {
+            syncDecisionDate();
+            const ok = allFilled();
+            button.disabled = !ok;
+            hint.classList.toggle("hidden", ok);
+        }
+
+        form.addEventListener("input", refresh);
+        form.addEventListener("change", refresh);
+        refresh();
+    })();
+</script>
+{% endblock %}

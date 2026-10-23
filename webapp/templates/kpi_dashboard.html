@@ -1,0 +1,186 @@
+{% extends "base.html" %}
+{% block title %}Dashboard - CLIC extraction{% endblock %}
+{% block content %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+
+<h1 class="text-2xl font-semibold mb-1">Impact Scorecard</h1>
+<p class="text-slate-600 mb-6">Every figure on this page is read from a SQL view (sql/schema.sql) - nothing is computed here. Pending proposals are excluded from every KPI below.</p>
+
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+    <div class="bg-white border border-slate-200 rounded-lg p-5 text-center">
+        <div class="text-3xl font-semibold">{{ "%.0f%%"|format(rate_n * 100) if rate_n is not none else "-" }}</div>
+        <div class="text-sm text-slate-500 mt-1">Success rate by count</div>
+        <div class="text-xs text-slate-400 mt-1">{{ approved_n }} approved of {{ total_n }} decided</div>
+    </div>
+    <div class="bg-white border border-slate-200 rounded-lg p-5 text-center">
+        <div class="text-3xl font-semibold">{{ "%.0f%%"|format(rate_eur * 100) if rate_eur is not none else "-" }}</div>
+        <div class="text-sm text-slate-500 mt-1">Success rate by euro</div>
+        <div class="text-xs text-slate-400 mt-1">{{ granted_eur | eur_compact }} granted of {{ requested_eur | eur_compact }} requested</div>
+    </div>
+    <div class="bg-white border border-slate-200 rounded-lg p-5 text-center">
+        <div class="text-3xl font-semibold">{{ partner_total | eur_compact }}</div>
+        <div class="text-sm text-slate-500 mt-1">Partner funding enabled</div>
+        <div class="text-xs text-slate-400 mt-1">Granted euro to non-CLIC partners, approved projects</div>
+    </div>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+    <div class="bg-white border border-slate-200 rounded-lg p-5">
+        <h2 class="font-semibold text-slate-800 mb-1">Applied versus granted funding by source</h2>
+        <p class="text-xs text-slate-500 mb-3">Clustered column chart.</p>
+        {% if not by_scope %}
+        <p class="text-sm text-slate-500">No projects recorded yet.</p>
+        {% else %}
+        <canvas id="scopeChart" height="220"></canvas>
+        {% endif %}
+    </div>
+    <div class="bg-white border border-slate-200 rounded-lg p-5">
+        <h2 class="font-semibold text-slate-800 mb-1">Top partners by funding enabled</h2>
+        <p class="text-xs text-slate-500 mb-3">Horizontal bar chart.</p>
+        {% if not top_partners %}
+        <p class="text-sm text-slate-500">No granted partner funding yet.</p>
+        {% else %}
+        <canvas id="topPartnersChart" height="220"></canvas>
+        {% endif %}
+    </div>
+</div>
+
+<div class="bg-white border border-slate-200 rounded-lg p-5 mb-8">
+    <h2 class="font-semibold text-slate-800 mb-1">Project partner network by category</h2>
+    <p class="text-xs text-slate-500 mb-3">Pie chart. Activated partners (at least one approved project), excluding CLIC itself.</p>
+    {% if not network %}
+    <p class="text-sm text-slate-500">No approved projects yet.</p>
+    {% else %}
+    <div class="max-w-md"><canvas id="networkChart"></canvas></div>
+    {% endif %}
+</div>
+
+<h2 class="text-xl font-semibold mb-4 mt-10">Portfolio impact</h2>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+    <div class="bg-white border border-slate-200 rounded-lg p-5 text-center">
+        <div class="text-2xl font-semibold">{{ "{:,}".format(building_on_previous) }}</div>
+        <div class="text-sm text-slate-500 mt-1">Projects building on a previous CLIC project</div>
+    </div>
+    <div class="bg-white border border-slate-200 rounded-lg p-5 text-center">
+        <div class="text-2xl font-semibold">{{ "{:,}".format(total_demo) }}</div>
+        <div class="text-sm text-slate-500 mt-1">Total demonstration activities</div>
+    </div>
+    <div class="bg-white border border-slate-200 rounded-lg p-5 text-center">
+        <div class="text-2xl font-semibold">{{ "{:,}".format(projects_with_demo) }}</div>
+        <div class="text-sm text-slate-500 mt-1">Projects with demonstration activities</div>
+    </div>
+</div>
+
+<div class="bg-white border border-slate-200 rounded-lg p-5 mb-8">
+    <h2 class="font-semibold text-slate-800 mb-1">TRL target vs. MCRL target</h2>
+    <p class="text-xs text-slate-500 mb-3">Bubble chart - bubble size is the number of approved projects at that pair.</p>
+    {% if not cloud %}
+    <p class="text-sm text-slate-500">No projects recorded yet.</p>
+    {% else %}
+    <canvas id="cloudChart" height="260"></canvas>
+    {% endif %}
+</div>
+
+<div class="bg-white border border-slate-200 rounded-lg p-5 mb-8">
+    <h2 class="font-semibold text-slate-800 mb-1">Projects supporting UN SDGs</h2>
+    <p class="text-xs text-slate-500 mb-3">Distinct approved projects addressing each SDG, highest first.</p>
+    {% if not sdg_counts %}
+    <p class="text-sm text-slate-500">No SDGs recorded yet.</p>
+    {% else %}
+    <table class="w-full text-sm">
+        <thead>
+            <tr class="text-left text-slate-500 border-b border-slate-200">
+                <th class="py-2 pr-4">SDG</th>
+                <th class="py-2 pr-4">Projects</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for s in sdg_counts %}
+            <tr class="border-b border-slate-100">
+                <td class="py-2 pr-4">{{ s.sdg_number }} - {{ s.sdg_title }}</td>
+                <td class="py-2 pr-4">{{ s.project_count }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+</div>
+
+<h2 class="text-xl font-semibold mb-4 mt-10">Communication &amp; outreach</h2>
+<p class="text-sm text-slate-500 mb-4">Not yet tracked - shown empty until this data is collected.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="bg-white border border-slate-200 rounded-lg p-5">
+        <h3 class="font-semibold text-slate-800 mb-3">Events</h3>
+        <p class="text-sm text-slate-400">No data collected yet.</p>
+    </div>
+    <div class="bg-white border border-slate-200 rounded-lg p-5">
+        <h3 class="font-semibold text-slate-800 mb-3">Communications</h3>
+        <p class="text-sm text-slate-400">No data collected yet.</p>
+    </div>
+</div>
+
+<script>
+    const SERIES = ["#2563eb", "#16a34a", "#f59e0b", "#dc2626", "#7c3aed", "#0891b2"];
+
+    {% if by_scope %}
+    new Chart(document.getElementById("scopeChart"), {
+        type: "bar",
+        data: {
+            labels: {{ by_scope | map(attribute="funding_source") | list | tojson }},
+            datasets: [
+                { label: "Applied", data: {{ by_scope | map(attribute="requested_eur") | list | tojson }}, backgroundColor: SERIES[0] },
+                { label: "Granted", data: {{ by_scope | map(attribute="granted_eur") | list | tojson }}, backgroundColor: SERIES[1] },
+            ],
+        },
+        options: { scales: { y: { title: { display: true, text: "EUR" } } } },
+    });
+    {% endif %}
+
+    {% if top_partners %}
+    new Chart(document.getElementById("topPartnersChart"), {
+        type: "bar",
+        data: {
+            labels: {{ top_partners | map(attribute="partner_name") | list | tojson }},
+            datasets: [{ label: "Granted EUR", data: {{ top_partners | map(attribute="granted_eur") | list | tojson }}, backgroundColor: SERIES[0] }],
+        },
+        options: { indexAxis: "y", plugins: { legend: { display: false } } },
+    });
+    {% endif %}
+
+    {% if network %}
+    new Chart(document.getElementById("networkChart"), {
+        type: "pie",
+        data: {
+            labels: {{ network | map(attribute="category") | list | tojson }},
+            datasets: [{ data: {{ network | map(attribute="count") | list | tojson }}, backgroundColor: SERIES }],
+        },
+    });
+    {% endif %}
+
+    {% if cloud %}
+    new Chart(document.getElementById("cloudChart"), {
+        type: "bubble",
+        data: {
+            datasets: [{
+                label: "Projects",
+                data: {{ cloud_points | tojson }},
+                backgroundColor: SERIES[0] + "aa",
+            }],
+        },
+        options: {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        label: (ctx) => `TRL ${ctx.raw.x}, MCRL ${ctx.raw.y}: ${ctx.raw.count} project(s)`,
+                    },
+                },
+            },
+            scales: {
+                x: { title: { display: true, text: "TRL target" }, min: 0.5, max: 9.5, ticks: { stepSize: 1 } },
+                y: { title: { display: true, text: "MCRL target" }, min: 0.5, max: 9.5, ticks: { stepSize: 1 } },
+            },
+        },
+    });
+    {% endif %}
+</script>
+{% endblock %}

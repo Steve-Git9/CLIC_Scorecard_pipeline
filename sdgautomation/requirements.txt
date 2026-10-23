@@ -1,0 +1,8 @@
+flask
+requests
+python-docx
+pymupdf
+sentence-transformers
+scikit-learn
+numpy
+torch

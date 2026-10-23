@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Extraction complete - CLIC extraction{% endblock %}
+{% block content %}
+<div class="max-w-xl mx-auto text-center py-12">
+    <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-green-100 text-green-700 text-2xl mb-4">&check;</div>
+    <h1 class="text-2xl font-semibold mb-2">Extraction complete</h1>
+    <p class="text-slate-600 mb-6">
+        Nothing has been saved to the database. This is only what the model produced -
+        review it on the next page before anything is written anywhere.
+    </p>
+
+    <div class="bg-white border border-slate-200 rounded-lg p-5 text-sm text-left inline-block">
+        <div class="flex justify-between gap-6 py-1"><span class="text-slate-500">Model</span><span>{{ run.get("model") }}</span></div>
+        <div class="flex justify-between gap-6 py-1"><span class="text-slate-500">Tokens</span><span>{{ run.get("prompt_tokens", 0) }} + {{ run.get("completion_tokens", 0) }}</span></div>
+        <div class="flex justify-between gap-6 py-1"><span class="text-slate-500">Cost</span><span>${{ "%.4f"|format(run.get("cost_usd", 0) or 0) }}</span></div>
+        <div class="flex justify-between gap-6 py-1"><span class="text-slate-500">Time</span><span>{{ run.get("seconds", 0) }}s</span></div>
+        <div class="flex justify-between gap-6 py-1"><span class="text-slate-500">Warnings</span><span>{{ run.get("warnings", [])|length }}</span></div>
+    </div>
+
+    <div class="mt-8">
+        <a href="/review/{{ arm }}/{{ stem }}" class="inline-flex items-center rounded-md bg-slate-900 text-white text-sm font-medium px-5 py-2.5 hover:bg-slate-700">
+            Proceed to the review phase
+        </a>
+    </div>
+</div>
+{% endblock %}

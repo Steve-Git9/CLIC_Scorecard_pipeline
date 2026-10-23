@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}CLIC extraction{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen">
+    <nav class="bg-white border-b border-slate-200">
+        <div class="max-w-5xl mx-auto px-4 py-3 flex items-center gap-6">
+            <a href="/" class="font-semibold text-slate-800">CLIC extraction</a>
+            <a href="/" class="text-sm text-slate-600 hover:text-slate-900">Extract</a>
+            <a href="/multimodal" class="text-sm text-slate-600 hover:text-slate-900">Multimodal</a>
+            <a href="/projects" class="text-sm text-slate-600 hover:text-slate-900">Projects</a>
+            <a href="/dashboard" class="text-sm text-slate-600 hover:text-slate-900">Dashboard</a>
+            <a href="/scorecard" class="text-sm text-slate-600 hover:text-slate-900">Scorecard</a>
+            <span class="text-xs text-slate-400 ml-auto">Local only</span>
+        </div>
+    </nav>
+    <main class="{% block main_class %}max-w-5xl mx-auto px-4 py-8{% endblock %}">
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

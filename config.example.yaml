@@ -1,0 +1,47 @@
+paths:
+  raw: data/raw
+  markdown: data/markdown
+  runs: data/runs
+  logs: data/logs
+  database: data/clic.db
+
+conversion:
+  tool: pymupdf4llm          # or docling
+  ocr_fallback: true
+  ocr_min_chars_per_page: 100
+  keep_page_markers: true
+
+extraction:
+  prompt_version: v1
+  max_attempts: 3
+  configurations:
+    local_default:
+      provider: ollama
+      model_name: qwen2.5:14b
+      is_local: true
+      temperature: 0
+    cloud_default:
+      provider: anthropic
+      model_name: claude-sonnet-4-6
+      is_local: false
+      temperature: 0
+
+review:
+  auto_accept: false          # nothing bypasses human review
+
+evaluation:
+  gold: evaluation/gold
+  markdown: data/markdown              # Docling Markdown, <document>.md, for the extra partner check
+  prices: provider_prices.csv          # provider price list, used for the cost of each run
+  protocols:                           # where the answer sits in a raw reply, see src/evaluation/validity.py
+    B: schema
+    C: schema
+    D: schema
+    multimodal_strict: schema
+    targeted_text: schema
+    targeted_multimodal: schema
+    freeform_B: freeform
+    freeform_light: freeform
+    multimodal_open: freeform
+    multimodal_combined_qwen_vl: freeform
+    multimodal_combined_llama4_maverick: freeform

@@ -1,0 +1,201 @@
+<div class="flex items-center justify-between mt-2 mb-1">
+    <h1 class="text-2xl font-semibold">{{ proposal.proposal_acronym | fmt }}</h1>
+    <span class="text-xs text-slate-400">proposal_key {{ proposal.proposal_key }}</span>
+</div>
+<p class="text-slate-600 mb-6">Every field is editable. Partners themselves cannot be added or removed here, only their amounts and the linked SDGs.</p>
+
+{% if saved %}
+<div class="mb-6 rounded-md border border-green-300 bg-green-50 text-green-800 px-4 py-3 text-sm">Saved.</div>
+{% endif %}
+{% if error %}
+<div class="mb-6 rounded-md border border-red-300 bg-red-50 text-red-800 px-4 py-3 text-sm">{{ error }}</div>
+{% endif %}
+
+<form id="edit-form" action="/projects/{{ proposal.proposal_key }}" method="post" class="space-y-6">
+    <div class="bg-white border border-slate-200 rounded-lg p-5">
+        <h2 class="font-semibold text-slate-800 mb-4">Proposal</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <label class="block text-sm">
+                <span class="text-slate-600">Acronym</span>
+                <input required name="proposal_acronym" value="{{ proposal.proposal_acronym | fmt }}"
+                       class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+            </label>
+            <label class="block text-sm">
+                <span class="text-slate-600">Title</span>
+                <input required name="proposal_title" value="{{ proposal.proposal_title | fmt }}"
+                       class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+            </label>
+            <label class="block text-sm">
+                <span class="text-slate-600">Call identifier</span>
+                <input required name="call_identifier" value="{{ proposal.call_identifier | fmt }}"
+                       class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+            </label>
+            <label class="block text-sm">
+                <span class="text-slate-600">Submission date</span>
+                <input required name="submission_date" value="{{ proposal.submission_date | fmt }}"
+                       class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+            </label>
+        </div>
+    </div>
+
+    <div class="bg-white border border-slate-200 rounded-lg p-5">
+        <h2 class="font-semibold text-slate-800 mb-4">Decision &amp; programme</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <label class="block text-sm">
+                <span class="text-slate-600">Status</span>
+                <select id="status-select" required name="status" class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+                    {% for s in statuses %}
+                    <option value="{{ s }}" {{ "selected" if s == proposal.status else "" }}>{{ s }}</option>
+                    {% endfor %}
+                </select>
+            </label>
+            <label class="block text-sm">
+                <span class="text-slate-600">Decision date (required once Approved/Rejected)</span>
+                <input id="decision-date" name="decision_date" value="{{ proposal.decision_date | fmt }}"
+                       class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+            </label>
+            <label class="block text-sm">
+                <span class="text-slate-600">Programme name</span>
+                <input required name="programme_name" value="{{ proposal.programme_name | fmt }}"
+                       class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+            </label>
+            <label class="block text-sm">
+                <span class="text-slate-600">Funding source</span>
+                <select required name="funding_source" class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+                    <option value="" disabled {{ "selected" if not proposal.funding_source else "" }}>Choose...</option>
+                    {% for f in funding_sources %}
+                    <option value="{{ f }}" {{ "selected" if f == proposal.funding_source else "" }}>{{ f }}</option>
+                    {% endfor %}
+                </select>
+            </label>
+        </div>
+    </div>
+
+    <div class="bg-white border border-slate-200 rounded-lg p-5">
+        <h2 class="font-semibold text-slate-800 mb-4">Facts</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <label class="block text-sm">
+                <span class="text-slate-600">Requested total (EUR)</span>
+                <input required type="number" step="0.01" name="requested_total_eur"
+                       value="{{ '%.2f'|format(proposal.requested_total_cents / 100) if proposal.requested_total_cents is not none else '0.00' }}"
+                       class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+            </label>
+            <label class="block text-sm">
+                <span class="text-slate-600">Granted total (EUR)</span>
+                <input required type="number" step="0.01" name="granted_total_eur"
+                       value="{{ '%.2f'|format(proposal.granted_total_cents / 100) if proposal.granted_total_cents is not none else '0.00' }}"
+                       class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+            </label>
+            <label class="block text-sm">
+                <span class="text-slate-600">Average TRL start</span>
+                <input required type="number" name="trl_start" value="{{ proposal.trl_start | fmt }}"
+                       class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+            </label>
+            <label class="block text-sm">
+                <span class="text-slate-600">Average TRL target</span>
+                <input required type="number" name="trl_target" value="{{ proposal.trl_target | fmt }}"
+                       class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+            </label>
+            <label class="block text-sm">
+                <span class="text-slate-600">MCRL start</span>
+                <input required type="number" name="mcrl_start" value="{{ proposal.mcrl_start | fmt }}"
+                       class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+            </label>
+            <label class="block text-sm">
+                <span class="text-slate-600">MCRL target</span>
+                <input required type="number" name="mcrl_target" value="{{ proposal.mcrl_target | fmt }}"
+                       class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+            </label>
+            <label class="block text-sm">
+                <span class="text-slate-600">Builds on a previous CLIC project</span>
+                <select required name="builds_on_previous" class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+                    <option value="" disabled {{ "selected" if proposal.builds_on_previous is none else "" }}>Choose...</option>
+                    <option value="yes" {{ "selected" if proposal.builds_on_previous == 1 else "" }}>Yes</option>
+                    <option value="no" {{ "selected" if proposal.builds_on_previous == 0 else "" }}>No</option>
+                </select>
+            </label>
+            <label class="block text-sm">
+                <span class="text-slate-600">Demonstration activity count</span>
+                <input required type="number" min="0" name="demo_activity_count" value="{{ proposal.demo_activity_count | fmt }}"
+                       class="mt-1 block w-full border border-slate-300 rounded-md px-3 py-2">
+            </label>
+        </div>
+    </div>
+
+    <div class="bg-white border border-slate-200 rounded-lg p-5">
+        <h2 class="font-semibold text-slate-800 mb-4">Partners ({{ partners|length }})</h2>
+        {% if not partners %}
+        <p class="text-sm text-slate-500">No partners linked.</p>
+        {% else %}
+        <table class="w-full text-sm">
+            <thead>
+                <tr class="text-left text-slate-500 border-b border-slate-200">
+                    <th class="py-2 pr-4">Partner</th>
+                    <th class="py-2 pr-4">Category</th>
+                    <th class="py-2 pr-4">Requested (EUR)</th>
+                    <th class="py-2 pr-4">Granted (EUR)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for p in partners %}
+                <tr class="border-b border-slate-100">
+                    <td class="py-2 pr-4">{{ p.partner_name }}</td>
+                    <td class="py-2 pr-4">{{ p.partner_category }}</td>
+                    <td class="py-2 pr-4">
+                        <input type="hidden" name="partner_id" value="{{ p.partner_id }}">
+                        <input required type="number" step="0.01" name="partner_requested"
+                               value="{{ '%.2f'|format(p.requested_cents / 100) if p.requested_cents is not none else '0.00' }}"
+                               class="border border-slate-300 rounded-md px-2 py-1.5 w-32">
+                    </td>
+                    <td class="py-2 pr-4">
+                        <input required type="number" step="0.01" name="partner_granted"
+                               value="{{ '%.2f'|format(p.granted_cents / 100) if p.granted_cents is not none else '0.00' }}"
+                               class="border border-slate-300 rounded-md px-2 py-1.5 w-32">
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+    </div>
+
+    <div class="bg-white border border-slate-200 rounded-lg p-5">
+        <h2 class="font-semibold text-slate-800 mb-4">SDGs</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+            {% for s in all_sdgs %}
+            <label class="flex items-center gap-2 text-sm">
+                <input type="checkbox" name="sdg_number" value="{{ s.sdg_number }}" {{ "checked" if s.sdg_number in linked_sdgs else "" }}>
+                SDG {{ s.sdg_number }}: {{ s.sdg_title }}
+            </label>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="bg-white border border-slate-200 rounded-lg p-5">
+        <h2 class="font-semibold text-slate-800 mb-3">Source document</h2>
+        <p class="text-sm text-slate-600">
+            {{ proposal.file_name | fmt }}
+            {% if proposal.content_hash %} | hash {{ proposal.content_hash[:12] }}{% endif %}
+            | {{ proposal.page_count | fmt }} pages
+            | status {{ proposal.document_status | fmt }}
+            | received {{ proposal.document_received_at | fmt }}
+            | ingested {{ proposal.ingested_at | fmt }}
+        </p>
+    </div>
+
+    <button type="submit" class="inline-flex items-center rounded-md bg-slate-900 text-white text-sm font-medium px-5 py-2.5 hover:bg-slate-700">
+        Save changes
+    </button>
+</form>
+
+<script>
+    (function () {
+        const statusSelect = document.getElementById("status-select");
+        const decisionDate = document.getElementById("decision-date");
+        function syncDecisionDate() {
+            decisionDate.required = statusSelect.value !== "Pending";
+        }
+        statusSelect.addEventListener("change", syncDecisionDate);
+        syncDecisionDate();
+    })();
+</script>

@@ -1,0 +1,13 @@
+pyyaml
+python-dotenv
+pymupdf
+pymupdf4llm
+docling
+pytesseract
+pdf2image
+jsonschema
+pandas
+openpyxl
+streamlit
+plotly
+pytest

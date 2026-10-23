@@ -1,0 +1,43 @@
+{
+  "B": {
+    "model": "Qwen/Qwen3.5-9B",
+    "provider": "deepinfra",
+    "role": "light model",
+    "max_tokens": 3000,
+    "extra_body": {
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    },
+    "context_length": 262144,
+    "input_per_m": 0.10,
+    "output_per_m": 0.15,
+    "pinned_on": "2026-10-16"
+  },
+  "C": {
+    "model": "openai/gpt-oss-120b",
+    "provider": "groq",
+    "role": "large model (accuracy ceiling)",
+    "max_tokens": 3000,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "context_length": 131072,
+    "input_per_m": 0.15,
+    "output_per_m": 0.75,
+    "pinned_on": "2026-09-30"
+  },
+  "D": {
+    "model": "openai/gpt-oss-20b",
+    "provider": "groq",
+    "role": "light model (alternative)",
+    "max_tokens": 3000,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "context_length": 131072,
+    "input_per_m": 0.10,
+    "output_per_m": 0.50,
+    "pinned_on": "2026-10-11"
+  }
+}

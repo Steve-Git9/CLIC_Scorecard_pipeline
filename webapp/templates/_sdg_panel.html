@@ -1,0 +1,22 @@
+{% if loading %}
+<div hx-get="/review/{{ arm }}/{{ stem }}/sdgs" hx-trigger="load delay:2s" hx-swap="outerHTML"
+     class="flex items-center gap-2 text-sm text-slate-500">
+    <svg class="animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-opacity="0.25" stroke-width="4"/><path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor" stroke-width="4"/></svg>
+    SDG classifier is still loading, the results will appear here automatically.
+</div>
+{% elif error %}
+<div class="rounded-md border border-red-300 bg-red-50 text-red-800 px-4 py-3 text-sm">
+    <p class="font-medium">The SDG classifier failed.</p>
+    <p class="mt-1 font-mono text-xs break-words">{{ error }}</p>
+    <p class="mt-2 text-xs">The SDGs shown at approval and saved with the project depend on this step.
+        <a href="#" class="underline" hx-get="/review/{{ arm }}/{{ stem }}/sdgs?retry=1" hx-target="closest div" hx-swap="outerHTML">Try again</a></p>
+</div>
+{% elif sdgs %}
+<div class="flex flex-wrap gap-2">
+    {% for s in sdgs %}
+    <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1">SDG {{ s.number }}: {{ s.name }}</span>
+    {% endfor %}
+</div>
+{% else %}
+<p class="text-sm text-slate-500">No SDGs matched above threshold.</p>
+{% endif %}

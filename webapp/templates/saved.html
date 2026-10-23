@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Saved - CLIC extraction{% endblock %}
+{% block content %}
+<div class="max-w-xl mx-auto text-center py-12">
+    <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-green-100 text-green-700 text-2xl mb-4">&check;</div>
+    <h1 class="text-2xl font-semibold mb-2">Saved</h1>
+    <p class="text-slate-600 mb-6">
+        "{{ proposal.get('proposal_acronym') }}" has been written to the database as proposal_key {{ result.proposal_key }}.
+    </p>
+    <div class="bg-white border border-slate-200 rounded-lg p-5 text-sm text-left inline-block">
+        <div class="flex justify-between gap-6 py-1"><span class="text-slate-500">Partners inserted</span><span>{{ result.partners_inserted }}</span></div>
+        <div class="flex justify-between gap-6 py-1"><span class="text-slate-500">SDGs inserted</span><span>{{ result.sdgs_inserted }}</span></div>
+        <div class="flex justify-between gap-6 py-1"><span class="text-slate-500">Flagged partners</span><span>{{ result.flagged_partners|length }}</span></div>
+    </div>
+    {% if result.flagged_partners %}
+    <div class="mt-4 text-sm text-amber-700">
+        Flagged on save: {{ result.flagged_partners|join(", ") }}
+    </div>
+    {% endif %}
+    <div class="mt-8 flex items-center justify-center gap-4">
+        <a href="/" class="inline-flex items-center rounded-md bg-slate-900 text-white text-sm font-medium px-5 py-2.5 hover:bg-slate-700">Extract another</a>
+        <a href="/projects/{{ result.proposal_key }}" class="inline-flex items-center rounded-md border border-slate-300 text-sm font-medium px-5 py-2.5 hover:bg-slate-50">View project</a>
+    </div>
+</div>
+{% endblock %}

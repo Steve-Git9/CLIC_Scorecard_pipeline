@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Extract - CLIC extraction{% endblock %}
+{% block content %}
+<h1 class="text-2xl font-semibold mb-1">Extract a proposal</h1>
+<p class="text-slate-600 mb-6">Upload a proposal PDF or an already-converted Markdown file, pick a model arm, and run extraction.</p>
+
+{% if error %}
+<div class="mb-6 rounded-md border border-red-300 bg-red-50 text-red-800 px-4 py-3 text-sm">{{ error }}</div>
+{% endif %}
+
+{% if not has_token %}
+<div class="mb-6 rounded-md border border-amber-300 bg-amber-50 text-amber-800 px-4 py-3 text-sm">
+    No HF_TOKEN found. Add it to <code class="font-mono">{{ env_path }}</code> as <code class="font-mono">HF_TOKEN=hf_...</code> and restart the server.
+</div>
+{% endif %}
+
+<form id="extract-form" action="/extract" method="post" enctype="multipart/form-data" class="bg-white border border-slate-200 rounded-lg p-6 space-y-5 max-w-xl">
+    <div>
+        <label class="block text-sm font-medium text-slate-700 mb-1" for="file">Proposal PDF or Markdown file</label>
+        <input class="block w-full text-sm border border-slate-300 rounded-md px-3 py-2" type="file" id="file" name="file" accept=".pdf,.md" required>
+        <p class="text-xs text-slate-500 mt-1">A PDF is converted to Markdown locally with docling (layout analysis + OCR) before extraction - this can take a few minutes on CPU for a long document. The file never leaves this machine.</p>
+    </div>
+    <div>
+        <label class="block text-sm font-medium text-slate-700 mb-1" for="arm">Model arm</label>
+        <select class="block w-full text-sm border border-slate-300 rounded-md px-3 py-2" id="arm" name="arm" required>
+            {% for key, cfg in arms.items() %}
+            <option value="{{ key }}">{{ key }} - {{ cfg.get("model", key) }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <button id="extract-button" type="submit" class="inline-flex items-center rounded-md bg-slate-900 text-white text-sm font-medium px-4 py-2 hover:bg-slate-700 disabled:bg-slate-400">
+        Extract
+    </button>
+    <p class="text-xs text-slate-500 mt-2">Nothing is saved to the database yet. Once extraction finishes, you will be able to proceed to review it.</p>
+    <span id="extract-hint" class="text-sm text-slate-500 mt-2 hidden">Converting and extracting - this can take several minutes, please wait...</span>
+</form>
+
+<script>
+    document.getElementById("extract-form").addEventListener("submit", function () {
+        document.getElementById("extract-button").disabled = true;
+        document.getElementById("extract-hint").classList.remove("hidden");
+    });
+</script>
+{% endblock %}

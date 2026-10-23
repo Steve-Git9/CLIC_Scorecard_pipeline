@@ -1,0 +1,64 @@
+# Whitelist: everything is ignored unless it is allowed below.
+# Only the code needed to run and test the pipeline is published. Proposal documents, gold sets,
+# extraction outputs, databases, backups, partner data, notes and assistant files never leave
+# this machine (CLAUDE.md, confidentiality rule). A new file or folder stays private until it is
+# deliberately added here.
+
+/*
+
+!/.gitignore
+!/requirements.txt
+!/pytest.ini
+!/config.example.yaml
+
+# Pipeline, evaluation scorer and their tests (tests use fictional data only)
+!/src/
+!/tests/
+!/sql/
+
+# Extraction package and its tests; samples/ holds the fictional synthetic proposal used by the tests
+!/Second_step_CLICpipeline/
+/Second_step_CLICpipeline/*
+!/Second_step_CLICpipeline/clic_extract/
+!/Second_step_CLICpipeline/tests/
+!/Second_step_CLICpipeline/samples/
+
+# Applications
+!/app/
+!/webapp/
+!/sdgautomation/
+
+# Real CLIC partner names and their category decisions (local only)
+/src/pipeline/seed_partners.py
+/tests/test_seed_partners.py
+
+# Never published, wherever they appear inside the allowed folders
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+.env.*
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.pdf
+*.docx
+*.xlsx
+*.csv
+*.log
+*.raw.txt
+*.replies.json
+*.run.json
+*.score.json
+*.trace.json
+*.freeform.txt
+output/
+_pagemap_cache/
+.claude/
+CLAUDE.md
+.vscode/
+.idea/
+.DS_Store

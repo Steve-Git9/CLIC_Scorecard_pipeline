@@ -198,9 +198,11 @@ def update_proposal(
     config: Config,
 ) -> None:
     """Overwrite every editable field of an already-saved project (the webapp's project
-    edit form). partner_updates is [{"partner_id", "requested_cents", "granted_cents"}],
-    one per existing fact_participation row - partners are never added or removed here,
-    only their amounts. sdg_numbers replaces the full fact_proposal_sdg set for this project.
+    edit form). partner_updates is [{"partner_id", "requested_cents", "granted_cents"}] - the
+    full desired set of partners for this project, not just changed amounts. Existing
+    fact_participation rows are replaced wholesale (delete then re-insert) rather than updated
+    in place, the same pattern already used for sdg_numbers below: a partner present in this
+    call but not before is thereby added, and one no longer present is thereby removed.
     """
     conn = get_connection(config)
     try:
@@ -247,13 +249,14 @@ def update_proposal(
                 proposal_key,
             ),
         )
+        conn.execute("DELETE FROM fact_participation WHERE proposal_key = ?", (proposal_key,))
         for pu in partner_updates:
             conn.execute(
                 """
-                UPDATE fact_participation SET requested_cents = ?, granted_cents = ?
-                WHERE proposal_key = ? AND partner_id = ?
+                INSERT INTO fact_participation (proposal_key, partner_id, requested_cents, granted_cents)
+                VALUES (?, ?, ?, ?)
                 """,
-                (pu.get("requested_cents") or 0, pu.get("granted_cents") or 0, proposal_key, pu["partner_id"]),
+                (proposal_key, pu["partner_id"], pu.get("requested_cents") or 0, pu.get("granted_cents") or 0),
             )
         conn.execute("DELETE FROM fact_proposal_sdg WHERE proposal_key = ?", (proposal_key,))
         for number in sdg_numbers:

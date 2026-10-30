@@ -8,8 +8,8 @@
     </thead>
     <tbody>
         {% for p in partners %}
-        <tr class="border-b border-slate-100">
-            <td class="py-2 pr-4">{{ p.partner_name }}</td>
+        <tr class="border-b border-slate-100 hover:bg-slate-50 cursor-pointer" onclick="window.location='/partners/{{ p.partner_id }}'">
+            <td class="py-2 pr-4"><a href="/partners/{{ p.partner_id }}" class="text-[#236543] hover:underline">{{ p.partner_name }}</a></td>
             <td class="py-2 pr-4">{{ p.partner_category }}</td>
             <td class="py-2 pr-4">{{ "yes" if p.is_clic else "no" }}</td>
         </tr>

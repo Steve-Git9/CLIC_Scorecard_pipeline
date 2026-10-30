@@ -32,6 +32,7 @@ from urllib.parse import quote
 from dotenv import load_dotenv
 from fastapi import FastAPI, File, Form, Request, UploadFile
 from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from markupsafe import Markup
 
@@ -68,7 +69,9 @@ from src.pipeline.queries import (  # noqa: E402
     fmt_cents,
     load_all_partners,
     load_all_sdgs,
+    load_partner,
     load_partners_for,
+    load_projects_for_partner,
     load_proposal,
     load_proposals,
     load_reference_counts,
@@ -76,6 +79,7 @@ from src.pipeline.queries import (  # noqa: E402
 )
 
 app = FastAPI(title="CLIC extraction")
+app.mount("/static", StaticFiles(directory=str(Path(__file__).resolve().parent / "static")), name="static")
 
 
 @app.on_event("startup")
@@ -490,6 +494,8 @@ async def save(request: Request, arm: str, stem: str):
     granted_amounts = form.getlist("partner_granted")
     if not matches:
         return missing_redo("At least one partner is required.")
+    if len(set(matches)) != len(matches):
+        return missing_redo("The same partner is selected more than once - each partner can only appear once per project.")
     for amount in amounts + granted_amounts:
         if not (amount or "").strip():
             return missing_redo("Every partner's requested and granted amount is required.")
@@ -543,9 +549,10 @@ async def save(request: Request, arm: str, stem: str):
 
 
 @app.get("/projects", response_class=HTMLResponse)
-def projects(request: Request, q: str = "", project: int | None = None,
+def projects(request: Request, project: int | None = None,
              saved: bool = False, error: str | None = None):
-    """Project selector (with the full edit form for the chosen project), counts, searchable partners."""
+    """Project selector (with the full edit form for the chosen project) and a clickable
+    list of every project. Partner browsing lives on its own Partners page, not here."""
     conn = get_db()
     selected = selected_partners = None
     all_sdgs, linked_sdgs = [], set()
@@ -555,27 +562,52 @@ def projects(request: Request, q: str = "", project: int | None = None,
             selected_partners = load_partners_for(conn, project)
             all_sdgs = load_all_sdgs(conn)
             linked_sdgs = {s["sdg_number"] for s in load_sdgs_for(conn, project)}
-    counts = load_reference_counts(conn)
-    partners = load_all_partners(conn)
-    if q:
-        partners = [p for p in partners if q.casefold() in p["partner_name"].casefold()]
     proposals = load_proposals(conn)
     return templates.TemplateResponse(request, "projects.html", {
-        "counts": counts, "partners": partners, "proposals": proposals, "q": q,
+        "proposals": proposals,
         "proposal_key": project, "selected": selected, "selected_partners": selected_partners,
-        "all_sdgs": all_sdgs, "linked_sdgs": linked_sdgs,
+        "all_sdgs": all_sdgs, "linked_sdgs": linked_sdgs, "all_partners": load_all_partners(conn),
         "statuses": STATUSES, "funding_sources": FUNDING_SOURCES, "saved": saved, "error": error,
     })
 
 
-@app.get("/projects/partners", response_class=HTMLResponse)
-def projects_partners_fragment(request: Request, q: str = ""):
+@app.get("/partners", response_class=HTMLResponse)
+def partners_page(request: Request, q: str = ""):
+    """Every partner, clickable through to its own detail page."""
+    conn = get_db()
+    counts = load_reference_counts(conn)
+    partners = load_all_partners(conn)
+    if q:
+        partners = [p for p in partners if q.casefold() in p["partner_name"].casefold()]
+    return templates.TemplateResponse(request, "partners.html", {"partners": partners, "q": q, "counts": counts})
+
+
+@app.get("/partners/search", response_class=HTMLResponse)
+def partners_search_fragment(request: Request, q: str = ""):
     """HTMX fragment: just the partner table, for live search without a full page reload."""
     conn = get_db()
     partners = load_all_partners(conn)
     if q:
         partners = [p for p in partners if q.casefold() in p["partner_name"].casefold()]
     return templates.TemplateResponse(request, "_partner_table.html", {"partners": partners})
+
+
+@app.get("/partners/{partner_id}", response_class=HTMLResponse)
+def partner_detail(request: Request, partner_id: int):
+    """One partner: total requested/granted across every project, and the list of those
+    projects, each a link into its own edit page."""
+    conn = get_db()
+    partner = load_partner(conn, partner_id)
+    if partner is None:
+        return templates.TemplateResponse(request, "partner_detail.html", {
+            "partner": None, "projects": [], "total_requested_cents": 0, "total_granted_cents": 0,
+        }, status_code=404)
+    projects_list = load_projects_for_partner(conn, partner_id)
+    return templates.TemplateResponse(request, "partner_detail.html", {
+        "partner": partner, "projects": projects_list,
+        "total_requested_cents": sum(p["requested_cents"] or 0 for p in projects_list),
+        "total_granted_cents": sum(p["granted_cents"] or 0 for p in projects_list),
+    })
 
 
 @app.get("/projects/{proposal_key}")
@@ -626,6 +658,10 @@ async def project_edit_save(request: Request, proposal_key: int):
     partner_ids = [int(v) for v in form.getlist("partner_id")]
     requested = form.getlist("partner_requested")
     granted = form.getlist("partner_granted")
+    if not partner_ids:
+        return redo("At least one partner is required.")
+    if len(set(partner_ids)) != len(partner_ids):
+        return redo("The same partner is selected more than once - each partner can only appear once per project.")
     for amount in requested + granted:
         if not (amount or "").strip():
             return redo("Every partner's requested and granted amount is required.")
@@ -697,6 +733,8 @@ def kpi_dashboard(request: Request):
         "cloud": kpi.trl_mcrl_cloud(conn),
         "cloud_points": build_cloud_points(kpi.trl_mcrl_cloud(conn)),
         "sdg_counts": kpi.sdg_project_counts(conn),
+        "events": kpi.outreach(conn, "Event"),
+        "comms": kpi.outreach(conn, "Communication"),
     })
 
 

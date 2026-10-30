@@ -43,6 +43,29 @@ def load_all_partners(conn) -> list[dict]:
     return [dict(r) for r in rows]
 
 
+def load_partner(conn, partner_id: int) -> dict | None:
+    row = conn.execute(
+        "SELECT partner_id, partner_name, partner_category, is_clic FROM dim_partner WHERE partner_id = ?",
+        (partner_id,),
+    ).fetchone()
+    return dict(row) if row else None
+
+
+def load_projects_for_partner(conn, partner_id: int) -> list[dict]:
+    rows = conn.execute(
+        """
+        SELECT p.proposal_key, p.proposal_acronym, p.proposal_title, p.status,
+               fp.requested_cents, fp.granted_cents
+        FROM fact_participation fp
+        JOIN dim_proposal p ON p.proposal_key = fp.proposal_key
+        WHERE fp.partner_id = ?
+        ORDER BY p.proposal_key DESC
+        """,
+        (partner_id,),
+    ).fetchall()
+    return [dict(r) for r in rows]
+
+
 def load_proposals(conn) -> list[dict]:
     rows = conn.execute(
         """

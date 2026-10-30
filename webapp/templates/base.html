@@ -6,16 +6,26 @@
     <title>{% block title %}CLIC extraction{% endblock %}</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+    <style>
+        /* The CLIC green (#236543), sampled directly from CLIClogo.png, as the one accent
+           color used everywhere an interactive element needs it - primary buttons, active
+           nav state, and form focus rings - so the accent is consistent without re-deriving
+           it in every template. */
+        input:focus, select:focus, textarea:focus {
+            outline: none; border-color: #236543; box-shadow: 0 0 0 2px rgba(35, 101, 67, 0.2);
+        }
+    </style>
 </head>
 <body class="bg-slate-50 text-slate-900 min-h-screen">
     <nav class="bg-white border-b border-slate-200">
         <div class="max-w-5xl mx-auto px-4 py-3 flex items-center gap-6">
-            <a href="/" class="font-semibold text-slate-800">CLIC extraction</a>
-            <a href="/" class="text-sm text-slate-600 hover:text-slate-900">Extract</a>
-            <a href="/multimodal" class="text-sm text-slate-600 hover:text-slate-900">Multimodal</a>
-            <a href="/projects" class="text-sm text-slate-600 hover:text-slate-900">Projects</a>
-            <a href="/dashboard" class="text-sm text-slate-600 hover:text-slate-900">Dashboard</a>
-            <a href="/scorecard" class="text-sm text-slate-600 hover:text-slate-900">Scorecard</a>
+            <a href="/" class="flex items-center gap-2 shrink-0">
+                <img src="/static/CLIClogo.png" alt="CLIC" class="h-6 w-auto">
+                <span class="font-semibold text-slate-800">extraction</span>
+            </a>
+            {% for href, label in [("/", "Extract"), ("/multimodal", "Multimodal"), ("/projects", "Projects"), ("/partners", "Partners"), ("/dashboard", "Dashboard"), ("/scorecard", "Scorecard")] %}
+            <a href="{{ href }}" class="text-sm {{ 'text-[#236543] font-semibold' if request.url.path == href else 'text-slate-600 hover:text-[#236543]' }}">{{ label }}</a>
+            {% endfor %}
             <span class="text-xs text-slate-400 ml-auto">Local only</span>
         </div>
     </nav>

@@ -2,7 +2,7 @@
     <h1 class="text-2xl font-semibold">{{ proposal.proposal_acronym | fmt }}</h1>
     <span class="text-xs text-slate-400">proposal_key {{ proposal.proposal_key }}</span>
 </div>
-<p class="text-slate-600 mb-6">Every field is editable. Partners themselves cannot be added or removed here, only their amounts and the linked SDGs.</p>
+<p class="text-slate-600 mb-6">Every field is editable, including adding or removing partners and the linked SDGs.</p>
 
 {% if saved %}
 <div class="mb-6 rounded-md border border-green-300 bg-green-50 text-green-800 px-4 py-3 text-sm">Saved.</div>
@@ -123,26 +123,27 @@
     </div>
 
     <div class="bg-white border border-slate-200 rounded-lg p-5">
-        <h2 class="font-semibold text-slate-800 mb-4">Partners ({{ partners|length }})</h2>
-        {% if not partners %}
-        <p class="text-sm text-slate-500">No partners linked.</p>
-        {% else %}
+        <h2 class="font-semibold text-slate-800 mb-4">Partners (<span id="partner-count">{{ partners|length }}</span>)</h2>
         <table class="w-full text-sm">
             <thead>
                 <tr class="text-left text-slate-500 border-b border-slate-200">
                     <th class="py-2 pr-4">Partner</th>
-                    <th class="py-2 pr-4">Category</th>
                     <th class="py-2 pr-4">Requested (EUR)</th>
                     <th class="py-2 pr-4">Granted (EUR)</th>
+                    <th class="py-2 pr-4"></th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="partner-rows">
                 {% for p in partners %}
                 <tr class="border-b border-slate-100">
-                    <td class="py-2 pr-4">{{ p.partner_name }}</td>
-                    <td class="py-2 pr-4">{{ p.partner_category }}</td>
                     <td class="py-2 pr-4">
-                        <input type="hidden" name="partner_id" value="{{ p.partner_id }}">
+                        <select required name="partner_id" class="border border-slate-300 rounded-md px-2 py-1.5 w-full max-w-xs">
+                            {% for ap in all_partners %}
+                            <option value="{{ ap.partner_id }}" {{ "selected" if ap.partner_id == p.partner_id else "" }}>{{ ap.partner_name }} ({{ ap.partner_category }})</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                    <td class="py-2 pr-4">
                         <input required type="number" step="0.01" name="partner_requested"
                                value="{{ '%.2f'|format(p.requested_cents / 100) if p.requested_cents is not none else '0.00' }}"
                                class="border border-slate-300 rounded-md px-2 py-1.5 w-32">
@@ -152,12 +153,38 @@
                                value="{{ '%.2f'|format(p.granted_cents / 100) if p.granted_cents is not none else '0.00' }}"
                                class="border border-slate-300 rounded-md px-2 py-1.5 w-32">
                     </td>
+                    <td class="py-2 pr-4">
+                        <button type="button" class="remove-partner-row text-red-600 hover:text-red-800 text-xs font-medium">Remove</button>
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
-        {% endif %}
+        <button type="button" id="add-partner-button" class="mt-3 text-sm font-medium text-[#236543] hover:text-[#1d4a33]">+ Add partner</button>
     </div>
+
+    <template id="partner-row-template">
+        <tr class="border-b border-slate-100">
+            <td class="py-2 pr-4">
+                <select required name="partner_id" class="border border-slate-300 rounded-md px-2 py-1.5 w-full max-w-xs">
+                    {% for ap in all_partners %}
+                    <option value="{{ ap.partner_id }}">{{ ap.partner_name }} ({{ ap.partner_category }})</option>
+                    {% endfor %}
+                </select>
+            </td>
+            <td class="py-2 pr-4">
+                <input required type="number" step="0.01" name="partner_requested" value="0.00"
+                       class="border border-slate-300 rounded-md px-2 py-1.5 w-32">
+            </td>
+            <td class="py-2 pr-4">
+                <input required type="number" step="0.01" name="partner_granted" value="0.00"
+                       class="border border-slate-300 rounded-md px-2 py-1.5 w-32">
+            </td>
+            <td class="py-2 pr-4">
+                <button type="button" class="remove-partner-row text-red-600 hover:text-red-800 text-xs font-medium">Remove</button>
+            </td>
+        </tr>
+    </template>
 
     <div class="bg-white border border-slate-200 rounded-lg p-5">
         <h2 class="font-semibold text-slate-800 mb-4">SDGs</h2>
@@ -183,7 +210,7 @@
         </p>
     </div>
 
-    <button type="submit" class="inline-flex items-center rounded-md bg-slate-900 text-white text-sm font-medium px-5 py-2.5 hover:bg-slate-700">
+    <button type="submit" class="inline-flex items-center rounded-md bg-[#236543] text-white text-sm font-medium px-5 py-2.5 hover:bg-[#1d4a33]">
         Save changes
     </button>
 </form>
@@ -197,5 +224,25 @@
         }
         statusSelect.addEventListener("change", syncDecisionDate);
         syncDecisionDate();
+
+        const partnerRows = document.getElementById("partner-rows");
+        const partnerCount = document.getElementById("partner-count");
+        const rowTemplate = document.getElementById("partner-row-template");
+        const addButton = document.getElementById("add-partner-button");
+
+        function refreshPartnerCount() {
+            partnerCount.textContent = partnerRows.children.length;
+        }
+
+        addButton.addEventListener("click", function () {
+            partnerRows.appendChild(rowTemplate.content.cloneNode(true));
+            refreshPartnerCount();
+        });
+
+        partnerRows.addEventListener("click", function (event) {
+            if (!event.target.classList.contains("remove-partner-row")) return;
+            event.target.closest("tr").remove();
+            refreshPartnerCount();
+        });
     })();
 </script>

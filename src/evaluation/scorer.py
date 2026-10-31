@@ -6,6 +6,10 @@ partner list. Not scored: `metadata` (extraction_timestamp, source_file).
 Outcomes per value: correct (null against null included), miss (null where gold has a value),
 unsupported (a value where gold is null), wrong (both present, different after normalisation).
 A run that is not valid after repair has every scored field counted as a miss.
+
+Fully correct (protocol section 6.5): 1 when the run is valid after repair and has no error,
+0.5 when its only errors come from unsure partner names (half scores, section 6.4), 0 as soon
+as it has one certain error or is not valid after repair.
 """
 
 from __future__ import annotations
@@ -21,7 +25,7 @@ from src.evaluation.normalise import (
     normalise_integer,
     normalise_text,
 )
-from src.evaluation.partners import score_partners
+from src.evaluation.partners import Decision, score_partners
 from src.evaluation.validity import after_repair_validity, first_attempt_validity
 
 NORMALISERS: dict[str, Callable[[Any], Any]] = {
@@ -68,10 +72,16 @@ def score_scalars(gold: dict, final: dict | None, valid: bool) -> list[dict[str,
 
 
 def _empty_partner_score(gold: dict) -> dict[str, Any]:
-    names = [p["partner_name"] for p in gold.get("partners", [])]
-    return {"entries": [], "gold_count": len(names), "matched_count": 0, "missed_gold": names,
-            "recall": 0.0 if names else None, "amount_accuracy": None, "amount_outcomes": {},
-            "classes": {}, "manual_review": [], "sum_check": None}
+    """Partner score of a run that is not valid after repair: every gold partner missed."""
+    gold_partners = gold.get("partners", [])
+    status = [{"partner_name": p["partner_name"], "requested_cents": p.get("requested_cents"),
+               "found": 0.0, "unsure": False} for p in gold_partners]
+    return {"entries": [], "gold_status": status, "gold_count": len(status), "matched_count": 0.0,
+            "missed_gold": [s["partner_name"] for s in status], "missed_weight": float(len(status)),
+            "recall": 0.0 if status else None, "amount_accuracy": None, "amount_outcomes": {},
+            "classes": {"matched": 0.0, "duplicate": 0.0, "supported_extra": 0.0, "unsupported_extra": 0.0},
+            "extracted_count": 0, "extra_weight": 0.0, "unsure": [], "unsure_error_weight": 0.0,
+            "sum_check": None}
 
 
 def score_run(
@@ -80,6 +90,7 @@ def score_run(
     replies: list[str] | None,
     protocol: str,
     document_markdown: str | None,
+    decisions: dict[str, Decision] | None = None,
 ) -> dict[str, Any]:
     _check_gold(gold)
     first_ok, first_reason = first_attempt_validity(replies, protocol)
@@ -89,7 +100,7 @@ def score_run(
     if repaired_ok:
         partners = score_partners(gold.get("partners", []), final.get("partners", []),
                                   gold.get("proposal_facts", {}).get("requested_total_cents"),
-                                  document_markdown)
+                                  document_markdown, decisions)
     else:
         partners = _empty_partner_score(gold)
 
@@ -97,18 +108,20 @@ def score_run(
     amounts = partners["amount_outcomes"]
     classes = partners["classes"]
     errors = {
-        "misses": outcomes.count("miss") + len(partners["missed_gold"]) + amounts.get("miss", 0),
-        "wrong_values": outcomes.count("wrong") + amounts.get("wrong", 0),
-        "unsupported_values": outcomes.count("unsupported") + amounts.get("unsupported", 0),
-        "unsupported_extras": classes.get("unsupported_extra", 0),
-        "duplicates": classes.get("duplicate", 0),
+        "misses": outcomes.count("miss") + partners["missed_weight"] + amounts.get("miss", 0.0),
+        "wrong_values": outcomes.count("wrong") + amounts.get("wrong", 0.0),
+        "unsupported_values": outcomes.count("unsupported") + amounts.get("unsupported", 0.0),
+        "unsupported_extras": classes["unsupported_extra"],
+        "duplicates": classes["duplicate"],
     }
     errors["total"] = sum(errors.values())
-    pending = len(partners["manual_review"])
-    if errors["total"] > 0 or not repaired_ok:
-        fully_correct: bool | None = False
+    errors["from_unsure_names"] = partners["unsure_error_weight"]
+    errors["certain"] = errors["total"] - errors["from_unsure_names"]
+    has_unsure = bool(partners["unsure"])
+    if not repaired_ok or errors["certain"] > 0:
+        fully_correct = 0.0
     else:
-        fully_correct = None if pending else True
+        fully_correct = 0.5 if has_unsure else 1.0
 
     return {
         "validity": {
@@ -123,8 +136,9 @@ def score_run(
         "errors": errors,
         "unsupported_values_including_extras": errors["unsupported_values"] + errors["unsupported_extras"],
         "reviewer_decisions": {
-            "supported_extras": classes.get("supported_extra", 0),
-            "pending_manual_review": pending,
+            "supported_extras": classes["supported_extra"],
+            "unsure_names": len(partners["unsure"]),
         },
+        "contains_unsure": has_unsure,
         "fully_correct": fully_correct,
     }

@@ -95,10 +95,10 @@ def gold_partners(*overrides: dict) -> list[dict]:
     return [dict(p) for p in GOLD["partners"]] + list(overrides)
 
 
-def score(final, replies=None, protocol="schema", markdown=MARKDOWN):
+def score(final, replies=None, protocol="schema", markdown=MARKDOWN, decisions=None):
     if replies is None and final is not None:
         replies = [json.dumps(raw_reply())]
-    return score_run(final, GOLD, replies, protocol, markdown)
+    return score_run(final, GOLD, replies, protocol, markdown, decisions)
 
 
 # --------------------------------------------------------------------------- normalisation
@@ -219,13 +219,13 @@ def test_identical_output_is_fully_correct():
                              "after_repair": True, "after_repair_problems": []}
     assert s["scalar_accuracy"] == 1.0
     assert s["errors"]["total"] == 0
-    assert s["fully_correct"] is True
+    assert s["fully_correct"] == 1.0
 
 
 def test_metadata_is_not_scored():
     assert not any(f.startswith("metadata") for f in SCALAR_FIELDS)
     s = score(final_from_gold(metadata__source_file="something else.pdf", metadata__extraction_timestamp=None))
-    assert s["fully_correct"] is True
+    assert s["fully_correct"] == 1.0
 
 
 def test_null_against_a_gold_value_is_a_miss_and_a_value_against_gold_null_is_unsupported():
@@ -234,7 +234,7 @@ def test_null_against_a_gold_value_is_a_miss_and_a_value_against_gold_null_is_un
     assert outcomes["proposal.call_identifier"] == "miss"
     assert outcomes["proposal_facts.mcrl_start"] == "unsupported"
     assert s["errors"]["misses"] == 1 and s["errors"]["unsupported_values"] == 1
-    assert s["fully_correct"] is False
+    assert s["fully_correct"] == 0.0
 
 
 def test_different_value_is_wrong():
@@ -289,10 +289,10 @@ def test_extra_partner_absent_from_the_markdown_is_unsupported():
     ("Imaginary Labs Oy Finland branch", MARKDOWN, "contains"),  # contains a gold name
     ("Pretend Industries & Partners Oy", None, "no Docling Markdown"),
 ])
-def test_names_that_cannot_be_classified_go_to_manual_review(name, markdown, reason_part):
+def test_names_that_cannot_be_classified_are_unsure(name, markdown, reason_part):
     r = score_partners(GOLD["partners"], [partner(name)], 300_000_000, markdown)
-    assert classes(r) == {name: "manual_review"}
-    assert reason_part in r["manual_review"][0]["reason"]
+    assert classes(r) == {name: "unsure"}
+    assert reason_part in r["unsure"][0]["reason"]
 
 
 def test_recall_and_amount_accuracy():
@@ -325,7 +325,7 @@ def test_supported_extra_is_a_reviewer_decision_not_an_error():
     s = score(final)
     assert s["errors"]["total"] == 0
     assert s["reviewer_decisions"]["supported_extras"] == 1
-    assert s["fully_correct"] is True
+    assert s["fully_correct"] == 1.0
 
 
 def test_unsupported_extra_and_duplicate_are_errors():
@@ -335,7 +335,7 @@ def test_unsupported_extra_and_duplicate_are_errors():
     assert s["errors"]["unsupported_extras"] == 1
     assert s["errors"]["duplicates"] == 1
     assert s["unsupported_values_including_extras"] == 1
-    assert s["fully_correct"] is False
+    assert s["fully_correct"] == 0.0
 
 
 def test_missed_partner_and_amount_errors_are_counted():
@@ -346,12 +346,12 @@ def test_missed_partner_and_amount_errors_are_counted():
     assert s["errors"]["wrong_values"] == 1
 
 
-def test_document_is_undetermined_while_a_name_awaits_manual_review():
+def test_document_is_half_correct_when_its_only_issue_is_an_unsure_name():
     final = final_from_gold()
     final["partners"].append(partner("Zorblax Holdings"))
     s = score(final)
-    assert s["errors"]["total"] == 0
-    assert s["fully_correct"] is None
+    assert s["errors"]["total"] == 0.5 and s["errors"]["certain"] == 0
+    assert s["fully_correct"] == 0.5
 
 
 # --------------------------------------------------------------------------- invalid output
@@ -363,7 +363,7 @@ def test_invalid_json_with_no_final_output_counts_every_field_as_a_miss():
     assert [r["outcome"] for r in s["scalars"]] == ["miss"] * 9
     assert s["partners"]["recall"] == 0.0
     assert s["errors"]["misses"] == 9 + 3
-    assert s["fully_correct"] is False
+    assert s["fully_correct"] == 0.0
 
 
 def test_final_output_that_fails_the_schema_counts_every_field_as_a_miss():
@@ -377,7 +377,7 @@ def test_repaired_output_is_valid_after_repair_but_not_at_the_first_attempt():
     s = score(final_from_gold(), replies=[fenced])
     assert s["validity"]["first_attempt"] is False
     assert s["validity"]["after_repair"] is True
-    assert s["fully_correct"] is True
+    assert s["fully_correct"] == 1.0
 
 
 def test_gold_that_cannot_be_normalised_is_rejected():
@@ -428,7 +428,7 @@ def test_command_line_scores_the_latest_run_and_writes_the_review_list(tmp_path:
     assert written["validity"]["first_attempt"] is True
     assert written["document"] == "FICTO" and written["configuration"] == "B"
     assert not (folder / "FICTO_20990101T000000Z.score.json").exists()
-    rows = list(csv.reader((folder / "manual_review.csv").open(encoding="utf-8")))
+    rows = list(csv.reader((folder / "review_list.csv").open(encoding="utf-8")))
     assert rows[1][2] == "Zorblax Holdings"
 
 

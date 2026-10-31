@@ -10,7 +10,8 @@ A run is identified by its <stem>_<UTC>.run.json file. Next to it the scorer rea
                                extraction call; without it first attempt validity is unknown
 and it writes <stem>_<UTC>.score.json. The gold set is <gold>/<stem>.json and the Docling
 Markdown is <markdown>/<stem>.md, both from config.yaml (evaluation section). For a folder,
-the names needing manual review are written to <folder>/manual_review.csv.
+the unsure partner names (scored with half values) are written to <folder>/review_list.csv.
+For a whole batch, use python -m src.evaluation.score_batch instead.
 """
 
 from __future__ import annotations
@@ -62,7 +63,9 @@ def latest_runs(folder: Path) -> list[Path]:
     return [newest[s] for s in sorted(newest)]
 
 
-def score_run_file(run_file: Path, settings: dict) -> dict[str, Any]:
+def score_run_file(run_file: Path, settings: dict, decisions: dict | None = None) -> dict[str, Any]:
+    """Score one run file and write <run>.score.json next to it. `decisions` maps document
+    stems to the author's decisions on unsure names (see partners.score_partners)."""
     base = run_base(run_file)
     stem = document_stem(base)
     run = _read_json(run_file) or {}
@@ -78,7 +81,7 @@ def score_run_file(run_file: Path, settings: dict) -> dict[str, Any]:
     markdown_path = Path(settings["markdown"]) / f"{stem}.md"
     markdown = markdown_path.read_text(encoding="utf-8") if markdown_path.is_file() else None
     if markdown is None:
-        logger.warning("%s: no Docling Markdown at %s; extra partners go to manual review", stem, markdown_path)
+        logger.warning("%s: no Docling Markdown at %s; extra partners are unsure", stem, markdown_path)
 
     replies_path = base.with_name(base.name + ".replies.json")
     replies = _read_json(replies_path)
@@ -87,7 +90,7 @@ def score_run_file(run_file: Path, settings: dict) -> dict[str, Any]:
     final_path = base.with_name(base.name + ".json")
     final = _read_json(final_path)
 
-    score = score_run(final, gold, replies, protocol, markdown)
+    score = score_run(final, gold, replies, protocol, markdown, (decisions or {}).get(stem))
     score.update({"run_file": run_file.name, "configuration": arm, "document": stem, "protocol": protocol,
                   "run_status": run.get("status"), "markdown_available": markdown is not None})
     out = base.with_name(base.name + ".score.json")
@@ -95,15 +98,15 @@ def score_run_file(run_file: Path, settings: dict) -> dict[str, Any]:
     return score
 
 
-def write_manual_review(folder: Path, scores: list[dict[str, Any]]) -> Path:
-    path = folder / "manual_review.csv"
+def write_review_list(folder: Path, scores: list[dict[str, Any]]) -> Path:
+    path = folder / "review_list.csv"
     with path.open("w", encoding="utf-8", newline="") as f:
         writer = csv.writer(f)
-        writer.writerow(["run_file", "document", "partner_name", "reason", "related_gold_partner"])
+        writer.writerow(["run_file", "document", "partner_name", "case", "reason", "related_gold_partner"])
         for s in scores:
-            for item in s["partners"]["manual_review"]:
-                writer.writerow([s["run_file"], s["document"], item["partner_name"], item["reason"],
-                                 item["related_gold_partner"] or ""])
+            for item in s["partners"]["unsure"]:
+                writer.writerow([s["run_file"], s["document"], item["partner_name"], item["case"],
+                                 item["reason"], item["related_gold_partner"] or ""])
     return path
 
 
@@ -117,7 +120,7 @@ def _summary(s: dict[str, Any]) -> str:
             f"after repair {str(v['after_repair']):<5} scalars {pct(s['scalar_accuracy']):>4}  "
             f"partner recall {pct(p['recall']):>4}  amounts {pct(p['amount_accuracy']):>4}  "
             f"errors {e['total']:>3}  supported extras {s['reviewer_decisions']['supported_extras']}  "
-            f"manual review {s['reviewer_decisions']['pending_manual_review']}  "
+            f"unsure names {s['reviewer_decisions']['unsure_names']}  "
             f"fully correct {s['fully_correct']}")
 
 
@@ -140,7 +143,7 @@ def main(argv: list[str] | None = None) -> None:
             for s in scores:
                 logger.info(_summary(s))
             if scores:
-                logger.info("manual review list: %s", write_manual_review(path, scores))
+                logger.info("review list: %s", write_review_list(path, scores))
             else:
                 logger.warning("no run files in %s", path)
         else:

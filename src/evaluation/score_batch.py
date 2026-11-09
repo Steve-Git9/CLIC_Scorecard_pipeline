@@ -182,8 +182,8 @@ def main(argv: list[str] | None = None) -> None:
         "final_runs": len(runs), "configurations": len(summary), "documents": len(documents),
         "repetitions": max(r["repetition"] for r in runs),
         "runs_not_ok": sum(1 for r in runs if r["status"] != "ok"),
-        "total_cost_usd": sum(r["cost_usd"] for r in runs),
-        "total_end_to_end_hours": sum(r["end_to_end_seconds"] for r in runs) / 3600,
+        "total_cost_usd": sum(r["cost_usd"] for r in runs if r["status"] == "ok"),
+        "total_end_to_end_hours": sum(r["end_to_end_seconds"] for r in runs if r["status"] == "ok") / 3600,
         "decisions_applied": f"{sum(len(v) for v in decisions.values())} from {DECISIONS_FILE}" if decisions else "none",
     }
     report.write_report(out_dir / "report.md", overview=overview, summary=summary, contrasts=contrasts,

@@ -209,7 +209,7 @@ def write_report(path: Path, *, overview: dict[str, Any], summary: list[dict], c
          f"2. Runs from {o['first_run_utc']} to {o['last_run_utc']} (UTC).",
          f"3. {o['final_runs']} final runs: {o['configurations']} configurations, {o['documents']} documents, "
          f"{o['repetitions']} repetitions; {o['runs_not_ok']} runs ended without a final record.",
-         f"4. Total cost of the final runs USD {o['total_cost_usd']:.2f}; total end to end time "
+         f"4. Total cost of the completed final runs USD {o['total_cost_usd']:.2f}; total end to end time "
          f"{o['total_end_to_end_hours']:.1f} hours.",
          f"5. Author's decisions applied: {o['decisions_applied']}.", "",
          "## 2. Reading notes", "",
@@ -217,9 +217,10 @@ def write_report(path: Path, *, overview: dict[str, Any], summary: list[dict], c
          "freeform_B, freeform_light) they include the Docling conversion of the document, run on the author's "
          "laptop processor; see `DOCLING_SPEED.md`.",
          "2. The six runs of targeted_text and targeted_multimodal on SP03B ended without a final record and are "
-         "counted as failures: every field and every gold partner missed.",
+         "counted as failures: every field and every gold partner missed. They are left out of every time and "
+         "cost figure.",
          "3. Six documents (SP01, SP02, SP03A, SP03B, SP04, SP05) state partner amounts in thousands of euros, "
-         "with the scale only in a table caption or header (SP04 also its total); amounts copied as written are "
+         "with the scale only in a table caption or header; amounts copied as written are "
          "a thousand times too small and are scored as wrong amounts.",
          "4. SP01: the Docling Markdown lost the partner table, which affects the five text configurations.",
          "5. Values marked unsure come from partner names the rules could not settle; they carry half scores.", "",

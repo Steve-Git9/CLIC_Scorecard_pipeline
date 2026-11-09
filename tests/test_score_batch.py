@@ -79,6 +79,25 @@ def test_summary_means_ranges_and_cost_of_pass(runs):
     assert c["after_repair_valid_share"] == 0.5
 
 
+def test_failed_runs_count_in_accuracy_but_not_in_time_or_cost():
+    group = [make_run("C", "FICTO", 1, final_from_gold(), cost=0.02, seconds=100.0),
+             make_run("C", "ALPHA", 1, None, cost=0.001, seconds=2.0)]
+    rows = [tables.run_row(r) for r in group]
+    c = tables.configuration_summary(group, rows)[0]
+    assert c["field_accuracy_mean"] == pytest.approx(0.5)               # the failure still counts as 0
+    assert c["end_to_end_seconds_mean"] == pytest.approx(100.0)         # but not in time
+    assert c["cost_usd_mean"] == pytest.approx(0.02)                    # nor in cost
+    assert c["cost_per_document_usd"] == pytest.approx(0.02)
+    assert c["total_cost_usd"] == pytest.approx(0.02)
+    assert c["cost_of_pass_usd"] == pytest.approx(0.02 / 0.5)
+    contrast_rows = rows + [tables.run_row(make_run("targeted_text", d, 1, final_from_gold(), seconds=10.0))
+                            for d in ("FICTO", "ALPHA")]
+    diffs = [r for r in tables.contrast_table(contrast_rows)
+             if r["difference"] == "targeted_text minus C" and r["document"] != "mean over documents"]
+    alpha = next(r for r in diffs if r["document"] == "ALPHA")
+    assert alpha["end_to_end_seconds"] is None and alpha["field_accuracy"] == pytest.approx(1.0)
+
+
 def test_cost_of_pass_is_not_defined_without_a_fully_correct_run():
     group = [make_run("B", "FICTO", i, wrong_acronym()) for i in (1, 2, 3)]
     rows = [tables.run_row(r) for r in group]

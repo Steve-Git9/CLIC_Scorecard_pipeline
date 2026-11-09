@@ -17,6 +17,9 @@ Definitions (protocol section 7.1):
                          every final run of the configuration
     cost of pass         mean cost per run divided by the mean fully correct value, or
                          "not defined" when no run is fully correct
+    time and cost        only runs that ended with a final record; a failed run counts in every
+                         accuracy measure but in no time or cost figure (author's decision of
+                         9 November 2026)
 """
 
 from __future__ import annotations
@@ -95,7 +98,13 @@ def run_row(run: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+TIME_COST_METRICS = ("cost_usd", "end_to_end_seconds")
+
+
 def _metric(row: dict[str, Any], name: str) -> float | None:
+    """A metric of one run row; time and cost only for runs that ended with a final record."""
+    if name in TIME_COST_METRICS and row["run_status"] != "ok":
+        return None
     return row[name]
 
 
@@ -161,11 +170,13 @@ def configuration_summary(runs: list[dict[str, Any]], rows: list[dict[str, Any]]
         row["after_repair_valid_share"] = sum(r["after_repair_valid"] for r in mine) / len(mine)
         extracted = sum(r["extracted_partners"] for r in mine)
         row["over_inclusion_rate"] = sum(r["extra_partner_weight"] for r in mine) / extracted if extracted else None
-        row["cost_per_document_usd"] = mean(r["cost_usd"] for r in mine)
+        completed = [r for r in mine if r["run_status"] == "ok"]
+        row["cost_per_document_usd"] = mean(r["cost_usd"] for r in completed) if completed else None
         fully = mean(r["fully_correct"] for r in mine)
         row["fully_correct_share"] = fully
-        row["cost_of_pass_usd"] = row["cost_per_document_usd"] / fully if fully else "not defined"
-        row["total_cost_usd"] = sum(r["cost_usd"] for r in mine)
+        row["cost_of_pass_usd"] = (row["cost_per_document_usd"] / fully
+                                   if fully and row["cost_per_document_usd"] is not None else "not defined")
+        row["total_cost_usd"] = sum(r["cost_usd"] for r in completed)
         row["runs_with_unsure_names"] = sum(1 for r in mine if r["contains_unsure"])
         row["unsure_names"] = sum(r["unsure_names"] for r in mine)
         out.append(row)

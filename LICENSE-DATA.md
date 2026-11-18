@@ -1,6 +1,6 @@
 # Licence of the data
 
-Copyright (c) 2026 <Stefano Fanelli>
+Copyright (c) 2026 Stefano Fanelli
 
 The following parts of this repository are licensed under the Creative Commons Attribution 4.0 International licence (CC BY 4.0), https://creativecommons.org/licenses/by/4.0/:
 

@@ -9,8 +9,8 @@ authors:
     # orcid: "https://orcid.org/0000-0000-0000-0000"
 repository-code: "https://github.com/Steve-Git9/CLIC_Scorecard_pipeline"
 license: MIT
-date-released: "<2026-11-19>"
-version: "<thesis-v1>"
+date-released: "2026-11-19"
+version: "thesis-v1"
 keywords:
   - information extraction
   - large language models

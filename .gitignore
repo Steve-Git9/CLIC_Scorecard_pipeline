@@ -62,3 +62,7 @@ CLAUDE.md
 .vscode/
 .idea/
 .DS_Store
+
+# Thesis chapter drafts with evaluation results (local only)
+/Chapter_4_Evaluation.md
+/Chapter_4_Evaluation_with_baseline.md

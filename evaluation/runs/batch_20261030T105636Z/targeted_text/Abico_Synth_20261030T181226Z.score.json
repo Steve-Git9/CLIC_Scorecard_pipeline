@@ -1,0 +1,283 @@
+{
+  "validity": {
+    "first_attempt": true,
+    "first_attempt_reason": null,
+    "after_repair": true,
+    "after_repair_problems": []
+  },
+  "scalars": [
+    {
+      "field": "proposal.proposal_acronym",
+      "gold": "ReCoSE",
+      "extracted": "ReCoSE",
+      "outcome": "correct"
+    },
+    {
+      "field": "proposal.proposal_title",
+      "gold": "Renewable Composite Systems with Circular Engineering",
+      "extracted": "Renewable Composite Systems with Circular Engineering ReCoSE",
+      "outcome": "wrong"
+    },
+    {
+      "field": "proposal.call_identifier",
+      "gold": "7421_18_2026",
+      "extracted": null,
+      "outcome": "miss"
+    },
+    {
+      "field": "proposal.submission_date",
+      "gold": null,
+      "extracted": null,
+      "outcome": "correct"
+    },
+    {
+      "field": "proposal_facts.requested_total_cents",
+      "gold": 221860000,
+      "extracted": 354540000,
+      "outcome": "wrong"
+    },
+    {
+      "field": "proposal_facts.trl_start",
+      "gold": null,
+      "extracted": null,
+      "outcome": "correct"
+    },
+    {
+      "field": "proposal_facts.trl_target",
+      "gold": null,
+      "extracted": null,
+      "outcome": "correct"
+    },
+    {
+      "field": "proposal_facts.mcrl_start",
+      "gold": null,
+      "extracted": null,
+      "outcome": "correct"
+    },
+    {
+      "field": "proposal_facts.mcrl_target",
+      "gold": null,
+      "extracted": null,
+      "outcome": "correct"
+    }
+  ],
+  "scalar_accuracy": 0.6666666666666666,
+  "partners": {
+    "entries": [
+      {
+        "partner_name": "NorthGrid Energy WS",
+        "class": "supported_extra",
+        "gold_partner": null,
+        "reason": "name appears in the Docling Markdown",
+        "unsure_case": null,
+        "decided": false,
+        "requested_cents": 1500000,
+        "amount_outcome": null,
+        "amount_weight": 0.0,
+        "weights": {
+          "matched": 0.0,
+          "duplicate": 0.0,
+          "supported_extra": 1.0,
+          "unsupported_extra": 0.0
+        },
+        "extra_weight": 1.0
+      },
+      {
+        "partner_name": "ForestLoop Fibre",
+        "class": "supported_extra",
+        "gold_partner": null,
+        "reason": "name appears in the Docling Markdown",
+        "unsure_case": null,
+        "decided": false,
+        "requested_cents": 2240000,
+        "amount_outcome": null,
+        "amount_weight": 0.0,
+        "weights": {
+          "matched": 0.0,
+          "duplicate": 0.0,
+          "supported_extra": 1.0,
+          "unsupported_extra": 0.0
+        },
+        "extra_weight": 1.0
+      },
+      {
+        "partner_name": "Atmosense",
+        "class": "supported_extra",
+        "gold_partner": null,
+        "reason": "name appears in the Docling Markdown",
+        "unsure_case": null,
+        "decided": false,
+        "requested_cents": 560000,
+        "amount_outcome": null,
+        "amount_weight": 0.0,
+        "weights": {
+          "matched": 0.0,
+          "duplicate": 0.0,
+          "supported_extra": 1.0,
+          "unsupported_extra": 0.0
+        },
+        "extra_weight": 1.0
+      },
+      {
+        "partner_name": "NordWindow Group",
+        "class": "supported_extra",
+        "gold_partner": null,
+        "reason": "name appears in the Docling Markdown",
+        "unsure_case": null,
+        "decided": false,
+        "requested_cents": 2240000,
+        "amount_outcome": null,
+        "amount_weight": 0.0,
+        "weights": {
+          "matched": 0.0,
+          "duplicate": 0.0,
+          "supported_extra": 1.0,
+          "unsupported_extra": 0.0
+        },
+        "extra_weight": 1.0
+      },
+      {
+        "partner_name": "Aurora Shipworks",
+        "class": "supported_extra",
+        "gold_partner": null,
+        "reason": "name appears in the Docling Markdown",
+        "unsure_case": null,
+        "decided": false,
+        "requested_cents": 1120000,
+        "amount_outcome": null,
+        "amount_weight": 0.0,
+        "weights": {
+          "matched": 0.0,
+          "duplicate": 0.0,
+          "supported_extra": 1.0,
+          "unsupported_extra": 0.0
+        },
+        "extra_weight": 1.0
+      },
+      {
+        "partner_name": "PolyNova Labs",
+        "class": "supported_extra",
+        "gold_partner": null,
+        "reason": "name appears in the Docling Markdown",
+        "unsure_case": null,
+        "decided": false,
+        "requested_cents": null,
+        "amount_outcome": null,
+        "amount_weight": 0.0,
+        "weights": {
+          "matched": 0.0,
+          "duplicate": 0.0,
+          "supported_extra": 1.0,
+          "unsupported_extra": 0.0
+        },
+        "extra_weight": 1.0
+      },
+      {
+        "partner_name": "Oerlikon Balzer",
+        "class": "supported_extra",
+        "gold_partner": null,
+        "reason": "name appears in the Docling Markdown",
+        "unsure_case": null,
+        "decided": false,
+        "requested_cents": null,
+        "amount_outcome": null,
+        "amount_weight": 0.0,
+        "weights": {
+          "matched": 0.0,
+          "duplicate": 0.0,
+          "supported_extra": 1.0,
+          "unsupported_extra": 0.0
+        },
+        "extra_weight": 1.0
+      }
+    ],
+    "gold_status": [
+      {
+        "partner_name": "Northern Lakes University of Applied Sciences",
+        "requested_cents": 48720000,
+        "found": 0.0,
+        "unsure": false
+      },
+      {
+        "partner_name": "Lake District Technical University",
+        "requested_cents": 38240000,
+        "found": 0.0,
+        "unsure": false
+      },
+      {
+        "partner_name": "Nordic Institute for Sustainable Materials",
+        "requested_cents": 64230000,
+        "found": 0.0,
+        "unsure": false
+      },
+      {
+        "partner_name": "Eastern Nordic University",
+        "requested_cents": 36950000,
+        "found": 0.0,
+        "unsure": false
+      },
+      {
+        "partner_name": "Coastal Finland University",
+        "requested_cents": 33720000,
+        "found": 0.0,
+        "unsure": false
+      }
+    ],
+    "gold_count": 5,
+    "matched_count": 0.0,
+    "missed_gold": [
+      "Northern Lakes University of Applied Sciences",
+      "Lake District Technical University",
+      "Nordic Institute for Sustainable Materials",
+      "Eastern Nordic University",
+      "Coastal Finland University"
+    ],
+    "missed_weight": 5.0,
+    "recall": 0.0,
+    "amount_accuracy": null,
+    "amount_outcomes": {},
+    "classes": {
+      "matched": 0.0,
+      "duplicate": 0.0,
+      "supported_extra": 7.0,
+      "unsupported_extra": 0.0
+    },
+    "extracted_count": 7,
+    "extra_weight": 7.0,
+    "unsure": [],
+    "unsure_error_weight": 0,
+    "sum_check": {
+      "stated_total_cents": 221860000,
+      "matched_sum_cents": 0,
+      "matched_without_amount": 0,
+      "matched_sum_equals_total": false,
+      "supported_extras_sum_cents": 7660000,
+      "sum_with_supported_extras_cents": 7660000,
+      "sum_with_supported_extras_equals_total": false,
+      "supported_extras_make_sum_deviate": false
+    }
+  },
+  "errors": {
+    "misses": 6.0,
+    "wrong_values": 2.0,
+    "unsupported_values": 0.0,
+    "unsupported_extras": 0.0,
+    "duplicates": 0.0,
+    "total": 8.0,
+    "from_unsure_names": 0,
+    "certain": 8.0
+  },
+  "unsupported_values_including_extras": 0.0,
+  "reviewer_decisions": {
+    "supported_extras": 7.0,
+    "unsure_names": 0
+  },
+  "contains_unsure": false,
+  "fully_correct": 0.0,
+  "run_file": "Abico_Synth_20261030T181226Z.run.json",
+  "configuration": "targeted_text",
+  "document": "Abico_Synth",
+  "protocol": "schema",
+  "run_status": "ok",
+  "markdown_available": true
+}

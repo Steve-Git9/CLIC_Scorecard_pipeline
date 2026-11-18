@@ -1,0 +1,110 @@
+{
+  "arm": "D",
+  "model": "openai/gpt-oss-20b",
+  "provider": "groq",
+  "source_file": "SP02.md",
+  "started_utc": "2026-10-30T18:51:05Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 3.96,
+  "attempts": 1,
+  "prompt_tokens": 21606,
+  "completion_tokens": 371,
+  "cost_usd": 0.002346,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-20b",
+  "parts": 1,
+  "output_file": "SP02_20261030T185105Z.json",
+  "replies_file": "SP02_20261030T185105Z.replies.json",
+  "total_seconds": 3.99,
+  "evaluation": {
+    "document": "SP02",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\D\\SP02_20261030T185105Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 143.97,
+      "docling_markdown_sha256": "506d02b5ac82270a9644747e6f9c112fe37b6be752aae88b6e0c7df578edaed9"
+    },
+    "runner_wall_clock_seconds": 3.99,
+    "end_to_end_seconds": 147.96,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 21606,
+      "completion_tokens": 371,
+      "reasoning_tokens": 180,
+      "image_tokens": null,
+      "cached_tokens": 512
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.00171255,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-20b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-20b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 132854,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 3.96
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 1.109288843,
+          "prompt_tokens": 21606,
+          "prompt_time": 1.722330124,
+          "completion_tokens": 371,
+          "completion_time": 0.399503594,
+          "total_tokens": 21977,
+          "total_time": 2.121833718,
+          "prompt_tokens_details": {
+            "cached_tokens": 512
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 180
+          }
+        },
+        "reply": "{\"proposal\":{\"proposal_acronym\":\"TIDEMESH\",\"proposal_title\":\"Adaptive Sensor Networks for Resilient Coastal Infrastructure\",\"call_identifier\":\"BF2026/93782\",\"submission_date\":\"2026-04-02\"},\"proposal_facts\":{\"requested_total\":\"EUR 991,100\",\"trl_start\":null,\"trl_target\":null,\"mcrl_start\":1,\"mcrl_target\":4},\"partners\":[{\"partner_name\":\"Nordvalen Systems Oy (NVS)\",\"requested\":\"181.6\"},{\"partner_name\":\"Kaltiora Analytics Oy (KTA)\",\"requested\":\"190.9\"},{\"partner_name\":\"Lumenthar Marine Oy (LMR)\",\"requested\":null},{\"partner_name\":\"Havrenmaa University (HVU)\",\"requested\":null},{\"partner_name\":\"Taimerra Research Institute (TMI)\",\"requested\":null}]}",
+        "reasoning": "Need proposal, facts, partners. Extract: proposal_acronym TIDEMESH, title Adaptive Sensor Networks for Resilient Coastal Infrastructure, call_identifier BF2026/93782, submission_date 2026-04-02. requested_total: EUR 991,100. trl_start/target? not given. mcrl_start 1, mcrl_target 4. partners: list five with requested amounts: NVS 181.6k? but requested funding per partner table shows amounts in EURthousand. Should copy as written: \"181.6\" etc. LMR no funding requested. HVU shown in Figure 5.1 (no amount). TMI shown in Figure 5.1. So requested: NVS \"181.6\", KTA \"190.9\", LMR null, HVU null, TMI null.",
+        "prompt_tokens": 21606,
+        "completion_tokens": 371,
+        "total_tokens": 21977,
+        "reasoning_tokens": 180,
+        "image_tokens": null,
+        "cached_tokens": 512,
+        "seconds": 3.96,
+        "model_reported": "openai/gpt-oss-20b",
+        "finish_reason": "stop",
+        "cost_usd": 0.00171255
+      }
+    ]
+  }
+}

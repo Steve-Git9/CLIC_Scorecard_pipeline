@@ -1,0 +1,166 @@
+{
+  "arm": "targeted_text",
+  "mode": "text",
+  "model": "openai/gpt-oss-120b",
+  "provider": "groq",
+  "source_file": "SP04.pdf",
+  "started_utc": "2026-10-31T07:29:31Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested[Hallvik] (67450 cents) is not on that partner's verified table row",
+    "requested[Orrenfjord] (56880 cents) is not on that partner's verified table row",
+    "requested[Marovik] (59280 cents) is not on that partner's verified table row",
+    "requested[Quenmark] (50700 cents) is not on that partner's verified table row",
+    "requested[Ostrelund] (21300 cents) is not on that partner's verified table row"
+  ],
+  "pages_total": 63,
+  "pages_sent": [
+    1,
+    11,
+    19,
+    23,
+    32,
+    40,
+    50,
+    53
+  ],
+  "scanned_pages": [],
+  "ocr_pages": [],
+  "images_sent": 0,
+  "located": {
+    "proposal": [
+      1,
+      3,
+      40
+    ],
+    "budget": [
+      50,
+      53,
+      40
+    ],
+    "partners": [
+      19,
+      23,
+      32
+    ],
+    "readiness": [
+      11,
+      37,
+      61
+    ]
+  },
+  "located_by": {
+    "proposal": "keywords",
+    "budget": "keywords",
+    "partners": "keywords",
+    "readiness": "keywords"
+  },
+  "tables_found": 4,
+  "tables_verified": 2,
+  "page_map_cached": false,
+  "calls": 1,
+  "seconds": 1.82,
+  "attempts": 1,
+  "prompt_tokens": 3942,
+  "completion_tokens": 559,
+  "cost_usd": 0.001011,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-120b",
+  "steps": {
+    "page_map": 7.27,
+    "locate": 0.01,
+    "identifier_hints": 0.23,
+    "tables": 0.75,
+    "text_and_ocr": 0.02,
+    "model": 1.83
+  },
+  "context_splits": 0,
+  "identifiers_filled": {},
+  "partners_confirmed_by_table": 1,
+  "output_file": "SP04_20261031T072931Z.json",
+  "replies_file": "SP04_20261031T072931Z.replies.json",
+  "total_seconds": 10.14,
+  "trace_file": "SP04_20261031T072931Z.trace.json",
+  "evaluation": {
+    "document": "SP04",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\targeted_text\\SP04_20261031T072931Z.run.json",
+    "input": "pdf",
+    "preparation": {},
+    "runner_wall_clock_seconds": 10.15,
+    "end_to_end_seconds": 10.15,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 3942,
+      "completion_tokens": 559,
+      "reasoning_tokens": 259,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.0009267,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-120b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-120b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 17360,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 1.82
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.087461833,
+          "prompt_tokens": 3942,
+          "prompt_time": 0.198001913,
+          "completion_tokens": 559,
+          "completion_time": 1.157451749,
+          "total_tokens": 4501,
+          "total_time": 1.355453662,
+          "completion_tokens_details": {
+            "reasoning_tokens": 259
+          }
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"MAROFLOW\",\n    \"proposal_title\": \"MAROFLOW Marine Observation Flows for Shared Coastal Planning\",\n    \"call_identifier\": \"BSR2026C41\",\n    \"submission_date\": \"2026-08-10\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2,946.1 thousand\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Hallvik\",\n      \"requested\": \"674.5\"\n    },\n    {\n      \"partner_name\": \"Orrenfjord\",\n      \"requested\": \"568.8\"\n    },\n    {\n      \"partner_name\": \"Marovik\",\n      \"requested\": \"592.8\"\n    },\n    {\n      \"partner_name\": \"Quenmark\",\n      \"requested\": \"507.0\"\n    },\n    {\n      \"partner_name\": \"Ostrelund\",\n      \"requested\": \"213.0\"\n    },\n    {\n      \"partner_name\": \"Brenvik\",\n      \"requested\": \"0.0\"\n    },\n    {\n      \"partner_name\": \"Eskeby\",\n      \"requested\": null\n    }\n  ]\n}",
+        "reasoning": "We need JSON. Fill fields.\n\nproposal_acronym: MAROFLOW. title: \"MAROFLOW Marine Observation Flows for Shared Coastal Planning\". call_identifier: BSR2026C41. submission_date: 10 August 2026 -> 2026-08-10.\n\nproposal_facts: requested_total from revised budget total requested funding: \"EUR 2,946.1 thousand\". Keep as written. trl_start/target not given. null. mcrl also null.\n\npartners: list in document order (probably as in table 5.2). Use partner short names? Need partner_name exactly as written. Use short names from table: Hallvik, Orrenfjord, Marovik, Quenmark, Ostrelund, Brenvik, Eskeby. Requested: from Requested funding column. For Eskeby it's \"calculated at the funding rate\" – that's not a amount, so treat as null? It's a string but not amount. Probably null because not a numeric amount. We'll set null.\n\nValues: Hallvik \"674.5\", but need include currency? Table shows numbers without EUR. The instruction: copy cells as written. So just \"674.5\". No currency. Keep as string.\n\nSimilarly others.\n\nReturn JSON.",
+        "prompt_tokens": 3942,
+        "completion_tokens": 559,
+        "total_tokens": 4501,
+        "reasoning_tokens": 259,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.82,
+        "model_reported": "openai/gpt-oss-120b",
+        "finish_reason": "stop",
+        "cost_usd": 0.0009267
+      }
+    ]
+  }
+}

@@ -1,0 +1,330 @@
+{
+  "arm": "multimodal_open",
+  "strict": false,
+  "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "provider": "deepinfra",
+  "source_file": "SP04.pdf",
+  "started_utc": "2026-10-31T08:21:20Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "duplicate partner 'Hallvik University' dropped",
+    "duplicate partner 'Orrenfjord Marine Systems Ltd (formerly Kellmar Technologies Ltd)' dropped",
+    "duplicate partner 'Marovik Research Institute' dropped",
+    "duplicate partner 'Quenmark Sensor Works Ltd' dropped",
+    "duplicate partner 'Ostrelund Regional Development Agency' dropped",
+    "duplicate partner 'Brenvik Port Logistics Ltd' dropped",
+    "duplicate partner 'Eskeby Technical University' dropped",
+    "duplicate partner 'Hallvik' dropped",
+    "duplicate partner 'Marovik' dropped",
+    "duplicate partner 'Quenmark' dropped",
+    "duplicate partner 'Ostrelund' dropped",
+    "duplicate partner 'Brenvik' dropped",
+    "requested[Eskeby]: could not parse amount 'calculated at the funding rate'"
+  ],
+  "batch_size": 10,
+  "overlap": 1,
+  "batches": 7,
+  "seconds": 387.71,
+  "attempts": 7,
+  "prompt_tokens": 138926,
+  "completion_tokens": 1680,
+  "cost_usd": 0.029264,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "output_file": "SP04_20261031T082120Z.json",
+  "replies_file": "SP04_20261031T082120Z.replies.json",
+  "total_seconds": 391.41,
+  "evaluation": {
+    "document": "SP04",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\multimodal_open\\SP04_20261031T082120Z.run.json",
+    "input": "pdf",
+    "preparation": {},
+    "runner_wall_clock_seconds": 391.41,
+    "end_to_end_seconds": 391.41,
+    "calls": 7,
+    "failed_calls": 0,
+    "attempts": 7,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 138926,
+      "completion_tokens": 1680,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 7,
+      "completion_tokens": 7,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.0292636,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 2500849,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 14.52
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20263,
+          "completion_tokens": 136,
+          "estimated_cost": 0.00414508,
+          "prompt_tokens_details": null
+        },
+        "reply": "```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"MAROFLOW\",\n    \"proposal_title\": \"Marine Observation Flows for Shared Coastal Planning\",\n    \"call_identifier\": \"BSR2026C41\",\n    \"submission_date\": \"2026-08-10\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 3,207,500\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 136,
+        "total_tokens": 20263,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 14.52,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00414508
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 2626609,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 34.89
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20390,
+          "completion_tokens": 263,
+          "estimated_cost": 0.0042568400000000004,
+          "prompt_tokens_details": null
+        },
+        "reply": "```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": 3,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Hallvik University\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Orrenfjord Marine Systems Ltd (formerly Kellmar Technologies Ltd)\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Marovik Research Institute\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Quenmark Sensor Works Ltd\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Ostrelund Regional Development Agency\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Brenvik Port Logistics Ltd\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Eskeby Technical University\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 263,
+        "total_tokens": 20390,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 34.89,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00425684
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 2451869,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 58.05
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20510,
+          "completion_tokens": 383,
+          "estimated_cost": 0.00436244,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided pages. The document contains a consortium overview and partner descriptions, but there is no table or section that lists the requested funding amount for each partner. The text on page 19 mentions that \"One partner takes part as an associated partner and does not request funding,\" and page 22 confirms that \"Brenvik ... takes part as an associated partner without requested funding.\" However, no specific monetary values are provided for any of the partners' requested grants.\n\nTherefore, for every partner, the requested amount must be set to null, as the document does not state any figures.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Hallvik University\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Orrenfjord Marine Systems Ltd (formerly Kellmar Technologies Ltd)\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Marovik Research Institute\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Quenmark Sensor Works Ltd\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Ostrelund Regional Development Agency\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Brenvik Port Logistics Ltd\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Eskeby Technical University\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 383,
+        "total_tokens": 20510,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 58.05,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00436244
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 2782413,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 52.37
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20306,
+          "completion_tokens": 179,
+          "estimated_cost": 0.00418292,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided pages. The document does not contain a partner budget table. The text describes work packages, management, impact, and market uptake, but there is no table listing partner names and their requested funding amounts. Therefore, I cannot extract the required data for the partners' requested grants.\n\nSince the required data is not present in the document, I will return null for all partner-related fields as per the instructions.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 179,
+        "total_tokens": 20306,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 52.37,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00418292
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 2866109,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 94.15
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20407,
+          "completion_tokens": 280,
+          "estimated_cost": 0.0042718,
+          "prompt_tokens_details": null
+        },
+        "reply": "```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": 4,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Hallvik\",\n      \"requested\": \"819,700\"\n    },\n    {\n      \"partner_name\": \"Kellmar\",\n      \"requested\": \"674,700\"\n    },\n    {\n      \"partner_name\": \"Marovik\",\n      \"requested\": \"621,400\"\n    },\n    {\n      \"partner_name\": \"Quenmark\",\n      \"requested\": \"539,700\"\n    },\n    {\n      \"partner_name\": \"Ostrelund\",\n      \"requested\": \"193,500\"\n    },\n    {\n      \"partner_name\": \"Brenvik\",\n      \"requested\": \"0\"\n    },\n    {\n      \"partner_name\": \"Lindmark\",\n      \"requested\": \"358,500\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 280,
+        "total_tokens": 20407,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 94.15,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0042718
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 2271021,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 79.75
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20409,
+          "completion_tokens": 282,
+          "estimated_cost": 0.00427356,
+          "prompt_tokens_details": null
+        },
+        "reply": "```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2,946.1 thousand\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Hallvik\",\n      \"requested\": \"674.5\"\n    },\n    {\n      \"partner_name\": \"Orrenfjord\",\n      \"requested\": \"568.8\"\n    },\n    {\n      \"partner_name\": \"Marovik\",\n      \"requested\": \"592.8\"\n    },\n    {\n      \"partner_name\": \"Quenmark\",\n      \"requested\": \"507.0\"\n    },\n    {\n      \"partner_name\": \"Ostrelund\",\n      \"requested\": \"213.0\"\n    },\n    {\n      \"partner_name\": \"Brenvik\",\n      \"requested\": \"0.0\"\n    },\n    {\n      \"partner_name\": \"Eskeby\",\n      \"requested\": \"calculated at the funding rate\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 282,
+        "total_tokens": 20409,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 79.75,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00427356
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1936002,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 53.98
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 18164,
+          "total_tokens": 18321,
+          "completion_tokens": 157,
+          "estimated_cost": 0.0037709600000000003,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed all the provided pages. The document does not contain a partner budget table. The pages detail work packages, deliverables, project targets, and a risk register, but there is no table listing partners and their requested funding amounts. Therefore, I cannot extract the required data for the partners' requested amounts.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 18164,
+        "completion_tokens": 157,
+        "total_tokens": 18321,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 53.98,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00377096
+      }
+    ]
+  }
+}

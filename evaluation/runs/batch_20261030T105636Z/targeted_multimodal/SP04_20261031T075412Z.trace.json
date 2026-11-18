@@ -1,0 +1,439 @@
+{
+ "located": {
+  "proposal": [
+   {
+    "page": 1,
+    "score": 13.25
+   },
+   {
+    "page": 3,
+    "score": 8.0
+   },
+   {
+    "page": 40,
+    "score": 8.0
+   }
+  ],
+  "budget": [
+   {
+    "page": 50,
+    "score": 25.0
+   },
+   {
+    "page": 53,
+    "score": 24.0
+   },
+   {
+    "page": 40,
+    "score": 21.25
+   }
+  ],
+  "partners": [
+   {
+    "page": 19,
+    "score": 19.25
+   },
+   {
+    "page": 23,
+    "score": 16.25
+   },
+   {
+    "page": 32,
+    "score": 15.75
+   }
+  ],
+  "readiness": [
+   {
+    "page": 11,
+    "score": 10.0
+   },
+   {
+    "page": 37,
+    "score": 7.5
+   },
+   {
+    "page": 61,
+    "score": 6.75
+   }
+  ]
+ },
+ "tables": [
+  {
+   "page": 19,
+   "index": 0,
+   "rows": [
+    [
+     "Legal name",
+     "Short name",
+     "Acronym",
+     "Partner type"
+    ],
+    [
+     "Hallvik University",
+     "Hallvik",
+     "HVU",
+     "University (lead partner)"
+    ],
+    [
+     "Orrenfjord Marine Systems Ltd (formerly Kellmar Technologies Ltd)",
+     "Orrenfjord",
+     "OMS",
+     "Company"
+    ],
+    [
+     "Marovik Research Institute",
+     "Marovik",
+     "MARO",
+     "Research organisation"
+    ],
+    [
+     "Quenmark Sensor Works Ltd",
+     "Quenmark",
+     "QSW",
+     "Company"
+    ],
+    [
+     "Ostrelund Regional Development Agency",
+     "Ostrelund",
+     "ORDA",
+     "Public body"
+    ],
+    [
+     "Brenvik Port Logistics Ltd",
+     "Brenvik",
+     "BPL",
+     "Company (associated partner)"
+    ],
+    [
+     "Eskeby Technical University",
+     "Eskeby",
+     "ETU",
+     "University"
+    ]
+   ],
+   "verification": {
+    "checks": [],
+    "columns": {},
+    "verified": false
+   }
+  },
+  {
+   "page": 40,
+   "index": 0,
+   "rows": [
+    [
+     "Partner",
+     "Requested amount (EUR)"
+    ],
+    [
+     "Hallvik",
+     "819,700"
+    ],
+    [
+     "Kellmar",
+     "674,700"
+    ],
+    [
+     "Marovik",
+     "621,400"
+    ],
+    [
+     "Quenmark",
+     "539,700"
+    ],
+    [
+     "Ostrelund",
+     "193,500"
+    ],
+    [
+     "Brenvik",
+     "0"
+    ],
+    [
+     "Lindmark",
+     "358,500"
+    ],
+    [
+     "Total",
+     "3,207,500"
+    ]
+   ],
+   "verification": {
+    "checks": [
+     {
+      "kind": "column",
+      "column": 1,
+      "row": 8,
+      "expected": 320750000,
+      "found": 320750000,
+      "ok": true
+     }
+    ],
+    "columns": {
+     "1": "verified"
+    },
+    "verified": true
+   }
+  },
+  {
+   "page": 50,
+   "index": 0,
+   "rows": [
+    [
+     "Partner",
+     "Eligible costs",
+     "Funding rate (%)",
+     "Requested funding"
+    ],
+    [
+     "Hallvik",
+     "950.0",
+     "71",
+     "674.5"
+    ],
+    [
+     "Orrenfjord",
+     "790.0",
+     "72",
+     "568.8"
+    ],
+    [
+     "Marovik",
+     "780.0",
+     "76",
+     "592.8"
+    ],
+    [
+     "Quenmark",
+     "650.0",
+     "78",
+     "507.0"
+    ],
+    [
+     "Ostrelund",
+     "300.0",
+     "71",
+     "213.0"
+    ],
+    [
+     "Brenvik",
+     "0.0",
+     "n/a",
+     "0.0"
+    ],
+    [
+     "Eskeby",
+     "520.0",
+     "75",
+     "calculated at the funding rate"
+    ],
+    [
+     "Total",
+     "3,990.0",
+     "",
+     "2,946.1"
+    ]
+   ],
+   "verification": {
+    "checks": [
+     {
+      "kind": "column",
+      "column": 1,
+      "row": 8,
+      "expected": 399000,
+      "found": 399000,
+      "ok": true
+     },
+     {
+      "kind": "column",
+      "column": 3,
+      "row": 8,
+      "expected": 294610,
+      "found": 255610,
+      "ok": false
+     }
+    ],
+    "columns": {
+     "1": "verified",
+     "3": "failed"
+    },
+    "verified": true
+   }
+  },
+  {
+   "page": 53,
+   "index": 0,
+   "rows": [
+    [
+     "Cost category",
+     "Amount"
+    ],
+    [
+     "Staff costs",
+     "2,134.6"
+    ],
+    [
+     "Office and administration",
+     "290.7"
+    ],
+    [
+     "Travel and accommodation",
+     "231.7"
+    ],
+    [
+     "External expertise and services",
+     "1,081.0"
+    ],
+    [
+     "Equipment",
+     "252.0"
+    ],
+    [
+     "Total eligible costs",
+     "3,990.0"
+    ],
+    [
+     "Costs that are not eligible",
+     "203.4"
+    ],
+    [
+     "Total budget",
+     "4,193.4"
+    ],
+    [
+     "Costs of the associated partner",
+     "270.0"
+    ],
+    [
+     "Total project cost",
+     "4,463.4"
+    ]
+   ],
+   "verification": {
+    "checks": [
+     {
+      "kind": "column",
+      "column": 1,
+      "row": 6,
+      "expected": 399000,
+      "found": 399000,
+      "ok": true
+     },
+     {
+      "kind": "column",
+      "column": 1,
+      "row": 8,
+      "expected": 419340,
+      "found": 20340,
+      "ok": false
+     },
+     {
+      "kind": "column",
+      "column": 1,
+      "row": 10,
+      "expected": 446340,
+      "found": 27000,
+      "ok": false
+     }
+    ],
+    "columns": {
+     "1": "partial"
+    },
+    "verified": false
+   }
+  }
+ ],
+ "partner_budget_table": {
+  "page": 40,
+  "index": 0,
+  "column": 1,
+  "header": "Requested amount (EUR)",
+  "partners": [
+   {
+    "name": "Hallvik",
+    "amount_text": "819,700",
+    "cents": 81970000
+   },
+   {
+    "name": "Kellmar",
+    "amount_text": "674,700",
+    "cents": 67470000
+   },
+   {
+    "name": "Marovik",
+    "amount_text": "621,400",
+    "cents": 62140000
+   },
+   {
+    "name": "Quenmark",
+    "amount_text": "539,700",
+    "cents": 53970000
+   },
+   {
+    "name": "Ostrelund",
+    "amount_text": "193,500",
+    "cents": 19350000
+   },
+   {
+    "name": "Brenvik",
+    "amount_text": "0",
+    "cents": 0
+   },
+   {
+    "name": "Lindmark",
+    "amount_text": "358,500",
+    "cents": 35850000
+   }
+  ],
+  "total_text": "3,207,500"
+ },
+ "identifier_hints": {
+  "cover_title": "MAROFLOW",
+  "cover_page": 1,
+  "acronym_candidates": [
+   "MAROFLOW"
+  ],
+  "labelled": {
+   "acronym": [],
+   "title": [],
+   "call": [
+    {
+     "page": 1,
+     "value": "BSR2026C41"
+    }
+   ]
+  },
+  "call_ids": []
+ },
+ "page_map_sha256": "a92a06f96ff9b071f820abbb3f974eb6b4741edc5e0e9883a208d3fce519aa3e",
+ "reconciliation": [
+  {
+   "partner_name": "Hallvik University",
+   "status": "mismatch"
+  },
+  {
+   "partner_name": "Orrenfjord Marine Systems Ltd (formerly Kellmar Technologies Ltd)",
+   "status": "mismatch"
+  },
+  {
+   "partner_name": "Marovik Research Institute",
+   "status": "mismatch"
+  },
+  {
+   "partner_name": "Quenmark Sensor Works Ltd",
+   "status": "mismatch"
+  },
+  {
+   "partner_name": "Ostrelund Regional Development Agency",
+   "status": "mismatch"
+  },
+  {
+   "partner_name": "Brenvik Port Logistics Ltd",
+   "status": "confirmed"
+  },
+  {
+   "partner_name": "Eskeby Technical University",
+   "status": "unchecked"
+  }
+ ]
+}

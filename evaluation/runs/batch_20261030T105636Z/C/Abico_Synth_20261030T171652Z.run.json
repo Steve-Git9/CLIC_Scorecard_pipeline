@@ -1,0 +1,107 @@
+{
+  "arm": "C",
+  "model": "openai/gpt-oss-120b",
+  "provider": "groq",
+  "source_file": "Abico_Synth.md",
+  "started_utc": "2026-10-30T17:16:52Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 3.46,
+  "attempts": 1,
+  "prompt_tokens": 25269,
+  "completion_tokens": 476,
+  "cost_usd": 0.004147,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-120b",
+  "parts": 1,
+  "output_file": "Abico_Synth_20261030T171652Z.json",
+  "replies_file": "Abico_Synth_20261030T171652Z.replies.json",
+  "total_seconds": 3.51,
+  "evaluation": {
+    "document": "Abico_Synth",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\C\\Abico_Synth_20261030T171652Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 244.1,
+      "docling_markdown_sha256": "db2432c37da8bfa28fb0856593c407d8265b4ca2ce0ecca1fa21a414dcb13c5f"
+    },
+    "runner_wall_clock_seconds": 3.51,
+    "end_to_end_seconds": 247.61,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 25269,
+      "completion_tokens": 476,
+      "reasoning_tokens": 303,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.00407595,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-120b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-120b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 171235,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 3.46
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.10346033,
+          "prompt_tokens": 25269,
+          "prompt_time": 1.180759496,
+          "completion_tokens": 476,
+          "completion_time": 1.218878248,
+          "total_tokens": 25745,
+          "total_time": 2.399637744,
+          "completion_tokens_details": {
+            "reasoning_tokens": 303
+          }
+        },
+        "reply": "{\"proposal\":{\"proposal_acronym\":\"ReCoSE\",\"proposal_title\":\"Renewable Composite Systems with Circular Engineering ReCoSE\",\"call_identifier\":null,\"submission_date\":null},\"proposal_facts\":{\"requested_total\":\"EUR 2.218.600\",\"trl_start\":null,\"trl_target\":null,\"mcrl_start\":null,\"mcrl_target\":null},\"partners\":[{\"partner_name\":\"NLUAS University of Applied Science\",\"requested\":\"487 200\"},{\"partner_name\":\"Lake District Technical University\",\"requested\":\"382 400\"},{\"partner_name\":\"Nordic Institute for Sustainable Materials NISM\",\"requested\":\"642 300\"},{\"partner_name\":\"Eastern Nordic University ENU\",\"requested\":\"369 500\"},{\"partner_name\":\"Coastal Finland University CFU\",\"requested\":\"337 200\"}]}",
+        "reasoning": "We need proposal_acronym? Not given. Title is \"Renewable Composite Systems with Circular Engineering ReCoSE\". Acronym maybe ReCoSE. Use that. call_identifier not present -> null. submission_date not present -> null. requested_total: total budget public joint research project EUR 2.218.600 and total budget EUR 3.860 million. Which is requested total? Likely total grant requested = EUR 2.218.600 (public). Use that string as written \"EUR 2.218.600\". trl_start/target not mentioned -> null. mcrl also null. Partners: list research institutes with requested amounts from table 21. Also companies? requested amounts for companies not given except funding plan. Use those with amounts: NLUAS 487 200, LDTU 382 400, NISM 642 300, ENU 369 500, CFU 337 200. Currency? amounts without EUR but assume EUR. Keep as \"EUR 487 200\". Use as written? Table shows numbers with spaces. We'll copy with spaces and no currency? It says just numbers. We'll put null for missing currency? Probably include as written \"487 200\". But schema expects string. Use as written. Partners order as in table: NLUAS University of Applied Science, Lake District Technical University, Nordic Institute for Sustainable Materials NISM, Eastern Nordic University ENU, Coastal Finland University CFU. Provide requested amounts.",
+        "prompt_tokens": 25269,
+        "completion_tokens": 476,
+        "total_tokens": 25745,
+        "reasoning_tokens": 303,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 3.46,
+        "model_reported": "openai/gpt-oss-120b",
+        "finish_reason": "stop",
+        "cost_usd": 0.00407595
+      }
+    ]
+  }
+}

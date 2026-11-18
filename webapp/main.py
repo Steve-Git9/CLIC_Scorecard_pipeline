@@ -1,15 +1,15 @@
-"""CLIC extraction web app: Markdown + text extraction only, FastAPI + HTMX + Tailwind.
+"""CLIC extraction web app: FastAPI + Jinja2 on the server, HTMX + Tailwind + Chart.js in the browser.
 
-A second, separate interface to the same backend logic already used by app/viewer.py -
-no logic is duplicated here, only the presentation layer differs (server-rendered HTML
-instead of Streamlit widgets). Reuses clic_extract (extraction), sdgautomation (local
-SDG classifier), and src/pipeline (config, db, partner matching, save, dashboard
-queries) exactly as they are.
+The interface for the pilot at CLIC. Reuses clic_extract (extraction), sdgautomation (local
+SDG classifier) and src/pipeline (config, db, partner matching, save, dashboard queries)
+exactly as they are; the eleven configurations are dispatched as in the evaluation's batch
+runner (src/evaluation/run_configs.py). The evaluation itself was run with that batch runner,
+not through this interface.
 
-Flow: upload a .md -> pick an arm (B/C/D) -> Extract -> a clean, read-only review page
--> Approve -> a form requiring every field to be filled (per the project's own rule,
-stricter than the database's actual NOT NULL constraints) -> Save -> a dashboard of
-everything saved so far. The Markdown + text pipeline only: no multimodal/PDF path here.
+Flow: upload a PDF (or a converted .md for the text configurations) -> pick one of the eleven
+configurations -> Extract -> a clean, read-only review page -> Approve -> a form requiring
+every field to be filled (per the project's own rule, stricter than the database's actual
+NOT NULL constraints) -> Save -> a dashboard of everything saved so far.
 
 Run from the project root:
     .venv\\Scripts\\python -m uvicorn webapp.main:app --reload --port 8000
@@ -37,7 +37,7 @@ from fastapi.templating import Jinja2Templates
 from markupsafe import Markup
 
 APP_ROOT = Path(__file__).resolve().parent.parent
-SECOND_STEP_ROOT = APP_ROOT / "second_step_CLICpipeline"
+SECOND_STEP_ROOT = APP_ROOT / "Second_step_CLICpipeline"  # exact case: Linux and macOS paths are case sensitive
 SDG_ROOT = APP_ROOT / "sdgautomation"
 INPUT_ROOT = SECOND_STEP_ROOT / "input"
 OUTPUT_ROOT = SECOND_STEP_ROOT / "output"
@@ -49,8 +49,16 @@ for _p in (APP_ROOT, SECOND_STEP_ROOT, SDG_ROOT):
         sys.path.insert(0, str(_p))
 
 from clic_extract.backends import BackendError, load_arms, verify_token  # noqa: E402
-from clic_extract.multimodal import COMBINED_MODELS, extract_native_text, run_one_combined  # noqa: E402
+from clic_extract.freeform import run_one_freeform  # noqa: E402
+from clic_extract.multimodal import (  # noqa: E402
+    DEFAULT_BATCH_OVERLAP,
+    DEFAULT_BATCH_SIZE,
+    extract_native_text,
+    run_one_combined,
+    run_one_multimodal,
+)
 from clic_extract.run_extract import run_one  # noqa: E402
+from clic_extract.targeted import run_one_targeted  # noqa: E402
 from src.pipeline import kpi  # noqa: E402
 from src.pipeline.config import load_config  # noqa: E402
 from src.pipeline.convert import convert_pdf_to_markdown  # noqa: E402
@@ -139,6 +147,13 @@ _sdg_running: set[str] = set()
 _sdg_errors: dict[str, str] = {}
 
 
+def sdg_source_path(run: dict) -> Path:
+    """The text the SDG classifier reads: the run's Markdown source, or for configurations that
+    read the PDF, the text written next to it at upload."""
+    path = INPUT_ROOT / run.get("source_file", "")
+    return path.with_suffix(".md") if path.suffix.lower() == ".pdf" else path
+
+
 def start_sdg_job(stem: str, run: dict) -> None:
     """Start classifying in the background unless it is done or already running."""
     if stem in _sdg_result_cache or stem in _sdg_running:
@@ -148,7 +163,7 @@ def start_sdg_job(stem: str, run: dict) -> None:
 
     def work() -> None:
         try:
-            get_sdg_result(stem, INPUT_ROOT / run.get("source_file", ""))
+            get_sdg_result(stem, sdg_source_path(run))
         except Exception as exc:  # shown in the review page's SDG panel
             logging.getLogger("webapp").exception("SDG classification failed for %s", stem)
             _sdg_errors[stem] = f"{type(exc).__name__}: {exc}"
@@ -189,7 +204,7 @@ def resolve_hf_token() -> str | None:
 
 
 def save_uploaded_bytes(raw: bytes, filename: str, dest_dir: Path) -> Path:
-    """Same Windows file-lock fallback as app/viewer.save_uploaded_file."""
+    """Save an upload; if Windows holds the file open, save it under a timestamped name instead."""
     dest_dir.mkdir(parents=True, exist_ok=True)
     path = dest_dir / filename
     try:
@@ -234,116 +249,107 @@ def build_partner_rows(partners: list[dict], db_names: list[str]) -> list[dict]:
 
 # --------------------------------------------------------------------------- routes
 
+# The eleven configurations of the evaluation, grouped by approach, in the order of the thesis.
+# "markdown": reads the Docling Markdown (a PDF upload is converted first; a .md is used as is).
+# "pdf": reads the PDF itself (page images, embedded text or located pages), so a PDF is required.
+CONFIGURATIONS: list[dict[str, str]] = [
+    {"key": "B", "approach": "Text only", "input": "markdown", "model": "Qwen3.5 9B, schema enforced"},
+    {"key": "C", "approach": "Text only", "input": "markdown", "model": "gpt oss 120B, schema enforced"},
+    {"key": "D", "approach": "Text only", "input": "markdown", "model": "gpt oss 20B, schema enforced"},
+    {"key": "freeform_B", "approach": "Text only", "input": "markdown", "model": "Qwen3.5 9B, free form"},
+    {"key": "freeform_light", "approach": "Text only", "input": "markdown", "model": "Qwen3 4B, free form"},
+    {"key": "multimodal_strict", "approach": "Images only", "input": "pdf", "model": "Qwen3 VL 235B, schema enforced"},
+    {"key": "multimodal_open", "approach": "Images only", "input": "pdf", "model": "Qwen3 VL 235B, unconstrained"},
+    {"key": "multimodal_combined_qwen_vl", "approach": "Combined", "input": "pdf", "model": "Qwen3 VL 235B, text and page images"},
+    {"key": "multimodal_combined_llama4_maverick", "approach": "Combined", "input": "pdf", "model": "Llama 4 Maverick, text and page images"},
+    {"key": "targeted_text", "approach": "Targeted", "input": "pdf", "model": "gpt oss 120B, selected pages"},
+    {"key": "targeted_multimodal", "approach": "Targeted", "input": "pdf", "model": "Qwen3 VL 235B, selected pages and images"},
+]
+CONFIGURATION_KEYS = {c["key"]: c for c in CONFIGURATIONS}
+
+
+def run_configuration(key: str, pdf_path: Path | None, md_path: Path, token: str) -> dict:
+    """Run one configuration exactly as the evaluation's batch runner dispatches it."""
+    out_dir = OUTPUT_ROOT / key
+    out_dir.mkdir(parents=True, exist_ok=True)
+    now = datetime.now(timezone.utc)
+    if key in ("B", "C", "D"):
+        return run_one(key, load_arms()[key], md_path, out_dir, token, True, now)
+    if key in ("freeform_B", "freeform_light"):
+        return run_one_freeform(md_path, out_dir, token, now, arm_name=key)
+    if key in ("multimodal_strict", "multimodal_open"):
+        return run_one_multimodal(pdf_path, out_dir, token, now, batch_size=DEFAULT_BATCH_SIZE,
+                                  overlap=DEFAULT_BATCH_OVERLAP, strict=key == "multimodal_strict")
+    if key.startswith("multimodal_combined_"):
+        return run_one_combined(pdf_path, md_path.read_text(encoding="utf-8"), out_dir,
+                                key.removeprefix("multimodal_combined_"), token, now)
+    if key in ("targeted_text", "targeted_multimodal"):
+        return run_one_targeted(pdf_path, out_dir, key.removeprefix("targeted_"), token, now)
+    raise ValueError(f"unknown configuration {key!r}")
+
+
+def _index_context(token: str | None, error: str | None = None) -> dict:
+    return {"configurations": CONFIGURATIONS, "has_token": bool(token), "env_path": str(APP_ROOT / ".env"),
+            "error": error}
+
+
 @app.get("/", response_class=HTMLResponse)
 def index(request: Request, error: str | None = None):
-    arms = load_arms()
-    token = resolve_hf_token()
-    return templates.TemplateResponse(request, "index.html", {
-        "arms": arms,
-        "has_token": bool(token),
-        "env_path": str(APP_ROOT / ".env"),
-        "error": error,
-    })
+    return templates.TemplateResponse(request, "index.html", _index_context(resolve_hf_token(), error))
+
+
+@app.get("/multimodal")
+def multimodal_index():
+    """Former separate page for the combined configurations; all configurations are now on the main page."""
+    return RedirectResponse("/", status_code=307)
 
 
 @app.post("/extract", response_class=HTMLResponse)
 async def extract(request: Request, arm: str = Form(...), file: UploadFile = File(...)):
-    arms = load_arms()
     token = resolve_hf_token()
 
     def fail(message: str):
-        return templates.TemplateResponse(request, "index.html", {
-            "arms": arms, "has_token": bool(token), "env_path": str(APP_ROOT / ".env"),
-            "error": message,
-        })
+        return templates.TemplateResponse(request, "index.html", _index_context(token, message))
 
-    if arm not in arms:
-        return fail(f"Unknown arm {arm!r}.")
+    configuration = CONFIGURATION_KEYS.get(arm)
+    if configuration is None:
+        return fail(f"Unknown configuration {arm!r}.")
     if not token:
         return fail(f"No HF_TOKEN found. Add it to {APP_ROOT / '.env'} as HF_TOKEN=hf_... and restart the server.")
 
     raw = await file.read()
     is_pdf = file.filename.lower().endswith(".pdf")
+    if configuration["input"] == "pdf" and not is_pdf:
+        return fail(f"{arm} reads the PDF itself (page images, embedded text or located pages): upload a PDF, "
+                    "not a converted Markdown file.")
 
-    if is_pdf:
-        pdf_path = save_uploaded_bytes(raw, file.filename, INPUT_ROOT)
+    pdf_path = save_uploaded_bytes(raw, file.filename, INPUT_ROOT) if is_pdf else None
+    md_path = pdf_path.with_suffix(".md") if pdf_path else save_uploaded_bytes(raw, file.filename, INPUT_ROOT)
+    if pdf_path:
         try:
-            markdown = convert_pdf_to_markdown(pdf_path)
-        except Exception as exc:  # docling failures vary; surface them, do not crash the page
-            return fail(f"Conversion to Markdown failed: {exc}")
-        md_path = pdf_path.with_suffix(".md")
-        md_path.write_text(markdown, encoding="utf-8")
-    else:
-        md_path = save_uploaded_bytes(raw, file.filename, INPUT_ROOT)
+            if configuration["input"] == "markdown":
+                text = convert_pdf_to_markdown(pdf_path)  # Docling, as for the text configurations
+            else:
+                text = extract_native_text(pdf_path)      # embedded text: the combined input, and the SDG text
+        except Exception as exc:  # conversion failures vary; surface them, do not crash the page
+            return fail(f"Could not read the PDF: {exc}")
+        md_path.write_text(text, encoding="utf-8")
 
     try:
         verify_token(token)
     except BackendError as exc:
         return fail(str(exc))
 
-    out_dir = OUTPUT_ROOT / arm
-    out_dir.mkdir(parents=True, exist_ok=True)
-    run = run_one(arm, arms[arm], md_path, out_dir, token, True, datetime.now(timezone.utc))
-
-    if run["status"] != "ok":
-        return fail(f"Extraction failed: {run['error']}")
+    try:
+        run = run_configuration(arm, pdf_path, md_path, token)
+    except Exception as exc:  # a configuration may raise before it can return a failed run
+        return fail(f"Extraction failed: {exc}")
+    if run.get("status") != "ok":
+        return fail(f"Extraction failed: {run.get('error')}")
 
     stem = Path(run["output_file"]).stem
     warm_sdg_result(stem, run)
     return templates.TemplateResponse(request, "extracted.html", {"arm": arm, "stem": stem, "run": run})
-
-
-@app.get("/multimodal", response_class=HTMLResponse)
-def multimodal_index(request: Request, error: str | None = None):
-    token = resolve_hf_token()
-    return templates.TemplateResponse(request, "multimodal.html", {
-        "models": COMBINED_MODELS, "has_token": bool(token), "env_path": str(APP_ROOT / ".env"), "error": error,
-    })
-
-
-@app.post("/multimodal/extract", response_class=HTMLResponse)
-async def multimodal_extract(request: Request, model_key: str = Form(...), file: UploadFile = File(...)):
-    token = resolve_hf_token()
-
-    def fail(message: str):
-        return templates.TemplateResponse(request, "multimodal.html", {
-            "models": COMBINED_MODELS, "has_token": bool(token), "env_path": str(APP_ROOT / ".env"),
-            "error": message,
-        })
-
-    if model_key not in COMBINED_MODELS:
-        return fail(f"Unknown model {model_key!r}.")
-    if not token:
-        return fail(f"No HF_TOKEN found. Add it to {APP_ROOT / '.env'} as HF_TOKEN=hf_... and restart the server.")
-    if not file.filename.lower().endswith(".pdf"):
-        return fail("Upload a PDF - this page needs the original pages to render as images, not an already-converted Markdown file.")
-
-    raw = await file.read()
-    pdf_path = save_uploaded_bytes(raw, file.filename, INPUT_ROOT)
-
-    try:
-        verify_token(token)
-    except BackendError as exc:
-        return fail(str(exc))
-
-    try:
-        document_text = extract_native_text(pdf_path)
-    except Exception as exc:  # malformed PDFs vary; surface them, do not crash the page
-        return fail(f"Could not read the PDF's text: {exc}")
-    md_path = pdf_path.with_suffix(".md")
-    md_path.write_text(document_text, encoding="utf-8")
-
-    arm_name = f"multimodal_combined_{model_key}"
-    out_dir = OUTPUT_ROOT / arm_name
-    out_dir.mkdir(parents=True, exist_ok=True)
-    run = run_one_combined(pdf_path, document_text, out_dir, model_key, token, datetime.now(timezone.utc))
-
-    if run["status"] != "ok":
-        return fail(f"Extraction failed: {run['error']}")
-
-    stem = Path(run["output_file"]).stem
-    warm_sdg_result(stem, run)
-    return templates.TemplateResponse(request, "extracted.html", {"arm": arm_name, "stem": stem, "run": run})
 
 
 @app.get("/review/{arm}/{stem}", response_class=HTMLResponse)
@@ -373,8 +379,8 @@ def review_sdgs(request: Request, arm: str, stem: str, retry: bool = False):
         return templates.TemplateResponse(request, "_sdg_panel.html", {"arm": arm, "stem": stem, **ctx})
 
     if stem not in _sdg_result_cache:
-        if not (INPUT_ROOT / run.get("source_file", "")).exists():
-            return panel(error=f"The source Markdown file '{run.get('source_file', '')}' was not found in {INPUT_ROOT}, so the SDGs cannot be classified.")
+        if not sdg_source_path(run).exists():
+            return panel(error=f"The source text '{sdg_source_path(run).name}' was not found in {INPUT_ROOT}, so the SDGs cannot be classified.")
         if retry:
             _sdg_errors.pop(stem, None)
         if stem in _sdg_errors:
@@ -427,7 +433,7 @@ def _yes_no_to_int(value: str | None) -> int | None:
 async def save(request: Request, arm: str, stem: str):
     form = await request.form()
     run, data = load_run_and_data(arm, stem)
-    source_md_path = INPUT_ROOT / run.get("source_file", "")
+    source_md_path = sdg_source_path(run)
     sdg_result = get_sdg_result(stem, source_md_path)
 
     def missing_redo(message: str):

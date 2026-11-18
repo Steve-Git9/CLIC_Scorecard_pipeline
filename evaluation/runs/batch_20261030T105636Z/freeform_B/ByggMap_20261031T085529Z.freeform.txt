@@ -1,0 +1,68 @@
+The document states the following details:
+- **Acronym**: Bygg Map
+- **Title**: Bygg Map (The document uses "Bygg Map" as the project name throughout, with no distinct full title separate from the acronym).
+- **Call Identifier**: Not explicitly stated in the text.
+- **Submission Date**: Not explicitly stated in the text.
+- **Readiness Levels**:
+  - TRL Start: The text mentions "TRL4 can be a suitable label" and later refers to evolving from a "research prototype (TRL4)".
+  - TRL Target: The text states the goal is to reach "TRL6".
+  - MCR Start: Not explicitly stated.
+  - MCR Target: Not explicitly stated.
+- **Partner Budget Table**: Found in "Table 1 - Budget Allocation" in the Appendix.
+
+**Partner Budget Table Row by Row:**
+1. MCI: € 590,625.00
+2. TUCN: € 465,625.00
+3. NTNU: € 748,625.00
+4. U-I: € 204,375.00
+5. SM: € 144,375.00
+6. CGI: € 195,000.00
+7. CEE: € 151,375.00
+
+```json
+{
+  "proposal": {
+    "proposal_acronym": "Bygg Map",
+    "proposal_title": "Bygg Map",
+    "call_identifier": null,
+    "submission_date": null
+  },
+  "proposal_facts": {
+    "requested_total": "€ 2,500,000.00",
+    "trl_start": 4,
+    "trl_target": 6,
+    "mcrl_start": null,
+    "mcrl_target": null
+  },
+  "partners": [
+    {
+      "partner_name": "MCI",
+      "requested": "€ 590,625.00"
+    },
+    {
+      "partner_name": "TUCN",
+      "requested": "€ 465,625.00"
+    },
+    {
+      "partner_name": "NTNU",
+      "requested": "€ 748,625.00"
+    },
+    {
+      "partner_name": "U-I",
+      "requested": "€ 204,375.00"
+    },
+    {
+      "partner_name": "SM",
+      "requested": "€ 144,375.00"
+    },
+    {
+      "partner_name": "CGI",
+      "requested": "€ 195,000.00"
+    },
+    {
+      "partner_name": "CEE",
+      "requested": "€ 151,375.00"
+    }
+  ]
+}
+```

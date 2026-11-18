@@ -23,8 +23,7 @@
 !/Second_step_CLICpipeline/tests/
 !/Second_step_CLICpipeline/samples/
 
-# Applications
-!/app/
+# Applications (the Streamlit viewer in app/ is a local prototype and is not published)
 !/webapp/
 !/sdgautomation/
 
@@ -66,3 +65,68 @@ CLAUDE.md
 # Thesis chapter drafts with evaluation results (local only)
 /Chapter_4_Evaluation.md
 /Chapter_4_Evaluation_with_baseline.md
+
+# Replication package (author's decision of 18 November 2026). Listed last so that these
+# entries override the general exclusions above. Only the ten evaluated documents of batch
+# batch_20261030T105636Z; Abico_Synth is published in everything except the document itself
+# (its PDF and Docling Markdown), which contains structures of CLIC's internal knowledge.
+!/README.md
+!/LICENSE
+!/LICENSE-DATA.md
+!/CITATION.cff
+!/provider_prices(1).csv
+
+!/docs/
+/docs/*
+!/docs/decisions.md
+!/docs/Database_Conceptual_Model.md
+
+!/Final_Results/
+!/Final_Results/**
+
+!/data/
+/data/*
+!/data/raw/
+/data/raw/*
+!/data/raw/ByggMap.pdf
+!/data/raw/CIRCUNOVA.pdf
+!/data/raw/CLIMACITIES.pdf
+!/data/raw/SP01.pdf
+!/data/raw/SP02.pdf
+!/data/raw/SP03A.pdf
+!/data/raw/SP03B.pdf
+!/data/raw/SP04.pdf
+!/data/raw/SP05.pdf
+!/data/markdown/
+/data/markdown/*
+!/data/markdown/ByggMap.md
+!/data/markdown/CIRCUNOVA.md
+!/data/markdown/CLIMACITIES.md
+!/data/markdown/SP01.md
+!/data/markdown/SP02.md
+!/data/markdown/SP03A.md
+!/data/markdown/SP03B.md
+!/data/markdown/SP04.md
+!/data/markdown/SP05.md
+!/data/markdown/*.conversion.json
+!/data/markdown/conversions.csv
+!/data/markdown/Abico_Synth.terms.json
+
+!/evaluation/
+/evaluation/*
+!/evaluation/gold/
+/evaluation/gold/*
+!/evaluation/gold/Abico_Synth.json
+!/evaluation/gold/ByggMap.json
+!/evaluation/gold/CIRCUNOVA.json
+!/evaluation/gold/CLIMACITIES.json
+!/evaluation/gold/SP01.json
+!/evaluation/gold/SP02.json
+!/evaluation/gold/SP03A.json
+!/evaluation/gold/SP03B.json
+!/evaluation/gold/SP04.json
+!/evaluation/gold/SP05.json
+!/evaluation/runs/
+/evaluation/runs/*
+!/evaluation/runs/batch_20261030T105636Z/
+!/evaluation/runs/batch_20261030T105636Z/**

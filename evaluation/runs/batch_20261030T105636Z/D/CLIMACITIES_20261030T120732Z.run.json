@@ -1,0 +1,107 @@
+{
+  "arm": "D",
+  "model": "openai/gpt-oss-20b",
+  "provider": "groq",
+  "source_file": "CLIMACITIES.md",
+  "started_utc": "2026-10-30T12:07:32Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 2.35,
+  "attempts": 1,
+  "prompt_tokens": 19353,
+  "completion_tokens": 319,
+  "cost_usd": 0.002095,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-20b",
+  "parts": 1,
+  "output_file": "CLIMACITIES_20261030T120732Z.json",
+  "replies_file": "CLIMACITIES_20261030T120732Z.replies.json",
+  "total_seconds": 2.37,
+  "evaluation": {
+    "document": "CLIMACITIES",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\D\\CLIMACITIES_20261030T120732Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 115.02,
+      "docling_markdown_sha256": "949af8bd07e2436524f0435a30f6b88f5830c13a3397260c211a488094e2efbf"
+    },
+    "runner_wall_clock_seconds": 2.37,
+    "end_to_end_seconds": 117.39,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 19353,
+      "completion_tokens": 319,
+      "reasoning_tokens": 52,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.00154718,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-20b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-20b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 116949,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 2.35
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.235828097,
+          "prompt_tokens": 19353,
+          "prompt_time": 1.363717934,
+          "completion_tokens": 319,
+          "completion_time": 0.37591307,
+          "total_tokens": 19672,
+          "total_time": 1.739631004,
+          "completion_tokens_details": {
+            "reasoning_tokens": 52
+          }
+        },
+        "reply": "{\"proposal\":{\"proposal_acronym\":\"CLIMACITIES\",\"proposal_title\":\"Climate Intelligence for Equitable and Adaptive European Cities\",\"call_identifier\":\"HORIZON-MISS-2027-CLIMA-SYN-01\",\"submission_date\":null},\"proposal_facts\":{\"requested_total\":\"EUR 7,500,000\",\"trl_start\":null,\"trl_target\":null,\"mcrl_start\":null,\"mcrl_target\":null},\"partners\":[{\"partner_name\":\"NORDIC URBAN SYSTEMS INSTITUTE\",\"requested\":\"EUR 1,420,000\"},{\"partner_name\":\"RHEIN DATA LABS GMBH\",\"requested\":\"EUR 1,060,000\"},{\"partner_name\":\"ATLANTIC RESILIENCE CENTRE\",\"requested\":\"EUR 910,000\"},{\"partner_name\":\"CIVITAS ANALYTICS SL\",\"requested\":\"EUR 870,000\"},{\"partner_name\":\"DELTA WATER RESEARCH BV\",\"requested\":\"EUR 850,000\"},{\"partner_name\":\"BALTIC COMMUNITY LAB\",\"requested\":\"EUR 690,000\"},{\"partner_name\":\"ALPINE ENERGY INNOVATION SRL\",\"requested\":\"EUR 930,000\"},{\"partner_name\":\"URBAN FUTURES ASSOCIATION\",\"requested\":\"EUR 770,000\"}]}",
+        "reasoning": "We need proposal_acronym, title, call_identifier, submission_date null. requested_total, trl_start/target, mcrl_start/target null. partners list with requested amounts. No TRL info. So trl_start null etc.",
+        "prompt_tokens": 19353,
+        "completion_tokens": 319,
+        "total_tokens": 19672,
+        "reasoning_tokens": 52,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 2.35,
+        "model_reported": "openai/gpt-oss-20b",
+        "finish_reason": "stop",
+        "cost_usd": 0.00154718
+      }
+    ]
+  }
+}

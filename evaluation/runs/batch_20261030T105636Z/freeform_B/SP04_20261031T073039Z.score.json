@@ -1,0 +1,293 @@
+{
+  "validity": {
+    "first_attempt": true,
+    "first_attempt_reason": null,
+    "after_repair": true,
+    "after_repair_problems": []
+  },
+  "scalars": [
+    {
+      "field": "proposal.proposal_acronym",
+      "gold": "MAROFLOW",
+      "extracted": "MAROFLOW",
+      "outcome": "correct"
+    },
+    {
+      "field": "proposal.proposal_title",
+      "gold": "Marine Observation Flows for Shared Coastal Planning",
+      "extracted": "Marine Observation Flows for Shared Coastal Planning",
+      "outcome": "correct"
+    },
+    {
+      "field": "proposal.call_identifier",
+      "gold": "BSR2026C41",
+      "extracted": "BSR2026C41",
+      "outcome": "correct"
+    },
+    {
+      "field": "proposal.submission_date",
+      "gold": "2026-08-10",
+      "extracted": "2026-08-10",
+      "outcome": "correct"
+    },
+    {
+      "field": "proposal_facts.requested_total_cents",
+      "gold": 294610000,
+      "extracted": 294610000,
+      "outcome": "correct"
+    },
+    {
+      "field": "proposal_facts.trl_start",
+      "gold": 3,
+      "extracted": null,
+      "outcome": "miss"
+    },
+    {
+      "field": "proposal_facts.trl_target",
+      "gold": 6,
+      "extracted": 6,
+      "outcome": "correct"
+    },
+    {
+      "field": "proposal_facts.mcrl_start",
+      "gold": 4,
+      "extracted": 4,
+      "outcome": "correct"
+    },
+    {
+      "field": "proposal_facts.mcrl_target",
+      "gold": null,
+      "extracted": null,
+      "outcome": "correct"
+    }
+  ],
+  "scalar_accuracy": 0.8888888888888888,
+  "partners": {
+    "entries": [
+      {
+        "partner_name": "Hallvik",
+        "class": "matched",
+        "gold_partner": "Hallvik University",
+        "reason": "author's decision: gold:Hallvik University",
+        "unsure_case": null,
+        "decided": true,
+        "requested_cents": 67450,
+        "amount_outcome": "wrong",
+        "amount_weight": 1.0,
+        "weights": {
+          "matched": 1.0,
+          "duplicate": 0.0,
+          "supported_extra": 0.0,
+          "unsupported_extra": 0.0
+        },
+        "extra_weight": 0.0
+      },
+      {
+        "partner_name": "Orrenfjord",
+        "class": "matched",
+        "gold_partner": "Orrenfjord Marine Systems Ltd",
+        "reason": "author's decision: gold:Orrenfjord Marine Systems Ltd",
+        "unsure_case": null,
+        "decided": true,
+        "requested_cents": 56880,
+        "amount_outcome": "wrong",
+        "amount_weight": 1.0,
+        "weights": {
+          "matched": 1.0,
+          "duplicate": 0.0,
+          "supported_extra": 0.0,
+          "unsupported_extra": 0.0
+        },
+        "extra_weight": 0.0
+      },
+      {
+        "partner_name": "Marovik",
+        "class": "matched",
+        "gold_partner": "Marovik Research Institute",
+        "reason": "author's decision: gold:Marovik Research Institute",
+        "unsure_case": null,
+        "decided": true,
+        "requested_cents": 59280,
+        "amount_outcome": "wrong",
+        "amount_weight": 1.0,
+        "weights": {
+          "matched": 1.0,
+          "duplicate": 0.0,
+          "supported_extra": 0.0,
+          "unsupported_extra": 0.0
+        },
+        "extra_weight": 0.0
+      },
+      {
+        "partner_name": "Quenmark",
+        "class": "matched",
+        "gold_partner": "Quenmark Sensor Works Ltd",
+        "reason": "author's decision: gold:Quenmark Sensor Works Ltd",
+        "unsure_case": null,
+        "decided": true,
+        "requested_cents": 50700,
+        "amount_outcome": "wrong",
+        "amount_weight": 1.0,
+        "weights": {
+          "matched": 1.0,
+          "duplicate": 0.0,
+          "supported_extra": 0.0,
+          "unsupported_extra": 0.0
+        },
+        "extra_weight": 0.0
+      },
+      {
+        "partner_name": "Ostrelund",
+        "class": "matched",
+        "gold_partner": "Ostrelund Regional Development Agency",
+        "reason": "author's decision: gold:Ostrelund Regional Development Agency",
+        "unsure_case": null,
+        "decided": true,
+        "requested_cents": 21300,
+        "amount_outcome": "wrong",
+        "amount_weight": 1.0,
+        "weights": {
+          "matched": 1.0,
+          "duplicate": 0.0,
+          "supported_extra": 0.0,
+          "unsupported_extra": 0.0
+        },
+        "extra_weight": 0.0
+      },
+      {
+        "partner_name": "Brenvik",
+        "class": "matched",
+        "gold_partner": "Brenvik Port Logistics Ltd",
+        "reason": "author's decision: gold:Brenvik Port Logistics Ltd",
+        "unsure_case": null,
+        "decided": true,
+        "requested_cents": 0,
+        "amount_outcome": "correct",
+        "amount_weight": 1.0,
+        "weights": {
+          "matched": 1.0,
+          "duplicate": 0.0,
+          "supported_extra": 0.0,
+          "unsupported_extra": 0.0
+        },
+        "extra_weight": 0.0
+      },
+      {
+        "partner_name": "Eskeby",
+        "class": "matched",
+        "gold_partner": "Eskeby Technical University",
+        "reason": "author's decision: gold:Eskeby Technical University",
+        "unsure_case": null,
+        "decided": true,
+        "requested_cents": null,
+        "amount_outcome": "miss",
+        "amount_weight": 1.0,
+        "weights": {
+          "matched": 1.0,
+          "duplicate": 0.0,
+          "supported_extra": 0.0,
+          "unsupported_extra": 0.0
+        },
+        "extra_weight": 0.0
+      }
+    ],
+    "gold_status": [
+      {
+        "partner_name": "Hallvik University",
+        "requested_cents": 67450000,
+        "found": 1.0,
+        "unsure": false
+      },
+      {
+        "partner_name": "Orrenfjord Marine Systems Ltd",
+        "requested_cents": 56880000,
+        "found": 1.0,
+        "unsure": false
+      },
+      {
+        "partner_name": "Marovik Research Institute",
+        "requested_cents": 59280000,
+        "found": 1.0,
+        "unsure": false
+      },
+      {
+        "partner_name": "Quenmark Sensor Works Ltd",
+        "requested_cents": 50700000,
+        "found": 1.0,
+        "unsure": false
+      },
+      {
+        "partner_name": "Ostrelund Regional Development Agency",
+        "requested_cents": 21300000,
+        "found": 1.0,
+        "unsure": false
+      },
+      {
+        "partner_name": "Brenvik Port Logistics Ltd",
+        "requested_cents": 0,
+        "found": 1.0,
+        "unsure": false
+      },
+      {
+        "partner_name": "Eskeby Technical University",
+        "requested_cents": 39000000,
+        "found": 1.0,
+        "unsure": false
+      }
+    ],
+    "gold_count": 7,
+    "matched_count": 7.0,
+    "missed_gold": [],
+    "missed_weight": 0.0,
+    "recall": 1.0,
+    "amount_accuracy": 0.14285714285714285,
+    "amount_outcomes": {
+      "wrong": 5.0,
+      "correct": 1.0,
+      "miss": 1.0
+    },
+    "classes": {
+      "matched": 7.0,
+      "duplicate": 0.0,
+      "supported_extra": 0.0,
+      "unsupported_extra": 0.0
+    },
+    "extracted_count": 7,
+    "extra_weight": 0.0,
+    "unsure": [],
+    "unsure_error_weight": 0,
+    "sum_check": {
+      "stated_total_cents": 294610000,
+      "matched_sum_cents": 255610,
+      "matched_without_amount": 1,
+      "matched_sum_equals_total": null,
+      "supported_extras_sum_cents": 0,
+      "sum_with_supported_extras_cents": 255610,
+      "sum_with_supported_extras_equals_total": null,
+      "supported_extras_make_sum_deviate": null
+    }
+  },
+  "errors": {
+    "misses": 2.0,
+    "wrong_values": 5.0,
+    "unsupported_values": 0.0,
+    "unsupported_extras": 0.0,
+    "duplicates": 0.0,
+    "total": 7.0,
+    "from_unsure_names": 0,
+    "certain": 7.0
+  },
+  "unsupported_values_including_extras": 0.0,
+  "reviewer_decisions": {
+    "supported_extras": 0.0,
+    "unsure_names": 0
+  },
+  "contains_unsure": false,
+  "fully_correct": 0.0,
+  "run_file": "SP04_20261031T073039Z.run.json",
+  "configuration": "freeform_B",
+  "document": "SP04",
+  "protocol": "freeform",
+  "run_status": "ok",
+  "markdown_available": true
+}

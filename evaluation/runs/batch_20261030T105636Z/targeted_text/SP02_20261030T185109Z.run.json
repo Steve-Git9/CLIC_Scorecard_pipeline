@@ -1,0 +1,158 @@
+{
+  "arm": "targeted_text",
+  "mode": "text",
+  "model": "openai/gpt-oss-120b",
+  "provider": "groq",
+  "source_file": "SP02.pdf",
+  "started_utc": "2026-10-30T18:51:09Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested[Lumenthar Marine Oy]: could not parse amount 'no funding requested'"
+  ],
+  "pages_total": 41,
+  "pages_sent": [
+    1,
+    13,
+    17,
+    22,
+    30,
+    33,
+    34,
+    35
+  ],
+  "scanned_pages": [],
+  "ocr_pages": [],
+  "images_sent": 0,
+  "located": {
+    "proposal": [
+      1
+    ],
+    "budget": [
+      33,
+      35,
+      34
+    ],
+    "partners": [
+      17,
+      22,
+      13
+    ],
+    "readiness": [
+      30
+    ]
+  },
+  "located_by": {
+    "proposal": "keywords",
+    "budget": "keywords",
+    "partners": "keywords",
+    "readiness": "keywords"
+  },
+  "tables_found": 0,
+  "tables_verified": 0,
+  "page_map_cached": false,
+  "calls": 1,
+  "seconds": 1.84,
+  "attempts": 1,
+  "prompt_tokens": 5321,
+  "completion_tokens": 522,
+  "cost_usd": 0.00119,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-120b",
+  "steps": {
+    "page_map": 5.65,
+    "locate": 0.0,
+    "identifier_hints": 0.18,
+    "tables": 0.84,
+    "text_and_ocr": 0.03,
+    "model": 1.84
+  },
+  "context_splits": 0,
+  "identifiers_filled": {},
+  "partners_confirmed_by_table": 0,
+  "output_file": "SP02_20261030T185109Z.json",
+  "replies_file": "SP02_20261030T185109Z.replies.json",
+  "total_seconds": 8.55,
+  "trace_file": "SP02_20261030T185109Z.trace.json",
+  "evaluation": {
+    "document": "SP02",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\targeted_text\\SP02_20261030T185109Z.run.json",
+    "input": "pdf",
+    "preparation": {},
+    "runner_wall_clock_seconds": 8.55,
+    "end_to_end_seconds": 8.55,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 5321,
+      "completion_tokens": 522,
+      "reasoning_tokens": 349,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.00111135,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-120b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-120b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 26148,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 1.84
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.187935743,
+          "prompt_tokens": 5321,
+          "prompt_time": 0.265518789,
+          "completion_tokens": 522,
+          "completion_time": 1.101732845,
+          "total_tokens": 5843,
+          "total_time": 1.367251634,
+          "completion_tokens_details": {
+            "reasoning_tokens": 349
+          }
+        },
+        "reply": "{\"proposal\":{\"proposal_acronym\":\"TIDEMESH\",\"proposal_title\":\"Adaptive Sensor Networks for Resilient Coastal Infrastructure\",\"call_identifier\":\"BF2026/93782\",\"submission_date\":\"2026-04-02\"},\"proposal_facts\":{\"requested_total\":\"EUR 991,100\",\"trl_start\":null,\"trl_target\":null,\"mcrl_start\":1,\"mcrl_target\":4},\"partners\":[{\"partner_name\":\"Nordvalen Systems Oy\",\"requested\":\"181.6\"},{\"partner_name\":\"Kaltiora Analytics Oy\",\"requested\":\"190.9\"},{\"partner_name\":\"Lumenthar Marine Oy\",\"requested\":\"no funding requested\"},{\"partner_name\":\"Havrenmaa University\",\"requested\":null},{\"partner_name\":\"Taimerra Research Institute\",\"requested\":null}]}",
+        "reasoning": "We need extract data. Proposal title from cover: \"Adaptive Sensor Networks for Resilient Coastal Infrastructure\". Acronym TIDEMESH. Call identifier BF2026/93782. Submission date: Document prepared: 2 April 2026 -> that's likely submission date? Use that date as 2026-04-02.\n\nRequested total: from page 35: \"The total requested funding of the consortium is EUR 991,100.\" So requested_total = \"EUR 991,100\". TRL not mentioned; MCRL start/target from page 30: start 1 target 4. TRL not found -> null.\n\nPartners and requested amounts: Table 5.1 page 33 gives requested funding per partner. Values: NVS 181.6, KTA 190.9, LMR no funding requested, HVU shown in Figure 5.1 (no amount), TMI shown in Figure 5.1 (no amount). Use as written. So partner entries in document order as listed earlier page 13: Nordvalen Systems Oy (NVS), Kaltiora Analytics Oy (KTA), Lumenthar Marine Oy (LMR), Havrenmaa University (HVU), Taimerra Research Institute (TMI). Requested values: \"181.6\" (but need include currency? Table header \"Requested funding (EUR thousand)\". So amount is in EUR thousand. Should copy as written: \"181.6\". Probably include \"EUR thousand\"? The cell is just number. We'll copy exactly \"181.6\". For LMR: \"no funding requested\". For HVU and TMI: null because not stated amount. Use null.\n\nReturn JSON.",
+        "prompt_tokens": 5321,
+        "completion_tokens": 522,
+        "total_tokens": 5843,
+        "reasoning_tokens": 349,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.84,
+        "model_reported": "openai/gpt-oss-120b",
+        "finish_reason": "stop",
+        "cost_usd": 0.00111135
+      }
+    ]
+  }
+}

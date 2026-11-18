@@ -1,0 +1,107 @@
+{
+  "arm": "C",
+  "model": "openai/gpt-oss-120b",
+  "provider": "groq",
+  "source_file": "Abico_Synth.md",
+  "started_utc": "2026-10-30T19:18:30Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 2.64,
+  "attempts": 1,
+  "prompt_tokens": 25269,
+  "completion_tokens": 399,
+  "cost_usd": 0.00409,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-120b",
+  "parts": 1,
+  "output_file": "Abico_Synth_20261030T191830Z.json",
+  "replies_file": "Abico_Synth_20261030T191830Z.replies.json",
+  "total_seconds": 2.67,
+  "evaluation": {
+    "document": "Abico_Synth",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\C\\Abico_Synth_20261030T191830Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 244.1,
+      "docling_markdown_sha256": "db2432c37da8bfa28fb0856593c407d8265b4ca2ce0ecca1fa21a414dcb13c5f"
+    },
+    "runner_wall_clock_seconds": 2.67,
+    "end_to_end_seconds": 246.77,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 25269,
+      "completion_tokens": 399,
+      "reasoning_tokens": 226,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.00402975,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-120b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-120b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 171235,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 2.64
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.08681799,
+          "prompt_tokens": 25269,
+          "prompt_time": 1.04620164,
+          "completion_tokens": 399,
+          "completion_time": 0.82942494,
+          "total_tokens": 25668,
+          "total_time": 1.87562658,
+          "completion_tokens_details": {
+            "reasoning_tokens": 226
+          }
+        },
+        "reply": "{\"proposal\":{\"proposal_acronym\":\"ReCoSE\",\"proposal_title\":\"Renewable Composite Systems with Circular Engineering ReCoSE\",\"call_identifier\":null,\"submission_date\":null},\"proposal_facts\":{\"requested_total\":\"EUR 2.218.600\",\"trl_start\":null,\"trl_target\":null,\"mcrl_start\":null,\"mcrl_target\":null},\"partners\":[{\"partner_name\":\"NLUAS University of Applied Science\",\"requested\":\"487 200\"},{\"partner_name\":\"Lake District Technical University\",\"requested\":\"382 400\"},{\"partner_name\":\"Nordic Institute for Sustainable Materials NISM\",\"requested\":\"642 300\"},{\"partner_name\":\"Eastern Nordic University ENU\",\"requested\":\"369 500\"},{\"partner_name\":\"Coastal Finland University CFU\",\"requested\":\"337 200\"}]}",
+        "reasoning": "We need proposal_acronym? Not given. Title is \"Renewable Composite Systems with Circular Engineering ReCoSE\". Acronym maybe ReCoSE. Use that. call_identifier not present -> null. submission_date not present -> null. requested_total: total budget public joint research project EUR 2.218.600 and total budget EUR 3.860 million. Which is requested total? Likely total grant requested = EUR 2.218.600 (public). Use that string as written \"EUR 2.218.600\". trl_start/target not mentioned -> null. mcrl also null. Partners: list research institutes with budgets? Provide requested per partner from table 21: NLUAS 487 200, LDTU 382 400, NISM 642 300, ENU 369 500, CFU 337 200. Currency? amounts without EUR. Document shows numbers without currency. Use as written \"487 200\". Probably need include currency? Not specified. Use as written. Also maybe companies have requested? Not given. So include those five.",
+        "prompt_tokens": 25269,
+        "completion_tokens": 399,
+        "total_tokens": 25668,
+        "reasoning_tokens": 226,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 2.64,
+        "model_reported": "openai/gpt-oss-120b",
+        "finish_reason": "stop",
+        "cost_usd": 0.00402975
+      }
+    ]
+  }
+}

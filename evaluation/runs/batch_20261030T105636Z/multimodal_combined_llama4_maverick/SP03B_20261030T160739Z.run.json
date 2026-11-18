@@ -1,0 +1,2163 @@
+{
+  "arm": "multimodal_combined_llama4_maverick",
+  "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+  "provider": "novita",
+  "source_file": "SP03B.md",
+  "started_utc": "2026-10-30T16:07:39Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "a 10-page batch was too large (413); split into 5 and 5 pages and retrying",
+    "a 5-page batch was too large (413); split into 2 and 3 pages and retrying",
+    "a 3-page batch was too large (413); split into 1 and 2 pages and retrying",
+    "a 5-page batch was too large (413); split into 2 and 3 pages and retrying",
+    "a 3-page batch was too large (413); split into 1 and 2 pages and retrying",
+    "a 10-page batch was too large (413); split into 5 and 5 pages and retrying",
+    "a 5-page batch was too large (413); split into 2 and 3 pages and retrying",
+    "a 3-page batch was too large (413); split into 1 and 2 pages and retrying",
+    "a 5-page batch was too large (413); split into 2 and 3 pages and retrying",
+    "a 3-page batch was too large (413); split into 1 and 2 pages and retrying",
+    "a 10-page batch was too large (413); split into 5 and 5 pages and retrying",
+    "a 5-page batch was too large (413); split into 2 and 3 pages and retrying",
+    "a 5-page batch was too large (413); split into 2 and 3 pages and retrying",
+    "a 3-page batch was too large (413); split into 1 and 2 pages and retrying",
+    "a 10-page batch was too large (413); split into 5 and 5 pages and retrying",
+    "a 5-page batch was too large (413); split into 2 and 3 pages and retrying",
+    "a 3-page batch was too large (413); split into 1 and 2 pages and retrying",
+    "a 5-page batch was too large (413); split into 2 and 3 pages and retrying",
+    "a 3-page batch was too large (413); split into 1 and 2 pages and retrying",
+    "a 9-page batch was too large (413); split into 4 and 5 pages and retrying",
+    "a 4-page batch was too large (413); split into 2 and 2 pages and retrying",
+    "a 5-page batch was too large (413); split into 2 and 3 pages and retrying",
+    "proposal_acronym 'RESENSE' not found verbatim in the document",
+    "proposal_title 'Adaptive Sensor Networks for Resource Efficient Process Monitoring' not found verbatim in the document",
+    "call_identifier 'RCF2027/6433' not found verbatim in the document",
+    "requested_total 'EUR 979 300' not found in the document",
+    "partner 'Vantora Sensor Solutions Ltd' not found verbatim in the document",
+    "partner 'Torvenmaa University' not found verbatim in the document",
+    "partner 'Haldeberg University of Applied Sciences and Regional Innovation Services' not found verbatim in the document",
+    "partner 'Kestrel Institute for Process Research' not found verbatim in the document",
+    "partner 'Ormenfield Process Systems Oy' not found verbatim in the document",
+    "partner 'Vantora Sensor Solutions Oy' not found verbatim in the document",
+    "partner 'Ostermark Regional Development Agency' not found verbatim in the document",
+    "partner 'TMU' not found verbatim in the document",
+    "requested[TMU] '214,8' not found in the document",
+    "partner 'HBU' not found verbatim in the document",
+    "requested[HBU] '159,8' not found in the document",
+    "partner 'KPRI' not found verbatim in the document",
+    "requested[KPRI]: could not parse amount 'see E.2'",
+    "partner 'OPS' not found verbatim in the document",
+    "requested[OPS] '167,1' not found in the document",
+    "partner 'VSS' not found verbatim in the document",
+    "requested[VSS] '196,4' not found in the document",
+    "partner 'ORDEA' not found verbatim in the document",
+    "requested[ORDEA] '0,0' not found in the document",
+    "duplicate partner 'KPRI' dropped"
+  ],
+  "batch_size": 10,
+  "overlap": 1,
+  "pages_total": 45,
+  "pages_with_images": 45,
+  "batches": 5,
+  "calls": 27,
+  "seconds": 258.35,
+  "attempts": 27,
+  "prompt_tokens": 38674,
+  "completion_tokens": 5489,
+  "cost_usd": 0.015112,
+  "finish_reason": "stop",
+  "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+  "context_splits": 0,
+  "output_file": "SP03B_20261030T160739Z.json",
+  "replies_file": "SP03B_20261030T160739Z.replies.json",
+  "total_seconds": 312.38,
+  "evaluation": {
+    "document": "SP03B",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\multimodal_combined_llama4_maverick\\SP03B_20261030T160739Z.run.json",
+    "input": "pdf",
+    "preparation": {
+      "native_text_seconds": 0.12
+    },
+    "runner_wall_clock_seconds": 312.51,
+    "end_to_end_seconds": 312.51,
+    "calls": 49,
+    "failed_calls": 22,
+    "attempts": 49,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 38674,
+      "completion_tokens": 5489,
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "cached_tokens": 15776
+    },
+    "calls_reporting": {
+      "prompt_tokens": 27,
+      "completion_tokens": 27,
+      "reasoning_tokens": 27,
+      "image_tokens": 27
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.01510763,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "novita",
+          "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+          "status": "verified",
+          "retrieved_on": "2026-10-23"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 19017467,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.2
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.2,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 8903600,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.04
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.04,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 3216363,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 8.71
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 1482,
+          "completion_tokens": 203,
+          "total_tokens": 1685,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "The provided document consists of a letter of support from Vantora Sensor Solutions Ltd for the project RESENSE. It does not contain a partner budget table, a total requested grant amount, a call identifier, a submission date, or TRL/MCRL levels.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"RESENSE\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Vantora Sensor Solutions Ltd\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 1482,
+        "completion_tokens": 203,
+        "total_tokens": 1685,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "seconds": 8.71,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00057269
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 5691190,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 0.89
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 0.89,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 1895904,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 5.72
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 1214,
+          "completion_tokens": 163,
+          "total_tokens": 1377,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "The provided document contains only one page of text and images. There is no partner budget table present in the provided material.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"RESENSE\",\n    \"proposal_title\": \"Adaptive Sensor Networks for Resource Efficient Process Monitoring\",\n    \"call_identifier\": \"RCF2027/6433\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 1214,
+        "completion_tokens": 163,
+        "total_tokens": 1377,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "seconds": 5.72,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00046633
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 3799239,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 10.51
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 1482,
+          "completion_tokens": 264,
+          "total_tokens": 1746,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 928,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I am sorry, but the provided document text is empty and the provided images only contain the \"Part B\" partner information forms for Partner A (Torvenmaa University) and Partner B (Haldeberg University of Applied Sciences and Regional Innovation Services). There is no partner budget table, project acronym, project title, call identifier, submission date, total requested amount, or TRL/MCRL levels present in the provided materials.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Torvenmaa University\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Haldeberg University of Applied Sciences and Regional Innovation Services\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 1482,
+        "completion_tokens": 264,
+        "total_tokens": 1746,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 928,
+        "seconds": 10.51,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00062454
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 10117820,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.06
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.06,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 3816067,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 10.89
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 1482,
+          "completion_tokens": 242,
+          "total_tokens": 1724,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 928,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I am sorry, but the provided document text is empty and the provided images only contain \"Part B, Partner information\" forms for Partner C and Partner D. There is no partner budget table, project acronym, title, call identifier, submission date, total requested amount, or TRL/MCRL levels present in the provided materials.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Kestrel Institute for Process Research\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Ormenfield Process Systems Oy\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 1482,
+        "completion_tokens": 242,
+        "total_tokens": 1724,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 928,
+        "seconds": 10.89,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00060584
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 6305706,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 0.99
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 0.99,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 2033500,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 11.66
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 1214,
+          "completion_tokens": 219,
+          "total_tokens": 1433,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 928,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "The provided document consists of a single page (Page 8 of 45) containing \"Partner information, Partner E\" for Vantora Sensor Solutions Oy. There is no partner budget table, project acronym, project title, call identifier, submission date, total requested amount, TRL, or MCRL information present in the provided text or image.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Vantora Sensor Solutions Oy\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 1214,
+        "completion_tokens": 219,
+        "total_tokens": 1433,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 928,
+        "seconds": 11.66,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00051393
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 4276159,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 10.58
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 1482,
+          "completion_tokens": 237,
+          "total_tokens": 1719,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 928,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I am sorry, but the provided document text is empty and the provided images do not contain a partner budget table, a project acronym, a project title, a call identifier, a submission date, a total requested amount, or TRL/MCRL levels. The images only show a \"Partner information\" form for Ostermark Regional Development Agency (which explicitly states it \"does not request funding for its participation\") and a \"Project description\" section.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Ostermark Regional Development Agency\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 1482,
+        "completion_tokens": 237,
+        "total_tokens": 1719,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 928,
+        "seconds": 10.58,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00060159
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 19949715,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.15
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.15,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 10029956,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.08
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.08,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 4069259,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 7.6
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 1482,
+          "completion_tokens": 173,
+          "total_tokens": 1655,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 928,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I am sorry, but the provided document text is empty and the provided images do not contain a partner budget table, project acronym, title, call identifier, submission date, total requested amount, TRL/MCRL levels, or a list of partners with their requested funding.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 1482,
+        "completion_tokens": 173,
+        "total_tokens": 1655,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 928,
+        "seconds": 7.6,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00054719
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 5964650,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.01
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.01,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 1846764,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 6.33
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 1214,
+          "completion_tokens": 199,
+          "total_tokens": 1413,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 928,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "The provided document consists of a single page (Page 12 of 45) containing sections C.7, C.8, and C.9 of a project description. There is no partner budget table, project acronym, title, call identifier, submission date, total requested amount, TRL/MCRL levels, or list of partners with requested funding present in the provided text or image.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 1214,
+        "completion_tokens": 199,
+        "total_tokens": 1413,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 928,
+        "seconds": 6.33,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00049693
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 4121839,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 11.25
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 1482,
+          "completion_tokens": 162,
+          "total_tokens": 1644,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 928,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I am sorry, but the provided document text is empty and the provided images do not contain a partner budget table, project acronym, title, call identifier, or funding amounts. Therefore, I cannot extract the requested information.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 1482,
+        "completion_tokens": 162,
+        "total_tokens": 1644,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 928,
+        "seconds": 11.25,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00053784
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 9923712,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.46
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.46,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 3805539,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 8.44
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 1482,
+          "completion_tokens": 206,
+          "total_tokens": 1688,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I am sorry, but the provided document text is empty and the provided images do not contain a partner budget table, a project acronym, a project title, a call identifier, a submission date, a total requested amount, or a list of partners with their requested funding. The images only contain sections of a project description (Part C) regarding technology readiness levels (TRL) and market cluster readiness levels (MCRL).\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": 3,\n    \"trl_target\": 5,\n    \"mcrl_start\": 1,\n    \"mcrl_target\": 4\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 1482,
+        "completion_tokens": 206,
+        "total_tokens": 1688,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "seconds": 8.44,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00057524
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 6122126,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.02
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.02,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 2153320,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 6.98
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 1214,
+          "completion_tokens": 180,
+          "total_tokens": 1394,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I am sorry, but the provided document text is empty and the single provided image (page 17) does not contain a partner budget table, project acronym, title, call identifier, submission date, total requested amount, TRL/MCRL levels, or a list of partners and their requested funding.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 1214,
+        "completion_tokens": 180,
+        "total_tokens": 1394,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "seconds": 6.98,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00048078
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 3972759,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 8.98
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 1482,
+          "completion_tokens": 173,
+          "total_tokens": 1655,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I am sorry, but the provided document text is empty and the provided images do not contain a partner budget table, project acronym, title, call identifier, submission date, total requested amount, TRL/MCRL levels, or a list of partners with their requested funding.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 1482,
+        "completion_tokens": 173,
+        "total_tokens": 1655,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "seconds": 8.98,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00054719
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 18219203,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.09
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.09,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 9163220,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.06
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.06,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 4382367,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 8.78
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 1482,
+          "completion_tokens": 162,
+          "total_tokens": 1644,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 928,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I am sorry, but the provided document text is empty and the provided images do not contain a partner budget table, project acronym, title, call identifier, or funding amounts. Therefore, I cannot extract the requested information.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 1482,
+        "completion_tokens": 162,
+        "total_tokens": 1644,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 928,
+        "seconds": 8.78,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00053784
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 4784806,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 12.73
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 1750,
+          "completion_tokens": 378,
+          "total_tokens": 2128,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 928,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "The partner budget table is located on page 21. Working through the rows:\n- TMU: 214,8\n- HBU: 159,8\n- KPRI: see E.2\n- OPS: 167,1\n- VSS: 196,4\n- ORDEA: 0,0\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 979 300\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"TMU\",\n      \"requested\": \"214,8\"\n    },\n    {\n      \"partner_name\": \"HBU\",\n      \"requested\": \"159,8\"\n    },\n    {\n      \"partner_name\": \"KPRI\",\n      \"requested\": \"see E.2\"\n    },\n    {\n      \"partner_name\": \"OPS\",\n      \"requested\": \"167,1\"\n    },\n    {\n      \"partner_name\": \"VSS\",\n      \"requested\": \"196,4\"\n    },\n    {\n      \"partner_name\": \"ORDEA\",\n      \"requested\": \"0,0\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 1750,
+        "completion_tokens": 378,
+        "total_tokens": 2128,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 928,
+        "seconds": 12.73,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.0007938
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 9059936,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.06
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.06,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 3463987,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 11.27
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 1482,
+          "completion_tokens": 183,
+          "total_tokens": 1665,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 928,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I am sorry, but the provided document text is empty and the provided images (pages 24 and 25) do not contain a partner budget table, project acronym, title, call identifier, submission date, total requested amount, TRL/MCRL levels, or a list of partners with their requested funding.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 1482,
+        "completion_tokens": 183,
+        "total_tokens": 1665,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 928,
+        "seconds": 11.27,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00055569
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 5599902,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 0.29
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 0.29,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 1835768,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 8.55
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 1214,
+          "completion_tokens": 274,
+          "total_tokens": 1488,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 928,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "The provided document consists of a single page (Page 26 of 45) which is part of \"Part E, Justification of costs\" for a Research Council of Finland application. It mentions that for KPRI, the requested funding amounts to EUR 241 200. However, the document does not contain a partner budget table, a project acronym, a full project title, a call identifier, a submission date, a total requested amount for the whole project, or TRL/MCRL levels.\n\nKPRI: EUR 241 200\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"KPRI\",\n      \"requested\": \"EUR 241 200\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 1214,
+        "completion_tokens": 274,
+        "total_tokens": 1488,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 928,
+        "seconds": 8.55,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00056068
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 3768087,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 9.68
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 1482,
+          "completion_tokens": 174,
+          "total_tokens": 1656,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 928,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I am sorry, but the provided document text is empty and the provided images (pages 27 and 28) do not contain a partner budget table, project acronym, title, call identifier, submission date, total requested amount, TRL, or MCRL levels.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 1482,
+        "completion_tokens": 174,
+        "total_tokens": 1656,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 928,
+        "seconds": 9.68,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00054804
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 19432399,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.08
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.08,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 9584832,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.06
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.06,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 3374251,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 7.15
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 1482,
+          "completion_tokens": 183,
+          "total_tokens": 1665,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I am sorry, but the provided document text is empty and the provided images (pages 28 and 29) do not contain a partner budget table, project acronym, title, call identifier, submission date, total requested amount, TRL/MCRL levels, or a list of partners with their requested funding.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 1482,
+        "completion_tokens": 183,
+        "total_tokens": 1665,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "seconds": 7.15,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00055569
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 6214534,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 0.99
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 0.99,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 2038012,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 8.68
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 1214,
+          "completion_tokens": 180,
+          "total_tokens": 1394,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I am sorry, but the provided document text is empty and the single provided image is a signature page (Page 30 of 45) which does not contain a partner budget table, project acronym, title, call identifier, or funding amounts. I cannot find the requested information in the provided materials.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 1214,
+        "completion_tokens": 180,
+        "total_tokens": 1394,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "seconds": 8.68,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00048078
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 4180475,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 9.61
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 1482,
+          "completion_tokens": 195,
+          "total_tokens": 1677,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I am sorry, but the provided document text is empty and the provided images only contain \"Work package sheet\" descriptions for Work Package 1 and Work Package 2. There is no partner budget table, project acronym, title, call identifier, submission date, total requested amount, TRL/MCRL levels, or a list of partners with their requested funding in the provided materials.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 1482,
+        "completion_tokens": 195,
+        "total_tokens": 1677,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "seconds": 9.61,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00056589
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 9851520,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.02
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.02,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 4222099,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 9.77
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 1482,
+          "completion_tokens": 189,
+          "total_tokens": 1671,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 928,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "The provided document contains only two pages (page 33 and 34 of 45) which describe Work Package 3 and Work Package 4. There is no partner budget table, project acronym, project title, call identifier, submission date, total requested amount, TRL, or MCRL information present in the provided text or images.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 1482,
+        "completion_tokens": 189,
+        "total_tokens": 1671,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 928,
+        "seconds": 9.77,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00056079
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 5633374,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.01
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.01,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 1966744,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 7.42
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 1214,
+          "completion_tokens": 186,
+          "total_tokens": 1400,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "The provided document consists of a single page (Page 35 of 45) containing a \"Work package sheet\" for \"System integration\". There is no partner budget table, project acronym, proposal title, call identifier, submission date, total requested amount, TRL, or MCRL information present in the provided text or image.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 1214,
+        "completion_tokens": 186,
+        "total_tokens": 1400,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "seconds": 7.42,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00048588
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 3670583,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 12.38
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 1482,
+          "completion_tokens": 188,
+          "total_tokens": 1670,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 928,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I am sorry, but the provided document text is empty and the provided images only contain descriptions of Work Packages 6 and 7. There is no partner budget table, project acronym, title, call identifier, submission date, total requested amount, TRL/MCRL levels, or a list of partners with their requested funding in the provided materials.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 1482,
+        "completion_tokens": 188,
+        "total_tokens": 1670,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 928,
+        "seconds": 12.38,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00055994
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 15920632,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.17
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.17,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 7493849,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 0.94
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 0.94,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 3576387,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 12.11
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 1482,
+          "completion_tokens": 196,
+          "total_tokens": 1678,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 928,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I am sorry, but the provided document text is empty and the provided images only contain \"Work package sheets\" (Annex A) for Work Packages 7 and 8. There is no partner budget table, project acronym, title, call identifier, submission date, total requested amount, TRL/MCRL levels, or a list of partners with their requested funding in the provided materials.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 1482,
+        "completion_tokens": 196,
+        "total_tokens": 1678,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 928,
+        "seconds": 12.11,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00056674
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 3921415,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 7.19
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 1482,
+          "completion_tokens": 197,
+          "total_tokens": 1679,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I am sorry, but the provided document text is empty and the provided images only contain \"Annex B: Deliverable list form\" (pages 39 and 40), which lists project deliverables, work packages, and leads, but does not contain a partner budget table, project acronym, title, call identifier, submission date, total requested funding, TRL, or MCRL levels.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 1482,
+        "completion_tokens": 197,
+        "total_tokens": 1679,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "seconds": 7.19,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00056759
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 8430736,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 0.74
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 0.74,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 3382995,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 9.0
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 1482,
+          "completion_tokens": 197,
+          "total_tokens": 1679,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 928,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I am sorry, but the provided document text is empty and the provided images only contain \"Annex B: Deliverable list form\" (pages 41 and 42), which lists project deliverables, work packages, and leads, but does not contain a partner budget table, project acronym, title, call identifier, submission date, total requested funding, TRL, or MCRL levels.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 1482,
+        "completion_tokens": 197,
+        "total_tokens": 1679,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 928,
+        "seconds": 9.0,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00056759
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 5051694,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 16.38
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 1750,
+          "completion_tokens": 186,
+          "total_tokens": 1936,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 928,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I am sorry, but the provided document text is empty and the provided images only contain a \"Risk register form\" (Annex C), which does not include a partner budget table, project acronym, title, call identifier, submission date, total requested funding, TRL/MCRL levels, or a list of partners with their requested grants.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 1750,
+        "completion_tokens": 186,
+        "total_tokens": 1936,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 928,
+        "seconds": 16.38,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.0006306
+      }
+    ]
+  }
+}

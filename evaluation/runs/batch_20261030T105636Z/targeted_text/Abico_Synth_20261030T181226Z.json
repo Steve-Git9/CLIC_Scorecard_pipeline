@@ -1,0 +1,49 @@
+{
+  "proposal": {
+    "proposal_acronym": "ReCoSE",
+    "proposal_title": "Renewable Composite Systems with Circular Engineering ReCoSE",
+    "call_identifier": null,
+    "submission_date": null
+  },
+  "proposal_facts": {
+    "requested_total_cents": 354540000,
+    "trl_start": null,
+    "trl_target": null,
+    "mcrl_start": null,
+    "mcrl_target": null
+  },
+  "partners": [
+    {
+      "partner_name": "NorthGrid Energy WS",
+      "requested_cents": 1500000
+    },
+    {
+      "partner_name": "ForestLoop Fibre",
+      "requested_cents": 2240000
+    },
+    {
+      "partner_name": "Atmosense",
+      "requested_cents": 560000
+    },
+    {
+      "partner_name": "NordWindow Group",
+      "requested_cents": 2240000
+    },
+    {
+      "partner_name": "Aurora Shipworks",
+      "requested_cents": 1120000
+    },
+    {
+      "partner_name": "PolyNova Labs",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "Oerlikon Balzer",
+      "requested_cents": null
+    }
+  ],
+  "metadata": {
+    "extraction_timestamp": "2026-10-30T18:12:26Z",
+    "source_file": "Abico_Synth.pdf"
+  }
+}

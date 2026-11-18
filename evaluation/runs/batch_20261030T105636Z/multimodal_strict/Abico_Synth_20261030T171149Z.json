@@ -1,0 +1,85 @@
+{
+  "proposal": {
+    "proposal_acronym": "ReCoSE",
+    "proposal_title": "Renewable Composite Systems with Circular Engineering ReCoSE",
+    "call_identifier": null,
+    "submission_date": null
+  },
+  "proposal_facts": {
+    "requested_total_cents": 221860000,
+    "trl_start": 3,
+    "trl_target": 5,
+    "mcrl_start": 3,
+    "mcrl_target": 5
+  },
+  "partners": [
+    {
+      "partner_name": "Nordic Institute for Sustainable Materials NISM",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "Lake District Technical University",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "Eastern Nordic University ENU",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "Coastal Finland University CFU",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "NLUAS University of Applied Science",
+      "requested_cents": 48720000
+    },
+    {
+      "partner_name": "LDTU University (LDTU)",
+      "requested_cents": 38240000
+    },
+    {
+      "partner_name": "PolyCycle",
+      "requested_cents": 2800000
+    },
+    {
+      "partner_name": "NorthGrid Energy WS",
+      "requested_cents": 1700000
+    },
+    {
+      "partner_name": "ForestLoop Fibre",
+      "requested_cents": 3400000
+    },
+    {
+      "partner_name": "CircuForm",
+      "requested_cents": 1700000
+    },
+    {
+      "partner_name": "BioCoat Solutions",
+      "requested_cents": 1700000
+    },
+    {
+      "partner_name": "NordWindow Group",
+      "requested_cents": 2240000
+    },
+    {
+      "partner_name": "Atmosense",
+      "requested_cents": 560000
+    },
+    {
+      "partner_name": "Aurora Shipworks",
+      "requested_cents": 1120000
+    },
+    {
+      "partner_name": "PolyNova Labs",
+      "requested_cents": 1120000
+    },
+    {
+      "partner_name": "SurfaceTech Nordic",
+      "requested_cents": 1700000
+    }
+  ],
+  "metadata": {
+    "extraction_timestamp": "2026-10-30T17:11:49Z",
+    "source_file": "Abico_Synth.pdf"
+  }
+}

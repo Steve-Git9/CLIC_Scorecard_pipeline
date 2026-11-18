@@ -1,0 +1,102 @@
+{
+  "arm": "B",
+  "model": "Qwen/Qwen3.5-9B",
+  "provider": "deepinfra",
+  "source_file": "CLIMACITIES.md",
+  "started_utc": "2026-10-30T11:59:28Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 18.05,
+  "attempts": 1,
+  "prompt_tokens": 20698,
+  "completion_tokens": 439,
+  "cost_usd": 0.002136,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3.5-9B",
+  "parts": 1,
+  "output_file": "CLIMACITIES_20261030T115928Z.json",
+  "replies_file": "CLIMACITIES_20261030T115928Z.replies.json",
+  "total_seconds": 18.07,
+  "evaluation": {
+    "document": "CLIMACITIES",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\B\\CLIMACITIES_20261030T115928Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 115.02,
+      "docling_markdown_sha256": "949af8bd07e2436524f0435a30f6b88f5830c13a3397260c211a488094e2efbf"
+    },
+    "runner_wall_clock_seconds": 18.07,
+    "end_to_end_seconds": 133.09,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 20698,
+      "completion_tokens": 439,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.00213565,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3.5-9B",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3.5-9B",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 116976,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 18.05
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20698,
+          "total_tokens": 21137,
+          "completion_tokens": 439,
+          "estimated_cost": 0.0021356500000000002,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"CLIMACITIES\",\n    \"proposal_title\": \"Climate Intelligence for Equitable and Adaptive European Cities\",\n    \"call_identifier\": \"HORIZON-MISS-2027-CLIMA-SYN-01\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 7,500,000\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NORDIC URBAN SYSTEMS INSTITUTE\",\n      \"requested\": \"1,420,000\"\n    },\n    {\n      \"partner_name\": \"RHEIN DATA LABS GMBH\",\n      \"requested\": \"1,060,000\"\n    },\n    {\n      \"partner_name\": \"ATLANTIC RESILIENCE CENTRE\",\n      \"requested\": \"910,000\"\n    },\n    {\n      \"partner_name\": \"CIVITAS ANALYTICS SL\",\n      \"requested\": \"870,000\"\n    },\n    {\n      \"partner_name\": \"DELTA WATER RESEARCH BV\",\n      \"requested\": \"850,000\"\n    },\n    {\n      \"partner_name\": \"BALTIC COMMUNITY LAB\",\n      \"requested\": \"690,000\"\n    },\n    {\n      \"partner_name\": \"ALPINE ENERGY INNOVATION SRL\",\n      \"requested\": \"930,000\"\n    },\n    {\n      \"partner_name\": \"URBAN FUTURES ASSOCIATION\",\n      \"requested\": \"770,000\"\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 20698,
+        "completion_tokens": 439,
+        "total_tokens": 21137,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 18.05,
+        "model_reported": "Qwen/Qwen3.5-9B",
+        "finish_reason": "stop",
+        "cost_usd": 0.00213565
+      }
+    ]
+  }
+}

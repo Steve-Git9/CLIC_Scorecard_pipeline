@@ -1,0 +1,110 @@
+{
+  "arm": "D",
+  "model": "openai/gpt-oss-20b",
+  "provider": "groq",
+  "source_file": "CIRCUNOVA.md",
+  "started_utc": "2026-10-31T11:12:39Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "duplicate partner 'GREEN PATHWAYS OY' dropped",
+    "duplicate partner 'RenewLoop Denmark' dropped"
+  ],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 3.8,
+  "attempts": 1,
+  "prompt_tokens": 44712,
+  "completion_tokens": 679,
+  "cost_usd": 0.004811,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-20b",
+  "parts": 1,
+  "output_file": "CIRCUNOVA_20261031T111239Z.json",
+  "replies_file": "CIRCUNOVA_20261031T111239Z.replies.json",
+  "total_seconds": 3.84,
+  "evaluation": {
+    "document": "CIRCUNOVA",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\D\\CIRCUNOVA_20261031T111239Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 648.98,
+      "docling_markdown_sha256": "30e0bb02a25c571eeee7ce56163a12b9d6629152cbf564b24fc8b8334df35d5d"
+    },
+    "runner_wall_clock_seconds": 3.84,
+    "end_to_end_seconds": 652.82,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 44712,
+      "completion_tokens": 679,
+      "reasoning_tokens": 74,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.0035571,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-20b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-20b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 283267,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 3.8
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.139565026,
+          "prompt_tokens": 44712,
+          "prompt_time": 2.447831781,
+          "completion_tokens": 679,
+          "completion_time": 0.714858962,
+          "total_tokens": 45391,
+          "total_time": 3.162690743,
+          "completion_tokens_details": {
+            "reasoning_tokens": 74
+          }
+        },
+        "reply": "{\"proposal\":{\"proposal_acronym\":\"CIRCUNOVA\",\"proposal_title\":\"Circular Industry Networks for Regenerative Urban PVerials\",\"call_identifier\":\"HORIZON-CL6-2026-01-two-stage\",\"submission_date\":null},\"proposal_facts\":{\"requested_total\":null,\"trl_start\":null,\"trl_target\":null,\"mcrl_start\":null,\"mcrl_target\":null},\"partners\":[{\"partner_name\":\"NORDIC CIRCULAR SYSTEMS OY\",\"requested\":null},{\"partner_name\":\"VESTFJORD MUNICIPALITY\",\"requested\":null},{\"partner_name\":\"Vestfjord Enterprise Agency\",\"requested\":null},{\"partner_name\":\"Northbridge PVerials ApS\",\"requested\":null},{\"partner_name\":\"Morrow Resource CRTNvery ApS\",\"requested\":null},{\"partner_name\":\"RenewLoop Denmark\",\"requested\":null},{\"partner_name\":\"LAKELAND REGIONAL COUNCIL\",\"requested\":null},{\"partner_name\":\"TAMPEREEN KAUPUNKISEUDUN ELINKEINOJA KEHITYSYHTIO BUSINESS TAMPERE OY\",\"requested\":null},{\"partner_name\":\"GREEN PATHWAYS OY\",\"requested\":null},{\"partner_name\":\"LAKELAND RESOURCE SERVICES OY\",\"requested\":null},{\"partner_name\":\"MineralCarbon Solutions Oy\",\"requested\":null},{\"partner_name\":\"TerraForm Innovations Oy\",\"requested\":null},{\"partner_name\":\"BALTIC INSTITUTE OF TECHNOLOGY\",\"requested\":null},{\"partner_name\":\"City of Valmont\",\"requested\":null},{\"partner_name\":\"EUROPEAN INSTITUTE OF PVERIALS\",\"requested\":null},{\"partner_name\":\"AEGEAN REGIONAL INNOVATION FUND\",\"requested\":null},{\"partner_name\":\"MUNICIPALITY OF PORTO VERDE\",\"requested\":null},{\"partner_name\":\"UNIVERSITY OF HARZ TECHNOLOGY\",\"requested\":null},{\"partner_name\":\"SAIMAA UNIVERSITY OF APPLIED SCIENCES\",\"requested\":null},{\"partner_name\":\"LAKELAND BUSINESS DEVELOPMENT AGENCY OY\",\"requested\":null},{\"partner_name\":\"GREEN PATHWAYS OY\",\"requested\":null},{\"partner_name\":\"NCS\",\"requested\":null},{\"partner_name\":\"VEST\",\"requested\":null},{\"partner_name\":\"VEA\",\"requested\":null},{\"partner_name\":\"NBM\",\"requested\":null},{\"partner_name\":\"MRR\",\"requested\":null},{\"partner_name\":\"RenewLoop Denmark\",\"requested\":null},{\"partner_name\":\"LRC\",\"requested\":null},{\"partner_name\":\"LBDA\",\"requested\":null},{\"partner_name\":\"GPO\",\"requested\":null},{\"partner_name\":\"VALM\",\"requested\":null},{\"partner_name\":\"EIM\",\"requested\":null},{\"partner_name\":\"ARIF\",\"requested\":null},{\"partner_name\":\"PV\",\"requested\":null},{\"partner_name\":\"UHT\",\"requested\":null},{\"partner_name\":\"SUAS\",\"requested\":null},{\"partner_name\":\"CRTN\",\"requested\":null},{\"partner_name\":\"AFL\",\"requested\":null}]}",
+        "reasoning": "Need proposal_acronym CIRCUNOVA, title Circular Industry Networks for Regenerative Urban PVerials, call_identifier HORIZON-CL6-2026-01-two-stage, submission_date null. requested_total? Not given. TRL start/target? none. MCRL start/target? none. partners list names. No requested amounts.",
+        "prompt_tokens": 44712,
+        "completion_tokens": 679,
+        "total_tokens": 45391,
+        "reasoning_tokens": 74,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 3.8,
+        "model_reported": "openai/gpt-oss-20b",
+        "finish_reason": "stop",
+        "cost_usd": 0.0035571
+      }
+    ]
+  }
+}

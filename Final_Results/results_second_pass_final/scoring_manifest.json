@@ -1,0 +1,47 @@
+{
+  "batch_id": "batch_20261030T105636Z",
+  "run_code_commit": "1380dc76546f8846585b33d7337068e54683a213",
+  "scorer_code": {
+    "commit": "86e6d7108157d0fc48a654cafff7afef4447f088",
+    "dirty": false,
+    "uncommitted_changes": []
+  },
+  "scored_utc": "2026-11-09T09:00:40Z",
+  "final_runs_scored": 330,
+  "superseded_attempts": "not scored and not reported",
+  "gold_sets": {
+    "Abico_Synth": "609297610f47b4d5121b665465e763aa52b8c68ab4fb6df54c1982fd21725772",
+    "ByggMap": "cf6af9b6c73ec7eedb8a57141c749ada6d8ab5b3de788c5891db02d952d1e5ab",
+    "CIRCUNOVA": "506e73df9d5e5f20168f89e002f34f7f1d596f31e48f9a56550a57d5fb907926",
+    "CLIMACITIES": "5d61b0e56e9d4508eb1ac33575d8aab973eeded69ba33c089872e5e558f0f2e3",
+    "SP01": "87adb89c5ced8854cb22deccbe10149dcbb0e1a04866570d877086680fc8ec96",
+    "SP02": "3aff978016ed795d091e08bfb093e618c4b1b0c3382f7158e23c455eb92e1648",
+    "SP03A": "276de389c8f374c5d6d4d1f116054a5fbfe203ac44fe1f41a5755125d1c8b703",
+    "SP03B": "276de389c8f374c5d6d4d1f116054a5fbfe203ac44fe1f41a5755125d1c8b703",
+    "SP04": "da9b5e9e13bd84b616ad59dc5c2600d3eeae3b9b0da481d4f7c69aeefb5e85ae",
+    "SP05": "43ea201b654886d4688db32e7630144371d8fe755771b823dc2be32b9057be31"
+  },
+  "markdown": {
+    "Abico_Synth": "f08d464f70b9c8e0622b95ad6d85ebd4003542afc91c38c57bc3fa85015da08e",
+    "ByggMap": "36e0fbc6b4bedbe7e73c78e7b44ad4054a5f4dac9ba314c7c26dcc21671d7ccf",
+    "CIRCUNOVA": "cbbb7830ee44945598e04d9187ed9d0af293c6ada3c95a4fd5efd8eac3c21ab1",
+    "CLIMACITIES": "6f75c6648418ca0920eae4b5debaecf38b852558b976dfc3c1aa4d1f86177041",
+    "SP01": "594defc42f02f06fd33462805ca8c30dfe6dfb33554c3b1254e0484a915be267",
+    "SP02": "4dccbc753938ede14a02f3bde2c732fe26b1670d5e34199ca8bd8fde1b2e000a",
+    "SP03A": "bec82f3ae4d89f21a43d3e71fc680a6f2b96a98118f71ffcc8d98eb014ba38ea",
+    "SP03B": "1e03641a68a87211f4c05a76abfcd31c9d30e2a66e5581225a268c39a868dc5f",
+    "SP04": "8a47026ba1f42f5fa4230de2b9774ac35741a417f2eb75a68ad5ded7362642d9",
+    "SP05": "b7605a7c998fbc2450704514d2eb7ebe50fabc32a8324763ac1ec9438e8a0bd2"
+  },
+  "decisions_file": {
+    "path": "evaluation\\results\\batch_20261030T105636Z\\review_decisions.csv",
+    "sha256": "da5e9a461f2883334b988a5c3e8a02f8240b059107dcb45ac3ef26f712817037"
+  },
+  "spot_check_seed": "spotcheck/batch_20261030T105636Z",
+  "document_codes": "document_codes.csv (private)",
+  "frontier": [
+    "B",
+    "freeform_light",
+    "multimodal_combined_llama4_maverick"
+  ]
+}

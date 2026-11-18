@@ -1,0 +1,73 @@
+{
+  "proposal": {
+    "proposal_acronym": "CIRCUNOVA",
+    "proposal_title": "Circular Industry Networks for Regenerative Urban PVerials",
+    "call_identifier": "HORIZON-CL6-2026-01-two-stage",
+    "submission_date": null
+  },
+  "proposal_facts": {
+    "requested_total_cents": 600000000,
+    "trl_start": null,
+    "trl_target": null,
+    "mcrl_start": null,
+    "mcrl_target": null
+  },
+  "partners": [
+    {
+      "partner_name": "NCS",
+      "requested_cents": 66670000
+    },
+    {
+      "partner_name": "VEST",
+      "requested_cents": 25025000
+    },
+    {
+      "partner_name": "LRC",
+      "requested_cents": 14935000
+    },
+    {
+      "partner_name": "LBDA",
+      "requested_cents": 30325000
+    },
+    {
+      "partner_name": "LRS",
+      "requested_cents": 33530000
+    },
+    {
+      "partner_name": "MCS",
+      "requested_cents": 37975000
+    },
+    {
+      "partner_name": "TFI",
+      "requested_cents": 38456250
+    },
+    {
+      "partner_name": "BIT",
+      "requested_cents": 36650000
+    },
+    {
+      "partner_name": "PV",
+      "requested_cents": 22206250
+    },
+    {
+      "partner_name": "UHT",
+      "requested_cents": 57150000
+    },
+    {
+      "partner_name": "SUAS",
+      "requested_cents": 34302500
+    },
+    {
+      "partner_name": "CRTN",
+      "requested_cents": 0
+    },
+    {
+      "partner_name": "AFL",
+      "requested_cents": 0
+    }
+  ],
+  "metadata": {
+    "extraction_timestamp": "2026-10-31T12:55:49Z",
+    "source_file": "CIRCUNOVA.pdf"
+  }
+}

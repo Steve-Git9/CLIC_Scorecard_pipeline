@@ -1,0 +1,184 @@
+{
+  "arm": "multimodal_combined_llama4_maverick",
+  "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+  "provider": "novita",
+  "source_file": "CLIMACITIES.md",
+  "started_utc": "2026-10-30T12:09:27Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "duplicate partner 'NORDIC URBAN SYSTEMS INSTITUTE' dropped",
+    "duplicate partner 'RHEIN DATA LABS GMBH' dropped",
+    "duplicate partner 'ATLANTIC RESILIENCE CENTRE' dropped",
+    "duplicate partner 'CIVITAS ANALYTICS SL' dropped",
+    "duplicate partner 'DELTA WATER RESEARCH BV' dropped",
+    "duplicate partner 'BALTIC COMMUNITY LAB' dropped",
+    "duplicate partner 'ALPINE ENERGY INNOVATION SRL' dropped",
+    "duplicate partner 'URBAN FUTURES ASSOCIATION' dropped"
+  ],
+  "batch_size": 10,
+  "overlap": 1,
+  "pages_total": 45,
+  "pages_with_images": 16,
+  "batches": 2,
+  "calls": 2,
+  "seconds": 63.86,
+  "attempts": 2,
+  "prompt_tokens": 47246,
+  "completion_tokens": 1190,
+  "cost_usd": 0.013767,
+  "finish_reason": "stop",
+  "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+  "context_splits": 0,
+  "output_file": "CLIMACITIES_20261030T120927Z.json",
+  "replies_file": "CLIMACITIES_20261030T120927Z.replies.json",
+  "total_seconds": 69.17,
+  "evaluation": {
+    "document": "CLIMACITIES",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\multimodal_combined_llama4_maverick\\CLIMACITIES_20261030T120927Z.run.json",
+    "input": "pdf",
+    "preparation": {
+      "native_text_seconds": 0.09
+    },
+    "runner_wall_clock_seconds": 69.26,
+    "end_to_end_seconds": 69.26,
+    "calls": 2,
+    "failed_calls": 0,
+    "attempts": 2,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 47246,
+      "completion_tokens": 1190,
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "cached_tokens": 0
+    },
+    "calls_reporting": {
+      "prompt_tokens": 2,
+      "completion_tokens": 2,
+      "reasoning_tokens": 2,
+      "image_tokens": 2
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.01376792,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "novita",
+          "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+          "status": "verified",
+          "retrieved_on": "2026-10-23"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 2724569,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 35.25
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 24025,
+          "completion_tokens": 595,
+          "total_tokens": 24620,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "The partner budget table is found on page 2 and page 43. Working through the rows:\nNORDIC URBAN SYSTEMS INSTITUTE: 1,420,000\nRHEIN DATA LABS GMBH: 1,060,000\nATLANTIC RESILIENCE CENTRE: 910,000\nCIVITAS ANALYTICS SL: 870,000\nDELTA WATER RESEARCH BV: 850,000\nBALTIC COMMUNITY LAB: 690,000\nALPINE ENERGY INNOVATION SRL: 930,000\nURBAN FUTURES ASSOCIATION: 770,000\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"CLIMACITIES\",\n    \"proposal_title\": \"Climate Intelligence for Equitable and Adaptive European Cities\",\n    \"call_identifier\": \"HORIZON-MISS-2027-CLIMA-SYN-01\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 7,500,000\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NORDIC URBAN SYSTEMS INSTITUTE\",\n      \"requested\": \"1,420,000\"\n    },\n    {\n      \"partner_name\": \"RHEIN DATA LABS GMBH\",\n      \"requested\": \"1,060,000\"\n    },\n    {\n      \"partner_name\": \"ATLANTIC RESILIENCE CENTRE\",\n      \"requested\": \"910,000\"\n    },\n    {\n      \"partner_name\": \"CIVITAS ANALYTICS SL\",\n      \"requested\": \"870,000\"\n    },\n    {\n      \"partner_name\": \"DELTA WATER RESEARCH BV\",\n      \"requested\": \"850,000\"\n    },\n    {\n      \"partner_name\": \"BALTIC COMMUNITY LAB\",\n      \"requested\": \"690,000\"\n    },\n    {\n      \"partner_name\": \"ALPINE ENERGY INNOVATION SRL\",\n      \"requested\": \"930,000\"\n    },\n    {\n      \"partner_name\": \"URBAN FUTURES ASSOCIATION\",\n      \"requested\": \"770,000\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 24025,
+        "completion_tokens": 595,
+        "total_tokens": 24620,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "seconds": 35.25,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.0069925
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 1936208,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 28.61
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 23221,
+          "completion_tokens": 595,
+          "total_tokens": 23816,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "The partner budget table is found on page 2 and page 43. Working through the rows:\nNORDIC URBAN SYSTEMS INSTITUTE: 1,420,000\nRHEIN DATA LABS GMBH: 1,060,000\nATLANTIC RESILIENCE CENTRE: 910,000\nCIVITAS ANALYTICS SL: 870,000\nDELTA WATER RESEARCH BV: 850,000\nBALTIC COMMUNITY LAB: 690,000\nALPINE ENERGY INNOVATION SRL: 930,000\nURBAN FUTURES ASSOCIATION: 770,000\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"CLIMACITIES\",\n    \"proposal_title\": \"Climate Intelligence for Equitable and Adaptive European Cities\",\n    \"call_identifier\": \"HORIZON-MISS-2027-CLIMA-SYN-01\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 7,500,000\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NORDIC URBAN SYSTEMS INSTITUTE\",\n      \"requested\": \"1,420,000\"\n    },\n    {\n      \"partner_name\": \"RHEIN DATA LABS GMBH\",\n      \"requested\": \"1,060,000\"\n    },\n    {\n      \"partner_name\": \"ATLANTIC RESILIENCE CENTRE\",\n      \"requested\": \"910,000\"\n    },\n    {\n      \"partner_name\": \"CIVITAS ANALYTICS SL\",\n      \"requested\": \"870,000\"\n    },\n    {\n      \"partner_name\": \"DELTA WATER RESEARCH BV\",\n      \"requested\": \"850,000\"\n    },\n    {\n      \"partner_name\": \"BALTIC COMMUNITY LAB\",\n      \"requested\": \"690,000\"\n    },\n    {\n      \"partner_name\": \"ALPINE ENERGY INNOVATION SRL\",\n      \"requested\": \"930,000\"\n    },\n    {\n      \"partner_name\": \"URBAN FUTURES ASSOCIATION\",\n      \"requested\": \"770,000\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 23221,
+        "completion_tokens": 595,
+        "total_tokens": 23816,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "seconds": 28.61,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00677542
+      }
+    ]
+  }
+}

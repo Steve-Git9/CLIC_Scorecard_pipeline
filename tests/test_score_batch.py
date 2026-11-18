@@ -204,3 +204,34 @@ def test_frontier_plot_is_written(runs, tmp_path: Path):
     rows = [tables.run_row(r) for r in runs]
     plot = report.frontier_plot(tables.configuration_summary(runs, rows), tmp_path / "frontier_plot.png", "fictional")
     assert plot.stat().st_size > 0
+
+
+def test_final_runs_can_be_read_without_the_database(tmp_path: Path, monkeypatch):
+    """The last slot attempt is the final run; cost and time are rounded as the database stores them."""
+    import json
+
+    from src.evaluation.score_batch import final_runs_from_files
+
+    monkeypatch.chdir(tmp_path)
+    batch = tmp_path / "evaluation" / "runs" / "batch_fictional"
+    (batch / "B").mkdir(parents=True)
+
+    def run_file(name: str, cost: float, seconds: float) -> str:
+        path = batch / "B" / f"{name}.run.json"
+        path.write_text(json.dumps({"status": "ok", "started_utc": "2026-01-01T00:00:00Z", "evaluation": {
+            "end_to_end_seconds": seconds, "cost": {"cost_usd": cost},
+            "tokens": {"prompt_tokens": 10, "completion_tokens": 2}}}), encoding="utf-8")
+        return str(path.relative_to(tmp_path)).replace("/", "\\")   # recorded on Windows
+
+    first = run_file("FICTO_1", 0.5, 1.0)
+    second = run_file("FICTO_2", 0.0123456789, 12.3456)
+    (batch / "manifest.json").write_text(json.dumps({"code": {"commit": "abc1234"}, "chunks": [{"runs": [
+        {"configuration": "B", "document": "FICTO", "repetition": 1, "slot_attempt": 1, "run_file": first},
+        {"configuration": "B", "document": "FICTO", "repetition": 1, "slot_attempt": 2, "run_file": second},
+    ]}]}), encoding="utf-8")
+
+    commit, runs = final_runs_from_files(batch)
+    assert commit == "abc1234" and len(runs) == 1
+    assert runs[0]["run_file"] == second
+    assert runs[0]["cost_usd"] == 0.012346 and runs[0]["end_to_end_seconds"] == 12.346
+    assert runs[0]["tokens"]["input"] == 10

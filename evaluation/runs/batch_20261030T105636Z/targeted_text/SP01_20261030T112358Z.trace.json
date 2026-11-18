@@ -1,0 +1,109 @@
+{
+ "located": {
+  "proposal": [
+   {
+    "page": 1,
+    "score": 17.5
+   }
+  ],
+  "budget": [
+   {
+    "page": 41,
+    "score": 18.0
+   },
+   {
+    "page": 44,
+    "score": 12.75
+   },
+   {
+    "page": 3,
+    "score": 12.0
+   }
+  ],
+  "partners": [
+   {
+    "page": 34,
+    "score": 16.25
+   },
+   {
+    "page": 7,
+    "score": 14.25
+   },
+   {
+    "page": 39,
+    "score": 14.0
+   }
+  ],
+  "readiness": [
+   {
+    "page": 6,
+    "score": 6.75
+   },
+   {
+    "page": 31,
+    "score": 6.75
+   },
+   {
+    "page": 19,
+    "score": 5.25
+   }
+  ]
+ },
+ "tables": [],
+ "partner_budget_table": null,
+ "identifier_hints": {
+  "cover_title": "Circular Weaving of Recycled Fibre Value Chains",
+  "cover_page": 1,
+  "acronym_candidates": [],
+  "labelled": {
+   "acronym": [],
+   "title": [],
+   "call": []
+  },
+  "call_ids": [
+   {
+    "id": "INNO-2027-03-CIRCFIBRE-04",
+    "page": 1
+   }
+  ]
+ },
+ "page_map_sha256": "bdfc9699e9267430e600b2fe37c7b7ada34200f68226735910209df8cb211746",
+ "reconciliation": [
+  {
+   "partner_name": "Kalevra Innovation Cluster Oy",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "Northbay Materials Oy",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "Corvane Polymer Systems AB",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "Tessilo Process Engineering GmbH",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "Rauvik University",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "Elvaris University of Technology",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "Sundmark Applied Research Institute",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "Brenvik Institute for Sustainable Process Engineering",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "Lindfors Regional Development Agency",
+   "status": "unchecked"
+  }
+ ]
+}

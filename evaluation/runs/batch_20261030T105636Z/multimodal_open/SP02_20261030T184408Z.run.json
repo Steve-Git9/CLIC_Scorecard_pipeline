@@ -1,0 +1,250 @@
+{
+  "arm": "multimodal_open",
+  "strict": false,
+  "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "provider": "deepinfra",
+  "source_file": "SP02.pdf",
+  "started_utc": "2026-10-30T18:44:08Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "duplicate partner 'NVS' dropped",
+    "duplicate partner 'KTA' dropped",
+    "duplicate partner 'LMR' dropped",
+    "duplicate partner 'HVU' dropped",
+    "duplicate partner 'TMI' dropped"
+  ],
+  "batch_size": 10,
+  "overlap": 1,
+  "batches": 5,
+  "seconds": 410.98,
+  "attempts": 5,
+  "prompt_tokens": 90820,
+  "completion_tokens": 1591,
+  "cost_usd": 0.019564,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "output_file": "SP02_20261030T184408Z.json",
+  "replies_file": "SP02_20261030T184408Z.replies.json",
+  "total_seconds": 416.15,
+  "evaluation": {
+    "document": "SP02",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\multimodal_open\\SP02_20261030T184408Z.run.json",
+    "input": "pdf",
+    "preparation": {},
+    "runner_wall_clock_seconds": 416.16,
+    "end_to_end_seconds": 416.16,
+    "calls": 5,
+    "failed_calls": 0,
+    "attempts": 5,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 90820,
+      "completion_tokens": 1591,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 5,
+      "completion_tokens": 5,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.01956408,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 4733389,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 78.71
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20366,
+          "completion_tokens": 239,
+          "estimated_cost": 0.00423572,
+          "prompt_tokens_details": null
+        },
+        "reply": "```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"TIDEMESH\",\n    \"proposal_title\": \"Adaptive Sensor Networks for Resilient Coastal Infrastructure\",\n    \"call_identifier\": \"BF2026/93782\",\n    \"submission_date\": \"2026-04-02\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2,003,400\",\n    \"trl_start\": 2,\n    \"trl_target\": 5,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NVS\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"KTA\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"LMR\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"HVU\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"TMI\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 239,
+        "total_tokens": 20366,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 78.71,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00423572
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 4797549,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 117.14
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20619,
+          "completion_tokens": 492,
+          "estimated_cost": 0.00445836,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided document pages. The document describes a project consortium and its structure, activities, and partners. However, after a thorough review of all pages, I cannot find a partner budget table that lists each partner's name alongside a specific requested funding amount for this project.\n\nThe document does list the five partners in Section 2.1 on page 13:\n- Nordvalen Systems Oy (NVS)\n- Kaltiora Analytics Oy (KTA)\n- Lumenthar Marine Oy (LMR)\n- Havrenmaa University (HVU)\n- Taimerra Research Institute (TMI)\n\nIt also mentions on page 13 that Nordvalen Systems Oy received \"EUR 230,000 in funding for an earlier project,\" but this is explicitly stated as funding for a *different*, completed project from 2020, not for the current project being proposed.\n\nThere is no table, list, or text that provides the requested grant amount for any of the partners for the current project. The document discusses financial management principles (pages 11, 17) but does not allocate specific funding figures to the partners.\n\nTherefore, I cannot provide the requested partner budget table data as it is not present in the document.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": 2,\n    \"trl_target\": 5,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Nordvalen Systems Oy (NVS)\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Kaltiora Analytics Oy (KTA)\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Lumenthar Marine Oy (LMR)\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Havrenmaa University (HVU)\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Taimerra Research Institute (TMI)\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 492,
+        "total_tokens": 20619,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 117.14,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00445836
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 4516929,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 71.48
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20382,
+          "completion_tokens": 255,
+          "estimated_cost": 0.004249800000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed all the provided pages. The document describes a project's work plan, management, and development approach, including the roles of various partners such as Nordvalen Systems, Kaltiora Analytics, University of Havrenmaa, Taimerra Institute, and Lumenthar Marine. However, after a thorough examination of every page, I can confirm that there is no partner budget table present in the document. The text does not contain any financial figures, requested grant amounts, or a breakdown of funding per partner. Therefore, I cannot extract the requested data for the `partners` array or the `requested_total` field.\n\nSince the required data is not present in the document, I will return null for all fields as per the instruction to use null for missing or unfindable values.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 255,
+        "total_tokens": 20382,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 71.48,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0042498
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 3275157,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 80.39
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20523,
+          "completion_tokens": 396,
+          "estimated_cost": 0.00437388,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have read the document and located the partner budget table. I will now work through it row by row as instructed.\n\n- The table is Table 5.1 on page 33, titled \"Requested funding per partner.\"\n- The first row lists \"NVS\" with the amount \"181.6\".\n- The second row lists \"KTA\" with the amount \"190.9\".\n- The third row lists \"LMR\" with the text \"no funding requested\".\n- The fourth row lists \"HVU\" with the text \"shown in Figure 5.1\".\n- The fifth row lists \"TMI\" with the text \"shown in Figure 5.1\".\n\nI have now gone through every row of the table. I will now write the final answer as a single JSON object.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 991,100\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": 1,\n    \"mcrl_target\": 4\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NVS\",\n      \"requested\": \"181.6\"\n    },\n    {\n      \"partner_name\": \"KTA\",\n      \"requested\": \"190.9\"\n    },\n    {\n      \"partner_name\": \"LMR\",\n      \"requested\": \"no funding requested\"\n    },\n    {\n      \"partner_name\": \"HVU\",\n      \"requested\": \"shown in Figure 5.1\"\n    },\n    {\n      \"partner_name\": \"TMI\",\n      \"requested\": \"shown in Figure 5.1\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 396,
+        "total_tokens": 20523,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 80.39,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00437388
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1443170,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 63.26
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 10312,
+          "total_tokens": 10521,
+          "completion_tokens": 209,
+          "estimated_cost": 0.00224632,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided document pages. The document contains sections on the Gantt chart, work package descriptions, deliverables, and a risk register. It lists the partners involved in the project (NVS, KTA, LMR, HVU, TMI) and their person-month contributions per work package. However, after a thorough review of all pages, I can confirm that there is no partner budget table present in the document. There is no table or section that lists the requested funding amount for each partner. Therefore, I cannot extract the requested partner budget information.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 10312,
+        "completion_tokens": 209,
+        "total_tokens": 10521,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 63.26,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00224632
+      }
+    ]
+  }
+}

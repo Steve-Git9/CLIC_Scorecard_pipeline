@@ -1,0 +1,482 @@
+{
+  "arm": "multimodal_combined_llama4_maverick",
+  "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+  "provider": "novita",
+  "source_file": "SP04.md",
+  "started_utc": "2026-10-31T07:59:28Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "duplicate partner 'Hallvik University' dropped",
+    "duplicate partner 'Orrenfjord Marine Systems Ltd (formerly Kellmar Technologies Ltd)' dropped",
+    "duplicate partner 'Marovik Research Institute' dropped",
+    "duplicate partner 'Quenmark Sensor Works Ltd' dropped",
+    "duplicate partner 'Ostrelund Regional Development Agency' dropped",
+    "duplicate partner 'Brenvik Port Logistics Ltd' dropped",
+    "duplicate partner 'Eskeby Technical University' dropped",
+    "duplicate partner 'Hallvik University' dropped",
+    "duplicate partner 'Orrenfjord Marine Systems Ltd (formerly Kellmar Technologies Ltd)' dropped",
+    "duplicate partner 'Marovik Research Institute' dropped",
+    "duplicate partner 'Quenmark Sensor Works Ltd' dropped",
+    "duplicate partner 'Ostrelund Regional Development Agency' dropped",
+    "duplicate partner 'Brenvik Port Logistics Ltd' dropped",
+    "duplicate partner 'Eskeby Technical University' dropped",
+    "duplicate partner 'Hallvik University' dropped",
+    "duplicate partner 'Marovik Research Institute' dropped",
+    "duplicate partner 'Quenmark Sensor Works Ltd' dropped",
+    "duplicate partner 'Ostrelund Regional Development Agency' dropped",
+    "duplicate partner 'Brenvik Port Logistics Ltd' dropped",
+    "duplicate partner 'Eskeby Technical University' dropped",
+    "duplicate partner 'Hallvik University' dropped",
+    "duplicate partner 'Orrenfjord Marine Systems Ltd' dropped",
+    "duplicate partner 'Marovik Research Institute' dropped",
+    "duplicate partner 'Quenmark Sensor Works Ltd' dropped",
+    "duplicate partner 'Ostrelund Regional Development Agency' dropped",
+    "duplicate partner 'Brenvik Port Logistics Ltd' dropped",
+    "duplicate partner 'Eskeby Technical University' dropped",
+    "duplicate partner 'Hallvik University' dropped",
+    "duplicate partner 'Orrenfjord Marine Systems Ltd (formerly Kellmar Technologies Ltd)' dropped",
+    "duplicate partner 'Marovik Research Institute' dropped",
+    "duplicate partner 'Quenmark Sensor Works Ltd' dropped",
+    "duplicate partner 'Ostrelund Regional Development Agency' dropped",
+    "duplicate partner 'Brenvik Port Logistics Ltd' dropped",
+    "duplicate partner 'Eskeby Technical University' dropped",
+    "duplicate partner 'Hallvik University' dropped",
+    "duplicate partner 'Orrenfjord Marine Systems Ltd' dropped",
+    "duplicate partner 'Marovik Research Institute' dropped",
+    "duplicate partner 'Quenmark Sensor Works Ltd' dropped",
+    "duplicate partner 'Ostrelund Regional Development Agency' dropped",
+    "duplicate partner 'Brenvik Port Logistics Ltd' dropped",
+    "duplicate partner 'Eskeby Technical University' dropped"
+  ],
+  "batch_size": 10,
+  "overlap": 1,
+  "pages_total": 63,
+  "pages_with_images": 63,
+  "batches": 7,
+  "calls": 7,
+  "seconds": 207.02,
+  "attempts": 7,
+  "prompt_tokens": 211916,
+  "completion_tokens": 3515,
+  "cost_usd": 0.060203,
+  "finish_reason": "stop",
+  "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+  "context_splits": 0,
+  "output_file": "SP04_20261031T075928Z.json",
+  "replies_file": "SP04_20261031T075928Z.replies.json",
+  "total_seconds": 210.67,
+  "evaluation": {
+    "document": "SP04",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\multimodal_combined_llama4_maverick\\SP04_20261031T075928Z.run.json",
+    "input": "pdf",
+    "preparation": {
+      "native_text_seconds": 0.1
+    },
+    "runner_wall_clock_seconds": 210.78,
+    "end_to_end_seconds": 210.78,
+    "calls": 7,
+    "failed_calls": 0,
+    "attempts": 7,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 211916,
+      "completion_tokens": 3515,
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "cached_tokens": 82848
+    },
+    "calls_reporting": {
+      "prompt_tokens": 7,
+      "completion_tokens": 7,
+      "reasoning_tokens": 7,
+      "image_tokens": 7
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.06020507,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "novita",
+          "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+          "status": "verified",
+          "retrieved_on": "2026-10-23"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 2636594,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 45.18
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 30312,
+          "completion_tokens": 594,
+          "total_tokens": 30906,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I have analyzed the partner budget tables in the document.\n\nThe \"Original budget (for reference)\" in Table 5.1 lists:\n- Hallvik: 819,700\n- Kellmar: 674,700\n- Marovik: 621,400\n- Quenmark: 539,700\n- Ostrelund: 193,500\n- Brenvik: 0\n- Lindmark: 358,500\n\nThe \"Revised budget\" in Table 5.2 lists:\n- Hallvik: 674.5\n- Orrenfjord: 568.8\n- Marovik: 592.8\n- Quenmark: 507.0\n- Ostrelund: 213.0\n- Brenvik: 0.0\n- Eskeby: calculated at the funding rate\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"MAROFLOW\",\n    \"proposal_title\": \"Marine Observation Flows for Shared Coastal Planning\",\n    \"call_identifier\": \"BSR2026C41\",\n    \"submission_date\": \"2026-08-10\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2,946.1 thousand\",\n    \"trl_start\": null,\n    \"trl_target\": 6,\n    \"mcrl_start\": 4,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Hallvik University\",\n      \"requested\": \"674.5\"\n    },\n    {\n      \"partner_name\": \"Orrenfjord Marine Systems Ltd (formerly Kellmar Technologies Ltd)\",\n      \"requested\": \"568.8\"\n    },\n    {\n      \"partner_name\": \"Marovik Research Institute\",\n      \"requested\": \"592.8\"\n    },\n    {\n      \"partner_name\": \"Quenmark Sensor Works Ltd\",\n      \"requested\": \"507.0\"\n    },\n    {\n      \"partner_name\": \"Ostrelund Regional Development Agency\",\n      \"requested\": \"213.0\"\n    },\n    {\n      \"partner_name\": \"Brenvik Port Logistics Ltd\",\n      \"requested\": \"0.0\"\n    },\n    {\n      \"partner_name\": \"Eskeby Technical University\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 30312,
+        "completion_tokens": 594,
+        "total_tokens": 30906,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "seconds": 45.18,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00868914
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 2762354,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 24.57
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 30312,
+          "completion_tokens": 486,
+          "total_tokens": 30798,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I have reviewed the partner budget information in the \"Revised budget\" table (Table 5.2) on page 50.\n\nHallvik: 674.5\nOrrenfjord: 568.8\nMarovik: 592.8\nQuenmark: 507.0\nOstrelund: 213.0\nBrenvik: 0.0\nEskeby: calculated at the funding rate\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"MAROFLOW\",\n    \"proposal_title\": \"Marine Observation Flows for Shared Coastal Planning\",\n    \"call_identifier\": \"BSR2026C41\",\n    \"submission_date\": \"2026-08-10\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2,946.1 thousand\",\n    \"trl_start\": 3,\n    \"trl_target\": 6,\n    \"mcrl_start\": 4,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Hallvik University\",\n      \"requested\": \"674.5\"\n    },\n    {\n      \"partner_name\": \"Orrenfjord Marine Systems Ltd (formerly Kellmar Technologies Ltd)\",\n      \"requested\": \"568.8\"\n    },\n    {\n      \"partner_name\": \"Marovik Research Institute\",\n      \"requested\": \"592.8\"\n    },\n    {\n      \"partner_name\": \"Quenmark Sensor Works Ltd\",\n      \"requested\": \"507.0\"\n    },\n    {\n      \"partner_name\": \"Ostrelund Regional Development Agency\",\n      \"requested\": \"213.0\"\n    },\n    {\n      \"partner_name\": \"Brenvik Port Logistics Ltd\",\n      \"requested\": \"0.0\"\n    },\n    {\n      \"partner_name\": \"Eskeby Technical University\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 30312,
+        "completion_tokens": 486,
+        "total_tokens": 30798,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "seconds": 24.57,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00859734
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 2587614,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 26.76
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 30312,
+          "completion_tokens": 485,
+          "total_tokens": 30797,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I have reviewed the budget information in the document. The revised budget is presented in Table 5.2 on page 50.\n\nHallvik: 674.5\nOrrenfjord: 568.8\nMarovik: 592.8\nQuenmark: 507.0\nOstrelund: 213.0\nBrenvik: 0.0\nEskeby: calculated at the funding rate\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"MAROFLOW\",\n    \"proposal_title\": \"Marine Observation Flows for Shared Coastal Planning\",\n    \"call_identifier\": \"BSR2026C41\",\n    \"submission_date\": \"2026-08-10\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2,946.1 thousand\",\n    \"trl_start\": null,\n    \"trl_target\": 6,\n    \"mcrl_start\": 4,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Hallvik University\",\n      \"requested\": \"674.5\"\n    },\n    {\n      \"partner_name\": \"Orrenfjord Marine Systems Ltd (formerly Kellmar Technologies Ltd)\",\n      \"requested\": \"568.8\"\n    },\n    {\n      \"partner_name\": \"Marovik Research Institute\",\n      \"requested\": \"592.8\"\n    },\n    {\n      \"partner_name\": \"Quenmark Sensor Works Ltd\",\n      \"requested\": \"507.0\"\n    },\n    {\n      \"partner_name\": \"Ostrelund Regional Development Agency\",\n      \"requested\": \"213.0\"\n    },\n    {\n      \"partner_name\": \"Brenvik Port Logistics Ltd\",\n      \"requested\": \"0.0\"\n    },\n    {\n      \"partner_name\": \"Eskeby Technical University\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 30312,
+        "completion_tokens": 485,
+        "total_tokens": 30797,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "seconds": 26.76,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00859649
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 2918158,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 24.42
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 30312,
+          "completion_tokens": 480,
+          "total_tokens": 30792,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I have reviewed the partner budget information in the document. The revised budget is found in Table 5.2 on page 50.\n\nHallvik: 674.5\nOrrenfjord: 568.8\nMarovik: 592.8\nQuenmark: 507.0\nOstrelund: 213.0\nBrenvik: 0.0\nEskeby: calculated at the funding rate\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"MAROFLOW\",\n    \"proposal_title\": \"Marine Observation Flows for Shared Coastal Planning\",\n    \"call_identifier\": \"BSR2026C41\",\n    \"submission_date\": \"2026-08-10\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2,946.1 thousand\",\n    \"trl_start\": null,\n    \"trl_target\": 6,\n    \"mcrl_start\": 4,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Hallvik University\",\n      \"requested\": \"674.5\"\n    },\n    {\n      \"partner_name\": \"Orrenfjord Marine Systems Ltd\",\n      \"requested\": \"568.8\"\n    },\n    {\n      \"partner_name\": \"Marovik Research Institute\",\n      \"requested\": \"592.8\"\n    },\n    {\n      \"partner_name\": \"Quenmark Sensor Works Ltd\",\n      \"requested\": \"507.0\"\n    },\n    {\n      \"partner_name\": \"Ostrelund Regional Development Agency\",\n      \"requested\": \"213.0\"\n    },\n    {\n      \"partner_name\": \"Brenvik Port Logistics Ltd\",\n      \"requested\": \"0.0\"\n    },\n    {\n      \"partner_name\": \"Eskeby Technical University\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 30312,
+        "completion_tokens": 480,
+        "total_tokens": 30792,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "seconds": 24.42,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00859224
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 3001854,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 25.26
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 30312,
+          "completion_tokens": 493,
+          "total_tokens": 30805,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 27616,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I have reviewed the document and found the revised budget table in section 5.2 (Table 5.2). I will now work through the partners and their requested funding as listed in that table.\n\nHallvik: 674.5\nOrrenfjord: 568.8\nMarovik: 592.8\nQuenmark: 507.0\nOstrelund: 213.0\nBrenvik: 0.0\nEskeby: calculated at the funding rate\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"MAROFLOW\",\n    \"proposal_title\": \"Marine Observation Flows for Shared Coastal Planning\",\n    \"call_identifier\": \"BSR2026C41\",\n    \"submission_date\": \"2026-08-10\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2,946.1 thousand\",\n    \"trl_start\": null,\n    \"trl_target\": 6,\n    \"mcrl_start\": 4,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Hallvik University\",\n      \"requested\": \"674.5\"\n    },\n    {\n      \"partner_name\": \"Orrenfjord Marine Systems Ltd\",\n      \"requested\": \"568.8\"\n    },\n    {\n      \"partner_name\": \"Marovik Research Institute\",\n      \"requested\": \"592.8\"\n    },\n    {\n      \"partner_name\": \"Quenmark Sensor Works Ltd\",\n      \"requested\": \"507.0\"\n    },\n    {\n      \"partner_name\": \"Ostrelund Regional Development Agency\",\n      \"requested\": \"213.0\"\n    },\n    {\n      \"partner_name\": \"Brenvik Port Logistics Ltd\",\n      \"requested\": \"0.0\"\n    },\n    {\n      \"partner_name\": \"Eskeby Technical University\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 30312,
+        "completion_tokens": 493,
+        "total_tokens": 30805,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 27616,
+        "seconds": 25.26,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00860329
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 2406766,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 32.51
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 30312,
+          "completion_tokens": 486,
+          "total_tokens": 30798,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 27616,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I will now work through the revised budget table (Table 5.2) on page 50.\n\n- Hallvik: 674.5\n- Orrenfjord: 568.8\n- Marovik: 592.8\n- Quenmark: 507.0\n- Ostrelund: 213.0\n- Brenvik: 0.0\n- Eskeby: calculated at the funding rate\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"MAROFLOW\",\n    \"proposal_title\": \"Marine Observation Flows for Shared Coastal Planning\",\n    \"call_identifier\": \"BSR2026C41\",\n    \"submission_date\": \"2026-08-10\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2,946.1 thousand\",\n    \"trl_start\": null,\n    \"trl_target\": 6,\n    \"mcrl_start\": 4,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Hallvik University\",\n      \"requested\": \"674.5\"\n    },\n    {\n      \"partner_name\": \"Orrenfjord Marine Systems Ltd (formerly Kellmar Technologies Ltd)\",\n      \"requested\": \"568.8\"\n    },\n    {\n      \"partner_name\": \"Marovik Research Institute\",\n      \"requested\": \"592.8\"\n    },\n    {\n      \"partner_name\": \"Quenmark Sensor Works Ltd\",\n      \"requested\": \"507.0\"\n    },\n    {\n      \"partner_name\": \"Ostrelund Regional Development Agency\",\n      \"requested\": \"213.0\"\n    },\n    {\n      \"partner_name\": \"Brenvik Port Logistics Ltd\",\n      \"requested\": \"0.0\"\n    },\n    {\n      \"partner_name\": \"Eskeby Technical University\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 30312,
+        "completion_tokens": 486,
+        "total_tokens": 30798,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 27616,
+        "seconds": 32.51,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00859734
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 2071747,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 28.32
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 30044,
+          "completion_tokens": 491,
+          "total_tokens": 30535,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 27616,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I will first work through the revised budget table (Table 5.2) on page 50, as it contains the current funding request for the proposal.\n\n- Hallvik: 674.5\n- Orrenfjord: 568.8\n- Marovik: 592.8\n- Quenmark: 507.0\n- Ostrelund: 213.0\n- Brenvik: 0.0\n- Eskeby: calculated at the funding rate\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"MAROFLOW\",\n    \"proposal_title\": \"Marine Observation Flows for Shared Coastal Planning\",\n    \"call_identifier\": \"BSR2026C41\",\n    \"submission_date\": \"2026-08-10\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2,946.1 thousand\",\n    \"trl_start\": null,\n    \"trl_target\": 6,\n    \"mcrl_start\": 4,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Hallvik University\",\n      \"requested\": \"674.5\"\n    },\n    {\n      \"partner_name\": \"Orrenfjord Marine Systems Ltd\",\n      \"requested\": \"568.8\"\n    },\n    {\n      \"partner_name\": \"Marovik Research Institute\",\n      \"requested\": \"592.8\"\n    },\n    {\n      \"partner_name\": \"Quenmark Sensor Works Ltd\",\n      \"requested\": \"507.0\"\n    },\n    {\n      \"partner_name\": \"Ostrelund Regional Development Agency\",\n      \"requested\": \"213.0\"\n    },\n    {\n      \"partner_name\": \"Brenvik Port Logistics Ltd\",\n      \"requested\": \"0.0\"\n    },\n    {\n      \"partner_name\": \"Eskeby Technical University\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 30044,
+        "completion_tokens": 491,
+        "total_tokens": 30535,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 27616,
+        "seconds": 28.32,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00852923
+      }
+    ]
+  }
+}

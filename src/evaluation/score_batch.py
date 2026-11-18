@@ -1,6 +1,7 @@
 """Score every final run of a batch against the gold sets and write the results (Phase 4).
 
     python -m src.evaluation.score_batch --batch batch_20261030T105636Z
+    python -m src.evaluation.score_batch --batch batch_20261030T105636Z --runs-from files   # no database
 
 Only the final attempt of each slot is scored and reported (`is_final` in the database);
 superseded attempts stay in the database and the run folder as the raw record but appear in no
@@ -42,7 +43,7 @@ from src.evaluation import batch_tables as tables
 from src.evaluation.partners import DECISIONS, normalise_name
 from src.evaluation.run_batch import code_version
 from src.evaluation.score_runs import score_run_file
-from src.evaluation.store_runs import file_sha256
+from src.evaluation.store_runs import _micros, _ms, file_sha256
 from src.pipeline.config import Config, configure_logging, load_config
 from src.pipeline.db import get_connection
 
@@ -96,9 +97,44 @@ def final_runs(conn, batch_id: str) -> list[dict[str, Any]]:
     return out
 
 
+def final_runs_from_files(batch_dir: Path) -> tuple[str, list[dict[str, Any]]]:
+    """The same final runs as final_runs(), read from the batch's manifest and run files instead of
+    the database, so a batch can be rescored without it. Returns (run code commit, runs).
+
+    The final attempt of a slot is its highest slot attempt, as in the database; cost and time are
+    rounded to millionths of a dollar and to milliseconds, as the database stores them."""
+    manifest = json.loads((batch_dir / "manifest.json").read_text(encoding="utf-8"))
+    final: dict[tuple, dict] = {}
+    for chunk in manifest["chunks"]:
+        for entry in chunk["runs"]:
+            slot = (entry["configuration"], entry["document"], entry["repetition"])
+            if slot not in final or entry["slot_attempt"] > final[slot]["slot_attempt"]:
+                final[slot] = entry
+    out = []
+    for (config, document, rep), entry in sorted(final.items(), key=lambda kv: (kv[0][0], kv[0][1] + ".pdf", kv[0][2])):
+        record = json.loads(_local_path(entry["run_file"]).read_text(encoding="utf-8"))
+        ev = record.get("evaluation") or {}
+        tokens = ev.get("tokens") or {}
+        cost = _micros((ev.get("cost") or {}).get("cost_usd"))
+        e2e = _ms(ev.get("end_to_end_seconds"))
+        out.append({"configuration": config, "document": document, "repetition": rep,
+                    "status": record["status"], "run_file": entry["run_file"], "cost_usd": (cost or 0) / 1e6,
+                    "end_to_end_seconds": (e2e or 0) / 1000,
+                    "tokens": {"input": tokens.get("prompt_tokens"), "output": tokens.get("completion_tokens"),
+                               "reasoning": tokens.get("reasoning_tokens"), "cached": tokens.get("cached_tokens"),
+                               "image": tokens.get("image_tokens")},
+                    "started_utc": record["started_utc"]})
+    return manifest["code"]["commit"], out
+
+
+def _local_path(recorded: str) -> Path:
+    """A run file path as recorded on Windows, usable on any operating system."""
+    return Path(recorded.replace("\\", "/"))
+
+
 def score_all(runs: list[dict[str, Any]], settings: dict, decisions: dict) -> None:
     for run in runs:
-        run_file = Path(run["run_file"])
+        run_file = _local_path(run["run_file"])
         record = json.loads(run_file.read_text(encoding="utf-8"))
         if record.get("arm") != run["configuration"]:
             raise SystemExit(f"{run_file}: arm {record.get('arm')!r} is not {run['configuration']!r}")
@@ -114,6 +150,9 @@ def main(argv: list[str] | None = None) -> None:
     ap.add_argument("--batch", required=True)
     ap.add_argument("--config", default="config.yaml")
     ap.add_argument("--allow-dirty", action="store_true", help="score with uncommitted code (recorded)")
+    ap.add_argument("--runs-from", choices=("database", "files"), default="database",
+                    help="where the list of final runs comes from: the database (default) or, without "
+                         "a database, the batch's manifest and run files in evaluation/runs/<batch>/")
     args = ap.parse_args(argv)
 
     config: Config = load_config(args.config)
@@ -128,14 +167,18 @@ def main(argv: list[str] | None = None) -> None:
     decisions_path = out_dir / DECISIONS_FILE
     decisions = load_decisions(decisions_path)
 
-    conn = get_connection(config)
-    try:
-        batch = conn.execute("SELECT code_commit FROM run_batch WHERE batch_id = ?", (args.batch,)).fetchone()
-        if batch is None:
-            raise SystemExit(f"no batch {args.batch} in the database")
-        runs = final_runs(conn, args.batch)
-    finally:
-        conn.close()
+    if args.runs_from == "files":
+        run_commit, runs = final_runs_from_files(Path("evaluation/runs") / args.batch)
+        batch = (run_commit,)
+    else:
+        conn = get_connection(config)
+        try:
+            batch = conn.execute("SELECT code_commit FROM run_batch WHERE batch_id = ?", (args.batch,)).fetchone()
+            if batch is None:
+                raise SystemExit(f"no batch {args.batch} in the database")
+            runs = final_runs(conn, args.batch)
+        finally:
+            conn.close()
     if not runs:
         raise SystemExit(f"batch {args.batch} has no final runs")
     score_all(runs, settings, decisions)
@@ -196,6 +239,9 @@ def main(argv: list[str] | None = None) -> None:
         "gold_sets": {d: file_sha256(Path(settings["gold"]) / f"{d}.json") for d in documents},
         "markdown": {d: file_sha256(Path(settings["markdown"]) / f"{d}.md") for d in documents
                      if (Path(settings["markdown"]) / f"{d}.md").is_file()},
+        "document_terms": {d: file_sha256(Path(settings["markdown"]) / f"{d}.terms.json") for d in documents
+                           if not (Path(settings["markdown"]) / f"{d}.md").is_file()
+                           and (Path(settings["markdown"]) / f"{d}.terms.json").is_file()},
         "decisions_file": {"path": str(decisions_path), "sha256": file_sha256(decisions_path)}
         if decisions_path.is_file() else None,
         "spot_check_seed": spot_seed, "document_codes": "document_codes.csv (private)",

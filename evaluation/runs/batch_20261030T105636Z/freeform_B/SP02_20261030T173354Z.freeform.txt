@@ -1,0 +1,85 @@
+The document states the acronym, title, call identifier, and submission date in the header section. The readiness levels are found in section 4.2. The partner budget table is located in section 5.1 (Table 5.1).
+
+**Proposal Details:**
+*   **Acronym:** TIDEMESH
+*   **Title:** Adaptive Sensor Networks for Resilient Coastal Infrastructure
+*   **Call Identifier:** BF2026/93782
+*   **Submission Date:** 2 April 2026
+*   **TRL Start:** 1 (Found in section 4.2: "MCRL start: 1" - Note: The document uses MCRL for the start value in the only explicit readiness level statement found, but the prompt asks for TRL. However, looking closely at section 4.2, it explicitly says "MCRL start: 1 MCRL target: 4". There is no explicit "TRL" statement in the text provided. Wait, re-reading the prompt instructions: "Work through that table row by row...". The prompt asks for TRL and MCRL. The document only explicitly states MCRL values in section 4.2. Let me re-read the document for TRL.
+    *   Scanning for "TRL"... No explicit "TRL start" or "TRL target" integers are found in the text provided.
+    *   Scanning for "MCRL"... Found in section 4.2: "MCRL start: 1 MCRL target: 4".
+    *   Since the instructions say "Use only what the document explicitly states... If a value is not stated... use null", I must use null for TRL values as they are not explicitly stated as integers in the text, even though MCRL is.
+    *   *Correction*: I will double check if "TRL" appears. It does not appear as a defined level. Only "MCRL" appears with values. Therefore TRL_start and TRL_target will be null. MCRL_start and MCRL_target will be 1 and 4.
+
+**Partners Budget Table (Section 5.1, Table 5.1):**
+The table lists "Requested funding (EUR thousand)".
+*   NVS: 181.6
+*   KTA: 190.9
+*   LMR: no funding requested
+*   HVU: shown in Figure 5.1
+*   TMI: shown in Figure 5.1
+
+The instruction says: "requested: that partner's requested grant / funding, COPIED AS WRITTEN... Null if the document gives no amount for that partner."
+*   For NVS and KTA, I will copy "181.6" and "190.9".
+*   For LMR, the text is "no funding requested".
+*   For HVU and TMI, the text says "shown in Figure 5.1". Since the figure is an image placeholder and the text does not give a specific number, I will use null for these as per the rule "Null if the document gives no amount for that partner" (the text refers to a figure, not a number).
+
+**Total Requested:**
+Section 5.3 states: "The total requested funding of the consortium is EUR 991,100."
+
+**JSON Construction:**
+*   proposal_acronym: "TIDEMESH"
+*   proposal_title: "Adaptive Sensor Networks for Resilient Coastal Infrastructure"
+*   call_identifier: "BF2026/93782"
+*   submission_date: "2026-04-02"
+*   requested_total: "EUR 991,100"
+*   trl_start: null (not stated)
+*   trl_target: null (not stated)
+*   mcrl_start: 1
+*   mcrl_target: 4
+*   Partners:
+    *   Nordvalen Systems Oy (NVS): "181.6"
+    *   Kaltiora Analytics Oy (KTA): "190.9"
+    *   Lumenthar Marine Oy (LMR): "no funding requested"
+    *   Havrenmaa University (HVU): null
+    *   Taimerra Research Institute (TMI): null
+
+```json
+{
+  "proposal": {
+    "proposal_acronym": "TIDEMESH",
+    "proposal_title": "Adaptive Sensor Networks for Resilient Coastal Infrastructure",
+    "call_identifier": "BF2026/93782",
+    "submission_date": "2026-04-02"
+  },
+  "proposal_facts": {
+    "requested_total": "EUR 991,100",
+    "trl_start": null,
+    "trl_target": null,
+    "mcrl_start": 1,
+    "mcrl_target": 4
+  },
+  "partners": [
+    {
+      "partner_name": "Nordvalen Systems Oy (NVS)",
+      "requested": "181.6"
+    },
+    {
+      "partner_name": "Kaltiora Analytics Oy (KTA)",
+      "requested": "190.9"
+    },
+    {
+      "partner_name": "Lumenthar Marine Oy (LMR)",
+      "requested": "no funding requested"
+    },
+    {
+      "partner_name": "Havrenmaa University (HVU)",
+      "requested": null
+    },
+    {
+      "partner_name": "Taimerra Research Institute (TMI)",
+      "requested": null
+    }
+  ]
+}
+```

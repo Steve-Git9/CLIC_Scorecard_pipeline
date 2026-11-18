@@ -1,0 +1,315 @@
+{
+  "validity": {
+    "first_attempt": true,
+    "first_attempt_reason": null,
+    "after_repair": true,
+    "after_repair_problems": []
+  },
+  "scalars": [
+    {
+      "field": "proposal.proposal_acronym",
+      "gold": "CLIMACITIES",
+      "extracted": "CLIMACITIES",
+      "outcome": "correct"
+    },
+    {
+      "field": "proposal.proposal_title",
+      "gold": "Climate Intelligence for Equitable and Adaptive European Cities",
+      "extracted": "Climate Intelligence for Equitable and Adaptive European Cities",
+      "outcome": "correct"
+    },
+    {
+      "field": "proposal.call_identifier",
+      "gold": "HORIZON-MISS-2027-CLIMA-SYN-01",
+      "extracted": "HORIZON-MISS-2027-CLIMA-SYN-01",
+      "outcome": "correct"
+    },
+    {
+      "field": "proposal.submission_date",
+      "gold": null,
+      "extracted": null,
+      "outcome": "correct"
+    },
+    {
+      "field": "proposal_facts.requested_total_cents",
+      "gold": 750000000,
+      "extracted": 750000000,
+      "outcome": "correct"
+    },
+    {
+      "field": "proposal_facts.trl_start",
+      "gold": null,
+      "extracted": null,
+      "outcome": "correct"
+    },
+    {
+      "field": "proposal_facts.trl_target",
+      "gold": null,
+      "extracted": null,
+      "outcome": "correct"
+    },
+    {
+      "field": "proposal_facts.mcrl_start",
+      "gold": null,
+      "extracted": null,
+      "outcome": "correct"
+    },
+    {
+      "field": "proposal_facts.mcrl_target",
+      "gold": null,
+      "extracted": null,
+      "outcome": "correct"
+    }
+  ],
+  "scalar_accuracy": 1.0,
+  "partners": {
+    "entries": [
+      {
+        "partner_name": "NORDIC URBAN SYSTEMS INSTITUTE",
+        "class": "matched",
+        "gold_partner": "NORDIC URBAN SYSTEMS INSTITUTE",
+        "reason": "same name",
+        "unsure_case": null,
+        "decided": false,
+        "requested_cents": 142000000,
+        "amount_outcome": "correct",
+        "amount_weight": 1.0,
+        "weights": {
+          "matched": 1.0,
+          "duplicate": 0.0,
+          "supported_extra": 0.0,
+          "unsupported_extra": 0.0
+        },
+        "extra_weight": 0.0
+      },
+      {
+        "partner_name": "RHEIN DATA LABS GMBH",
+        "class": "matched",
+        "gold_partner": "RHEIN DATA LABS GMBH",
+        "reason": "same name",
+        "unsure_case": null,
+        "decided": false,
+        "requested_cents": 106000000,
+        "amount_outcome": "correct",
+        "amount_weight": 1.0,
+        "weights": {
+          "matched": 1.0,
+          "duplicate": 0.0,
+          "supported_extra": 0.0,
+          "unsupported_extra": 0.0
+        },
+        "extra_weight": 0.0
+      },
+      {
+        "partner_name": "ATLANTIC RESILIENCE CENTRE",
+        "class": "matched",
+        "gold_partner": "ATLANTIC RESILIENCE CENTRE",
+        "reason": "same name",
+        "unsure_case": null,
+        "decided": false,
+        "requested_cents": 91000000,
+        "amount_outcome": "correct",
+        "amount_weight": 1.0,
+        "weights": {
+          "matched": 1.0,
+          "duplicate": 0.0,
+          "supported_extra": 0.0,
+          "unsupported_extra": 0.0
+        },
+        "extra_weight": 0.0
+      },
+      {
+        "partner_name": "CIVITAS ANALYTICS SL",
+        "class": "matched",
+        "gold_partner": "CIVITAS ANALYTICS SL",
+        "reason": "same name",
+        "unsure_case": null,
+        "decided": false,
+        "requested_cents": 87000000,
+        "amount_outcome": "correct",
+        "amount_weight": 1.0,
+        "weights": {
+          "matched": 1.0,
+          "duplicate": 0.0,
+          "supported_extra": 0.0,
+          "unsupported_extra": 0.0
+        },
+        "extra_weight": 0.0
+      },
+      {
+        "partner_name": "DELTA WATER RESEARCH BV",
+        "class": "matched",
+        "gold_partner": "DELTA WATER RESEARCH BV",
+        "reason": "same name",
+        "unsure_case": null,
+        "decided": false,
+        "requested_cents": 85000000,
+        "amount_outcome": "correct",
+        "amount_weight": 1.0,
+        "weights": {
+          "matched": 1.0,
+          "duplicate": 0.0,
+          "supported_extra": 0.0,
+          "unsupported_extra": 0.0
+        },
+        "extra_weight": 0.0
+      },
+      {
+        "partner_name": "BALTIC COMMUNITY LAB",
+        "class": "matched",
+        "gold_partner": "BALTIC COMMUNITY LAB",
+        "reason": "same name",
+        "unsure_case": null,
+        "decided": false,
+        "requested_cents": 69000000,
+        "amount_outcome": "correct",
+        "amount_weight": 1.0,
+        "weights": {
+          "matched": 1.0,
+          "duplicate": 0.0,
+          "supported_extra": 0.0,
+          "unsupported_extra": 0.0
+        },
+        "extra_weight": 0.0
+      },
+      {
+        "partner_name": "ALPINE ENERGY INNOVATION SRL",
+        "class": "matched",
+        "gold_partner": "ALPINE ENERGY INNOVATION SRL",
+        "reason": "same name",
+        "unsure_case": null,
+        "decided": false,
+        "requested_cents": 93000000,
+        "amount_outcome": "correct",
+        "amount_weight": 1.0,
+        "weights": {
+          "matched": 1.0,
+          "duplicate": 0.0,
+          "supported_extra": 0.0,
+          "unsupported_extra": 0.0
+        },
+        "extra_weight": 0.0
+      },
+      {
+        "partner_name": "URBAN FUTURES ASSOCIATION",
+        "class": "matched",
+        "gold_partner": "URBAN FUTURES ASSOCIATION",
+        "reason": "same name",
+        "unsure_case": null,
+        "decided": false,
+        "requested_cents": 77000000,
+        "amount_outcome": "correct",
+        "amount_weight": 1.0,
+        "weights": {
+          "matched": 1.0,
+          "duplicate": 0.0,
+          "supported_extra": 0.0,
+          "unsupported_extra": 0.0
+        },
+        "extra_weight": 0.0
+      }
+    ],
+    "gold_status": [
+      {
+        "partner_name": "NORDIC URBAN SYSTEMS INSTITUTE",
+        "requested_cents": 142000000,
+        "found": 1.0,
+        "unsure": false
+      },
+      {
+        "partner_name": "RHEIN DATA LABS GMBH",
+        "requested_cents": 106000000,
+        "found": 1.0,
+        "unsure": false
+      },
+      {
+        "partner_name": "ATLANTIC RESILIENCE CENTRE",
+        "requested_cents": 91000000,
+        "found": 1.0,
+        "unsure": false
+      },
+      {
+        "partner_name": "CIVITAS ANALYTICS SL",
+        "requested_cents": 87000000,
+        "found": 1.0,
+        "unsure": false
+      },
+      {
+        "partner_name": "DELTA WATER RESEARCH BV",
+        "requested_cents": 85000000,
+        "found": 1.0,
+        "unsure": false
+      },
+      {
+        "partner_name": "BALTIC COMMUNITY LAB",
+        "requested_cents": 69000000,
+        "found": 1.0,
+        "unsure": false
+      },
+      {
+        "partner_name": "ALPINE ENERGY INNOVATION SRL",
+        "requested_cents": 93000000,
+        "found": 1.0,
+        "unsure": false
+      },
+      {
+        "partner_name": "URBAN FUTURES ASSOCIATION",
+        "requested_cents": 77000000,
+        "found": 1.0,
+        "unsure": false
+      }
+    ],
+    "gold_count": 8,
+    "matched_count": 8.0,
+    "missed_gold": [],
+    "missed_weight": 0.0,
+    "recall": 1.0,
+    "amount_accuracy": 1.0,
+    "amount_outcomes": {
+      "correct": 8.0
+    },
+    "classes": {
+      "matched": 8.0,
+      "duplicate": 0.0,
+      "supported_extra": 0.0,
+      "unsupported_extra": 0.0
+    },
+    "extracted_count": 8,
+    "extra_weight": 0.0,
+    "unsure": [],
+    "unsure_error_weight": 0,
+    "sum_check": {
+      "stated_total_cents": 750000000,
+      "matched_sum_cents": 750000000,
+      "matched_without_amount": 0,
+      "matched_sum_equals_total": true,
+      "supported_extras_sum_cents": 0,
+      "sum_with_supported_extras_cents": 750000000,
+      "sum_with_supported_extras_equals_total": true,
+      "supported_extras_make_sum_deviate": false
+    }
+  },
+  "errors": {
+    "misses": 0.0,
+    "wrong_values": 0.0,
+    "unsupported_values": 0.0,
+    "unsupported_extras": 0.0,
+    "duplicates": 0.0,
+    "total": 0.0,
+    "from_unsure_names": 0,
+    "certain": 0.0
+  },
+  "unsupported_values_including_extras": 0.0,
+  "reviewer_decisions": {
+    "supported_extras": 0.0,
+    "unsure_names": 0
+  },
+  "contains_unsure": false,
+  "fully_correct": 1.0,
+  "run_file": "CLIMACITIES_20261030T114942Z.run.json",
+  "configuration": "C",
+  "document": "CLIMACITIES",
+  "protocol": "schema",
+  "run_status": "ok",
+  "markdown_available": true
+}

@@ -1,0 +1,181 @@
+{
+  "arm": "multimodal_combined_llama4_maverick",
+  "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+  "provider": "novita",
+  "source_file": "SP02.md",
+  "started_utc": "2026-10-30T18:43:11Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "duplicate partner 'Nordvalen Systems Oy (NVS)' dropped",
+    "duplicate partner 'Kaltiora Analytics Oy (KTA)' dropped",
+    "duplicate partner 'Lumenthar Marine Oy (LMR)' dropped",
+    "duplicate partner 'Havrenmaa University (HVU)' dropped",
+    "duplicate partner 'Taimerra Research Institute (TMI)' dropped"
+  ],
+  "batch_size": 10,
+  "overlap": 1,
+  "pages_total": 41,
+  "pages_with_images": 17,
+  "batches": 2,
+  "calls": 2,
+  "seconds": 51.73,
+  "attempts": 2,
+  "prompt_tokens": 53636,
+  "completion_tokens": 990,
+  "cost_usd": 0.015323,
+  "finish_reason": "stop",
+  "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+  "context_splits": 0,
+  "output_file": "SP02_20261030T184311Z.json",
+  "replies_file": "SP02_20261030T184311Z.replies.json",
+  "total_seconds": 57.59,
+  "evaluation": {
+    "document": "SP02",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\multimodal_combined_llama4_maverick\\SP02_20261030T184311Z.run.json",
+    "input": "pdf",
+    "preparation": {
+      "native_text_seconds": 0.11
+    },
+    "runner_wall_clock_seconds": 57.72,
+    "end_to_end_seconds": 57.72,
+    "calls": 2,
+    "failed_calls": 0,
+    "attempts": 2,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 53636,
+      "completion_tokens": 990,
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "cached_tokens": 0
+    },
+    "calls_reporting": {
+      "prompt_tokens": 2,
+      "completion_tokens": 2,
+      "reasoning_tokens": 2,
+      "image_tokens": 2
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.01532322,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "novita",
+          "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+          "status": "verified",
+          "retrieved_on": "2026-10-23"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 4789794,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 30.45
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 27086,
+          "completion_tokens": 546,
+          "total_tokens": 27632,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "The partner budget information is found in Table 5.1 (Requested funding per partner) and Table 5.2 (Eligible costs and in kind contributions per partner).\n\nFrom Table 5.1:\n- NVS: 181.6 (EUR thousand)\n- KTA: 190.9 (EUR thousand)\n- LMR: no funding requested\n- HVU: shown in Figure 5.1\n- TMI: shown in Figure 5.1\n\nFrom Table 5.2 (Eligible costs):\n- NVS: 370,600 (EUR)\n- KTA: 415,000 (EUR)\n- LMR: 178,000 (EUR)\n- HVU: 329,300 (EUR)\n- TMI: 493,200 (EUR)\n\nThe requested funding for the consortium is explicitly stated in section 5.3 as EUR 991,100.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"TIDEMESH\",\n    \"proposal_title\": \"Adaptive Sensor Networks for Resilient Coastal Infrastructure\",\n    \"call_identifier\": \"BF2026/93782\",\n    \"submission_date\": \"2026-04-02\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 991,100\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": 1,\n    \"mcrl_target\": 4\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Nordvalen Systems Oy (NVS)\",\n      \"requested\": \"181.6\"\n    },\n    {\n      \"partner_name\": \"Kaltiora Analytics Oy (KTA)\",\n      \"requested\": \"190.9\"\n    },\n    {\n      \"partner_name\": \"Lumenthar Marine Oy (LMR)\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Havrenmaa University (HVU)\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Taimerra Research Institute (TMI)\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 27086,
+        "completion_tokens": 546,
+        "total_tokens": 27632,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "seconds": 30.45,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00777732
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 3180064,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 21.28
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 26550,
+          "completion_tokens": 444,
+          "total_tokens": 26994,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I will first work through the partner budget information found in Table 5.1 and Figure 5.1 on page 33.\n\n- NVS: 181.6 (EUR thousand)\n- KTA: 190.9 (EUR thousand)\n- LMR: no funding requested\n- HVU: 253.6 (EUR thousand) - from Figure 5.1\n- TMI: 365.0 (EUR thousand) - from Figure 5.1\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"TIDEMESH\",\n    \"proposal_title\": \"Adaptive Sensor Networks for Resilient Coastal Infrastructure\",\n    \"call_identifier\": \"BF2026/93782\",\n    \"submission_date\": \"2026-04-02\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 991,100\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": 1,\n    \"mcrl_target\": 4\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Nordvalen Systems Oy (NVS)\",\n      \"requested\": \"181.6\"\n    },\n    {\n      \"partner_name\": \"Kaltiora Analytics Oy (KTA)\",\n      \"requested\": \"190.9\"\n    },\n    {\n      \"partner_name\": \"Lumenthar Marine Oy (LMR)\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Havrenmaa University (HVU)\",\n      \"requested\": \"253.6\"\n    },\n    {\n      \"partner_name\": \"Taimerra Research Institute (TMI)\",\n      \"requested\": \"365.0\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 26550,
+        "completion_tokens": 444,
+        "total_tokens": 26994,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "seconds": 21.28,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.0075459
+      }
+    ]
+  }
+}

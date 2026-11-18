@@ -1,0 +1,154 @@
+{
+  "arm": "targeted_text",
+  "mode": "text",
+  "model": "openai/gpt-oss-120b",
+  "provider": "groq",
+  "source_file": "ByggMap.pdf",
+  "started_utc": "2026-10-31T08:34:28Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [],
+  "pages_total": 22,
+  "pages_sent": [
+    1,
+    2,
+    12,
+    16,
+    18,
+    22
+  ],
+  "scanned_pages": [],
+  "ocr_pages": [],
+  "images_sent": 0,
+  "located": {
+    "proposal": [
+      1,
+      2
+    ],
+    "budget": [
+      22
+    ],
+    "partners": [
+      16,
+      22,
+      18
+    ],
+    "readiness": [
+      2,
+      12
+    ]
+  },
+  "located_by": {
+    "proposal": "keywords",
+    "budget": "keywords",
+    "partners": "keywords",
+    "readiness": "keywords"
+  },
+  "tables_found": 9,
+  "tables_verified": 1,
+  "page_map_cached": false,
+  "calls": 1,
+  "seconds": 1.62,
+  "attempts": 1,
+  "prompt_tokens": 4006,
+  "completion_tokens": 418,
+  "cost_usd": 0.000914,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-120b",
+  "steps": {
+    "page_map": 4.34,
+    "locate": 0.0,
+    "identifier_hints": 0.09,
+    "tables": 0.84,
+    "text_and_ocr": 0.03,
+    "model": 1.62
+  },
+  "context_splits": 0,
+  "identifiers_filled": {},
+  "partners_confirmed_by_table": 7,
+  "output_file": "ByggMap_20261031T083428Z.json",
+  "replies_file": "ByggMap_20261031T083428Z.replies.json",
+  "total_seconds": 6.94,
+  "trace_file": "ByggMap_20261031T083428Z.trace.json",
+  "evaluation": {
+    "document": "ByggMap",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\targeted_text\\ByggMap_20261031T083428Z.run.json",
+    "input": "pdf",
+    "preparation": {},
+    "runner_wall_clock_seconds": 6.94,
+    "end_to_end_seconds": 6.94,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 4006,
+      "completion_tokens": 418,
+      "reasoning_tokens": 112,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.0008517,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-120b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-120b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 18217,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 1.62
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.087873373,
+          "prompt_tokens": 4006,
+          "prompt_time": 0.185919979,
+          "completion_tokens": 418,
+          "completion_time": 0.879072529,
+          "total_tokens": 4424,
+          "total_time": 1.064992508,
+          "completion_tokens_details": {
+            "reasoning_tokens": 112
+          }
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"Bygg Map\",\n    \"proposal_title\": \"Bygg Map\",\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"€ 2,500,000.00\",\n    \"trl_start\": 4,\n    \"trl_target\": 6,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"MCI\",\n      \"requested\": \"€ 590,625.00\"\n    },\n    {\n      \"partner_name\": \"TUCN\",\n      \"requested\": \"€ 465,625.00\"\n    },\n    {\n      \"partner_name\": \"NTNU\",\n      \"requested\": \"€ 748,625.00\"\n    },\n    {\n      \"partner_name\": \"U-I\",\n      \"requested\": \"€ 204,375.00\"\n    },\n    {\n      \"partner_name\": \"SM\",\n      \"requested\": \"€ 144,375.00\"\n    },\n    {\n      \"partner_name\": \"CGI\",\n      \"requested\": \"€ 195,000.00\"\n    },\n    {\n      \"partner_name\": \"CEE\",\n      \"requested\": \"€ 151,375.00\"\n    }\n  ]\n}",
+        "reasoning": "We need JSON. Extract title = Bygg Map, acronym also Bygg Map. call_identifier not present => null. submission_date not present => null. requested_total from table total € 2,500,000.00. TRL start? Text says assume TRL4 start, aims TRL5 then TRL6. So start TRL4, target TRL6. mcrl not mentioned => null. Partners list in order as in table. requested copy as written including € and space. Use null if missing none. Provide.",
+        "prompt_tokens": 4006,
+        "completion_tokens": 418,
+        "total_tokens": 4424,
+        "reasoning_tokens": 112,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.62,
+        "model_reported": "openai/gpt-oss-120b",
+        "finish_reason": "stop",
+        "cost_usd": 0.0008517
+      }
+    ]
+  }
+}

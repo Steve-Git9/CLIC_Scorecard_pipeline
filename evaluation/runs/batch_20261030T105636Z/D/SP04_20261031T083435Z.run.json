@@ -1,0 +1,110 @@
+{
+  "arm": "D",
+  "model": "openai/gpt-oss-20b",
+  "provider": "groq",
+  "source_file": "SP04.md",
+  "started_utc": "2026-10-31T08:34:35Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 1.59,
+  "attempts": 1,
+  "prompt_tokens": 24735,
+  "completion_tokens": 432,
+  "cost_usd": 0.00269,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-20b",
+  "parts": 1,
+  "output_file": "SP04_20261031T083435Z.json",
+  "replies_file": "SP04_20261031T083435Z.replies.json",
+  "total_seconds": 1.61,
+  "evaluation": {
+    "document": "SP04",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\D\\SP04_20261031T083435Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 193.06,
+      "docling_markdown_sha256": "951b31c414cf23cb5b6509c461a804c7a170ca72fff157efdb3dcaa02845bdfb"
+    },
+    "runner_wall_clock_seconds": 1.61,
+    "end_to_end_seconds": 194.67,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 24735,
+      "completion_tokens": 432,
+      "reasoning_tokens": 232,
+      "image_tokens": null,
+      "cached_tokens": 24576
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.00106312,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-20b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-20b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 139372,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 1.59
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.14018569,
+          "prompt_tokens": 24735,
+          "prompt_time": 0.084199426,
+          "completion_tokens": 432,
+          "completion_time": 0.448165682,
+          "total_tokens": 25167,
+          "total_time": 0.532365108,
+          "prompt_tokens_details": {
+            "cached_tokens": 24576
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 232
+          }
+        },
+        "reply": "{\"proposal\":{\"proposal_acronym\":\"MAROFLOW\",\"proposal_title\":\"Marine Observation Flows for Shared Coastal Planning\",\"call_identifier\":\"BSR2026C41\",\"submission_date\":\"2026-08-10\"},\"proposal_facts\":{\"requested_total\":\"EUR 3,207,500\",\"trl_start\":null,\"trl_target\":6,\"mcrl_start\":4,\"mcrl_target\":null},\"partners\":[{\"partner_name\":\"Hallvik\",\"requested\":\"EUR 819,700\"},{\"partner_name\":\"Kellmar\",\"requested\":\"EUR 674,700\"},{\"partner_name\":\"Marovik\",\"requested\":\"EUR 621,400\"},{\"partner_name\":\"Quenmark\",\"requested\":\"EUR 539,700\"},{\"partner_name\":\"Ostrelund\",\"requested\":\"EUR 193,500\"},{\"partner_name\":\"Brenvik\",\"requested\":\"EUR 0\"},{\"partner_name\":\"Lindmark\",\"requested\":\"EUR 358,500\"}]}",
+        "reasoning": "Need TRL start/target from Annex B: start not given but earlier? In readiness assessment: start shown in Figure 1.2 but not numeric. Target TRL 6. So trl_start null? mcrl_start 4? target 4? Actually market readiness at start? In 4.2: start MCRL 4. target not given. So null. requested_total: earlier budget total 3,207,500. So string \"EUR 3,207,500\". partners requested amounts: from Table 5.1 earlier: Hallvik 819,700; Kellmar 674,700; Marovik 621,400; Quenmark 539,700; Ostrelund 193,500; Brenvik 0; Lindmark 358,500. Also new partner Eskeby 520,000? but earlier budget didn't include. Use earlier amounts. So partners list in order: Hallvik, Kellmar, Marovik, Quenmark, Ostrelund, Brenvik, Lindmark. Provide requested as strings with EUR and commas. Use null for missing.",
+        "prompt_tokens": 24735,
+        "completion_tokens": 432,
+        "total_tokens": 25167,
+        "reasoning_tokens": 232,
+        "image_tokens": null,
+        "cached_tokens": 24576,
+        "seconds": 1.59,
+        "model_reported": "openai/gpt-oss-20b",
+        "finish_reason": "stop",
+        "cost_usd": 0.00106312
+      }
+    ]
+  }
+}

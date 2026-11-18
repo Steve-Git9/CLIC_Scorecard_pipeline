@@ -1,0 +1,112 @@
+{
+  "arm": "B",
+  "model": "Qwen/Qwen3.5-9B",
+  "provider": "deepinfra",
+  "source_file": "SP01.md",
+  "started_utc": "2026-10-30T11:31:38Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "partner 'Northbay Materials Oy' not found verbatim in the document",
+    "partner 'Corvane Polymer Systems AB' not found verbatim in the document",
+    "partner 'Tessilo Process Engineering GmbH' not found verbatim in the document",
+    "partner 'Rauvik University' not found verbatim in the document",
+    "partner 'Elvaris University of Technology' not found verbatim in the document",
+    "partner 'Sundmark Applied Research Institute' not found verbatim in the document",
+    "partner 'Brenvik Institute for Sustainable Process Engineering' not found verbatim in the document",
+    "partner 'Lindfors Regional Development Agency' not found verbatim in the document",
+    "sum of partner requested_cents (55633770) != requested_total_cents (478980000)"
+  ],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 26.51,
+  "attempts": 1,
+  "prompt_tokens": 31975,
+  "completion_tokens": 448,
+  "cost_usd": 0.003265,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3.5-9B",
+  "parts": 1,
+  "output_file": "SP01_20261030T113138Z.json",
+  "replies_file": "SP01_20261030T113138Z.replies.json",
+  "total_seconds": 26.54,
+  "evaluation": {
+    "document": "SP01",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\B\\SP01_20261030T113138Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 191.79,
+      "docling_markdown_sha256": "3336f13127c448debbfd443b496945784e43f599d594d395b5a365d056687338"
+    },
+    "runner_wall_clock_seconds": 26.54,
+    "end_to_end_seconds": 218.33,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 31975,
+      "completion_tokens": 448,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.0032647,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3.5-9B",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3.5-9B",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 176214,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 26.51
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 31975,
+          "total_tokens": 32423,
+          "completion_tokens": 448,
+          "estimated_cost": 0.0032647000000000006,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"LOOPWEAVE\",\n    \"proposal_title\": \"Circular Weaving of Recycled Fibre Value Chains\",\n    \"call_identifier\": \"INNO-2027-03-CIRCFIBRE-04\",\n    \"submission_date\": \"2027-03-06\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 4,789,800\",\n    \"trl_start\": 5,\n    \"trl_target\": 7,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Kalevra Innovation Cluster Oy\",\n      \"requested\": \"575.6\"\n    },\n    {\n      \"partner_name\": \"Northbay Materials Oy\",\n      \"requested\": \"466.6\"\n    },\n    {\n      \"partner_name\": \"Corvane Polymer Systems AB\",\n      \"requested\": \"578.0\"\n    },\n    {\n      \"partner_name\": \"Tessilo Process Engineering GmbH\",\n      \"requested\": \"552,100\"\n    },\n    {\n      \"partner_name\": \"Rauvik University\",\n      \"requested\": \"643.9\"\n    },\n    {\n      \"partner_name\": \"Elvaris University of Technology\",\n      \"requested\": \"735.9\"\n    },\n    {\n      \"partner_name\": \"Sundmark Applied Research Institute\",\n      \"requested\": \"553.2\"\n    },\n    {\n      \"partner_name\": \"Brenvik Institute for Sustainable Process Engineering\",\n      \"requested\": \"684.5\"\n    },\n    {\n      \"partner_name\": \"Lindfors Regional Development Agency\",\n      \"requested\": \"0.0\"\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 31975,
+        "completion_tokens": 448,
+        "total_tokens": 32423,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 26.51,
+        "model_reported": "Qwen/Qwen3.5-9B",
+        "finish_reason": "stop",
+        "cost_usd": 0.0032647
+      }
+    ]
+  }
+}

@@ -1,0 +1,233 @@
+{
+  "arm": "multimodal_combined_qwen_vl",
+  "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "provider": "deepinfra",
+  "source_file": "SP03A.md",
+  "started_utc": "2026-10-30T16:14:55Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "duplicate partner 'Torvenmaa University' dropped",
+    "duplicate partner 'Haldeberg University of Applied Sciences and Regional Innovation Services' dropped",
+    "duplicate partner 'Kestrel Institute for Process Research' dropped",
+    "duplicate partner 'Ormenfield Process Systems Oy' dropped",
+    "duplicate partner 'Vantora Sensor Solutions Oy' dropped",
+    "duplicate partner 'Ostermark Regional Development Agency' dropped",
+    "duplicate partner 'Torvenmaa University' dropped",
+    "duplicate partner 'Haldeberg University of Applied Sciences and Regional Innovation Services' dropped",
+    "duplicate partner 'Kestrel Institute for Process Research' dropped",
+    "duplicate partner 'Ormenfield Process Systems Oy' dropped",
+    "duplicate partner 'Vantora Sensor Solutions Oy' dropped",
+    "duplicate partner 'Ostermark Regional Development Agency' dropped",
+    "duplicate partner 'Torvenmaa University' dropped",
+    "duplicate partner 'Haldeberg University of Applied Sciences and Regional Innovation Services' dropped",
+    "duplicate partner 'Kestrel Institute for Process Research' dropped",
+    "duplicate partner 'Ormenfield Process Systems Oy' dropped",
+    "duplicate partner 'Vantora Sensor Solutions Oy' dropped",
+    "duplicate partner 'Ostermark Regional Development Agency' dropped",
+    "sum of partner requested_cents (24194880) != requested_total_cents (97930000)"
+  ],
+  "batch_size": 10,
+  "overlap": 1,
+  "pages_total": 45,
+  "pages_with_images": 29,
+  "batches": 4,
+  "calls": 4,
+  "seconds": 477.34,
+  "attempts": 4,
+  "prompt_tokens": 130268,
+  "completion_tokens": 2330,
+  "cost_usd": 0.028104,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "context_splits": 0,
+  "output_file": "SP03A_20261030T161455Z.json",
+  "replies_file": "SP03A_20261030T161455Z.replies.json",
+  "total_seconds": 482.15,
+  "evaluation": {
+    "document": "SP03A",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\multimodal_combined_qwen_vl\\SP03A_20261030T161455Z.run.json",
+    "input": "pdf",
+    "preparation": {
+      "native_text_seconds": 0.07
+    },
+    "runner_wall_clock_seconds": 482.21,
+    "end_to_end_seconds": 482.21,
+    "calls": 4,
+    "failed_calls": 0,
+    "attempts": 4,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 130268,
+      "completion_tokens": 2330,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 4,
+      "completion_tokens": 4,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.028104,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 2021992,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 69.07
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 36493,
+          "total_tokens": 36800,
+          "completion_tokens": 307,
+          "estimated_cost": 0.007568760000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"RESENSE\",\n    \"proposal_title\": \"Adaptive Sensor Networks for Resource Efficient Process Monitoring\",\n    \"call_identifier\": \"RCF2027/6433\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 979 300\",\n    \"trl_start\": 3,\n    \"trl_target\": 5,\n    \"mcrl_start\": 1,\n    \"mcrl_target\": 4\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Torvenmaa University\",\n      \"requested\": \"214,8\"\n    },\n    {\n      \"partner_name\": \"Haldeberg University of Applied Sciences and Regional Innovation Services\",\n      \"requested\": \"159,8\"\n    },\n    {\n      \"partner_name\": \"Kestrel Institute for Process Research\",\n      \"requested\": \"241 200\"\n    },\n    {\n      \"partner_name\": \"Ormenfield Process Systems Oy\",\n      \"requested\": \"177,8\"\n    },\n    {\n      \"partner_name\": \"Vantora Sensor Solutions Oy\",\n      \"requested\": \"196,4\"\n    },\n    {\n      \"partner_name\": \"Ostermark Regional Development Agency\",\n      \"requested\": \"0,0\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 36493,
+        "completion_tokens": 307,
+        "total_tokens": 36800,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 69.07,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00756876
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1978844,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 192.47
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 36493,
+          "total_tokens": 37411,
+          "completion_tokens": 918,
+          "estimated_cost": 0.00810644,
+          "prompt_tokens_details": null
+        },
+        "reply": "First, I will find the partner budget table and work through it row by row, writing out each partner's name exactly as shown, together with the amount on that same row.\n\nThe budget table is on page 21 (text) and page 2 of the images. The table is titled \"D.1 Budget by partner\" and has columns for \"Partner type\", \"Partner\", \"Total costs\", \"Own contribution\", and \"Requested funding\". The \"Partner\" column uses short names, which I will match to the full names from Part B (pages 4-9).\n\n- Row 1: Partner type \"Universities\", Partner \"TMU\". From Part B, page 4, the full name is \"Torvenmaa University\". The requested funding is \"214,8\" (in 1000 EUR). So, the amount is EUR 214,800.\n- Row 2: Partner type \"Universities\", Partner \"HBU\". From Part B, page 5, the full name is \"Haldeberg University of Applied Sciences and Regional Innovation Services\". The requested funding is \"159,8\" (in 1000 EUR). So, the amount is EUR 159,800.\n- Row 3: Partner type \"Research organisation\", Partner \"KPRI\". From Part B, page 6, the full name is \"Kestrel Institute for Process Research\". The requested funding is \"see E.2\". In Part E, page 26, it states: \"For KPRI, the requested funding amounts to EUR 241 200\". So, the amount is EUR 241,200.\n- Row 4: Partner type \"Companies\", Partner \"OPS\". From Part B, page 7, the full name is \"Ormenfield Process Systems Oy\". The requested funding is \"177,8\" (in 1000 EUR). So, the amount is EUR 177,800.\n- Row 5: Partner type \"Companies\", Partner \"VSS\". From Part B, page 8, the full name is \"Vantora Sensor Solutions Oy\". The requested funding is \"196,4\" (in 1000 EUR). So, the amount is EUR 196,400.\n- Row 6: Partner type \"Public body\", Partner \"ORDEA\". From Part B, page 9, the full name is \"Ostermark Regional Development Agency\". The requested funding is \"0,0\" (in 1000 EUR). So, the amount is EUR 0.00.\n\nNow, I will write the final answer as a JSON object.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"RESENSE\",\n    \"proposal_title\": \"Adaptive Sensor Networks for Resource Efficient Process Monitoring\",\n    \"call_identifier\": \"RCF2027/6433\",\n    \"submission_date\": \"2027-02-02\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 979 300\",\n    \"trl_start\": 3,\n    \"trl_target\": 5,\n    \"mcrl_start\": 1,\n    \"mcrl_target\": 4\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Torvenmaa University\",\n      \"requested\": \"EUR 214,800\"\n    },\n    {\n      \"partner_name\": \"Haldeberg University of Applied Sciences and Regional Innovation Services\",\n      \"requested\": \"EUR 159,800\"\n    },\n    {\n      \"partner_name\": \"Kestrel Institute for Process Research\",\n      \"requested\": \"EUR 241,200\"\n    },\n    {\n      \"partner_name\": \"Ormenfield Process Systems Oy\",\n      \"requested\": \"EUR 177,800\"\n    },\n    {\n      \"partner_name\": \"Vantora Sensor Solutions Oy\",\n      \"requested\": \"EUR 196,400\"\n    },\n    {\n      \"partner_name\": \"Ostermark Regional Development Agency\",\n      \"requested\": \"EUR 0.00\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 36493,
+        "completion_tokens": 918,
+        "total_tokens": 37411,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 192.47,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00810644
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1691608,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 73.95
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 36493,
+          "total_tokens": 36800,
+          "completion_tokens": 307,
+          "estimated_cost": 0.007568760000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"RESENSE\",\n    \"proposal_title\": \"Adaptive Sensor Networks for Resource Efficient Process Monitoring\",\n    \"call_identifier\": \"RCF2027/6433\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 979 300\",\n    \"trl_start\": 3,\n    \"trl_target\": 5,\n    \"mcrl_start\": 1,\n    \"mcrl_target\": 4\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Torvenmaa University\",\n      \"requested\": \"214,8\"\n    },\n    {\n      \"partner_name\": \"Haldeberg University of Applied Sciences and Regional Innovation Services\",\n      \"requested\": \"159,8\"\n    },\n    {\n      \"partner_name\": \"Kestrel Institute for Process Research\",\n      \"requested\": \"241 200\"\n    },\n    {\n      \"partner_name\": \"Ormenfield Process Systems Oy\",\n      \"requested\": \"177,8\"\n    },\n    {\n      \"partner_name\": \"Vantora Sensor Solutions Oy\",\n      \"requested\": \"196,4\"\n    },\n    {\n      \"partner_name\": \"Ostermark Regional Development Agency\",\n      \"requested\": \"0,0\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 36493,
+        "completion_tokens": 307,
+        "total_tokens": 36800,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 73.95,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00756876
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 330532,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 141.85
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20789,
+          "total_tokens": 21587,
+          "completion_tokens": 798,
+          "estimated_cost": 0.00486004,
+          "prompt_tokens_details": null
+        },
+        "reply": "First, I will find the partner budget table and work through it row by row, writing out each partner's name exactly as shown, together with the amount on that same row.\n\nThe budget table is on page 21 (text) and is titled \"D.1 Budget by partner\". The table lists partners and their requested funding. I will go through each row:\n\n1.  **Partner: TMU** (Short name for Torvenmaa University, as per page 4). The requested funding is **214,8** (in 1,000 EUR, so EUR 214,800).\n2.  **Partner: HBU** (Short name for Haldeberg University of Applied Sciences and Regional Innovation Services, as per page 5). The requested funding is **159,8** (in 1,000 EUR, so EUR 159,800).\n3.  **Partner: KPRI** (Short name for Kestrel Institute for Process Research, as per page 6). The requested funding is listed as **see E.2**. However, page 26 (text) under section E.2 states: \"For KPRI, the requested funding amounts to EUR 241 200 for the whole project period.\" This is the specific amount for KPRI. I will use this value.\n4.  **Partner: OPS** (Short name for Ormenfield Process Systems Oy, as per page 7). The requested funding is **177,8** (in 1,000 EUR, so EUR 177,800).\n5.  **Partner: VSS** (Short name for Vantora Sensor Solutions Oy, as per page 8). The requested funding is **196,4** (in 1,000 EUR, so EUR 196,400).\n6.  **Partner: ORDEA** (Short name for Ostermark Regional Development Agency, as per page 9). The requested funding is **0,0** (in 1,000 EUR, so EUR 0).\n\nNow, I will write the final answer as a single JSON object.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"RESENSE\",\n    \"proposal_title\": \"Adaptive Sensor Networks for Resource Efficient Process Monitoring\",\n    \"call_identifier\": \"RCF2027/6433\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 979 300\",\n    \"trl_start\": 3,\n    \"trl_target\": 5,\n    \"mcrl_start\": 1,\n    \"mcrl_target\": 4\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Torvenmaa University\",\n      \"requested\": \"EUR 214,800\"\n    },\n    {\n      \"partner_name\": \"Haldeberg University of Applied Sciences and Regional Innovation Services\",\n      \"requested\": \"EUR 159,800\"\n    },\n    {\n      \"partner_name\": \"Kestrel Institute for Process Research\",\n      \"requested\": \"EUR 241,200\"\n    },\n    {\n      \"partner_name\": \"Ormenfield Process Systems Oy\",\n      \"requested\": \"EUR 177,800\"\n    },\n    {\n      \"partner_name\": \"Vantora Sensor Solutions Oy\",\n      \"requested\": \"EUR 196,400\"\n    },\n    {\n      \"partner_name\": \"Ostermark Regional Development Agency\",\n      \"requested\": \"EUR 0\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20789,
+        "completion_tokens": 798,
+        "total_tokens": 21587,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 141.85,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00486004
+      }
+    ]
+  }
+}

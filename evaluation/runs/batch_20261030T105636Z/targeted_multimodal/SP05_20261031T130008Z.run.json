@@ -1,0 +1,166 @@
+{
+  "arm": "targeted_multimodal",
+  "mode": "multimodal",
+  "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "provider": "deepinfra",
+  "source_file": "SP05.pdf",
+  "started_utc": "2026-10-31T13:00:08Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested_total 'EUR 3,828,561.00' not found in the document",
+    "requested[Nordvane Systems Oy] 'EUR 870,765.93' not found in the document",
+    "requested[University of Teralund] 'EUR 679,493.18' not found in the document",
+    "requested[Valoria Labs Oy] 'EUR 594,205.74' not found in the document",
+    "requested[Hallavik Applied Research Centre] 'EUR 649,300.03' not found in the document",
+    "requested[Arctic Sensor Systems Oy] 'EUR 449,835.12' not found in the document",
+    "requested[Lumivara Edge Oy] 'EUR 0.00' not found in the document",
+    "requested[Arctic Sensing Solutions Oy] 'EUR 298,000.00' not found in the document",
+    "requested[Kaltio Regional Council] 'EUR 199,200.00' not found in the document",
+    "sum of partner requested_cents (374080000) != requested_total_cents (382856100)"
+  ],
+  "pages_total": 78,
+  "pages_sent": [
+    1,
+    3,
+    11,
+    16,
+    42,
+    47,
+    64,
+    69
+  ],
+  "scanned_pages": [],
+  "ocr_pages": [],
+  "images_sent": 6,
+  "located": {
+    "proposal": [
+      1,
+      69,
+      70
+    ],
+    "budget": [
+      42,
+      64,
+      3
+    ],
+    "partners": [
+      16,
+      64,
+      47
+    ],
+    "readiness": [
+      11,
+      37,
+      38
+    ]
+  },
+  "located_by": {
+    "proposal": "keywords",
+    "budget": "keywords",
+    "partners": "keywords",
+    "readiness": "keywords"
+  },
+  "tables_found": 5,
+  "tables_verified": 0,
+  "page_map_cached": false,
+  "calls": 1,
+  "seconds": 47.65,
+  "attempts": 1,
+  "prompt_tokens": 17596,
+  "completion_tokens": 411,
+  "cost_usd": 0.003881,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "steps": {
+    "page_map": 14.82,
+    "locate": 0.0,
+    "identifier_hints": 0.42,
+    "tables": 1.22,
+    "text_and_ocr": 0.03,
+    "model": 48.23
+  },
+  "context_splits": 0,
+  "identifiers_filled": {},
+  "partners_confirmed_by_table": 0,
+  "output_file": "SP05_20261031T130008Z.json",
+  "replies_file": "SP05_20261031T130008Z.replies.json",
+  "total_seconds": 64.73,
+  "trace_file": "SP05_20261031T130008Z.trace.json",
+  "evaluation": {
+    "document": "SP05",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\targeted_multimodal\\SP05_20261031T130008Z.run.json",
+    "input": "pdf",
+    "preparation": {},
+    "runner_wall_clock_seconds": 64.75,
+    "end_to_end_seconds": 64.75,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 17596,
+      "completion_tokens": 411,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.00388088,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 1674556,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 47.65
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 17596,
+          "total_tokens": 18007,
+          "completion_tokens": 411,
+          "estimated_cost": 0.0038808799999999997,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"NIVALIS\",\n    \"proposal_title\": \"Federated Data Spaces for Resilient Cold Climate Infrastructure Monitoring\",\n    \"call_identifier\": \"to be confirmed\",\n    \"submission_date\": \"2026-09-16\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 3,828,561.00\",\n    \"trl_start\": 4,\n    \"trl_target\": 7,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Nordvane Systems Oy\",\n      \"requested\": \"EUR 870,765.93\"\n    },\n    {\n      \"partner_name\": \"University of Teralund\",\n      \"requested\": \"EUR 679,493.18\"\n    },\n    {\n      \"partner_name\": \"Valoria Labs Oy\",\n      \"requested\": \"EUR 594,205.74\"\n    },\n    {\n      \"partner_name\": \"Hallavik Applied Research Centre\",\n      \"requested\": \"EUR 649,300.03\"\n    },\n    {\n      \"partner_name\": \"Arctic Sensor Systems Oy\",\n      \"requested\": \"EUR 449,835.12\"\n    },\n    {\n      \"partner_name\": \"Lumivara Edge Oy\",\n      \"requested\": \"EUR 0.00\"\n    },\n    {\n      \"partner_name\": \"Arctic Sensing Solutions Oy\",\n      \"requested\": \"EUR 298,000.00\"\n    },\n    {\n      \"partner_name\": \"Kaltio Regional Council\",\n      \"requested\": \"EUR 199,200.00\"\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 17596,
+        "completion_tokens": 411,
+        "total_tokens": 18007,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 47.65,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00388088
+      }
+    ]
+  }
+}

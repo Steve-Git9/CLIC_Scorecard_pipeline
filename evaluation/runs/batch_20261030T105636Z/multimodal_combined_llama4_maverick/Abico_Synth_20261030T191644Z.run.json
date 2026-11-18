@@ -1,0 +1,297 @@
+{
+  "arm": "multimodal_combined_llama4_maverick",
+  "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+  "provider": "novita",
+  "source_file": "Abico_Synth.md",
+  "started_utc": "2026-10-30T19:16:44Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "duplicate partner 'NLUAS' dropped",
+    "duplicate partner 'Lake District Technical University' dropped",
+    "duplicate partner 'NISM' dropped",
+    "duplicate partner 'ENU' dropped",
+    "duplicate partner 'CFU' dropped",
+    "duplicate partner 'NLUAS' dropped",
+    "duplicate partner 'Lake District Technical University' dropped",
+    "duplicate partner 'NISM' dropped",
+    "duplicate partner 'ENU' dropped",
+    "duplicate partner 'CFU' dropped",
+    "duplicate partner 'NLUAS' dropped",
+    "duplicate partner 'Lake District Technical University' dropped",
+    "duplicate partner 'NISM' dropped",
+    "duplicate partner 'ENU' dropped",
+    "duplicate partner 'CFU' dropped"
+  ],
+  "batch_size": 10,
+  "overlap": 1,
+  "pages_total": 40,
+  "pages_with_images": 30,
+  "batches": 4,
+  "calls": 4,
+  "seconds": 85.39,
+  "attempts": 4,
+  "prompt_tokens": 120560,
+  "completion_tokens": 1570,
+  "cost_usd": 0.033885,
+  "finish_reason": "stop",
+  "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+  "context_splits": 0,
+  "output_file": "Abico_Synth_20261030T191644Z.json",
+  "replies_file": "Abico_Synth_20261030T191644Z.replies.json",
+  "total_seconds": 100.09,
+  "evaluation": {
+    "document": "Abico_Synth",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\multimodal_combined_llama4_maverick\\Abico_Synth_20261030T191644Z.run.json",
+    "input": "pdf",
+    "preparation": {
+      "native_text_seconds": 0.33
+    },
+    "runner_wall_clock_seconds": 100.42,
+    "end_to_end_seconds": 100.42,
+    "calls": 4,
+    "failed_calls": 0,
+    "attempts": 4,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 120560,
+      "completion_tokens": 1570,
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "cached_tokens": 55808
+    },
+    "calls_reporting": {
+      "prompt_tokens": 4,
+      "completion_tokens": 4,
+      "reasoning_tokens": 4,
+      "image_tokens": 4
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.0338857,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "novita",
+          "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+          "status": "verified",
+          "retrieved_on": "2026-10-23"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 4770286,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 22.28
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 30609,
+          "completion_tokens": 393,
+          "total_tokens": 31002,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "The partner budget table is found in Table 21 on page 34. Working through it row by row:\n- NLUAS: 487 200\n- Lake District Technical University: 382 400\n- NISM: 642 300\n- ENU: 369 500\n- CFU: 337 200\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"ReCoSE\",\n    \"proposal_title\": \"Renewable Composite Systems with Circular Engineering ReCoSE\",\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2.218.600\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NLUAS\",\n      \"requested\": \"487 200\"\n    },\n    {\n      \"partner_name\": \"Lake District Technical University\",\n      \"requested\": \"382 400\"\n    },\n    {\n      \"partner_name\": \"NISM\",\n      \"requested\": \"642 300\"\n    },\n    {\n      \"partner_name\": \"ENU\",\n      \"requested\": \"369 500\"\n    },\n    {\n      \"partner_name\": \"CFU\",\n      \"requested\": \"337 200\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 30609,
+        "completion_tokens": 393,
+        "total_tokens": 31002,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "seconds": 22.28,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00859848
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 4460278,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 21.92
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 30609,
+          "completion_tokens": 391,
+          "total_tokens": 31000,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "The partner budget table is Table 21 on page 34. Working through it row by row:\n- NLUAS: 487 200\n- Lake District Technical University: 382 400\n- NISM: 642 300\n- ENU: 369 500\n- CFU: 337 200\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"ReCoSE\",\n    \"proposal_title\": \"Renewable Composite Systems with Circular Engineering ReCoSE\",\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2.218.600\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NLUAS\",\n      \"requested\": \"487 200\"\n    },\n    {\n      \"partner_name\": \"Lake District Technical University\",\n      \"requested\": \"382 400\"\n    },\n    {\n      \"partner_name\": \"NISM\",\n      \"requested\": \"642 300\"\n    },\n    {\n      \"partner_name\": \"ENU\",\n      \"requested\": \"369 500\"\n    },\n    {\n      \"partner_name\": \"CFU\",\n      \"requested\": \"337 200\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 30609,
+        "completion_tokens": 391,
+        "total_tokens": 31000,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "seconds": 21.92,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00859678
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 3344490,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 19.74
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 30609,
+          "completion_tokens": 381,
+          "total_tokens": 30990,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 27904,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "The partner budget table for research institutes is found in Table 21 on page 34.\n\nNLUAS: 487 200\nLake District Technical University: 382 400\nNISM: 642 300\nENU: 369 500\nCFU: 337 200\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"ReCoSE\",\n    \"proposal_title\": \"Renewable Composite Systems with Circular Engineering\",\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2.218.600\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NLUAS\",\n      \"requested\": \"487 200\"\n    },\n    {\n      \"partner_name\": \"Lake District Technical University\",\n      \"requested\": \"382 400\"\n    },\n    {\n      \"partner_name\": \"NISM\",\n      \"requested\": \"642 300\"\n    },\n    {\n      \"partner_name\": \"ENU\",\n      \"requested\": \"369 500\"\n    },\n    {\n      \"partner_name\": \"CFU\",\n      \"requested\": \"337 200\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 30609,
+        "completion_tokens": 381,
+        "total_tokens": 30990,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 27904,
+        "seconds": 19.74,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00858828
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 1003177,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 21.45
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 28733,
+          "completion_tokens": 405,
+          "total_tokens": 29138,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 27904,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I have reviewed the document and located the partner budget table (Table 21, \"Budgets of research institutes\") on page 34.\n\nNLUAS: 487 200\nLake District Technical University: 382 400\nNISM: 642 300\nENU: 369 500\nCFU: 337 200\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"ReCoSE\",\n    \"proposal_title\": \"Renewable Composite Systems with Circular Engineering ReCoSE\",\n    \"call_identifier\": null,\n    \"submission_date\": \"2026-03-01\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2.218.600\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NLUAS\",\n      \"requested\": \"487 200\"\n    },\n    {\n      \"partner_name\": \"Lake District Technical University\",\n      \"requested\": \"382 400\"\n    },\n    {\n      \"partner_name\": \"NISM\",\n      \"requested\": \"642 300\"\n    },\n    {\n      \"partner_name\": \"ENU\",\n      \"requested\": \"369 500\"\n    },\n    {\n      \"partner_name\": \"CFU\",\n      \"requested\": \"337 200\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 28733,
+        "completion_tokens": 405,
+        "total_tokens": 29138,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 27904,
+        "seconds": 21.45,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00810216
+      }
+    ]
+  }
+}

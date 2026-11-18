@@ -1,0 +1,114 @@
+{
+  "arm": "multimodal_combined_qwen_vl",
+  "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "provider": "deepinfra",
+  "source_file": "SP01.md",
+  "started_utc": "2026-10-30T11:20:59Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested[Kalevra Innovation Cluster Oy] 'EUR 575,600' not found in the document",
+    "requested[Northbay Materials Oy] 'EUR 466,600' not found in the document",
+    "requested[Corvane Polymer Systems AB] 'EUR 578,000' not found in the document",
+    "requested[Rauvik University] 'EUR 643,900' not found in the document",
+    "requested[Elvaris University of Technology] 'EUR 735,900' not found in the document",
+    "requested[Sundmark Applied Research Institute] 'EUR 553,200' not found in the document",
+    "requested[Brenvik Institute for Sustainable Process Engineering] 'EUR 684,500' not found in the document",
+    "requested[Lindfors Regional Development Agency] 'EUR 0.00' not found in the document"
+  ],
+  "batch_size": 10,
+  "overlap": 1,
+  "pages_total": 66,
+  "pages_with_images": 5,
+  "batches": 1,
+  "calls": 1,
+  "seconds": 114.96,
+  "attempts": 1,
+  "prompt_tokens": 43719,
+  "completion_tokens": 782,
+  "cost_usd": 0.009432,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "context_splits": 0,
+  "output_file": "SP01_20261030T112059Z.json",
+  "replies_file": "SP01_20261030T112059Z.replies.json",
+  "total_seconds": 122.91,
+  "evaluation": {
+    "document": "SP01",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\multimodal_combined_qwen_vl\\SP01_20261030T112059Z.run.json",
+    "input": "pdf",
+    "preparation": {
+      "native_text_seconds": 0.16
+    },
+    "runner_wall_clock_seconds": 123.08,
+    "end_to_end_seconds": 123.08,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 43719,
+      "completion_tokens": 782,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.00943196,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1252962,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 114.96
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 43719,
+          "total_tokens": 44501,
+          "completion_tokens": 782,
+          "estimated_cost": 0.00943196,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the document text and images to extract the partner budget information.\n\nThe partner budget table is located on pages 41-43 of the document text. I will go through each row of the table to extract the partner name and the requested amount.\n\n- Row 1: Partner is \"Kalevra Innovation Cluster Oy\", requested amount is \"575.6\" (in EUR thousand, as per the table header).\n- Row 2: Partner is \"Northbay Materials Oy\", requested amount is \"466.6\".\n- Row 3: Partner is \"Corvane Polymer Systems AB\", requested amount is \"578.0\".\n- Row 4: Partner is \"Tessilo Process Engineering GmbH\", requested amount is \"see note 3\". Note 3 on page 44 clarifies this amount is \"EUR 552,100\". Since the table is in EUR thousand, this is 552.1.\n- Row 5: Partner is \"Rauvik University\", requested amount is \"643.9\".\n- Row 6: Partner is \"Elvaris University of Technology\", requested amount is \"735.9\".\n- Row 7: Partner is \"Sundmark Applied Research Institute\", requested amount is \"553.2\".\n- Row 8: Partner is \"Brenvik Institute for Sustainable Process Engineering\", requested amount is \"684.5\".\n- Row 9: Partner is \"Lindfors Regional Development Agency\", requested amount is \"0.0\".\n\nI have now extracted all partner names and their corresponding requested amounts from the table.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"LOOPWEAVE\",\n    \"proposal_title\": \"Circular Weaving of Recycled Fibre Value Chains\",\n    \"call_identifier\": \"INNO-2027-03-CIRCFIBRE-04\",\n    \"submission_date\": \"2027-03-06\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 4,789,800\",\n    \"trl_start\": 5,\n    \"trl_target\": 7,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Kalevra Innovation Cluster Oy\",\n      \"requested\": \"EUR 575,600\"\n    },\n    {\n      \"partner_name\": \"Northbay Materials Oy\",\n      \"requested\": \"EUR 466,600\"\n    },\n    {\n      \"partner_name\": \"Corvane Polymer Systems AB\",\n      \"requested\": \"EUR 578,000\"\n    },\n    {\n      \"partner_name\": \"Tessilo Process Engineering GmbH\",\n      \"requested\": \"EUR 552,100\"\n    },\n    {\n      \"partner_name\": \"Rauvik University\",\n      \"requested\": \"EUR 643,900\"\n    },\n    {\n      \"partner_name\": \"Elvaris University of Technology\",\n      \"requested\": \"EUR 735,900\"\n    },\n    {\n      \"partner_name\": \"Sundmark Applied Research Institute\",\n      \"requested\": \"EUR 553,200\"\n    },\n    {\n      \"partner_name\": \"Brenvik Institute for Sustainable Process Engineering\",\n      \"requested\": \"EUR 684,500\"\n    },\n    {\n      \"partner_name\": \"Lindfors Regional Development Agency\",\n      \"requested\": \"EUR 0.00\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 43719,
+        "completion_tokens": 782,
+        "total_tokens": 44501,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 114.96,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00943196
+      }
+    ]
+  }
+}

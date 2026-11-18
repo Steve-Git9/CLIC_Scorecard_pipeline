@@ -1,0 +1,110 @@
+{
+  "arm": "freeform_light",
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "provider": "nscale",
+  "source_file": "CIRCUNOVA.md",
+  "started_utc": "2026-10-31T13:52:10Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested[Morrow Resource CRTNvery ApS] '209,562.50 €' not found in the document",
+    "requested[TerraForm Innovations Oy] '384,562.50 €' not found in the document",
+    "requested[City of Valmont] '224,062.50 €' not found in the document",
+    "requested[MUNICIPALITY OF PORTO VERDE] '222,062.50 €' not found in the document"
+  ],
+  "free_form": true,
+  "context_splits": 0,
+  "seconds": 131.71,
+  "attempts": 1,
+  "prompt_tokens": 48256,
+  "completion_tokens": 848,
+  "cost_usd": 0.000508,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-4B-Instruct-2507",
+  "parts": 1,
+  "freeform_file": "CIRCUNOVA_20261031T135210Z.freeform.txt",
+  "output_file": "CIRCUNOVA_20261031T135210Z.json",
+  "replies_file": "CIRCUNOVA_20261031T135210Z.replies.json",
+  "total_seconds": 131.77,
+  "evaluation": {
+    "document": "CIRCUNOVA",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\freeform_light\\CIRCUNOVA_20261031T135210Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 648.98,
+      "docling_markdown_sha256": "30e0bb02a25c571eeee7ce56163a12b9d6629152cbf564b24fc8b8334df35d5d"
+    },
+    "runner_wall_clock_seconds": 131.78,
+    "end_to_end_seconds": 780.76,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 48256,
+      "completion_tokens": 848,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": {
+      "made": false,
+      "tokens": 0,
+      "note": "the free form reply is converted to JSON locally in Python; no model call"
+    },
+    "cost": {
+      "cost_usd": 0.000508,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "nscale",
+          "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-4B-Instruct-2507",
+        "provider": "nscale",
+        "response_format": false,
+        "request_bytes": 282648,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 131.71
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 48256,
+          "total_tokens": 49104,
+          "completion_tokens": 848
+        },
+        "reply": "```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": \"Circular Industry Networks for Regenerative Urban PVerials\",\n    \"call_identifier\": \"HORIZON-CL6-2026-01-CIRCBIO-02-two-stage\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"6,000,000 €\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NORDIC CIRCULAR SYSTEMS OY\",\n      \"requested\": \"666,700 €\"\n    },\n    {\n      \"partner_name\": \"VESTFJORD MUNICIPALITY\",\n      \"requested\": \"250,250 €\"\n    },\n    {\n      \"partner_name\": \"Vestfjord Enterprise Agency\",\n      \"requested\": \"430,000 €\"\n    },\n    {\n      \"partner_name\": \"Northbridge PVerials ApS\",\n      \"requested\": \"222,375 €\"\n    },\n    {\n      \"partner_name\": \"Morrow Resource CRTNvery ApS\",\n      \"requested\": \"209,562.50 €\"\n    },\n    {\n      \"partner_name\": \"RenewLoop Denmark\",\n      \"requested\": \"158,375 €\"\n    },\n    {\n      \"partner_name\": \"LAKELAND REGIONAL COUNCIL\",\n      \"requested\": \"149,350 €\"\n    },\n    {\n      \"partner_name\": \"TAMPEREEN KAUPUNKISEUDUN ELINKEINOJA KEHITYSYHTIO BUSINESS TAMPERE OY\",\n      \"requested\": \"303,250 €\"\n    },\n    {\n      \"partner_name\": \"GREEN PATHWAYS OY\",\n      \"requested\": \"431,875 €\"\n    },\n    {\n      \"partner_name\": \"LAKELAND RESOURCE SERVICES OY\",\n      \"requested\": \"335,300 €\"\n    },\n    {\n      \"partner_name\": \"MineralCarbon Solutions Oy\",\n      \"requested\": \"379,750 €\"\n    },\n    {\n      \"partner_name\": \"TerraForm Innovations Oy\",\n      \"requested\": \"384,562.50 €\"\n    },\n    {\n      \"partner_name\": \"BALTIC INSTITUTE OF TECHNOLOGY\",\n      \"requested\": \"366,500 €\"\n    },\n    {\n      \"partner_name\": \"City of Valmont\",\n      \"requested\": \"224,062.50 €\"\n    },\n    {\n      \"partner_name\": \"EUROPEAN INSTITUTE OF PVERIALS\",\n      \"requested\": \"215,625 €\"\n    },\n    {\n      \"partner_name\": \"AEGEAN REGIONAL INNOVATION FUND\",\n      \"requested\": \"135,875 €\"\n    },\n    {\n      \"partner_name\": \"MUNICIPALITY OF PORTO VERDE\",\n      \"requested\": \"222,062.50 €\"\n    },\n    {\n      \"partner_name\": \"UNIVERSITY OF HARZ TECHNOLOGY\",\n      \"requested\": \"571,500 €\"\n    },\n    {\n      \"partner_name\": \"SAIMAA UNIVERSITY OF APPLIED SCIENCES\",\n      \"requested\": \"343,025 €\"\n    },\n    {\n      \"partner_name\": \"CycleReturn ApS\",\n      \"requested\": \"0 €\"\n    },\n    {\n      \"partner_name\": \"AFL\",\n      \"requested\": \"0 €\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 48256,
+        "completion_tokens": 848,
+        "total_tokens": 49104,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 131.71,
+        "model_reported": "Qwen/Qwen3-4B-Instruct-2507",
+        "finish_reason": "stop",
+        "cost_usd": 0.000508
+      }
+    ]
+  }
+}

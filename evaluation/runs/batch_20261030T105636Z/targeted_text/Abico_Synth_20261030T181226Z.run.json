@@ -1,0 +1,201 @@
+{
+  "arm": "targeted_text",
+  "mode": "text",
+  "model": "openai/gpt-oss-120b",
+  "provider": "groq",
+  "source_file": "Abico_Synth.pdf",
+  "started_utc": "2026-10-30T18:12:26Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [],
+  "pages_total": 40,
+  "pages_sent": [
+    1,
+    4,
+    6,
+    27,
+    29,
+    30,
+    34,
+    35
+  ],
+  "scanned_pages": [],
+  "ocr_pages": [],
+  "images_sent": 0,
+  "located": {
+    "proposal": [
+      1,
+      6,
+      7
+    ],
+    "budget": [
+      34,
+      35
+    ],
+    "partners": [
+      29,
+      27,
+      30
+    ],
+    "readiness": [
+      4,
+      7,
+      10
+    ]
+  },
+  "located_by": {
+    "proposal": "keywords",
+    "budget": "keywords",
+    "partners": "keywords",
+    "readiness": "model"
+  },
+  "tables_found": 6,
+  "tables_verified": 2,
+  "page_map_cached": false,
+  "calls": 2,
+  "seconds": 2.35,
+  "attempts": 2,
+  "prompt_tokens": 7498,
+  "completion_tokens": 627,
+  "cost_usd": 0.001594,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-120b",
+  "steps": {
+    "page_map": 12.95,
+    "locate": 0.0,
+    "identifier_hints": 0.28,
+    "tables": 1.63,
+    "locate_model_fallback": 0.63,
+    "text_and_ocr": 0.06,
+    "model": 1.72
+  },
+  "context_splits": 0,
+  "identifiers_filled": {},
+  "partners_confirmed_by_table": 2,
+  "output_file": "Abico_Synth_20261030T181226Z.json",
+  "replies_file": "Abico_Synth_20261030T181226Z.replies.json",
+  "total_seconds": 17.3,
+  "trace_file": "Abico_Synth_20261030T181226Z.trace.json",
+  "evaluation": {
+    "document": "Abico_Synth",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\targeted_text\\Abico_Synth_20261030T181226Z.run.json",
+    "input": "pdf",
+    "preparation": {},
+    "runner_wall_clock_seconds": 17.3,
+    "end_to_end_seconds": 17.3,
+    "calls": 2,
+    "failed_calls": 0,
+    "attempts": 2,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 7498,
+      "completion_tokens": 627,
+      "reasoning_tokens": 411,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 2,
+      "completion_tokens": 2,
+      "reasoning_tokens": 2,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.0015009,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-120b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "page_pick",
+        "model": "openai/gpt-oss-120b",
+        "provider": "groq",
+        "response_format": false,
+        "request_bytes": 7250,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 0.63
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.074267911,
+          "prompt_tokens": 1773,
+          "prompt_time": 0.0829027,
+          "completion_tokens": 102,
+          "completion_time": 0.214948797,
+          "total_tokens": 1875,
+          "total_time": 0.297851497,
+          "completion_tokens_details": {
+            "reasoning_tokens": 70
+          }
+        },
+        "reply": "{\n  \"pages\": {\n    \"readiness\": [4, 7, 10]\n  }\n}",
+        "reasoning": "Need pages with TRL and MCRL. Look for keywords TRL or MCRL not present. Likely in sections about readiness maybe not indexed. Choose pages likely: introduction, objectives, work content, maybe appendix. Choose up to 3: p4 (intro), p7 (objectives), p10 (work content).",
+        "prompt_tokens": 1773,
+        "completion_tokens": 102,
+        "total_tokens": 1875,
+        "reasoning_tokens": 70,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 0.63,
+        "model_reported": "openai/gpt-oss-120b",
+        "finish_reason": "stop",
+        "cost_usd": 0.00032715
+      },
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-120b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 26874,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 1.72
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.07687117,
+          "prompt_tokens": 5725,
+          "prompt_time": 0.297283563,
+          "completion_tokens": 525,
+          "completion_time": 1.098211211,
+          "total_tokens": 6250,
+          "total_time": 1.3954947739999999,
+          "completion_tokens_details": {
+            "reasoning_tokens": 341
+          }
+        },
+        "reply": "{\"proposal\":{\"proposal_acronym\":\"ReCoSE\",\"proposal_title\":\"Renewable Composite Systems with Circular Engineering ReCoSE\",\"call_identifier\":null,\"submission_date\":null},\"proposal_facts\":{\"requested_total\":\"EUR 3 545 400\",\"trl_start\":null,\"trl_target\":null,\"mcrl_start\":null,\"mcrl_target\":null},\"partners\":[{\"partner_name\":\"NorthGrid Energy WS\",\"requested\":\"15 000\"},{\"partner_name\":\"ForestLoop Fibre\",\"requested\":\"22 400\"},{\"partner_name\":\"Atmosense\",\"requested\":\"5 600\"},{\"partner_name\":\"NordWindow Group\",\"requested\":\"22 400\"},{\"partner_name\":\"Aurora Shipworks\",\"requested\":\"11 200\"},{\"partner_name\":\"PolyNova Labs\",\"requested\":null},{\"partner_name\":\"Oerlikon Balzer\",\"requested\":null}]}",
+        "reasoning": "We need requested_total, partners requested. Use verified tables for partner amounts. Table 2 gives direct financial support of companies to research orgs, amounts per company. Those are likely requested? Probably requested grant per partner is the amount they receive from agency? Table 2 shows contributions. Use those as requested per partner. Also total requested maybe from Table 1 overall budget? Requested_total likely total grant requested = total from National Innovation Agency? Table 1 page 35 not verified but shows totals. Use maybe \"TOTAL from National Innovation Agency\" 2 177 600 (companies) + 2 526 900 (research institutes) = 4 704 500? But unclear. Might use overall budget? Probably requested_total = total budget? Use \"TOTAL Budget\" 3 545 400 and 4 245 400 two columns? ambiguous. Might pick first column? Use as written \"3 545 400\". Include currency EUR. So \"EUR 3 545 400\". Partners list: from Table 2 rows: NorthGrid Energy WS, ForestLoop Fibre, Atmosense, NordWindow Group, Aurora Shipworks, PolyNova Labs (In-kind), Oerlikon Balzer (In-kind). Requested amounts: for those with numbers, copy as written with €? Table shows numbers without currency. Use as is. For In-kind, requested null? Probably null. We'll output requested as string with €? Keep as given \"15 000\". Use null for In-kind. Also include others? That's it.\n\nCall identifier not present => null. submission_date not present => null. TRL and MCRL not present => null.\n\nProceed.",
+        "prompt_tokens": 5725,
+        "completion_tokens": 525,
+        "total_tokens": 6250,
+        "reasoning_tokens": 341,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.72,
+        "model_reported": "openai/gpt-oss-120b",
+        "finish_reason": "stop",
+        "cost_usd": 0.00117375
+      }
+    ]
+  }
+}

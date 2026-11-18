@@ -1,0 +1,27 @@
+{
+  "document": "SP03B",
+  "pdf_file": "data\\raw\\SP03B.pdf",
+  "pdf_sha256": "bfa4cb89bbfd9f0016ec7935be7e2a9a277cf96a1d0cbde395c739926c49dd0d",
+  "pages": 45,
+  "started_utc": "2026-10-30T10:27:39Z",
+  "total_seconds": 460.97,
+  "ocr_used": true,
+  "tables": 22,
+  "pictures": 3,
+  "setup_seconds": 0.49,
+  "convert_seconds": 460.23,
+  "export_seconds": 0.17,
+  "seconds_per_page": 10.244,
+  "pages_per_minute": 5.86,
+  "markdown_file": "data\\markdown\\SP03B.md",
+  "markdown_chars": 80541,
+  "markdown_sha256": "feda96f35bbc403b38b945c259e41f84ed7e62f84c65dfc8243d300540e793e2",
+  "tool": "docling",
+  "docling_version": "2.130.0",
+  "machine": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 23 Model 160 Stepping 0, AuthenticAMD",
+    "cpu_count": 8,
+    "python": "3.13.2"
+  }
+}

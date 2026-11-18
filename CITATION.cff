@@ -1,0 +1,29 @@
+# Fill in every field marked with < > before committing.
+cff-version: 1.2.0
+message: "If you use this software or its replication package, please cite it as below."
+type: software
+title: "Text-Based Pipeline versus Multimodal Language Model: Which Extracts Structured Data from Funding Proposals Best at the Low-est Cost? A Case Study at CLIC Innovation Oy"
+authors:
+  - family-names: "Fanelli"
+    given-names: "Stefano"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+repository-code: "https://github.com/Steve-Git9/CLIC_Scorecard_pipeline"
+license: MIT
+date-released: "<2026-11-19>"
+version: "<thesis-v1>"
+keywords:
+  - information extraction
+  - large language models
+  - design science research
+  - document processing
+  - evaluation
+preferred-citation:
+  type: thesis
+  thesis-type: "Master's thesis"
+  title: "Text-Based Pipeline versus Multimodal Language Model: Which Extracts Structured Data from Funding Proposals Best at the Low-est Cost? A Case Study at CLIC Innovation Oy"
+  authors:
+    - family-names: "Fanelli"
+      given-names: "Stefano"
+  institution:
+    name: "Haaga-Helia Applied Science University"
+  year: 2026

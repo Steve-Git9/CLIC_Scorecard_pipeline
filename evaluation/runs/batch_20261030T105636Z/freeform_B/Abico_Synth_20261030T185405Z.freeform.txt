@@ -1,0 +1,108 @@
+The document states the project acronym is **ReCoSE**, the title is **Renewable Composite Systems with Circular Engineering ReCoSE**, the call identifier is not explicitly stated (only the funding source "National Innovation Agency" is mentioned), and the submission date is not explicitly stated (only the project timeline "1.4.2026-31.3.2028" is given). The readiness levels (TRL/MCR) are not stated in the text. The partner budget table is found in **Table 22** (Direct financial support of companies to research organisations) and **Table 21** (Budgets of research institutes).
+
+**Table 21** lists the requested amounts for the research institutes:
+*   NLUAS: 487 200
+*   Lake District Technical University: 382 400
+*   NISM: 642 300
+*   ENU: 369 500
+*   CFU: 337 200
+
+**Table 22** lists the requested amounts for the companies supporting the research organisations:
+*   NorthGrid Energy WS: 20 000 (Total column) - Note: The table shows specific allocations to NLUAS, LDTU, ENU, CFU but the Total column sums to 20 000 for this row. However, looking closely at the row "NorthGrid Energy WS", it has 15 000 for LDTU and 5 000 for ENU. The Total column says 20 000.
+*   ForestLoop Fibre: 20 000 (Total column) - Note: The table shows 22 400 for NISM but the Total column says 20 000.
+*   Atmosense: 20 000 (Total column) - Note: The table shows 5 600 for NLUAS and 17 000 for CFU.
+*   NordWindow Group: 20 000 (Total column) - Note: The table shows 22 400 for NLUAS.
+*   Aurora Shipworks: 20 000 (Total column) - Note: The table shows 11 200 for NISM and 11 200 for ENU.
+*   PolyNova Labs: In-kind (No monetary value stated).
+*   Oerlikon Balzer: In-kind (No monetary value stated).
+
+The prompt asks to work through the table row by row writing each partner's name exactly as shown together with the amount on the same row. I will extract the "Total" amount from the rightmost column for each company row as that represents the requested grant/funding for that partner in the context of the table structure, or the specific cell if the total is ambiguous. However, the instruction says "amount on the same row". For companies, the specific amounts are split across columns, but the "Total" column provides the sum. I will use the "Total" column value as the requested amount for the partner, as it represents the total funding requested from that partner.
+
+Wait, looking at the instruction: "Work through that table row by row, writing each partner's name exactly as shown together with the amount on the same row."
+For Table 22:
+Row: NorthGrid Energy WS | Total: 20 000
+Row: ForestLoop Fibre | Total: 20 000
+Row: Atmosense | Total: 20 000
+Row: NordWindow Group | Total: 20 000
+Row: Aurora Shipworks | Total: 20 000
+Row: PolyNova Labs | Total: In-kind
+Row: Oerlikon Balzer | Total: In-kind
+
+For Table 21 (Research institutes):
+Row: NLUAS | 487 200
+Row: Lake District Technical University | 382 400
+Row: NISM | 642 300
+Row: ENU | 369 500
+Row: CFU | 337 200
+
+The document does not explicitly state TRL or MCR levels.
+The document does not explicitly state a Call Identifier (only "National Innovation Agency").
+The document does not explicitly state a Submission Date.
+
+```json
+{
+  "proposal": {
+    "proposal_acronym": "ReCoSE",
+    "proposal_title": "Renewable Composite Systems with Circular Engineering ReCoSE",
+    "call_identifier": null,
+    "submission_date": null
+  },
+  "proposal_facts": {
+    "requested_total": "EUR 3.860 million",
+    "trl_start": null,
+    "trl_target": null,
+    "mcrl_start": null,
+    "mcrl_target": null
+  },
+  "partners": [
+    {
+      "partner_name": "NLUAS",
+      "requested": "487 200"
+    },
+    {
+      "partner_name": "Lake District Technical University",
+      "requested": "382 400"
+    },
+    {
+      "partner_name": "NISM",
+      "requested": "642 300"
+    },
+    {
+      "partner_name": "ENU",
+      "requested": "369 500"
+    },
+    {
+      "partner_name": "CFU",
+      "requested": "337 200"
+    },
+    {
+      "partner_name": "NorthGrid Energy WS",
+      "requested": "20 000"
+    },
+    {
+      "partner_name": "ForestLoop Fibre",
+      "requested": "20 000"
+    },
+    {
+      "partner_name": "Atmosense",
+      "requested": "20 000"
+    },
+    {
+      "partner_name": "NordWindow Group",
+      "requested": "20 000"
+    },
+    {
+      "partner_name": "Aurora Shipworks",
+      "requested": "20 000"
+    },
+    {
+      "partner_name": "PolyNova Labs",
+      "requested": "In-kind"
+    },
+    {
+      "partner_name": "Oerlikon Balzer",
+      "requested": "In-kind"
+    }
+  ]
+}
+```

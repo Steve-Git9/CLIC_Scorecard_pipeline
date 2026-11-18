@@ -1,0 +1,244 @@
+{
+  "arm": "multimodal_open",
+  "strict": false,
+  "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "provider": "deepinfra",
+  "source_file": "Abico_Synth.pdf",
+  "started_utc": "2026-10-30T17:59:28Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [],
+  "batch_size": 10,
+  "overlap": 1,
+  "batches": 5,
+  "seconds": 629.64,
+  "attempts": 5,
+  "prompt_tokens": 88857,
+  "completion_tokens": 1843,
+  "cost_usd": 0.019393,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "output_file": "Abico_Synth_20261030T175928Z.json",
+  "replies_file": "Abico_Synth_20261030T175928Z.replies.json",
+  "total_seconds": 635.47,
+  "evaluation": {
+    "document": "Abico_Synth",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\multimodal_open\\Abico_Synth_20261030T175928Z.run.json",
+    "input": "pdf",
+    "preparation": {},
+    "runner_wall_clock_seconds": 635.48,
+    "end_to_end_seconds": 635.48,
+    "calls": 5,
+    "failed_calls": 0,
+    "attempts": 5,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 88857,
+      "completion_tokens": 1843,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 5,
+      "completion_tokens": 5,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.01939324,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 4092701,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 67.0
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20344,
+          "completion_tokens": 217,
+          "estimated_cost": 0.00421636,
+          "prompt_tokens_details": null
+        },
+        "reply": "```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"ReCoSE\",\n    \"proposal_title\": \"Renewable Composite Systems with Circular Engineering ReCoSE\",\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2,218,600\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NISM\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"NLUAS\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"LDTU\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"ENU\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"CFU\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 217,
+        "total_tokens": 20344,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 67.0,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00421636
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 4316565,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 86.38
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20365,
+          "completion_tokens": 238,
+          "estimated_cost": 0.00423484,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided document pages. The task requires me to find the partner budget table and extract the partner names and their requested funding amounts.\n\nAfter a thorough review of all 10 pages, I can confirm that there is no table or section that lists the requested funding amounts for each partner. The document contains several tables (Table 1, Table 2, Table 3, Table 4, Table 5, Table 6, Table 7) that detail work packages, human resources, and roles, but none of them specify the financial budget or requested grant amount for any partner.\n\nTherefore, I cannot provide the requested data for the partners' funding amounts. The document does not contain this information.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 238,
+        "total_tokens": 20365,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 86.38,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00423484
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 3933393,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 78.66
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20387,
+          "completion_tokens": 260,
+          "estimated_cost": 0.0042542000000000005,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed all the provided pages. The document contains detailed descriptions of work packages, tasks, human resources, and timelines. However, after a thorough search across all 10 pages, I cannot find a partner budget table that lists the requested funding amount for each partner organization.\n\nThe document mentions the partners involved (e.g., LDTU, NISM, NLUAS, ENU, CFU, Industry, ForestLoop) and their roles in various tasks and work packages, but it does not provide any financial figures, budget allocations, or requested grant amounts for any of them. The section on \"Partners\" on page 27 only describes their roles in project management and does not include any budgetary information.\n\nTherefore, I cannot extract the requested partner budget data as it is not present in the document.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 260,
+        "total_tokens": 20387,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 78.66,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0042542
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 3268869,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 325.48
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 21095,
+          "completion_tokens": 968,
+          "estimated_cost": 0.00487724,
+          "prompt_tokens_details": null
+        },
+        "reply": "The partner budget table is Table 23, \"Funding plan of the project,\" on page 35. I will go through it row by row to extract the partner names and their requested amounts.\n\n- The table is divided into two main sections: \"Companies\" and \"Research institutes\".\n- For \"Companies\", the table shows funding applied from the National Innovation Agency and own funding, but does not list individual company amounts. The \"TOTAL\" for companies is 1,249,400 € (without Veturi) and 1,894,000 € (with Veturi). However, the table does not break this down by individual company. The text on page 34 mentions that the funding applied from the National Innovation Agency for companies is ca EUR 418,000, but this is not broken down per company. Therefore, for individual companies, the requested amount is not stated in the table.\n- For \"Research institutes\", the table shows funding applied from the National Innovation Agency and own funding, but again, does not list individual institute amounts. The \"TOTAL\" for research institutes is 2,218,600 €. The text on page 34 mentions that the funding for research institutes from the National Innovation Agency is EUR 1,552,900, but this is not broken down per institute. Therefore, for individual research institutes, the requested amount is not stated in the table.\n\nSince the table does not provide the requested amount for each individual partner, I will use null for the requested amount for each partner.\n\nNow, I will list the partners in document order. The partners are listed in Table 18 on page 29 and the continuation on page 30.\n\n1. NLUAS University of Applied Science\n2. LDTU University (LDTU)\n3. Nordic Institute for Sustainable Materials NISM\n4. Eastern Nordic University ENU\n5. Coastal Finland University CFU\n6. PolyCycle\n7. NorthGrid Energy WS\n8. ForestLoop Fibre\n9. CircuForm\n10. BioCoat Solutions\n11. NordWindow Group\n12. Atmosense\n13. Aurora Shipworks\n14. PolyNova Labs\n15. SurfaceTech Nordic\n\nFor each of these partners, the requested amount is not stated in the budget table, so I will use null.\n\nNow, I will write the final answer as a JSON object.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"ReCoSE\",\n    \"proposal_title\": \"Recycling of end-of-life biocomposite products\",\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 3,860,000.00\",\n    \"trl_start\": 3,\n    \"trl_target\": 6,\n    \"mcrl_start\": 3,\n    \"mcrl_target\": 6\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NLUAS University of Applied Science\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"LDTU University (LDTU)\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Nordic Institute for Sustainable Materials NISM\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Eastern Nordic University ENU\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Coastal Finland University CFU\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"PolyCycle\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"NorthGrid Energy WS\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"ForestLoop Fibre\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"CircuForm\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"BioCoat Solutions\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"NordWindow Group\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Atmosense\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Aurora Shipworks\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"PolyNova Labs\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"SurfaceTech Nordic\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 968,
+        "total_tokens": 21095,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 325.48,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00487724
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1143003,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 72.12
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 8349,
+          "total_tokens": 8509,
+          "completion_tokens": 160,
+          "estimated_cost": 0.0018106000000000003,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed all the provided pages. The document does not contain a partner budget table. The pages show sections on project work packages, relevant projects and forums, international collaboration plans, and references. There is no table listing partners with their requested funding amounts. Therefore, I cannot extract the required data for the partners' requested amounts.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 8349,
+        "completion_tokens": 160,
+        "total_tokens": 8509,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 72.12,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0018106
+      }
+    ]
+  }
+}

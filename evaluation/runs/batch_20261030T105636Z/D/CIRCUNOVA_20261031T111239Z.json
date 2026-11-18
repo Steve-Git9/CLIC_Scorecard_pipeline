@@ -1,0 +1,165 @@
+{
+  "proposal": {
+    "proposal_acronym": "CIRCUNOVA",
+    "proposal_title": "Circular Industry Networks for Regenerative Urban PVerials",
+    "call_identifier": "HORIZON-CL6-2026-01-two-stage",
+    "submission_date": null
+  },
+  "proposal_facts": {
+    "requested_total_cents": null,
+    "trl_start": null,
+    "trl_target": null,
+    "mcrl_start": null,
+    "mcrl_target": null
+  },
+  "partners": [
+    {
+      "partner_name": "NORDIC CIRCULAR SYSTEMS OY",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "VESTFJORD MUNICIPALITY",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "Vestfjord Enterprise Agency",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "Northbridge PVerials ApS",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "Morrow Resource CRTNvery ApS",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "RenewLoop Denmark",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "LAKELAND REGIONAL COUNCIL",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "TAMPEREEN KAUPUNKISEUDUN ELINKEINOJA KEHITYSYHTIO BUSINESS TAMPERE OY",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "GREEN PATHWAYS OY",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "LAKELAND RESOURCE SERVICES OY",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "MineralCarbon Solutions Oy",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "TerraForm Innovations Oy",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "BALTIC INSTITUTE OF TECHNOLOGY",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "City of Valmont",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "EUROPEAN INSTITUTE OF PVERIALS",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "AEGEAN REGIONAL INNOVATION FUND",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "MUNICIPALITY OF PORTO VERDE",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "UNIVERSITY OF HARZ TECHNOLOGY",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "SAIMAA UNIVERSITY OF APPLIED SCIENCES",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "LAKELAND BUSINESS DEVELOPMENT AGENCY OY",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "NCS",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "VEST",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "VEA",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "NBM",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "MRR",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "LRC",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "LBDA",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "GPO",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "VALM",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "EIM",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "ARIF",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "PV",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "UHT",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "SUAS",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "CRTN",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "AFL",
+      "requested_cents": null
+    }
+  ],
+  "metadata": {
+    "extraction_timestamp": "2026-10-31T11:12:39Z",
+    "source_file": "CIRCUNOVA.md"
+  }
+}

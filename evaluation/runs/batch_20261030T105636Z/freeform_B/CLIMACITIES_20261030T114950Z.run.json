@@ -1,0 +1,107 @@
+{
+  "arm": "freeform_B",
+  "model": "Qwen/Qwen3.5-9B",
+  "provider": "deepinfra",
+  "source_file": "CLIMACITIES.md",
+  "started_utc": "2026-10-30T11:49:50Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [],
+  "free_form": true,
+  "context_splits": 0,
+  "seconds": 19.59,
+  "attempts": 1,
+  "prompt_tokens": 20844,
+  "completion_tokens": 709,
+  "cost_usd": 0.002191,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3.5-9B",
+  "parts": 1,
+  "freeform_file": "CLIMACITIES_20261030T114950Z.freeform.txt",
+  "output_file": "CLIMACITIES_20261030T114950Z.json",
+  "replies_file": "CLIMACITIES_20261030T114950Z.replies.json",
+  "total_seconds": 19.62,
+  "evaluation": {
+    "document": "CLIMACITIES",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\freeform_B\\CLIMACITIES_20261030T114950Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 115.02,
+      "docling_markdown_sha256": "949af8bd07e2436524f0435a30f6b88f5830c13a3397260c211a488094e2efbf"
+    },
+    "runner_wall_clock_seconds": 19.62,
+    "end_to_end_seconds": 134.64,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 20844,
+      "completion_tokens": 709,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": {
+      "made": false,
+      "tokens": 0,
+      "note": "the free form reply is converted to JSON locally in Python; no model call"
+    },
+    "cost": {
+      "cost_usd": 0.00219075,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3.5-9B",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3.5-9B",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 116372,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 19.59
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20844,
+          "total_tokens": 21553,
+          "completion_tokens": 709,
+          "estimated_cost": 0.00219075,
+          "prompt_tokens_details": null
+        },
+        "reply": "The document states the acronym is CLIMACITIES, the title is Climate Intelligence for Equitable and Adaptive European Cities, the call identifier is HORIZON-MISS-2027-CLIMA-SYN-01, and the submission date is not stated. The readiness levels are not stated in the text. The partner budget table is found in the \"Financial annex and extraction challenge\" section (pages 43-45) under \"Consolidated partner budget and financial definitions\".\n\nThe partners and their requested amounts are:\n- NORDIC URBAN SYSTEMS INSTITUTE: 1,420,000\n- RHEIN DATA LABS GMBH: 1,060,000\n- ATLANTIC RESILIENCE CENTRE: 910,000\n- CIVITAS ANALYTICS SL: 870,000\n- DELTA WATER RESEARCH BV: 850,000\n- BALTIC COMMUNITY LAB: 690,000\n- ALPINE ENERGY INNOVATION SRL: 930,000\n- URBAN FUTURES ASSOCIATION: 770,000\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"CLIMACITIES\",\n    \"proposal_title\": \"Climate Intelligence for Equitable and Adaptive European Cities\",\n    \"call_identifier\": \"HORIZON-MISS-2027-CLIMA-SYN-01\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 7,500,000\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NORDIC URBAN SYSTEMS INSTITUTE\",\n      \"requested\": \"1,420,000\"\n    },\n    {\n      \"partner_name\": \"RHEIN DATA LABS GMBH\",\n      \"requested\": \"1,060,000\"\n    },\n    {\n      \"partner_name\": \"ATLANTIC RESILIENCE CENTRE\",\n      \"requested\": \"910,000\"\n    },\n    {\n      \"partner_name\": \"CIVITAS ANALYTICS SL\",\n      \"requested\": \"870,000\"\n    },\n    {\n      \"partner_name\": \"DELTA WATER RESEARCH BV\",\n      \"requested\": \"850,000\"\n    },\n    {\n      \"partner_name\": \"BALTIC COMMUNITY LAB\",\n      \"requested\": \"690,000\"\n    },\n    {\n      \"partner_name\": \"ALPINE ENERGY INNOVATION SRL\",\n      \"requested\": \"930,000\"\n    },\n    {\n      \"partner_name\": \"URBAN FUTURES ASSOCIATION\",\n      \"requested\": \"770,000\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20844,
+        "completion_tokens": 709,
+        "total_tokens": 21553,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 19.59,
+        "model_reported": "Qwen/Qwen3.5-9B",
+        "finish_reason": "stop",
+        "cost_usd": 0.00219075
+      }
+    ]
+  }
+}

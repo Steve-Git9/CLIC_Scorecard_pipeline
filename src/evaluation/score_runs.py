@@ -24,6 +24,7 @@ import re
 from pathlib import Path
 from typing import Any
 
+from src.evaluation.partners import DocumentTerms
 from src.evaluation.scorer import score_run
 from src.pipeline.config import Config, configure_logging, load_config
 
@@ -79,8 +80,14 @@ def score_run_file(run_file: Path, settings: dict, decisions: dict | None = None
     if gold is None:
         raise FileNotFoundError(f"no gold set {gold_path} for run {run_file.name}")
     markdown_path = Path(settings["markdown"]) / f"{stem}.md"
-    markdown = markdown_path.read_text(encoding="utf-8") if markdown_path.is_file() else None
-    if markdown is None:
+    terms_path = markdown_path.with_name(f"{stem}.terms.json")
+    if markdown_path.is_file():
+        markdown = markdown_path.read_text(encoding="utf-8")
+    elif terms_path.is_file():  # Markdown withheld: the recorded presence checks stand in for it
+        terms = json.loads(terms_path.read_text(encoding="utf-8"))
+        markdown = DocumentTerms(terms["present"], terms["absent"])
+    else:
+        markdown = None
         logger.warning("%s: no Docling Markdown at %s; extra partners are unsure", stem, markdown_path)
 
     replies_path = base.with_name(base.name + ".replies.json")

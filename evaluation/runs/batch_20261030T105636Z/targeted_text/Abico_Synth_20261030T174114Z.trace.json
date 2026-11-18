@@ -1,0 +1,653 @@
+{
+ "located": {
+  "proposal": [
+   {
+    "page": 1,
+    "score": 8.25
+   },
+   {
+    "page": 6,
+    "score": 5.25
+   },
+   {
+    "page": 7,
+    "score": 5.25
+   }
+  ],
+  "budget": [
+   {
+    "page": 34,
+    "score": 27.0
+   },
+   {
+    "page": 35,
+    "score": 23.25
+   }
+  ],
+  "partners": [
+   {
+    "page": 29,
+    "score": 20.75
+   },
+   {
+    "page": 27,
+    "score": 20.0
+   },
+   {
+    "page": 30,
+    "score": 15.5
+   }
+  ],
+  "readiness": [
+   {
+    "page": 4,
+    "score": null
+   },
+   {
+    "page": 7,
+    "score": null
+   },
+   {
+    "page": 10,
+    "score": null
+   }
+  ]
+ },
+ "tables": [
+  {
+   "page": 27,
+   "index": 0,
+   "rows": [
+    [
+     "WP5",
+     ""
+    ],
+    [
+     "WP5 Leader WP5 Industry Leader",
+     "NLUAS N/A"
+    ],
+    [
+     "Participants",
+     "All participants"
+    ],
+    [
+     "Objectives The aim of the work package is to enable smooth progress of the research work in ReCoSE with the required quality and schedules. Co-design workshops (2-3) will be organized to support the iterative material and product development between all consortium partners.",
+     ""
+    ],
+    [
+     "Task descriptions – WP5 includes 3 tasks: Task 5.1 Administrative management of project execution Drafting, commenting on, organizing signature rounds, and managing changes to the consortium agreement. Organizing project steering group meetings, including preparing agendas, arranging meetings, participating in meetings, documenting minutes, and sharing event materials. Requesting quotations for meeting room bookings when necessary. Participation in project monthly work package (WP) meetings and providing support as needed in their organization. Task 5.2 Co-design activities Organising and facilitating co-design workshops (2-3 workshops during project time) for industrial and academic partners The purpose of the workshops is to gather industrial development challenges and corresponding material and process requirements as a basis for selecting research project demos and prototypes. Additionally, the goal is to collectively assess the results obtained so far and guide the continuation of the research in this regard. This task is supporting especially WP2 and WP3. Task 5.3 Project documentation, reporting and risk management Providing and maintaining processes and related management tools and methods for executing the project and supervising the execution of the project following the practices set for realisation and management of the research project. Building project management tools, including establishing and maintaining a shared workspace, including project documentation management. Monitoring the progress of work packages and managing the project schedule to achieve high quality results. Monitoring and managing project risks. Guidance and coordination of consortium project reporting. Acting as a representative of the consortium towards National Innovation Agency together with the scientific leader of the project. Outcomes: • Project meeting agendas & minutes. Consortium agreement prepared and signed. • Co-design workshops between all consortium members, well-organized project management and web-based portal for facilitating the internal and external information archiving and exchange relating to and within project • Regular updates between National Innovation Agency and the consortium, support in form of templates for reporting the costs and international activities. Partners: All partners will take part in the joint activities. NISM will take the leading role within the research partners’ consortium and NLUAS UAS will lead the management of the consortium. Project coordination services are being tendered. The consortium authorizes one of the partners (NLUAS) to represent the consortium in the tender.",
+     ""
+    ]
+   ],
+   "verification": {
+    "checks": [],
+    "columns": {},
+    "verified": false
+   }
+  },
+  {
+   "page": 29,
+   "index": 0,
+   "rows": [
+    [
+     "Organisation",
+     "Type",
+     "Role in the project"
+    ],
+    [
+     "NLUAS University of Applied Science",
+     "Research partner",
+     "WP4 leader WP5 leader Research on processing technologies"
+    ],
+    [
+     "LDTU University (LDTU)",
+     "Research partner",
+     "WP2 leader + WP3 research Research on design for circularity, end-of-life recycling and environmental impacts of the case products."
+    ],
+    [
+     "Nordic Institute for Sustainable Materials NISM",
+     "Research lead (and partner)",
+     "WP1 leader Regulatory analysis, recycling, identification methods and AI- based modelling in WP2 and WP3"
+    ],
+    [
+     "Eastern Nordic University ENU",
+     "Research partner",
+     "WP1 Biobased components for composites WP3 leader, testing and analytics, preparation and optimization of bio-based additives and their performance"
+    ],
+    [
+     "Coastal Finland University CFU",
+     "Research partner",
+     "WP1 Testing and analytics and preparation of bio-based fire retardants"
+    ],
+    [
+     "PolyCycle",
+     "Industry partner",
+     "Plastics processor, injection moulding"
+    ],
+    [
+     "NorthGrid Energy WS",
+     "Industry partner",
+     "Producer of recycled plastic material"
+    ],
+    [
+     "ForestLoop Fibre",
+     "Industry partner",
+     "Producer of pulp fibre, developer of biocomposite material"
+    ],
+    [
+     "CircuForm",
+     "Industry partner",
+     "Developer of composite products"
+    ],
+    [
+     "BioCoat Solutions",
+     "Industry partner",
+     "Developer of renewable coatings and materials"
+    ],
+    [
+     "NordWindow Group",
+     "Industry partner",
+     "End-user for window frame applications"
+    ],
+    [
+     "Atmosense",
+     "Industry partner",
+     "End-user for equipment casings applications"
+    ]
+   ],
+   "verification": {
+    "checks": [],
+    "columns": {},
+    "verified": false
+   }
+  },
+  {
+   "page": 30,
+   "index": 0,
+   "rows": [
+    [
+     "Aurora Shipworks",
+     "Industry partner, leading company programme",
+     "End-user for marine applications, ecosystem collaborative partner"
+    ],
+    [
+     "PolyNova Labs",
+     "Industry partner",
+     "Developer and processor of compounding products"
+    ],
+    [
+     "SurfaceTech Nordic",
+     "Industry partner",
+     "Developer of industrial coatings for tools"
+    ]
+   ],
+   "verification": {
+    "checks": [],
+    "columns": {},
+    "verified": false
+   }
+  },
+  {
+   "page": 34,
+   "index": 0,
+   "rows": [
+    [
+     "Research institute",
+     ""
+    ],
+    [
+     "NLUAS",
+     "487 200"
+    ],
+    [
+     "Lake District Technical University",
+     "382 400"
+    ],
+    [
+     "NISM",
+     "642 300"
+    ],
+    [
+     "ENU",
+     "369 500"
+    ],
+    [
+     "CFU",
+     "337 200"
+    ],
+    [
+     "TOTAL",
+     "2 218 600"
+    ]
+   ],
+   "verification": {
+    "checks": [
+     {
+      "kind": "column",
+      "column": 1,
+      "row": 6,
+      "expected": 221860000,
+      "found": 221860000,
+      "ok": true
+     }
+    ],
+    "columns": {
+     "1": "verified"
+    },
+    "verified": true
+   }
+  },
+  {
+   "page": 34,
+   "index": 1,
+   "rows": [
+    [
+     "",
+     "NLUAS",
+     "LDTU",
+     "NISM",
+     "ENU",
+     "CFU",
+     "Total"
+    ],
+    [
+     "NorthGrid Energy WS",
+     "",
+     "15000",
+     "",
+     "5000",
+     "",
+     "20000"
+    ],
+    [
+     "ForestLoop Fibre",
+     "",
+     "",
+     "22 400",
+     "",
+     "",
+     "20000"
+    ],
+    [
+     "Atmosense",
+     "5 600",
+     "",
+     "",
+     "",
+     "17 000",
+     "20000"
+    ],
+    [
+     "NordWindow Group",
+     "22 400",
+     "",
+     "",
+     "",
+     "",
+     "20000"
+    ],
+    [
+     "Aurora Shipworks",
+     "",
+     "",
+     "11 200",
+     "11 200",
+     "",
+     "20000"
+    ],
+    [
+     "PolyNova Labs",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "In-kind"
+    ],
+    [
+     "Oerlikon Balzer",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "In-kind"
+    ],
+    [
+     "Total",
+     "28 000",
+     "17 000",
+     "34 000",
+     "17 000",
+     "17 000",
+     "112 000"
+    ]
+   ],
+   "verification": {
+    "checks": [
+     {
+      "kind": "column",
+      "column": 1,
+      "row": 8,
+      "expected": 2800000,
+      "found": 2800000,
+      "ok": true
+     },
+     {
+      "kind": "column",
+      "column": 2,
+      "row": 8,
+      "expected": 1700000,
+      "found": 1500000,
+      "ok": false
+     },
+     {
+      "kind": "column",
+      "column": 3,
+      "row": 8,
+      "expected": 3400000,
+      "found": 3360000,
+      "ok": false
+     },
+     {
+      "kind": "column",
+      "column": 4,
+      "row": 8,
+      "expected": 1700000,
+      "found": 1620000,
+      "ok": false
+     },
+     {
+      "kind": "column",
+      "column": 5,
+      "row": 8,
+      "expected": 1700000,
+      "found": 1700000,
+      "ok": true
+     },
+     {
+      "kind": "column",
+      "column": 6,
+      "row": 8,
+      "expected": 11200000,
+      "found": 10000000,
+      "ok": false
+     },
+     {
+      "kind": "row",
+      "column": 6,
+      "row": 1,
+      "expected": 2000000,
+      "found": 2000000,
+      "ok": true
+     },
+     {
+      "kind": "row",
+      "column": 6,
+      "row": 2,
+      "expected": 2000000,
+      "found": 2240000,
+      "ok": false
+     },
+     {
+      "kind": "row",
+      "column": 6,
+      "row": 3,
+      "expected": 2000000,
+      "found": 2260000,
+      "ok": false
+     },
+     {
+      "kind": "row",
+      "column": 6,
+      "row": 4,
+      "expected": 2000000,
+      "found": 2240000,
+      "ok": false
+     },
+     {
+      "kind": "row",
+      "column": 6,
+      "row": 5,
+      "expected": 2000000,
+      "found": 2240000,
+      "ok": false
+     }
+    ],
+    "columns": {
+     "1": "verified",
+     "2": "failed",
+     "3": "failed",
+     "4": "failed",
+     "5": "verified",
+     "6": "failed"
+    },
+    "verified": true
+   }
+  },
+  {
+   "page": 35,
+   "index": 0,
+   "rows": [
+    [
+     "Companies",
+     "[€]",
+     "[€]"
+    ],
+    [
+     "Funding applied from National Innovation Agency",
+     "",
+     ""
+    ],
+    [
+     "Own funding",
+     "624 700*",
+     "957 300"
+    ],
+    [
+     "TOTAL",
+     "1 249 400*",
+     "1 894 000"
+    ],
+    [
+     "",
+     "",
+     ""
+    ],
+    [
+     "Research institutes",
+     "",
+     ""
+    ],
+    [
+     "Funding applied from National Innovation Agency",
+     "1 552 900",
+     "1 552 900"
+    ],
+    [
+     "Own funding",
+     "665 700",
+     "665 700"
+    ],
+    [
+     "Company support",
+     "112 000",
+     "112 000"
+    ],
+    [
+     "TOTAL",
+     "2 218 600",
+     "2 218 600"
+    ],
+    [
+     "",
+     "",
+     ""
+    ],
+    [
+     "TOTAL from National Innovation Agency",
+     "2 177 600",
+     "2 526 900"
+    ],
+    [
+     "TOTAL Budget",
+     "3 545 400",
+     "4 245 400"
+    ],
+    [
+     "Share of public funding [%]",
+     "74",
+     "75"
+    ],
+    [
+     "Share of funding from Business Finland [%]",
+     "63",
+     "52"
+    ]
+   ],
+   "verification": {
+    "checks": [
+     {
+      "kind": "column",
+      "column": 1,
+      "row": 9,
+      "expected": 221860000,
+      "found": 233060000,
+      "ok": false
+     },
+     {
+      "kind": "column",
+      "column": 2,
+      "row": 3,
+      "expected": 189400000,
+      "found": 95730000,
+      "ok": false
+     },
+     {
+      "kind": "column",
+      "column": 2,
+      "row": 9,
+      "expected": 221860000,
+      "found": 233060000,
+      "ok": false
+     }
+    ],
+    "columns": {
+     "1": "failed",
+     "2": "failed"
+    },
+    "verified": false
+   }
+  }
+ ],
+ "partner_budget_table": {
+  "page": 34,
+  "index": 0,
+  "column": 1,
+  "header": "",
+  "partners": [
+   {
+    "name": "NLUAS",
+    "amount_text": "487 200",
+    "cents": 48720000
+   },
+   {
+    "name": "Lake District Technical University",
+    "amount_text": "382 400",
+    "cents": 38240000
+   },
+   {
+    "name": "NISM",
+    "amount_text": "642 300",
+    "cents": 64230000
+   },
+   {
+    "name": "ENU",
+    "amount_text": "369 500",
+    "cents": 36950000
+   },
+   {
+    "name": "CFU",
+    "amount_text": "337 200",
+    "cents": 33720000
+   }
+  ],
+  "total_text": "2 218 600"
+ },
+ "identifier_hints": {
+  "cover_title": "Renewable Composite Systems with Circular Engineering ReCoSE",
+  "cover_page": 1,
+  "acronym_candidates": [
+   "ReCoSE"
+  ],
+  "labelled": {
+   "acronym": [],
+   "title": [],
+   "call": []
+  },
+  "call_ids": []
+ },
+ "page_map_sha256": "3f58ceff117b24db2e3e1eb665dcd21356f9e0db1a65d9b78727c441b4e2d175",
+ "reconciliation": [
+  {
+   "partner_name": "NLUAS",
+   "status": "confirmed"
+  },
+  {
+   "partner_name": "Lake District Technical University",
+   "status": "confirmed"
+  },
+  {
+   "partner_name": "NISM",
+   "status": "confirmed"
+  },
+  {
+   "partner_name": "ENU",
+   "status": "confirmed"
+  },
+  {
+   "partner_name": "CFU",
+   "status": "confirmed"
+  },
+  {
+   "partner_name": "PolyCycle",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "NorthGrid Energy WS",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "ForestLoop Fibre",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "CircuForm",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "BioCoat Solutions",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "NordWindow Group",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "Atmosense",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "Aurora Shipworks",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "PolyNova Labs",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "SurfaceTech Nordic",
+   "status": "unchecked"
+  }
+ ]
+}

@@ -1,0 +1,392 @@
+{
+  "arm": "multimodal_open",
+  "strict": false,
+  "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "provider": "deepinfra",
+  "source_file": "SP05.pdf",
+  "started_utc": "2026-10-31T10:37:43Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "duplicate partner 'Lumivara' dropped",
+    "duplicate partner 'Arctic Sensing' dropped",
+    "duplicate partner 'Kaltio Council' dropped"
+  ],
+  "batch_size": 10,
+  "overlap": 1,
+  "batches": 9,
+  "seconds": 203.6,
+  "attempts": 9,
+  "prompt_tokens": 173291,
+  "completion_tokens": 2130,
+  "cost_usd": 0.036533,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "output_file": "SP05_20261031T103743Z.json",
+  "replies_file": "SP05_20261031T103743Z.replies.json",
+  "total_seconds": 208.61,
+  "evaluation": {
+    "document": "SP05",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\multimodal_open\\SP05_20261031T103743Z.run.json",
+    "input": "pdf",
+    "preparation": {},
+    "runner_wall_clock_seconds": 208.62,
+    "end_to_end_seconds": 208.62,
+    "calls": 9,
+    "failed_calls": 0,
+    "attempts": 9,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 173291,
+      "completion_tokens": 2130,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 9,
+      "completion_tokens": 9,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.0365326,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 3916357,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 16.75
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20264,
+          "completion_tokens": 137,
+          "estimated_cost": 0.004145960000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"NIVALIS\",\n    \"proposal_title\": \"Federated Data Spaces for Resilient Cold Climate Infrastructure Monitoring\",\n    \"call_identifier\": \"to be confirmed\",\n    \"submission_date\": \"2026-09-16\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"3 828 561,00 €\",\n    \"trl_start\": 3,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 137,
+        "total_tokens": 20264,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 16.75,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00414596
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 4662225,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 26.97
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20381,
+          "completion_tokens": 254,
+          "estimated_cost": 0.00424892,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided document pages. The document contains detailed text about project management, consortium structure, roles, and technical aspects. It includes a \"Consortium list\" in Table 2.1 on page 16, which lists the 8 organizations involved, their short names, acronyms, types, and roles.\n\nHowever, after a thorough review of all pages, I cannot find a \"partner budget table\" or any table that lists the requested funding amount for each partner. The text mentions financial management and reporting costs in a common template (page 12 and 19), but it does not provide the specific monetary values for each partner's requested grant.\n\nTherefore, I cannot extract the partner budget information as requested. The required data is not present in the document.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 254,
+        "total_tokens": 20381,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 26.97,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00424892
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 4517529,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 18.33
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20320,
+          "completion_tokens": 193,
+          "estimated_cost": 0.00419524,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed all the provided pages. The document contains detailed descriptions of project management, collaboration, and work packages, but it does not contain a partner budget table. There is no table listing partner names alongside their requested funding amounts. Therefore, I cannot extract the required data for the partners' requested funding.\n\nSince the partner budget table is not present in the document, I cannot fulfill the request to list each partner's name and amount row by row, nor can I construct the required JSON object.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 193,
+        "total_tokens": 20320,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 18.33,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00419524
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 4900201,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 19.23
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20332,
+          "completion_tokens": 205,
+          "estimated_cost": 0.0042058,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed all the provided pages. The document describes the project's work packages, market context, and management structure, mentioning partners such as Teralund University, Hallavik, Arctic Sensor, Lumivara, Kaltio Council, Valoria Laboratories Ltd, and Arctic Sensing. However, after a thorough search of all pages, I can confirm that there is no partner budget table present. The document does not contain any table listing partners alongside their requested funding amounts.\n\nTherefore, I cannot extract the required data for the partners' requested funding.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 205,
+        "total_tokens": 20332,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 19.23,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0042058
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 3683133,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 21.06
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20395,
+          "completion_tokens": 268,
+          "estimated_cost": 0.00426124,
+          "prompt_tokens_details": null
+        },
+        "reply": "```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 3,828,561.00\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": 2,\n    \"mcrl_target\": 5\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Nordvane\",\n      \"requested\": \"870 765,93 €\"\n    },\n    {\n      \"partner_name\": \"Teralund University\",\n      \"requested\": \"679 493,18 €\"\n    },\n    {\n      \"partner_name\": \"Valoria\",\n      \"requested\": \"594 205,74 €\"\n    },\n    {\n      \"partner_name\": \"Hallavik\",\n      \"requested\": \"649 300,03 €\"\n    },\n    {\n      \"partner_name\": \"Arctic Sensor\",\n      \"requested\": \"449 835,12 €\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 268,
+        "total_tokens": 20395,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 21.06,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00426124
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 4558529,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 16.57
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20339,
+          "completion_tokens": 212,
+          "estimated_cost": 0.00421196,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided document pages. The task requires me to find the partner budget table and extract the partner names and their requested funding amounts.\n\nAfter carefully examining all 10 pages, I can confirm that there is no table listing partners and their requested funding amounts. The document contains sections on Quality Assurance, Internal Communication, Ethics, Data Protection, Sustainability, and Dissemination activities, but no financial or budgetary table with partner names and funding figures is present.\n\nTherefore, I cannot fulfill the request to extract the partner budget table data as it does not exist in the provided document.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 212,
+        "total_tokens": 20339,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 16.57,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00421196
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 4609485,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 27.32
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20503,
+          "completion_tokens": 376,
+          "estimated_cost": 0.004356280000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have examined the provided document pages to locate the partner budget table. The table is found on page 10 (image 10), titled \"Table 5.1 continued (EUR thousand)\".\n\nI will now work through this table row by row to extract the partner names and their corresponding funding amounts as requested.\n\n- Row 1: The \"Brought forward\" row is a subtotal and not a partner. I will skip this.\n- Row 2: Partner name is \"Lumivara\". The amount in the \"Funding requested\" column is \"0.0\".\n- Row 3: Partner name is \"Arctic Sensing\". The amount in the \"Funding requested\" column is \"298.0\".\n- Row 4: Partner name is \"Kaltio Council\". The amount in the \"Funding requested\" column is \"199.2\".\n\nI have now completed the row-by-row extraction of partner names and their funding amounts from the table.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Lumivara\",\n      \"requested\": \"0.0\"\n    },\n    {\n      \"partner_name\": \"Arctic Sensing\",\n      \"requested\": \"298.0\"\n    },\n    {\n      \"partner_name\": \"Kaltio Council\",\n      \"requested\": \"199.2\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 376,
+        "total_tokens": 20503,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 27.32,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00435628
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 3820317,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 18.06
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20333,
+          "completion_tokens": 206,
+          "estimated_cost": 0.00420668,
+          "prompt_tokens_details": null
+        },
+        "reply": "Lumivara: 0.0\nArctic Sensing: 298.0\nKaltio Council: 199.2\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Lumivara\",\n      \"requested\": \"0.0\"\n    },\n    {\n      \"partner_name\": \"Arctic Sensing\",\n      \"requested\": \"298.0\"\n    },\n    {\n      \"partner_name\": \"Kaltio Council\",\n      \"requested\": \"199.2\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 206,
+        "total_tokens": 20333,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 18.06,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00420668
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1850369,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 39.31
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 12275,
+          "total_tokens": 12554,
+          "completion_tokens": 279,
+          "estimated_cost": 0.00270052,
+          "prompt_tokens_details": null
+        },
+        "reply": "```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Nordvane Systems Oy\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"University of Teralund\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Valoria Labs Ltd\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Hallavik Applied Research Centre\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Arctic Sensor Systems Oy\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Lumivara Edge Oy\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Arctic Sensing Solutions Oy\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Kaltio Regional Council\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 12275,
+        "completion_tokens": 279,
+        "total_tokens": 12554,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 39.31,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00270052
+      }
+    ]
+  }
+}

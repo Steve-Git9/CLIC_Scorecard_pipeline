@@ -1,0 +1,27 @@
+{
+  "document": "CLIMACITIES",
+  "pdf_file": "data\\raw\\CLIMACITIES.pdf",
+  "pdf_sha256": "de4e0b55d65974111cc28c99c9f03adf74fcb0e9eea3e27eaa32fb6c6211bc83",
+  "pages": 45,
+  "started_utc": "2026-10-30T10:17:14Z",
+  "total_seconds": 115.02,
+  "ocr_used": false,
+  "tables": 2,
+  "pictures": 16,
+  "setup_seconds": 0.48,
+  "convert_seconds": 114.25,
+  "export_seconds": 0.26,
+  "seconds_per_page": 2.556,
+  "pages_per_minute": 23.47,
+  "markdown_file": "data\\markdown\\CLIMACITIES.md",
+  "markdown_chars": 111324,
+  "markdown_sha256": "949af8bd07e2436524f0435a30f6b88f5830c13a3397260c211a488094e2efbf",
+  "tool": "docling",
+  "docling_version": "2.130.0",
+  "machine": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 23 Model 160 Stepping 0, AuthenticAMD",
+    "cpu_count": 8,
+    "python": "3.13.2"
+  }
+}

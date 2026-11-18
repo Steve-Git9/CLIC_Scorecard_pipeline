@@ -1,0 +1,111 @@
+{
+  "arm": "C",
+  "model": "openai/gpt-oss-120b",
+  "provider": "groq",
+  "source_file": "SP02.md",
+  "started_utc": "2026-10-30T17:16:56Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested[Lumenthar Marine Oy (LMR)]: could not parse amount 'no funding requested'",
+    "requested[Havrenmaa University (HVU)]: could not parse amount 'shown in Figure 5.1'",
+    "requested[Taimerra Research Institute (TMI)]: could not parse amount 'shown in Figure 5.1'"
+  ],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 2.73,
+  "attempts": 1,
+  "prompt_tokens": 21606,
+  "completion_tokens": 458,
+  "cost_usd": 0.003584,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-120b",
+  "parts": 1,
+  "output_file": "SP02_20261030T171656Z.json",
+  "replies_file": "SP02_20261030T171656Z.replies.json",
+  "total_seconds": 2.76,
+  "evaluation": {
+    "document": "SP02",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\C\\SP02_20261030T171656Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 143.97,
+      "docling_markdown_sha256": "506d02b5ac82270a9644747e6f9c112fe37b6be752aae88b6e0c7df578edaed9"
+    },
+    "runner_wall_clock_seconds": 2.77,
+    "end_to_end_seconds": 146.74,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 21606,
+      "completion_tokens": 458,
+      "reasoning_tokens": 253,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.0035157,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-120b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-120b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 132855,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 2.73
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.249835649,
+          "prompt_tokens": 21606,
+          "prompt_time": 0.985195544,
+          "completion_tokens": 458,
+          "completion_time": 0.952848407,
+          "total_tokens": 22064,
+          "total_time": 1.938043951,
+          "completion_tokens_details": {
+            "reasoning_tokens": 253
+          }
+        },
+        "reply": "{\"proposal\":{\"proposal_acronym\":\"TIDEMESH\",\"proposal_title\":\"Adaptive Sensor Networks for Resilient Coastal Infrastructure\",\"call_identifier\":\"BF2026/93782\",\"submission_date\":\"2026-04-02\"},\"proposal_facts\":{\"requested_total\":\"EUR 991,100\",\"trl_start\":null,\"trl_target\":null,\"mcrl_start\":1,\"mcrl_target\":4},\"partners\":[{\"partner_name\":\"Nordvalen Systems Oy (NVS)\",\"requested\":\"181.6\"},{\"partner_name\":\"Kaltiora Analytics Oy (KTA)\",\"requested\":\"190.9\"},{\"partner_name\":\"Lumenthar Marine Oy (LMR)\",\"requested\":\"no funding requested\"},{\"partner_name\":\"Havrenmaa University (HVU)\",\"requested\":\"shown in Figure 5.1\"},{\"partner_name\":\"Taimerra Research Institute (TMI)\",\"requested\":\"shown in Figure 5.1\"}]}",
+        "reasoning": "We need fields: proposal_acronym TIDEMESH, title Adaptive Sensor Networks for Resilient Coastal Infrastructure, call BF2026/93782, submission_date from \"Document prepared: 2 April 2026\" => 2026-04-02.\n\nrequested_total: \"EUR 991,100\" from 5.3.\n\nTRL start/target not found -> null. MCRL start/target: start 1 target 4 from market readiness section.\n\nPartners list order as in consortium: Nordvalen Systems Oy (NVS), Kaltiora Analytics Oy (KTA), Lumenthar Marine Oy (LMR), Havrenmaa University (HVU), Taimerra Research Institute (TMI). Requested amounts: from table 5.1: NVS 181.6 (EUR thousand) but need copy as written? It says \"181.6\". Should include currency? Not given. Use as string \"181.6\". KTA \"190.9\". LMR \"no funding requested\". HVU \"shown in Figure 5.1\". TMI same. Use null if not amount? It says value not numeric. Probably treat as string as written. We'll copy exactly.\n\nReturn JSON.",
+        "prompt_tokens": 21606,
+        "completion_tokens": 458,
+        "total_tokens": 22064,
+        "reasoning_tokens": 253,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 2.73,
+        "model_reported": "openai/gpt-oss-120b",
+        "finish_reason": "stop",
+        "cost_usd": 0.0035157
+      }
+    ]
+  }
+}

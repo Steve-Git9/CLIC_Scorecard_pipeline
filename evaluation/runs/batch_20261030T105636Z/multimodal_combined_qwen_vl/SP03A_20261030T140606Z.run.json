@@ -1,0 +1,233 @@
+{
+  "arm": "multimodal_combined_qwen_vl",
+  "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "provider": "deepinfra",
+  "source_file": "SP03A.md",
+  "started_utc": "2026-10-30T14:06:06Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "duplicate partner 'Torvenmaa University' dropped",
+    "duplicate partner 'Haldeberg University of Applied Sciences and Regional Innovation Services' dropped",
+    "duplicate partner 'Kestrel Institute for Process Research' dropped",
+    "duplicate partner 'Ormenfield Process Systems Oy' dropped",
+    "duplicate partner 'Vantora Sensor Solutions Oy' dropped",
+    "duplicate partner 'Ostermark Regional Development Agency' dropped",
+    "duplicate partner 'Torvenmaa University' dropped",
+    "duplicate partner 'Haldeberg University of Applied Sciences and Regional Innovation Services' dropped",
+    "duplicate partner 'Kestrel Institute for Process Research' dropped",
+    "duplicate partner 'Ormenfield Process Systems Oy' dropped",
+    "duplicate partner 'Vantora Sensor Solutions Oy' dropped",
+    "duplicate partner 'Ostermark Regional Development Agency' dropped",
+    "duplicate partner 'Torvenmaa University' dropped",
+    "duplicate partner 'Haldeberg University of Applied Sciences and Regional Innovation Services' dropped",
+    "duplicate partner 'Kestrel Institute for Process Research' dropped",
+    "duplicate partner 'Ormenfield Process Systems Oy' dropped",
+    "duplicate partner 'Vantora Sensor Solutions Oy' dropped",
+    "duplicate partner 'Ostermark Regional Development Agency' dropped",
+    "sum of partner requested_cents (24194880) != requested_total_cents (97930000)"
+  ],
+  "batch_size": 10,
+  "overlap": 1,
+  "pages_total": 45,
+  "pages_with_images": 29,
+  "batches": 4,
+  "calls": 4,
+  "seconds": 712.68,
+  "attempts": 4,
+  "prompt_tokens": 130268,
+  "completion_tokens": 3914,
+  "cost_usd": 0.029498,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "context_splits": 0,
+  "output_file": "SP03A_20261030T140606Z.json",
+  "replies_file": "SP03A_20261030T140606Z.replies.json",
+  "total_seconds": 721.74,
+  "evaluation": {
+    "document": "SP03A",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\multimodal_combined_qwen_vl\\SP03A_20261030T140606Z.run.json",
+    "input": "pdf",
+    "preparation": {
+      "native_text_seconds": 0.13
+    },
+    "runner_wall_clock_seconds": 721.87,
+    "end_to_end_seconds": 721.87,
+    "calls": 4,
+    "failed_calls": 0,
+    "attempts": 4,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 130268,
+      "completion_tokens": 3914,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 4,
+      "completion_tokens": 4,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.02949792,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 2021992,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 64.73
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 36493,
+          "total_tokens": 36800,
+          "completion_tokens": 307,
+          "estimated_cost": 0.007568760000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"RESENSE\",\n    \"proposal_title\": \"Adaptive Sensor Networks for Resource Efficient Process Monitoring\",\n    \"call_identifier\": \"RCF2027/6433\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 979 300\",\n    \"trl_start\": 3,\n    \"trl_target\": 5,\n    \"mcrl_start\": 1,\n    \"mcrl_target\": 4\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Torvenmaa University\",\n      \"requested\": \"214,8\"\n    },\n    {\n      \"partner_name\": \"Haldeberg University of Applied Sciences and Regional Innovation Services\",\n      \"requested\": \"159,8\"\n    },\n    {\n      \"partner_name\": \"Kestrel Institute for Process Research\",\n      \"requested\": \"241 200\"\n    },\n    {\n      \"partner_name\": \"Ormenfield Process Systems Oy\",\n      \"requested\": \"177,8\"\n    },\n    {\n      \"partner_name\": \"Vantora Sensor Solutions Oy\",\n      \"requested\": \"196,4\"\n    },\n    {\n      \"partner_name\": \"Ostermark Regional Development Agency\",\n      \"requested\": \"0,0\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 36493,
+        "completion_tokens": 307,
+        "total_tokens": 36800,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 64.73,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00756876
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1978844,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 452.32
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 36493,
+          "total_tokens": 38947,
+          "completion_tokens": 2454,
+          "estimated_cost": 0.00945812,
+          "prompt_tokens_details": null
+        },
+        "reply": "First, I will find the partner budget table and work through it row by row, writing out each partner's name exactly as shown, together with the amount on that same row.\n\nThe budget table is on page 21 (text) and page 2 of the images. The table is titled \"D.1 Budget by partner\" and lists partners under \"Partner\" with their \"Requested funding\" in the last column. The amounts are in \"Budget (1 000 EUR)\".\n\nRow 1: Partner is \"TMU\", requested funding is \"214,8\".\nRow 2: Partner is \"HBU\", requested funding is \"159,8\".\nRow 3: Partner is \"KPRI\", requested funding is \"see E.2\". However, Part E, section E.2 on page 26 (text) states: \"For KPRI, the requested funding amounts to EUR 241 200 for the whole project period.\" This is a specific amount, so I will use that. Note that the table says \"see E.2\", but the text in E.2 provides the number. The amount is EUR 241,200, which is 241.2 in thousands of EUR. But the table is in thousands of EUR, so I need to write it as \"241,2\" to match the table's format? Wait, no. The table's requested funding for KPRI is \"see E.2\", which is a reference, not a number. But the instruction says to use what the document explicitly states. The document explicitly states in E.2 that the requested funding is EUR 241,200. However, the budget table itself does not state a number for KPRI; it says \"see E.2\". So, for the purpose of this task, I should use the value from the table, which is \"see E.2\", but that is not a number. The instruction says: \"Copy names and titles exactly as written\" and for the amount, \"COPIED AS WRITTEN with currency and separators\". The table says \"see E.2\" for KPRI. But in the image of page 21, the table has \"see E.2\" for KPRI. However, in the image of page 2 (which is page 21 of the document), there is a handwritten correction: for OPS, it says \"477,8\" and then \"167,1 x.k.\" which might be a correction. But for KPRI, it still says \"see E.2\". So, I will use \"see E.2\" as the amount for KPRI, because that is what is written in the table. But the instruction says: \"Do not convert, round or add up numbers.\" and \"Use only what the document explicitly states.\" The document explicitly states \"see E.2\" for KPRI in the budget table. However, in the justification (E.2), it states a specific amount. But the budget table is the primary source for the budget. The instruction says to use the text as primary source, but if there is a discrepancy, check images. The image of page 21 (which is page 2 of the images) shows the table with \"see E.2\" for KPRI. So, I will use \"see E.2\" for KPRI.\n\nBut wait, the instruction says: \"the way a general-purpose document-aware assistant normally receives a PDF: the document's text, already extracted with layout analysis, and the same document's pages rendered as images, in page order. Use the text as your primary source; check the images directly wherever the text may be incomplete, garbled, or where a number, stamp, table or handwriting needs visual confirmation.\"\n\nIn the text extraction, for KPRI, it says \"see E.2\". In the image, it also says \"see E.2\". So, I will use \"see E.2\" for KPRI.\n\nRow 4: Partner is \"OPS\", requested funding is \"177,8\" (in the text, it says \"177,8\", but in the image, there is a handwritten correction: \"477,8\" and then \"167,1 x.k.\" which might mean that 177.8 is corrected to 167.1? But the text says \"177,8\". The image shows \"477,8\" and then \"167,1 x.k.\" which is likely a correction of the 477.8 to 167.1. But the original in the table is 177.8? No, in the text, it says \"177,8\" for OPS. In the image, the table has \"477,8\" for OPS and then \"167,1 x.k.\" which is probably a correction. But the text extraction says \"177,8\". This is a discrepancy. I need to check the image. The image of page 2 (which is page 21 of the document) shows the table. In the row for OPS, under \"Requested funding\", it says \"477,8\" and then above it, there is a handwritten \"167,1\" and \"x.k.\" which might mean \"see correction\". But the text extraction says \"177,8\". This is confusing. The instruction says to use the text as primary source, but to check images for numbers. The text says \"177,8\" for OPS. But in the image, it is \"477,8\" with a correction to \"167,1\". I think the text extraction might have a typo. In the text, it says \"OPS 328,3 161,2 177,8\". But in the image, it is \"477,8\" for requested funding. And then there is a handwritten \"167,1\" and \"x.k.\" which might mean that the correct value is 167.1. But the text says 177.8. I think I should go with the image because it is a visual confirmation. The image shows \"477,8\" and then a correction to \"167,1\". But the text extraction says \"177,8\". This is a problem. Let me look at the total. The total requested funding is 979,3. If I use 177.8 for OPS, then the subtotal for research partners is 615.8, for companies: OPS 177.8 + VSS 196.4 = 374.2, public body 0.0, total 615.8 + 374.2 = 990.0, but the total is 979.3. If I use 167.1 for OPS, then companies: 167.1 + 196.4 = 363.5, total 615.8 + 363.5 = 979.3, which matches. So, the correct value for OPS is 167.1. The text extraction has a typo. I will use 167,1 for OPS, as per the image correction.\n\nRow 5: Partner is \"VSS\", requested funding is \"196,4\".\nRow 6: Partner is \"ORDEA\", requested funding is \"0,0\".\n\nNow, I will write the final answer as a JSON object.\n\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"RESENSE\",\n    \"proposal_title\": \"Adaptive Sensor Networks for Resource Efficient Process Monitoring\",\n    \"call_identifier\": \"RCF2027/6433\",\n    \"submission_date\": \"2027-02-02\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 979 300\",\n    \"trl_start\": 3,\n    \"trl_target\": 5,\n    \"mcrl_start\": 1,\n    \"mcrl_target\": 4\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Torvenmaa University\",\n      \"requested\": \"214,8\"\n    },\n    {\n      \"partner_name\": \"Haldeberg University of Applied Sciences and Regional Innovation Services\",\n      \"requested\": \"159,8\"\n    },\n    {\n      \"partner_name\": \"Kestrel Institute for Process Research\",\n      \"requested\": \"see E.2\"\n    },\n    {\n      \"partner_name\": \"Ormenfield Process Systems Oy\",\n      \"requested\": \"167,1\"\n    },\n    {\n      \"partner_name\": \"Vantora Sensor Solutions Oy\",\n      \"requested\": \"196,4\"\n    },\n    {\n      \"partner_name\": \"Ostermark Regional Development Agency\",\n      \"requested\": \"0,0\"\n    }\n  ]\n}\n\nNote: For KPRI, I used \"see E.2\" as per the table, even though E.2 provides a specific amount, because the instruction says to use what is explicitly stated in the document, and the table says \"see E.2\". For OPS, I used 167,1 based on the image correction, as it matches the total.\n\nBut wait, the instruction says: \"Do not convert, round or add up numbers.\" and \"Use only what the document explicitly states.\" The document explicitly states in the table for OPS \"177,8\" in the text, but in the image, it is corrected to \"167,1\". Since the image is provided for visual confirmation, and the correction is there, I will use 167,1. Also, the total matches with 167,1.\n\nFor KPRI, the table says \"see E.2\", so I will use that.\n\nNow, I will write the JSON.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"RESENSE\",\n    \"proposal_title\": \"Adaptive Sensor Networks for Resource Efficient Process Monitoring\",\n    \"call_identifier\": \"RCF2027/6433\",\n    \"submission_date\": \"2027-02-02\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 979 300\",\n    \"trl_start\": 3,\n    \"trl_target\": 5,\n    \"mcrl_start\": 1,\n    \"mcrl_target\": 4\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Torvenmaa University\",\n      \"requested\": \"214,8\"\n    },\n    {\n      \"partner_name\": \"Haldeberg University of Applied Sciences and Regional Innovation Services\",\n      \"requested\": \"159,8\"\n    },\n    {\n      \"partner_name\": \"Kestrel Institute for Process Research\",\n      \"requested\": \"see E.2\"\n    },\n    {\n      \"partner_name\": \"Ormenfield Process Systems Oy\",\n      \"requested\": \"167,1\"\n    },\n    {\n      \"partner_name\": \"Vantora Sensor Solutions Oy\",\n      \"requested\": \"196,4\"\n    },\n    {\n      \"partner_name\": \"Ostermark Regional Development Agency\",\n      \"requested\": \"0,0\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 36493,
+        "completion_tokens": 2454,
+        "total_tokens": 38947,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 452.32,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00945812
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1691608,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 57.11
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 36493,
+          "total_tokens": 36800,
+          "completion_tokens": 307,
+          "estimated_cost": 0.007568760000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"RESENSE\",\n    \"proposal_title\": \"Adaptive Sensor Networks for Resource Efficient Process Monitoring\",\n    \"call_identifier\": \"RCF2027/6433\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 979 300\",\n    \"trl_start\": 3,\n    \"trl_target\": 5,\n    \"mcrl_start\": 1,\n    \"mcrl_target\": 4\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Torvenmaa University\",\n      \"requested\": \"214,8\"\n    },\n    {\n      \"partner_name\": \"Haldeberg University of Applied Sciences and Regional Innovation Services\",\n      \"requested\": \"159,8\"\n    },\n    {\n      \"partner_name\": \"Kestrel Institute for Process Research\",\n      \"requested\": \"241 200\"\n    },\n    {\n      \"partner_name\": \"Ormenfield Process Systems Oy\",\n      \"requested\": \"177,8\"\n    },\n    {\n      \"partner_name\": \"Vantora Sensor Solutions Oy\",\n      \"requested\": \"196,4\"\n    },\n    {\n      \"partner_name\": \"Ostermark Regional Development Agency\",\n      \"requested\": \"0,0\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 36493,
+        "completion_tokens": 307,
+        "total_tokens": 36800,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 57.11,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00756876
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 330532,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 138.52
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20789,
+          "total_tokens": 21635,
+          "completion_tokens": 846,
+          "estimated_cost": 0.00490228,
+          "prompt_tokens_details": null
+        },
+        "reply": "First, I will find the partner budget table and work through it row by row, writing out each partner's name exactly as shown, together with the amount on that same row.\n\nThe budget table is on page 21 (text page 21), under \"Part D, Budget\" and \"D.1 Budget by partner\".\n\nThe table lists partners and their requested funding. I will go row by row:\n\n1.  **Partner: TMU** (Short name for Torvenmaa University, as per page 4)\n    *   **Requested funding:** 214,8 (in 1 000 EUR, so this is EUR 214,800)\n\n2.  **Partner: HBU** (Short name for Haldeberg University of Applied Sciences and Regional Innovation Services, as per page 5)\n    *   **Requested funding:** 159,8 (in 1 000 EUR, so this is EUR 159,800)\n\n3.  **Partner: KPRI** (Short name for Kestrel Institute for Process Research, as per page 6)\n    *   **Requested funding:** The table says \"see E.2\". On page 26 (text page 26), under \"E.2 Requested funding of the research organisation\", it states: \"For KPRI, the requested funding amounts to EUR 241 200\". So, the amount is EUR 241,200.\n\n4.  **Partner: OPS** (Short name for Ormenfield Process Systems Oy, as per page 7)\n    *   **Requested funding:** 177,8 (in 1 000 EUR, so this is EUR 177,800)\n\n5.  **Partner: VSS** (Short name for Vantora Sensor Solutions Oy, as per page 8)\n    *   **Requested funding:** 196,4 (in 1 000 EUR, so this is EUR 196,400)\n\n6.  **Partner: ORDEA** (Short name for Ostermark Regional Development Agency, as per page 9)\n    *   **Requested funding:** 0,0 (in 1 000 EUR, so this is EUR 0.00)\n\nNow, I will write the final answer as a JSON object following the specified shape.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"RESENSE\",\n    \"proposal_title\": \"Adaptive Sensor Networks for Resource Efficient Process Monitoring\",\n    \"call_identifier\": \"RCF2027/6433\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 979 300\",\n    \"trl_start\": 3,\n    \"trl_target\": 5,\n    \"mcrl_start\": 1,\n    \"mcrl_target\": 4\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Torvenmaa University\",\n      \"requested\": \"EUR 214,800\"\n    },\n    {\n      \"partner_name\": \"Haldeberg University of Applied Sciences and Regional Innovation Services\",\n      \"requested\": \"EUR 159,800\"\n    },\n    {\n      \"partner_name\": \"Kestrel Institute for Process Research\",\n      \"requested\": \"EUR 241,200\"\n    },\n    {\n      \"partner_name\": \"Ormenfield Process Systems Oy\",\n      \"requested\": \"EUR 177,800\"\n    },\n    {\n      \"partner_name\": \"Vantora Sensor Solutions Oy\",\n      \"requested\": \"EUR 196,400\"\n    },\n    {\n      \"partner_name\": \"Ostermark Regional Development Agency\",\n      \"requested\": \"EUR 0.00\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20789,
+        "completion_tokens": 846,
+        "total_tokens": 21635,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 138.52,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00490228
+      }
+    ]
+  }
+}

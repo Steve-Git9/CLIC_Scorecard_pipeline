@@ -1,0 +1,135 @@
+The document states the following details:
+
+*   **Acronym:** CIRCUNOVA
+*   **Title:** Circular Industry Networks for Regenerative Urban PVerials
+*   **Call Identifier:** HORIZON-CL6-2026-01-CIRCBIO-02-two-stage
+*   **Submission Date:** The document does not explicitly state the submission date (YYYY-MM-DD). It mentions "This proposal version was submitted by on Brussels Local Time" but the date is missing.
+*   **Readiness Levels:** The document does not explicitly state the Technology Readiness Level (TRL) or Market Cluster Readiness Level (MCRL) start or target values.
+*   **Partner Budget Table:** The table is located in Section 3 - Budget.
+
+**Partner Budget Table (Row by Row):**
+1.  NORDIC CIRCULAR SYSTEMS OY: 666,700 €
+2.  VESTFJORD MUNICIPALITY: 250,250 €
+3.  Vestfjord Enterprise Agency: 430,000 €
+4.  Northbridge PVerials ApS: 222,375 €
+5.  Morrow Resource CRTNvery ApS: 299,375 €
+6.  RenewLoop Denmark: 226,250 €
+7.  LAKELAND REGIONAL COUNCIL: 149,350 €
+8.  TAMPEREEN KAUPUNKISEUDUN ELINKEINOJA KEHITYSYHTIO BUSINESS TAMPERE OY: 303,250 €
+9.  GREEN PATHWAYS OY: 431,875 €
+10. LAKELAND RESOURCE SERVICES OY: 479,000 €
+11. MineralCarbon Solutions Oy: 542,500 €
+12. TerraForm Innovations Oy: 549,375 €
+13. BALTIC INSTITUTE OF TECHNOLOGY: 366,500 €
+14. City of Valmont: 224,062.5 €
+15. EUROPEAN INSTITUTE OF PVERIALS: 215,625 €
+16. AEGEAN REGIONAL INNOVATION FUND: 135,875 €
+17. MUNICIPALITY OF PORTO VERDE: 222,062.5 €
+18. UNIVERSITY OF HARZ TECHNOLOGY: 571,500 €
+19. SAIMAA UNIVERSITY OF APPLIED SCIENCES: 343,025 €
+20. CycleReturn ApS: 0 €
+21. AFL: 0 €
+
+```json
+{
+  "proposal": {
+    "proposal_acronym": "CIRCUNOVA",
+    "proposal_title": "Circular Industry Networks for Regenerative Urban PVerials",
+    "call_identifier": "HORIZON-CL6-2026-01-CIRCBIO-02-two-stage",
+    "submission_date": null
+  },
+  "proposal_facts": {
+    "requested_total": "6,000,000 €",
+    "trl_start": null,
+    "trl_target": null,
+    "mcrl_start": null,
+    "mcrl_target": null
+  },
+  "partners": [
+    {
+      "partner_name": "NORDIC CIRCULAR SYSTEMS OY",
+      "requested": "666,700 €"
+    },
+    {
+      "partner_name": "VESTFJORD MUNICIPALITY",
+      "requested": "250,250 €"
+    },
+    {
+      "partner_name": "Vestfjord Enterprise Agency",
+      "requested": "430,000 €"
+    },
+    {
+      "partner_name": "Northbridge PVerials ApS",
+      "requested": "222,375 €"
+    },
+    {
+      "partner_name": "Morrow Resource CRTNvery ApS",
+      "requested": "299,375 €"
+    },
+    {
+      "partner_name": "RenewLoop Denmark",
+      "requested": "226,250 €"
+    },
+    {
+      "partner_name": "LAKELAND REGIONAL COUNCIL",
+      "requested": "149,350 €"
+    },
+    {
+      "partner_name": "TAMPEREEN KAUPUNKISEUDUN ELINKEINOJA KEHITYSYHTIO BUSINESS TAMPERE OY",
+      "requested": "303,250 €"
+    },
+    {
+      "partner_name": "GREEN PATHWAYS OY",
+      "requested": "431,875 €"
+    },
+    {
+      "partner_name": "LAKELAND RESOURCE SERVICES OY",
+      "requested": "479,000 €"
+    },
+    {
+      "partner_name": "MineralCarbon Solutions Oy",
+      "requested": "542,500 €"
+    },
+    {
+      "partner_name": "TerraForm Innovations Oy",
+      "requested": "549,375 €"
+    },
+    {
+      "partner_name": "BALTIC INSTITUTE OF TECHNOLOGY",
+      "requested": "366,500 €"
+    },
+    {
+      "partner_name": "City of Valmont",
+      "requested": "224,062.5 €"
+    },
+    {
+      "partner_name": "EUROPEAN INSTITUTE OF PVERIALS",
+      "requested": "215,625 €"
+    },
+    {
+      "partner_name": "AEGEAN REGIONAL INNOVATION FUND",
+      "requested": "135,875 €"
+    },
+    {
+      "partner_name": "MUNICIPALITY OF PORTO VERDE",
+      "requested": "222,062.5 €"
+    },
+    {
+      "partner_name": "UNIVERSITY OF HARZ TECHNOLOGY",
+      "requested": "571,500 €"
+    },
+    {
+      "partner_name": "SAIMAA UNIVERSITY OF APPLIED SCIENCES",
+      "requested": "343,025 €"
+    },
+    {
+      "partner_name": "CycleReturn ApS",
+      "requested": "0 €"
+    },
+    {
+      "partner_name": "AFL",
+      "requested": "0 €"
+    }
+  ]
+}
+```

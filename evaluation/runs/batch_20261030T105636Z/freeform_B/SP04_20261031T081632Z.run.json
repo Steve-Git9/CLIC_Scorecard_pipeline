@@ -1,0 +1,109 @@
+{
+  "arm": "freeform_B",
+  "model": "Qwen/Qwen3.5-9B",
+  "provider": "deepinfra",
+  "source_file": "SP04.md",
+  "started_utc": "2026-10-31T08:16:32Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested[Eskeby]: could not parse amount 'calculated at the funding rate'"
+  ],
+  "free_form": true,
+  "context_splits": 0,
+  "seconds": 26.98,
+  "attempts": 1,
+  "prompt_tokens": 25375,
+  "completion_tokens": 457,
+  "cost_usd": 0.002606,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3.5-9B",
+  "parts": 1,
+  "freeform_file": "SP04_20261031T081632Z.freeform.txt",
+  "output_file": "SP04_20261031T081632Z.json",
+  "replies_file": "SP04_20261031T081632Z.replies.json",
+  "total_seconds": 27.0,
+  "evaluation": {
+    "document": "SP04",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\freeform_B\\SP04_20261031T081632Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 193.06,
+      "docling_markdown_sha256": "951b31c414cf23cb5b6509c461a804c7a170ca72fff157efdb3dcaa02845bdfb"
+    },
+    "runner_wall_clock_seconds": 27.0,
+    "end_to_end_seconds": 220.06,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 25375,
+      "completion_tokens": 457,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": {
+      "made": false,
+      "tokens": 0,
+      "note": "the free form reply is converted to JSON locally in Python; no model call"
+    },
+    "cost": {
+      "cost_usd": 0.00260605,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3.5-9B",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3.5-9B",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 138795,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 26.98
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 25375,
+          "total_tokens": 25832,
+          "completion_tokens": 457,
+          "estimated_cost": 0.0026060500000000004,
+          "prompt_tokens_details": null
+        },
+        "reply": "The document states the acronym is MAROFLOW, the title is Marine Observation Flows for Shared Coastal Planning, the call identifier is BSR2026C41, and the submission date is 10 August 2026. The readiness levels are a Technology Readiness Level (TRL) start of 3 and a target of 6, and a Market Cluster Readiness Level (MCRL) start of 4. The partner budget table is found in section 5.2 (Table 5.2).\n\nThe partners and their requested amounts from Table 5.2 are:\n- Hallvik: 674.5\n- Orrenfjord: 568.8\n- Marovik: 592.8\n- Quenmark: 507.0\n- Ostrelund: 213.0\n- Brenvik: 0.0\n- Eskeby: calculated at the funding rate\n\n```json\n{\"proposal\": {\"proposal_acronym\": \"MAROFLOW\", \"proposal_title\": \"Marine Observation Flows for Shared Coastal Planning\", \"call_identifier\": \"BSR2026C41\", \"submission_date\": \"2026-08-10\"}, \"proposal_facts\": {\"requested_total\": \"EUR 2,946.1 thousand\", \"trl_start\": 3, \"trl_target\": 6, \"mcrl_start\": 4, \"mcrl_target\": null}, \"partners\": [{\"partner_name\": \"Hallvik\", \"requested\": \"674.5\"}, {\"partner_name\": \"Orrenfjord\", \"requested\": \"568.8\"}, {\"partner_name\": \"Marovik\", \"requested\": \"592.8\"}, {\"partner_name\": \"Quenmark\", \"requested\": \"507.0\"}, {\"partner_name\": \"Ostrelund\", \"requested\": \"213.0\"}, {\"partner_name\": \"Brenvik\", \"requested\": \"0.0\"}, {\"partner_name\": \"Eskeby\", \"requested\": \"calculated at the funding rate\"}]}\n```",
+        "reasoning": null,
+        "prompt_tokens": 25375,
+        "completion_tokens": 457,
+        "total_tokens": 25832,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 26.98,
+        "model_reported": "Qwen/Qwen3.5-9B",
+        "finish_reason": "stop",
+        "cost_usd": 0.00260605
+      }
+    ]
+  }
+}

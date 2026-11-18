@@ -1,0 +1,1055 @@
+{
+ "located": {
+  "proposal": [
+   {
+    "page": 1,
+    "score": 20.25
+   },
+   {
+    "page": 2,
+    "score": 20.0
+   },
+   {
+    "page": 10,
+    "score": "hint"
+   }
+  ],
+  "budget": [
+   {
+    "page": 139,
+    "score": 27.0
+   }
+  ],
+  "partners": [
+   {
+    "page": 139,
+    "score": 12.5
+   },
+   {
+    "page": 100,
+    "score": 11.75
+   },
+   {
+    "page": 4,
+    "score": 10.75
+   }
+  ],
+  "readiness": [
+   {
+    "page": 42,
+    "score": 2.25
+   }
+  ]
+ },
+ "tables": [
+  {
+   "page": 100,
+   "index": 0,
+   "rows": [
+    [
+     "Publication",
+     "Simba, C.M.; Lemelin, E.; Masson, E.; Senouci, A.; Maherzi, W. A Data Processing Methodology to Analyze Construction and Demolition Dynamics in the European Metropolis of Lille, France. Buildings 2023, 13, 2671. https://doi.org/10.3390/ buildings13102671",
+     ""
+    ],
+    [
+     "Publication",
+     "Benjamin Cordrie and Adrien Laurent, (2023) Regional demolition waste treatment capacity: a case study based on the identification of building sTFIctive deconstruction value chain·s stakeholders, European Journal of Social Impact and Circular Economy - ISSN: 2704-9906 - DOI: 10.13135/2704-9906/7603",
+     "Benjamin Cordrie and Adrien Laurent, (2023) Regional demolition waste treatment capacity:"
+    ],
+    [
+     "",
+     "",
+     "a case study based on the identification of building sTFIctive deconstruction value chain·s"
+    ],
+    [
+     "Publication",
+     "Amar, M.; Kleib, J.; Tall, M.; Alloul, A.; Zeraoui, A.; Abriak, N.-E.; Benzerzour, M. Case study: reuse of excavated soils from the Grand Paris Express project for the formulation of low-carbon cementitious PVrixes: Part 1. Journal of PVerial Cycles and Waste Management, 2024. DOI: 10.1007/s10163-024-01957-z.",
+     ""
+    ],
+    [
+     "Publication",
+     "Amar, M.; Ladduri, B.; Alloul, A.; Benzerzour, M.; Abriak, N.-E. Geopolymer synthesis and performance paving the way for greener building PVerial: A comprehensive study. Case Studies in Construction PVerials, 20 (2024), e03280. DOI: 10.1016/j.cscm.2024.e03280.",
+     ""
+    ],
+    [
+     "Service",
+     "ECOCIRNOV chair developed a digital tool for managing household waste streams by local public authorities. CRTNNVERT chair created an agent based model of managing construction demolition waste (CDW). The next step envisaged for each of these tools is to create an user interface that facilitates decision-making by comparing different scenarios of management of waste as resources at regional scale.",
+     ""
+    ]
+   ],
+   "verification": {
+    "checks": [],
+    "columns": {},
+    "verified": false
+   }
+  },
+  {
+   "page": 100,
+   "index": 1,
+   "rows": [
+    [
+     "Ecocirnov and CRTNnvert chairs",
+     "ECOCIRNOV chair (E. LEMELIN coordinator 2016-2021- SYMEVAD and MEL partners) aims to simulate impacts of management of household waste by local public authorities; CRTNNVERT chair (E. LEMELIN co-titular of CRTNNVERT Chair 2020-2024 · large consortium) contributes to modeling different treatment methods of CDW. Both projects aimed to develop decision-support tools based on the comparison of scenarios at the regional level.",
+     ""
+    ],
+    [
+     "USAR (INTERREG)",
+     "“Using Sediment As a Resource” (€4.821 M; 2016–2020), involved partners from France, Belgium, England and the Netherlands. Mouhamadou Amar contributed as a technical consultant. The project addressed dredged sediment as a secondary resource and supported cross-border circular- economy pathways for sediment management, treatment, valorisation, and reuse.",
+     ""
+    ],
+    [
+     "Al²SiBuild (INTERREG)",
+     "Interreg project “Enhancing the alternative and circular industrial ecosystem for aluminosilicate- based construction PVerials· (budget ·2.83 M). BCRC coordinator; partners include IMT Nord Europe, UGent, Centrale Lille, Buildwise, UMONS, PVeria Nova and Neo-Eco. Develops low- carbon geopolymer/alkali-activated binders and concretes from local, secondary, and circular resources.",
+     ""
+    ],
+    [
+     "SEDICIM (FEDER)",
+     "FEDER project ·CRTNvery of dredged sediments in the cement industry· (·5.2 M; EQIOM/IMT Nord Europe, 2018–2023). Mouhamadou Amar served as scientific and technical coordinator: project deployment and monitoring, formulation and characterisation studies, progress and steering meetings, and drafting of deliverables. Directly supports the circular use of secondary mineral resources.",
+     "FEDER project ·CRTNvery of dredged sediments in the cement industry· (·5.2 M; EQIOM/IMT"
+    ],
+    [
+     "Sed’Opal project (2023-2027)",
+     "The project aims to turn dredging sediments into a sustainable resource avaiSUASle to construction industry stakeholders, while addressing the need for post-dredging management. The objectives are therefore two-fold: 1. Transform these sediments into resources for local supply chains; 2. Reduce dependence on primary PVerials; 3. Anticipate the increase in volumes of sediments managed on land. (https://www.sediSUAS.com/portfolio-item/port-boulogne-calais/)",
+     "The project aims to turn dredging sediments into a sustainable resource avaiSUASle to construction"
+    ]
+   ],
+   "verification": {
+    "checks": [],
+    "columns": {},
+    "verified": false
+   }
+  },
+  {
+   "page": 139,
+   "index": 0,
+   "rows": [
+    [
+     "Order",
+     "PIC",
+     "Legal Name",
+     "Role",
+     "Country",
+     "Funding Rate %",
+     "EstiPVed eligible costs (per budget category)",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Requested EU contribution",
+     "",
+     "",
+     "Revenues",
+     "Other sources of financing",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Direct costs",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Indirect costs",
+     "Total costs €",
+     "EU contribution to eligible costs",
+     "",
+     "Maximum grant amount €",
+     "Income generated by the action €",
+     "In kind contributions €",
+     "Financial contributions €",
+     "Own resources €",
+     "Total estiPVed €"
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "A. Personnel costs",
+     "B. Subcontracting costs",
+     "C. Purchase costs",
+     "",
+     "",
+     "D. Other cost categories",
+     "E. Indirect costs €",
+     "",
+     "Maximum EU contribution €",
+     "Requested EU contribution €",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "A.1 Employees (or equivalent) A.2 Natural persons under direct contract A.3 Seconded persons €",
+     "Subcontracting €",
+     "C.1 Travel and subsistence €",
+     "C.2 Equipment €",
+     "C.3 Other goods, works and services €",
+     "D.2 Internally invoiced goods and services €",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "1",
+     "140037669",
+     "NCS",
+     "Coordinator",
+     "FI",
+     "100",
+     "459,360",
+     "0",
+     "22,000",
+     "0",
+     "52,000",
+     "0",
+     "133,340",
+     "666,700",
+     "666,700",
+     "666,700",
+     "666,700",
+     "0",
+     "0",
+     "0",
+     "0",
+     "666,700"
+    ],
+    [
+     "2",
+     "129796991",
+     "VEST",
+     "Partner",
+     "DK",
+     "100",
+     "178,200",
+     "0",
+     "12,000",
+     "0",
+     "10,000",
+     "0",
+     "50,050",
+     "250,250",
+     "250,250",
+     "250,250",
+     "250,250",
+     "0",
+     "0",
+     "0",
+     "0",
+     "250,250"
+    ],
+    [
+     "3",
+     "985194645",
+     "",
+     "Partner",
+     "DK",
+     "100",
+     "280,000",
+     "0",
+     "24,000",
+     "0",
+     "40,000",
+     "0",
+     "86,000",
+     "430,000",
+     "430,000",
+     "430,000",
+     "430,000",
+     "0",
+     "0",
+     "0",
+     "0",
+     "430,000"
+    ],
+    [
+     "4",
+     "984551632",
+     "",
+     "Partner",
+     "DK",
+     "100",
+     "153,900",
+     "0",
+     "12,000",
+     "0",
+     "12,000",
+     "0",
+     "44,475",
+     "222,375",
+     "222,375",
+     "222,375",
+     "222,375",
+     "0",
+     "0",
+     "0",
+     "0",
+     "222,375"
+    ],
+    [
+     "5",
+     "975935510",
+     "",
+     "Partner",
+     "DK",
+     "70",
+     "127,500",
+     "0",
+     "12,000",
+     "40,000",
+     "60,000",
+     "0",
+     "59,875",
+     "299,375",
+     "209,562.5",
+     "209,562.5",
+     "209,562.5",
+     "0",
+     "0",
+     "0",
+     "89,812.5",
+     "299,375"
+    ],
+    [
+     "6",
+     "976373950",
+     "",
+     "Partner",
+     "DK",
+     "70",
+     "129,000",
+     "0",
+     "12,000",
+     "0",
+     "40,000",
+     "0",
+     "45,250",
+     "226,250",
+     "158,375",
+     "158,375",
+     "158,375",
+     "0",
+     "0",
+     "0",
+     "67,875",
+     "226,250"
+    ],
+    [
+     "7",
+     "149019772",
+     "LRC",
+     "Partner",
+     "FI",
+     "100",
+     "105,480",
+     "0",
+     "12,000",
+     "0",
+     "2,000",
+     "0",
+     "29,870",
+     "149,350",
+     "149,350",
+     "149,350",
+     "149,350",
+     "0",
+     "0",
+     "0",
+     "0",
+     "149,350"
+    ],
+    [
+     "8",
+     "111833561",
+     "LBDA",
+     "Partner",
+     "FI",
+     "100",
+     "225,000",
+     "0",
+     "15,600",
+     "0",
+     "2,000",
+     "0",
+     "60,650",
+     "303,250",
+     "303,250",
+     "303,250",
+     "303,250",
+     "0",
+     "0",
+     "0",
+     "0",
+     "303,250"
+    ],
+    [
+     "9",
+     "150768197",
+     "",
+     "Partner",
+     "FI",
+     "100",
+     "255,500",
+     "0",
+     "20,000",
+     "0",
+     "70,000",
+     "0",
+     "86,375",
+     "431,875",
+     "431,875",
+     "431,875",
+     "431,875",
+     "0",
+     "0",
+     "0",
+     "0",
+     "431,875"
+    ],
+    [
+     "10",
+     "103699044",
+     "LRS",
+     "Affiliated",
+     "FI",
+     "70",
+     "133,200",
+     "150,000",
+     "10,000",
+     "0",
+     "120,000",
+     "0",
+     "65,800",
+     "479,000",
+     "335,300",
+     "335,300",
+     "335,300",
+     "0",
+     "0",
+     "0",
+     "143,700",
+     "479,000"
+    ],
+    [
+     "11",
+     "997248156",
+     "MCS",
+     "Partner",
+     "FI",
+     "70",
+     "252,000",
+     "0",
+     "12,000",
+     "50,000",
+     "120,000",
+     "0",
+     "108,500",
+     "542,500",
+     "379,750",
+     "379,750",
+     "379,750",
+     "0",
+     "0",
+     "0",
+     "162,750",
+     "542,500"
+    ],
+    [
+     "12",
+     "101888927",
+     "TFI",
+     "Partner",
+     "FI",
+     "70",
+     "247,500",
+     "0",
+     "12,000",
+     "80,000",
+     "100,000",
+     "0",
+     "109,875",
+     "549,375",
+     "384,562.5",
+     "384,562.5",
+     "384,562.5",
+     "0",
+     "0",
+     "0",
+     "164,812.5",
+     "549,375"
+    ],
+    [
+     "13",
+     "214169725",
+     "BIT",
+     "Partner",
+     "EE",
+     "100",
+     "209,000",
+     "0",
+     "24,200",
+     "0",
+     "60,000",
+     "0",
+     "73,300",
+     "366,500",
+     "366,500",
+     "366,500",
+     "366,500",
+     "0",
+     "0",
+     "0",
+     "0",
+     "366,500"
+    ],
+    [
+     "14",
+     "127117172",
+     "",
+     "Partner",
+     "FR",
+     "100",
+     "126,250",
+     "0",
+     "18,000",
+     "0",
+     "35,000",
+     "0",
+     "44,812.5",
+     "224,062.5",
+     "224,062.5",
+     "224,062.5",
+     "224,062.5",
+     "0",
+     "0",
+     "0",
+     "0",
+     "224,062.5"
+    ],
+    [
+     "15",
+     "214176515",
+     "",
+     "Partner",
+     "FR",
+     "100",
+     "144,000",
+     "0",
+     "20,000",
+     "0",
+     "8,500",
+     "0",
+     "43,125",
+     "215,625",
+     "215,625",
+     "215,625",
+     "215,625",
+     "0",
+     "0",
+     "0",
+     "0",
+     "215,625"
+    ],
+    [
+     "16",
+     "207379240",
+     "",
+     "Partner",
+     "EL",
+     "100",
+     "57,500",
+     "0",
+     "13,200",
+     "0",
+     "38,000",
+     "0",
+     "27,175",
+     "135,875",
+     "135,875",
+     "135,875",
+     "135,875",
+     "0",
+     "0",
+     "0",
+     "0",
+     "135,875"
+    ],
+    [
+     "17",
+     "134731963",
+     "PV",
+     "Partner",
+     "PT",
+     "100",
+     "115,000",
+     "0",
+     "12,650",
+     "0",
+     "50,000",
+     "0",
+     "44,412.5",
+     "222,062.5",
+     "222,062.5",
+     "222,062.5",
+     "222,062.5",
+     "0",
+     "0",
+     "0",
+     "0",
+     "222,062.5"
+    ],
+    [
+     "18",
+     "214193102",
+     "UHT",
+     "Partner",
+     "DE",
+     "100",
+     "395,200",
+     "0",
+     "22,000",
+     "0",
+     "40,000",
+     "0",
+     "114,300",
+     "571,500",
+     "571,500",
+     "571,500",
+     "571,500",
+     "0",
+     "0",
+     "0",
+     "0",
+     "571,500"
+    ],
+    [
+     "19",
+     "163596544",
+     "SUAS",
+     "Partner",
+     "FI",
+     "100",
+     "241,920",
+     "0",
+     "22,500",
+     "0",
+     "10,000",
+     "0",
+     "68,605",
+     "343,025",
+     "343,025",
+     "343,025",
+     "343,025",
+     "0",
+     "0",
+     "0",
+     "0",
+     "343,025"
+    ],
+    [
+     "20",
+     "976160841",
+     "CRTN",
+     "Associated",
+     "DK",
+     "70",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "21",
+     "975747330",
+     "AFL",
+     "Associated",
+     "DK",
+     "70",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "TOTAL",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "3,835,510",
+     "150,000",
+     "308,150",
+     "170,000",
+     "869,500",
+     "0",
+     "1,295,790",
+     "6,628,950",
+     "6,000,000",
+     "6,000,000",
+     "6,000,000",
+     "0",
+     "0",
+     "0",
+     "628,950",
+     "6,628,950"
+    ]
+   ],
+   "verification": {
+    "checks": [
+     {
+      "kind": "column",
+      "column": 6,
+      "row": 25,
+      "expected": 383551000,
+      "found": 383551000,
+      "ok": true
+     },
+     {
+      "kind": "column",
+      "column": 7,
+      "row": 25,
+      "expected": 15000000,
+      "found": 15000000,
+      "ok": true
+     },
+     {
+      "kind": "column",
+      "column": 8,
+      "row": 25,
+      "expected": 30815000,
+      "found": 30815000,
+      "ok": true
+     },
+     {
+      "kind": "column",
+      "column": 9,
+      "row": 25,
+      "expected": 17000000,
+      "found": 17000000,
+      "ok": true
+     },
+     {
+      "kind": "column",
+      "column": 10,
+      "row": 25,
+      "expected": 86950000,
+      "found": 86950000,
+      "ok": true
+     },
+     {
+      "kind": "column",
+      "column": 11,
+      "row": 25,
+      "expected": 0,
+      "found": 0,
+      "ok": true
+     },
+     {
+      "kind": "column",
+      "column": 12,
+      "row": 25,
+      "expected": 129579000,
+      "found": 129579000,
+      "ok": true
+     },
+     {
+      "kind": "column",
+      "column": 13,
+      "row": 25,
+      "expected": 662895000,
+      "found": 662895000,
+      "ok": true
+     },
+     {
+      "kind": "column",
+      "column": 14,
+      "row": 25,
+      "expected": 600000000,
+      "found": 600000000,
+      "ok": true
+     },
+     {
+      "kind": "column",
+      "column": 15,
+      "row": 25,
+      "expected": 600000000,
+      "found": 600000000,
+      "ok": true
+     },
+     {
+      "kind": "column",
+      "column": 16,
+      "row": 25,
+      "expected": 600000000,
+      "found": 600000000,
+      "ok": true
+     },
+     {
+      "kind": "column",
+      "column": 17,
+      "row": 25,
+      "expected": 0,
+      "found": 0,
+      "ok": true
+     },
+     {
+      "kind": "column",
+      "column": 18,
+      "row": 25,
+      "expected": 0,
+      "found": 0,
+      "ok": true
+     },
+     {
+      "kind": "column",
+      "column": 19,
+      "row": 25,
+      "expected": 0,
+      "found": 0,
+      "ok": true
+     },
+     {
+      "kind": "column",
+      "column": 20,
+      "row": 25,
+      "expected": 62895000,
+      "found": 62895000,
+      "ok": true
+     },
+     {
+      "kind": "column",
+      "column": 21,
+      "row": 25,
+      "expected": 662895000,
+      "found": 662895000,
+      "ok": true
+     }
+    ],
+    "columns": {
+     "6": "verified",
+     "7": "verified",
+     "8": "verified",
+     "9": "verified",
+     "10": "verified",
+     "11": "verified",
+     "12": "verified",
+     "13": "verified",
+     "14": "verified",
+     "15": "verified",
+     "16": "verified",
+     "17": "verified",
+     "18": "verified",
+     "19": "verified",
+     "20": "verified",
+     "21": "verified"
+    },
+    "verified": true
+   }
+  }
+ ],
+ "partner_budget_table": null,
+ "identifier_hints": {
+  "cover_title": "Call: HORIZON-CL6-2026-01-two-stage Topic: HORIZON-CL6-2026-01-CIRCBIO-02-two-stage Type of Action: HORIZON-IA",
+  "cover_page": 1,
+  "acronym_candidates": [],
+  "labelled": {
+   "acronym": [
+    {
+     "page": 1,
+     "value": "CIRCUNOVA"
+    }
+   ],
+   "title": [
+    {
+     "page": 17,
+     "value": "Guide on how to manufacture waste-based products Description: an introduction to"
+    },
+    {
+     "page": 17,
+     "value": "Test of a demand driven innovation method Description: a case study on how to use an AI-"
+    },
+    {
+     "page": 17,
+     "value": "Development and test of a take-back model Description: a spreadsheet tool for calculating"
+    },
+    {
+     "page": 17,
+     "value": "Industrial reuse of linoleum flooring Description: a business case on the creation of a value"
+    },
+    {
+     "page": 17,
+     "value": "Data analysis for an autoPVed waste sorting plant Description: a quantitive analysis of the"
+    },
+    {
+     "page": 24,
+     "value": "Guide on how to manufacture waste-based products Description: an introduction to"
+    },
+    {
+     "page": 24,
+     "value": "Test of a demand driven innovation method Description: a case study on how to use an AI-"
+    },
+    {
+     "page": 24,
+     "value": "Development and test of a take-back model Description: a spreadsheet tool for calculating"
+    },
+    {
+     "page": 24,
+     "value": "Industrial reuse of linoleum flooring Description: a business case on the creation of a value"
+    },
+    {
+     "page": 24,
+     "value": "Data analysis for an autoPVed waste sorting plant Description: a quantitive analysis of the"
+    },
+    {
+     "page": 30,
+     "value": "The Hunt for the Biobased Production System - Finding the Needle in the Haystack Source:"
+    },
+    {
+     "page": 30,
+     "value": "Pathways to Bio-Based Construction: A Cross-Sectoral View Source: Realdania - Pathways"
+    },
+    {
+     "page": 30,
+     "value": "Innovation of Nothing - The capabilities neede to lead sustainable change in the"
+    },
+    {
+     "page": 30,
+     "value": "Circulating Building PVerials in Practice. A Best Practice Benchmarking of Circular"
+    },
+    {
+     "page": 30,
+     "value": "How can trade in reused PVerials in construction be increased? Three reports. Source:"
+    }
+   ],
+   "call": [
+    {
+     "page": 1,
+     "value": "HORIZON-CL6-2026-01-two-stage"
+    },
+    {
+     "page": 1,
+     "value": "HORIZON-CL6-2026-01-CIRCBIO-02-two-stage"
+    }
+   ]
+  },
+  "call_ids": [
+   {
+    "id": "HORIZON-CL6-2026-01",
+    "page": 1
+   },
+   {
+    "id": "HORIZON-CL6-2026-01-CIRCBIO-02",
+    "page": 1
+   },
+   {
+    "id": "HORIZON-CL6-2021",
+    "page": 10
+   },
+   {
+    "id": "NCS-CE-SRIA-2026",
+    "page": 10
+   }
+  ]
+ },
+ "page_map_sha256": "42665465f13c1bf7d5a4aebef6da3c60824a655d1ebd01b5af7063e614da7c31",
+ "reconciliation": [
+  {
+   "partner_name": "NCS",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "VEST",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "LRC",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "LBDA",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "LRS",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "MCS",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "TFI",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "BIT",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "PV",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "UHT",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "SUAS",
+   "status": "unchecked"
+  }
+ ]
+}

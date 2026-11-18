@@ -1,0 +1,110 @@
+{
+  "arm": "freeform_B",
+  "model": "Qwen/Qwen3.5-9B",
+  "provider": "deepinfra",
+  "source_file": "Abico_Synth.md",
+  "started_utc": "2026-10-30T18:54:05Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested[PolyNova Labs]: could not parse amount 'In-kind'",
+    "requested[Oerlikon Balzer]: could not parse amount 'In-kind'"
+  ],
+  "free_form": true,
+  "context_splits": 0,
+  "seconds": 13.19,
+  "attempts": 1,
+  "prompt_tokens": 26276,
+  "completion_tokens": 1462,
+  "cost_usd": 0.002847,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3.5-9B",
+  "parts": 1,
+  "freeform_file": "Abico_Synth_20261030T185405Z.freeform.txt",
+  "output_file": "Abico_Synth_20261030T185405Z.json",
+  "replies_file": "Abico_Synth_20261030T185405Z.replies.json",
+  "total_seconds": 13.24,
+  "evaluation": {
+    "document": "Abico_Synth",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\freeform_B\\Abico_Synth_20261030T185405Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 244.1,
+      "docling_markdown_sha256": "db2432c37da8bfa28fb0856593c407d8265b4ca2ce0ecca1fa21a414dcb13c5f"
+    },
+    "runner_wall_clock_seconds": 13.24,
+    "end_to_end_seconds": 257.34,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 26276,
+      "completion_tokens": 1462,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": {
+      "made": false,
+      "tokens": 0,
+      "note": "the free form reply is converted to JSON locally in Python; no model call"
+    },
+    "cost": {
+      "cost_usd": 0.0028469,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3.5-9B",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3.5-9B",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 170657,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 13.19
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 26276,
+          "total_tokens": 27738,
+          "completion_tokens": 1462,
+          "estimated_cost": 0.0028469000000000007,
+          "prompt_tokens_details": null
+        },
+        "reply": "The document states the project acronym is **ReCoSE**, the title is **Renewable Composite Systems with Circular Engineering ReCoSE**, the call identifier is not explicitly stated (only the funding source \"National Innovation Agency\" is mentioned), and the submission date is not explicitly stated (only the project timeline \"1.4.2026-31.3.2028\" is given). The readiness levels (TRL/MCR) are not stated in the text. The partner budget table is found in **Table 22** (Direct financial support of companies to research organisations) and **Table 21** (Budgets of research institutes).\n\n**Table 21** lists the requested amounts for the research institutes:\n*   NLUAS: 487 200\n*   Lake District Technical University: 382 400\n*   NISM: 642 300\n*   ENU: 369 500\n*   CFU: 337 200\n\n**Table 22** lists the requested amounts for the companies supporting the research organisations:\n*   NorthGrid Energy WS: 20 000 (Total column) - Note: The table shows specific allocations to NLUAS, LDTU, ENU, CFU but the Total column sums to 20 000 for this row. However, looking closely at the row \"NorthGrid Energy WS\", it has 15 000 for LDTU and 5 000 for ENU. The Total column says 20 000.\n*   ForestLoop Fibre: 20 000 (Total column) - Note: The table shows 22 400 for NISM but the Total column says 20 000.\n*   Atmosense: 20 000 (Total column) - Note: The table shows 5 600 for NLUAS and 17 000 for CFU.\n*   NordWindow Group: 20 000 (Total column) - Note: The table shows 22 400 for NLUAS.\n*   Aurora Shipworks: 20 000 (Total column) - Note: The table shows 11 200 for NISM and 11 200 for ENU.\n*   PolyNova Labs: In-kind (No monetary value stated).\n*   Oerlikon Balzer: In-kind (No monetary value stated).\n\nThe prompt asks to work through the table row by row writing each partner's name exactly as shown together with the amount on the same row. I will extract the \"Total\" amount from the rightmost column for each company row as that represents the requested grant/funding for that partner in the context of the table structure, or the specific cell if the total is ambiguous. However, the instruction says \"amount on the same row\". For companies, the specific amounts are split across columns, but the \"Total\" column provides the sum. I will use the \"Total\" column value as the requested amount for the partner, as it represents the total funding requested from that partner.\n\nWait, looking at the instruction: \"Work through that table row by row, writing each partner's name exactly as shown together with the amount on the same row.\"\nFor Table 22:\nRow: NorthGrid Energy WS | Total: 20 000\nRow: ForestLoop Fibre | Total: 20 000\nRow: Atmosense | Total: 20 000\nRow: NordWindow Group | Total: 20 000\nRow: Aurora Shipworks | Total: 20 000\nRow: PolyNova Labs | Total: In-kind\nRow: Oerlikon Balzer | Total: In-kind\n\nFor Table 21 (Research institutes):\nRow: NLUAS | 487 200\nRow: Lake District Technical University | 382 400\nRow: NISM | 642 300\nRow: ENU | 369 500\nRow: CFU | 337 200\n\nThe document does not explicitly state TRL or MCR levels.\nThe document does not explicitly state a Call Identifier (only \"National Innovation Agency\").\nThe document does not explicitly state a Submission Date.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"ReCoSE\",\n    \"proposal_title\": \"Renewable Composite Systems with Circular Engineering ReCoSE\",\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 3.860 million\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NLUAS\",\n      \"requested\": \"487 200\"\n    },\n    {\n      \"partner_name\": \"Lake District Technical University\",\n      \"requested\": \"382 400\"\n    },\n    {\n      \"partner_name\": \"NISM\",\n      \"requested\": \"642 300\"\n    },\n    {\n      \"partner_name\": \"ENU\",\n      \"requested\": \"369 500\"\n    },\n    {\n      \"partner_name\": \"CFU\",\n      \"requested\": \"337 200\"\n    },\n    {\n      \"partner_name\": \"NorthGrid Energy WS\",\n      \"requested\": \"20 000\"\n    },\n    {\n      \"partner_name\": \"ForestLoop Fibre\",\n      \"requested\": \"20 000\"\n    },\n    {\n      \"partner_name\": \"Atmosense\",\n      \"requested\": \"20 000\"\n    },\n    {\n      \"partner_name\": \"NordWindow Group\",\n      \"requested\": \"20 000\"\n    },\n    {\n      \"partner_name\": \"Aurora Shipworks\",\n      \"requested\": \"20 000\"\n    },\n    {\n      \"partner_name\": \"PolyNova Labs\",\n      \"requested\": \"In-kind\"\n    },\n    {\n      \"partner_name\": \"Oerlikon Balzer\",\n      \"requested\": \"In-kind\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 26276,
+        "completion_tokens": 1462,
+        "total_tokens": 27738,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 13.19,
+        "model_reported": "Qwen/Qwen3.5-9B",
+        "finish_reason": "stop",
+        "cost_usd": 0.0028469
+      }
+    ]
+  }
+}

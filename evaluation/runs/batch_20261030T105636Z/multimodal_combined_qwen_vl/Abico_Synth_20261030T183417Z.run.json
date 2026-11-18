@@ -1,0 +1,232 @@
+{
+  "arm": "multimodal_combined_qwen_vl",
+  "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "provider": "deepinfra",
+  "source_file": "Abico_Synth.md",
+  "started_utc": "2026-10-30T18:34:17Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested_total 'EUR 2,218,600' not found in the document",
+    "requested[Northern Lakes University of Applied Sciences] 'EUR 487,200' not found in the document",
+    "requested[Lake District Technical University] 'EUR 382,400' not found in the document",
+    "requested[NISM Nordic Institute for Sustainable Materials] 'EUR 642,300' not found in the document",
+    "requested[Eastern Nordic University] 'EUR 369,500' not found in the document",
+    "requested[Coastal Finland University] 'EUR 337,200' not found in the document",
+    "duplicate partner 'Lake District Technical University' dropped",
+    "duplicate partner 'NLUAS' dropped",
+    "duplicate partner 'Lake District Technical University' dropped",
+    "duplicate partner 'NISM' dropped",
+    "duplicate partner 'ENU' dropped",
+    "duplicate partner 'CFU' dropped",
+    "duplicate partner 'NLUAS' dropped",
+    "duplicate partner 'Lake District Technical University' dropped",
+    "duplicate partner 'NISM' dropped",
+    "duplicate partner 'ENU' dropped",
+    "duplicate partner 'CFU' dropped",
+    "sum of partner requested_cents (405480000) != requested_total_cents (221860000)"
+  ],
+  "batch_size": 10,
+  "overlap": 1,
+  "pages_total": 40,
+  "pages_with_images": 30,
+  "batches": 4,
+  "calls": 4,
+  "seconds": 517.69,
+  "attempts": 4,
+  "prompt_tokens": 166479,
+  "completion_tokens": 1823,
+  "cost_usd": 0.034901,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "context_splits": 0,
+  "output_file": "Abico_Synth_20261030T183417Z.json",
+  "replies_file": "Abico_Synth_20261030T183417Z.replies.json",
+  "total_seconds": 533.22,
+  "evaluation": {
+    "document": "Abico_Synth",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\multimodal_combined_qwen_vl\\Abico_Synth_20261030T183417Z.run.json",
+    "input": "pdf",
+    "preparation": {
+      "native_text_seconds": 0.27
+    },
+    "runner_wall_clock_seconds": 533.49,
+    "end_to_end_seconds": 533.49,
+    "calls": 4,
+    "failed_calls": 0,
+    "attempts": 4,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 166479,
+      "completion_tokens": 1823,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 4,
+      "completion_tokens": 4,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.03490004,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 4770272,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 86.07
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 45055,
+          "total_tokens": 45341,
+          "completion_tokens": 286,
+          "estimated_cost": 0.00926268,
+          "prompt_tokens_details": null
+        },
+        "reply": "```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"ReCoSE\",\n    \"proposal_title\": \"Renewable Composite Systems with Circular Engineering ReCoSE\",\n    \"call_identifier\": null,\n    \"submission_date\": \"2026-03-01\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2,218,600\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Northern Lakes University of Applied Sciences\",\n      \"requested\": \"EUR 487,200\"\n    },\n    {\n      \"partner_name\": \"Lake District Technical University\",\n      \"requested\": \"EUR 382,400\"\n    },\n    {\n      \"partner_name\": \"NISM Nordic Institute for Sustainable Materials\",\n      \"requested\": \"EUR 642,300\"\n    },\n    {\n      \"partner_name\": \"Eastern Nordic University\",\n      \"requested\": \"EUR 369,500\"\n    },\n    {\n      \"partner_name\": \"Coastal Finland University\",\n      \"requested\": \"EUR 337,200\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 45055,
+        "completion_tokens": 286,
+        "total_tokens": 45341,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 86.07,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00926268
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 4460264,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 167.22
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 45055,
+          "total_tokens": 45575,
+          "completion_tokens": 520,
+          "estimated_cost": 0.0094686,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the document text and images to find the partner budget table.\n\nThe partner budget information is located in Section 8.1 \"Overall budget\" on page 34 of the text, which presents \"Table 21. Budgets of research institutes.\"\n\nI will now list each partner's name and its corresponding requested amount as shown in that table, row by row:\n\n- NLUAS: 487 200\n- Lake District Technical University: 382 400\n- NISM: 642 300\n- ENU: 369 500\n- CFU: 337 200\n\nThe total for these five research partners is 2,218,600, which matches the total stated in the table.\n\nThe document does not provide a requested grant amount for any of the industry partners (e.g., NorthGrid Energy, ForestLoop Fibre, CircuForm, etc.). The funding plan on page 35 details funding from the National Innovation Agency and own funding for the research institutes, but does not specify a requested amount for each individual partner beyond the research institutes listed in Table 21.\n\nBased on the explicit information in the document, I will now construct the final JSON object.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"ReCoSE\",\n    \"proposal_title\": \"Renewable Composite Systems with Circular Engineering\",\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2,218,600\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NLUAS\",\n      \"requested\": \"487 200\"\n    },\n    {\n      \"partner_name\": \"Lake District Technical University\",\n      \"requested\": \"382 400\"\n    },\n    {\n      \"partner_name\": \"NISM\",\n      \"requested\": \"642 300\"\n    },\n    {\n      \"partner_name\": \"ENU\",\n      \"requested\": \"369 500\"\n    },\n    {\n      \"partner_name\": \"CFU\",\n      \"requested\": \"337 200\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 45055,
+        "completion_tokens": 520,
+        "total_tokens": 45575,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 167.22,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0094686
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 3344476,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 129.73
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 45055,
+          "total_tokens": 45522,
+          "completion_tokens": 467,
+          "estimated_cost": 0.009421960000000002,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the document text and images to locate the partner budget table. The relevant table is Table 21, titled \"Budgets of research institutes,\" found on page 34 of the text and page 34 of the images.\n\nI will now extract each partner's name and its corresponding requested amount from this table, row by row, as instructed.\n\n- The first row lists \"NLUAS\" with the amount \"487 200\".\n- The second row lists \"Lake District Technical University\" with the amount \"382 400\".\n- The third row lists \"NISM\" with the amount \"642 300\".\n- The fourth row lists \"ENU\" with the amount \"369 500\".\n- The fifth row lists \"CFU\" with the amount \"337 200\".\n\nI have now gone through every row of the partner budget table. I will now write the final answer as a single JSON object.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"ReCoSE\",\n    \"proposal_title\": \"Renewable Composite Systems with Circular Engineering\",\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2,218,600\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NLUAS\",\n      \"requested\": \"EUR 487,200\"\n    },\n    {\n      \"partner_name\": \"Lake District Technical University\",\n      \"requested\": \"EUR 382,400\"\n    },\n    {\n      \"partner_name\": \"NISM\",\n      \"requested\": \"EUR 642,300\"\n    },\n    {\n      \"partner_name\": \"ENU\",\n      \"requested\": \"EUR 369,500\"\n    },\n    {\n      \"partner_name\": \"CFU\",\n      \"requested\": \"EUR 337,200\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 45055,
+        "completion_tokens": 467,
+        "total_tokens": 45522,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 129.73,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00942196
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1003163,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 134.67
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 31314,
+          "total_tokens": 31864,
+          "completion_tokens": 550,
+          "estimated_cost": 0.006746800000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "First, I will find the partner budget table and work through it row by row, writing out each partner's name exactly as shown, together with the amount on that same row.\n\nThe partner budget table is found on page 34, under section 8.1 \"Overall budget\". The table is titled \"Table 21. Budgets of research institutes.\" and lists the research institutes and their respective budgets.\n\nI will go through each row:\n\n1. The first row lists \"Research institute\" as the header, so I will skip this and start with the actual data rows.\n2. The second row: \"NLUAS\" with the amount \"487 200\".\n3. The third row: \"Lake District Technical University\" with the amount \"382 400\".\n4. The fourth row: \"NISM\" with the amount \"642 300\".\n5. The fifth row: \"ENU\" with the amount \"369 500\".\n6. The sixth row: \"CFU\" with the amount \"337 200\".\n7. The seventh row: \"TOTAL\" with the amount \"2 218 600\". Since this is a total and not a partner, I will not include it in the partners list.\n\nNow, I will write the final answer as a JSON object following the specified shape.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"ReCoSE\",\n    \"proposal_title\": \"Renewable Composite Systems with Circular Engineering\",\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2,218,600\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NLUAS\",\n      \"requested\": \"EUR 487,200\"\n    },\n    {\n      \"partner_name\": \"Lake District Technical University\",\n      \"requested\": \"EUR 382,400\"\n    },\n    {\n      \"partner_name\": \"NISM\",\n      \"requested\": \"EUR 642,300\"\n    },\n    {\n      \"partner_name\": \"ENU\",\n      \"requested\": \"EUR 369,500\"\n    },\n    {\n      \"partner_name\": \"CFU\",\n      \"requested\": \"EUR 337,200\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 31314,
+        "completion_tokens": 550,
+        "total_tokens": 31864,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 134.67,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0067468
+      }
+    ]
+  }
+}

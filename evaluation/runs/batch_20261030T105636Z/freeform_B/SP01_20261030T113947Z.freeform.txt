@@ -1,0 +1,75 @@
+The document states the acronym, title, call identifier and submission date, the readiness levels, and the partner budget table as follows:
+
+*   **Acronym:** LOOPWEAVE
+*   **Title:** Circular Weaving of Recycled Fibre Value Chains
+*   **Call Identifier:** INNO-2027-03-CIRCFIBRE-04
+*   **Submission Date:** 6 March 2027
+*   **Readiness Levels:** The project starts at Technology Readiness Level (TRL) 5. The target TRL at the end of the project is the start level plus two (TRL 7). The document does not explicitly state a Market Cluster Readiness Level (MCRL) start or target value.
+*   **Partner Budget Table:** The table lists 9 partners with their requested contributions. Note 3 clarifies that partner 4 (Tessilo) has a requested contribution of EUR 552,100, which is written as "552.1" in the table (amounts are in EUR thousand). Partner 9 (Lindfors) has a requested contribution of 0.0.
+
+**Partner Budget Table Details:**
+1.  KalevraInnovationClusterOy: 575.6
+2.  NorthbayMaterialsOy: 466.6
+3.  CorvanePolymerSystemsAB: 578.0
+4.  TessiloProcessEngineeringGmbH: 552.1 (per Note 3)
+5.  RauvikUniversity: 643.9
+6.  ElvarisUniversityofTechnology: 735.9
+7.  SundmarkAppliedResearchInstitute: 553.2
+8.  BrenvikInstituteforSustainableProcess Engineering: 684.5
+9.  LindforsRegionalDevelopmentAgency: 0.0
+
+```json
+{
+  "proposal": {
+    "proposal_acronym": "LOOPWEAVE",
+    "proposal_title": "Circular Weaving of Recycled Fibre Value Chains",
+    "call_identifier": "INNO-2027-03-CIRCFIBRE-04",
+    "submission_date": "2027-03-06"
+  },
+  "proposal_facts": {
+    "requested_total": "4,789.8",
+    "trl_start": 5,
+    "trl_target": 7,
+    "mcrl_start": null,
+    "mcrl_target": null
+  },
+  "partners": [
+    {
+      "partner_name": "KalevraInnovationClusterOy",
+      "requested": "575.6"
+    },
+    {
+      "partner_name": "NorthbayMaterialsOy",
+      "requested": "466.6"
+    },
+    {
+      "partner_name": "CorvanePolymerSystemsAB",
+      "requested": "578.0"
+    },
+    {
+      "partner_name": "TessiloProcessEngineeringGmbH",
+      "requested": "552.1"
+    },
+    {
+      "partner_name": "RauvikUniversity",
+      "requested": "643.9"
+    },
+    {
+      "partner_name": "ElvarisUniversityofTechnology",
+      "requested": "735.9"
+    },
+    {
+      "partner_name": "SundmarkAppliedResearchInstitute",
+      "requested": "553.2"
+    },
+    {
+      "partner_name": "BrenvikInstituteforSustainableProcess Engineering",
+      "requested": "684.5"
+    },
+    {
+      "partner_name": "LindforsRegionalDevelopmentAgency",
+      "requested": "0.0"
+    }
+  ]
+}
+```

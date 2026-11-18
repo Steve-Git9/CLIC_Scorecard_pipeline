@@ -1,0 +1,124 @@
+{
+  "arm": "freeform_light",
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "provider": "nscale",
+  "source_file": "SP01.md",
+  "started_utc": "2026-10-30T11:32:56Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested_total 'EUR 4,789,800.00' not found in the document",
+    "requested[Kalevra Innovation Cluster Oy] 'EUR 575,600.00' not found in the document",
+    "partner 'Northbay Materials Oy' not found verbatim in the document",
+    "requested[Northbay Materials Oy] 'EUR 466,600.00' not found in the document",
+    "partner 'Corvane Polymer Systems AB' not found verbatim in the document",
+    "requested[Corvane Polymer Systems AB] 'EUR 578,000.00' not found in the document",
+    "partner 'Tessilo Process Engineering GmbH' not found verbatim in the document",
+    "requested[Tessilo Process Engineering GmbH] 'EUR 552,100.00' not found in the document",
+    "partner 'Rauvik University' not found verbatim in the document",
+    "requested[Rauvik University] 'EUR 643,900.00' not found in the document",
+    "partner 'Elvaris University of Technology' not found verbatim in the document",
+    "requested[Elvaris University of Technology] 'EUR 735,900.00' not found in the document",
+    "partner 'Sundmark Applied Research Institute' not found verbatim in the document",
+    "requested[Sundmark Applied Research Institute] 'EUR 553,200.00' not found in the document",
+    "partner 'Brenvik Institute for Sustainable Process Engineering' not found verbatim in the document",
+    "requested[Brenvik Institute for Sustainable Process Engineering] 'EUR 684,500.00' not found in the document",
+    "partner 'Lindfors Regional Development Agency' not found verbatim in the document",
+    "requested[Lindfors Regional Development Agency] 'EUR 0.00' not found in the document"
+  ],
+  "free_form": true,
+  "context_splits": 0,
+  "seconds": 40.02,
+  "attempts": 1,
+  "prompt_tokens": 31535,
+  "completion_tokens": 384,
+  "cost_usd": 0.000327,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-4B-Instruct-2507",
+  "parts": 1,
+  "freeform_file": "SP01_20261030T113256Z.freeform.txt",
+  "output_file": "SP01_20261030T113256Z.json",
+  "replies_file": "SP01_20261030T113256Z.replies.json",
+  "total_seconds": 40.05,
+  "evaluation": {
+    "document": "SP01",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\freeform_light\\SP01_20261030T113256Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 191.79,
+      "docling_markdown_sha256": "3336f13127c448debbfd443b496945784e43f599d594d395b5a365d056687338"
+    },
+    "runner_wall_clock_seconds": 40.06,
+    "end_to_end_seconds": 231.85,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 31535,
+      "completion_tokens": 384,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": {
+      "made": false,
+      "tokens": 0,
+      "note": "the free form reply is converted to JSON locally in Python; no model call"
+    },
+    "cost": {
+      "cost_usd": 0.00032687,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "nscale",
+          "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-4B-Instruct-2507",
+        "provider": "nscale",
+        "response_format": false,
+        "request_bytes": 175568,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 40.02
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 31535,
+          "total_tokens": 31919,
+          "completion_tokens": 384
+        },
+        "reply": "{\"proposal\": {\"proposal_acronym\": \"LOOPWEAVE\", \"proposal_title\": \"Circular Weaving of Recycled Fibre Value Chains\", \"call_identifier\": \"INNO-2027-03-CIRCFIBRE-04\", \"submission_date\": \"2027-03-06\"}, \"proposal_facts\": {\"requested_total\": \"EUR 4,789,800.00\", \"trl_start\": 5, \"trl_target\": 7, \"mcrl_start\": null, \"mcrl_target\": null}, \"partners\": [{\"partner_name\": \"Kalevra Innovation Cluster Oy\", \"requested\": \"EUR 575,600.00\"}, {\"partner_name\": \"Northbay Materials Oy\", \"requested\": \"EUR 466,600.00\"}, {\"partner_name\": \"Corvane Polymer Systems AB\", \"requested\": \"EUR 578,000.00\"}, {\"partner_name\": \"Tessilo Process Engineering GmbH\", \"requested\": \"EUR 552,100.00\"}, {\"partner_name\": \"Rauvik University\", \"requested\": \"EUR 643,900.00\"}, {\"partner_name\": \"Elvaris University of Technology\", \"requested\": \"EUR 735,900.00\"}, {\"partner_name\": \"Sundmark Applied Research Institute\", \"requested\": \"EUR 553,200.00\"}, {\"partner_name\": \"Brenvik Institute for Sustainable Process Engineering\", \"requested\": \"EUR 684,500.00\"}, {\"partner_name\": \"Lindfors Regional Development Agency\", \"requested\": \"EUR 0.00\"}]}",
+        "reasoning": null,
+        "prompt_tokens": 31535,
+        "completion_tokens": 384,
+        "total_tokens": 31919,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 40.02,
+        "model_reported": "Qwen/Qwen3-4B-Instruct-2507",
+        "finish_reason": "stop",
+        "cost_usd": 0.00032687
+      }
+    ]
+  }
+}

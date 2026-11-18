@@ -1,0 +1,341 @@
+{
+ "located": {
+  "proposal": [
+   {
+    "page": 1,
+    "score": "hint"
+   },
+   {
+    "page": 3,
+    "score": 12.25
+   }
+  ],
+  "budget": [
+   {
+    "page": 21,
+    "score": 25.5
+   }
+  ],
+  "partners": [
+   {
+    "page": 6,
+    "score": 15.0
+   },
+   {
+    "page": 9,
+    "score": 14.75
+   },
+   {
+    "page": 4,
+    "score": 13.0
+   }
+  ],
+  "readiness": [
+   {
+    "page": 15,
+    "score": 7.5
+   }
+  ]
+ },
+ "tables": [
+  {
+   "page": 4,
+   "index": 0,
+   "rows": [
+    [
+     "B.1",
+     "Organisation name",
+     "Torvenmaa University",
+     "Official name of the organisation."
+    ],
+    [
+     "B.2",
+     "Short name",
+     "TMU",
+     "Name used in the budget."
+    ],
+    [
+     "B.3",
+     "Organisation type",
+     "X University Research organisation Company Public body Other",
+     "Tick one type."
+    ],
+    [
+     "B.4",
+     "Postal address",
+     "Campus Lane 5 99010 Northhaven Finland",
+     "Three lines."
+    ],
+    [
+     "B.5",
+     "Contact role",
+     "Principal investigator",
+     "Role only, no names."
+    ],
+    [
+     "B.6",
+     "Requests funding",
+     "X Yes No",
+     "Tick yes or no."
+    ]
+   ],
+   "verification": {
+    "checks": [],
+    "columns": {},
+    "verified": false
+   }
+  },
+  {
+   "page": 6,
+   "index": 0,
+   "rows": [
+    [
+     "B.1",
+     "Organisation name",
+     "Kestrel Institute for Process Research",
+     "Official name of the organisation."
+    ],
+    [
+     "B.2",
+     "Short name",
+     "KPRI",
+     "Name used in the budget."
+    ],
+    [
+     "B.3",
+     "Organisation type",
+     "University X Research organisation Company Public body Other",
+     "Tick one type."
+    ],
+    [
+     "B.4",
+     "Postal address",
+     "Laboratory Road 8 99230 Kestrelby Finland",
+     "Three lines."
+    ],
+    [
+     "B.5",
+     "Contact role",
+     "Research coordinator",
+     "Role only, no names."
+    ],
+    [
+     "B.6",
+     "Requests funding",
+     "X Yes No",
+     "Tick yes or no."
+    ]
+   ],
+   "verification": {
+    "checks": [],
+    "columns": {},
+    "verified": false
+   }
+  },
+  {
+   "page": 9,
+   "index": 0,
+   "rows": [
+    [
+     "B.1",
+     "Organisation name",
+     "Ostermark Regional Development Agency",
+     "Official name of the organisation."
+    ],
+    [
+     "B.2",
+     "Short name",
+     "ORDEA",
+     "Name used in the budget."
+    ],
+    [
+     "B.3",
+     "Organisation type",
+     "University Research organisation Company X Public body Other",
+     "Tick one type."
+    ],
+    [
+     "B.4",
+     "Postal address",
+     "Harbour Square 9 99650 Ostermark Finland",
+     "Three lines."
+    ],
+    [
+     "B.5",
+     "Contact role",
+     "Programme coordinator",
+     "Role only, no names."
+    ],
+    [
+     "B.6",
+     "Requests funding",
+     "Yes X No",
+     "Tick yes or no."
+    ]
+   ],
+   "verification": {
+    "checks": [],
+    "columns": {},
+    "verified": false
+   }
+  },
+  {
+   "page": 21,
+   "index": 0,
+   "rows": [
+    [
+     "",
+     "",
+     "Budget (1 000 EUR)",
+     "",
+     ""
+    ],
+    [
+     "Partner type",
+     "Partner",
+     "Total costs",
+     "Own contribution",
+     "Requested funding"
+    ],
+    [
+     "Universities",
+     "TMU",
+     "273,1",
+     "58,3",
+     "214,8"
+    ],
+    [
+     "",
+     "HBU",
+     "189,1",
+     "29,3",
+     "159,8"
+    ],
+    [
+     "Research organisation",
+     "KPRI",
+     "304,9",
+     "63,7",
+     "see E.2"
+    ],
+    [
+     "Subtotal, research partners",
+     "",
+     "767,1",
+     "151,3",
+     "615,8"
+    ],
+    [
+     "Companies",
+     "OPS",
+     "328,3",
+     "161,2",
+     "177,8"
+    ],
+    [
+     "",
+     "VSS",
+     "420,5",
+     "224,1",
+     "196,4"
+    ],
+    [
+     "Public body",
+     "ORDEA",
+     "50,0",
+     "50,0",
+     "0,0"
+    ],
+    [
+     "Total",
+     "",
+     "1 565,9",
+     "586,6",
+     "979,3"
+    ]
+   ],
+   "verification": {
+    "checks": [
+     {
+      "kind": "column",
+      "column": 2,
+      "row": 9,
+      "expected": 156590,
+      "found": 233300,
+      "ok": false
+     },
+     {
+      "kind": "column",
+      "column": 3,
+      "row": 9,
+      "expected": 58660,
+      "found": 73790,
+      "ok": false
+     },
+     {
+      "kind": "column",
+      "column": 4,
+      "row": 9,
+      "expected": 97930,
+      "found": 136460,
+      "ok": false
+     }
+    ],
+    "columns": {
+     "2": "failed",
+     "3": "failed",
+     "4": "failed"
+    },
+    "verified": false
+   }
+  },
+  {
+   "page": 21,
+   "index": 1,
+   "rows": [
+    [
+     "D.2",
+     "Total funding requested",
+     "EUR 979 300",
+     "Sum of requested funding of all partners."
+    ]
+   ],
+   "verification": {
+    "checks": [],
+    "columns": {},
+    "verified": false
+   }
+  }
+ ],
+ "partner_budget_table": null,
+ "identifier_hints": {
+  "cover_title": "Vantora Sensor Solutions Ltd",
+  "cover_page": 1,
+  "acronym_candidates": [],
+  "labelled": {
+   "acronym": [],
+   "title": [],
+   "call": []
+  },
+  "call_ids": []
+ },
+ "page_map_sha256": "037ba7e6cb644d7b90d3a3e14b0fe5d5660a8cceab2f551a79c1555bf584227d",
+ "reconciliation": [
+  {
+   "partner_name": "Torvenmaa University",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "Kestrel Institute for Process Research",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "Ostermark Regional Development Agency",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "Vantora Sensor Solutions Ltd",
+   "status": "unchecked"
+  }
+ ]
+}

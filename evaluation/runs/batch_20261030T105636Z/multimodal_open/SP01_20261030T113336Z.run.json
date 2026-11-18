@@ -1,0 +1,354 @@
+{
+  "arm": "multimodal_open",
+  "strict": false,
+  "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "provider": "deepinfra",
+  "source_file": "SP01.pdf",
+  "started_utc": "2026-10-30T11:33:36Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "sum of partner requested_cents (55633770) != requested_total_cents (478980000)"
+  ],
+  "batch_size": 10,
+  "overlap": 1,
+  "batches": 8,
+  "seconds": 364.48,
+  "attempts": 8,
+  "prompt_tokens": 147275,
+  "completion_tokens": 1885,
+  "cost_usd": 0.031113,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "output_file": "SP01_20261030T113336Z.json",
+  "replies_file": "SP01_20261030T113336Z.replies.json",
+  "total_seconds": 371.23,
+  "evaluation": {
+    "document": "SP01",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\multimodal_open\\SP01_20261030T113336Z.run.json",
+    "input": "pdf",
+    "preparation": {},
+    "runner_wall_clock_seconds": 371.23,
+    "end_to_end_seconds": 371.23,
+    "calls": 8,
+    "failed_calls": 0,
+    "attempts": 8,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 147275,
+      "completion_tokens": 1885,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 8,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.0311138,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 3078649,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 24.69
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20274,
+          "completion_tokens": 147,
+          "estimated_cost": 0.00415476,
+          "prompt_tokens_details": null
+        },
+        "reply": "```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"LOOPWEAVE\",\n    \"proposal_title\": \"Circular Weaving of Recycled Fibre Value Chains\",\n    \"call_identifier\": \"INNO-2027-03-CIRCFIBRE-04\",\n    \"submission_date\": \"2027-03-06\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 4,789,800\",\n    \"trl_start\": 5,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 147,
+        "total_tokens": 20274,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 24.69,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00415476
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 3577865,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 31.18
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20296,
+          "completion_tokens": 169,
+          "estimated_cost": 0.00417412,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed all the provided pages. The document does not contain a partner budget table. There is no table listing partner names alongside funding amounts. The text discusses project organization, collaboration, and impact, but it does not provide the specific financial breakdown for each partner as required.\n\nTherefore, I cannot extract the partner budget table or any of the requested financial data for individual partners.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 169,
+        "total_tokens": 20296,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 31.18,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00417412
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 3621437,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 32.44
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20335,
+          "completion_tokens": 208,
+          "estimated_cost": 0.00420844,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed all the provided pages. I have searched for a partner budget table, which would list partner names and their requested funding amounts. I have also searched for the project acronym, full title, call identifier, submission date, total requested funding, and TRL/MCRL levels.\n\nNone of these elements are present in any of the pages. The document contains sections on impact, communication, organisation, risks, and dissemination, but it does not contain the specific financial or administrative data required to populate the requested JSON structure.\n\nTherefore, I cannot extract the required data.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 208,
+        "total_tokens": 20335,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 32.44,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00420844
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 3521413,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 39.53
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20351,
+          "completion_tokens": 224,
+          "estimated_cost": 0.0042225200000000004,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided document images. The partner budget table, which would contain the requested funding amounts for each partner, is not present in any of the pages. The document includes a consortium table (Table 3 on page 34) that lists the partner names, countries, types, and roles, but it does not contain any financial data or requested grant amounts for any of the partners.\n\nSince the required partner budget table is missing from the document, I cannot extract the requested funding amounts for each partner. Therefore, I cannot fulfill the request to write out each partner's name with their amount or to construct the final JSON object as specified.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 224,
+        "total_tokens": 20351,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 39.53,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00422252
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 3147101,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 70.26
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20628,
+          "completion_tokens": 501,
+          "estimated_cost": 0.00446628,
+          "prompt_tokens_details": null
+        },
+        "reply": "Kalevra Innovation Cluster Oy: 575.6\nNorthbay Materials Oy: 466.6\nCorvane Polymer Systems AB: 578.0\nTessilo Process Engineering GmbH: see note 3\nRauvik University: 643.9\nElvaris University of Technology: 735.9\nSundmark Applied Research Institute: 553.2\nBrenvik Institute for Sustainable Process Engineering: 684.5\nLindfors Regional Development Agency: 0.0\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 4,789.8\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Kalevra Innovation Cluster Oy\",\n      \"requested\": \"EUR 575.6\"\n    },\n    {\n      \"partner_name\": \"Northbay Materials Oy\",\n      \"requested\": \"EUR 466.6\"\n    },\n    {\n      \"partner_name\": \"Corvane Polymer Systems AB\",\n      \"requested\": \"EUR 578.0\"\n    },\n    {\n      \"partner_name\": \"Tessilo Process Engineering GmbH\",\n      \"requested\": \"EUR 552,100\"\n    },\n    {\n      \"partner_name\": \"Rauvik University\",\n      \"requested\": \"EUR 643.9\"\n    },\n    {\n      \"partner_name\": \"Elvaris University of Technology\",\n      \"requested\": \"EUR 735.9\"\n    },\n    {\n      \"partner_name\": \"Sundmark Applied Research Institute\",\n      \"requested\": \"EUR 553.2\"\n    },\n    {\n      \"partner_name\": \"Brenvik Institute for Sustainable Process Engineering\",\n      \"requested\": \"EUR 684.5\"\n    },\n    {\n      \"partner_name\": \"Lindfors Regional Development Agency\",\n      \"requested\": \"EUR 0.0\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 501,
+        "total_tokens": 20628,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 70.26,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00446628
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 3056229,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 91.51
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20412,
+          "completion_tokens": 285,
+          "estimated_cost": 0.0042762,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed all the provided pages. The document contains sections on project management, work packages, and annexes, including a Gantt chart and work package tables. However, after a thorough examination of all pages, I cannot find a partner budget table or any explicit mention of the following required fields:\n\n- The project acronym or full title.\n- The call identifier.\n- The submission date.\n- The total requested grant amount.\n- The TRL or MCRL start and target levels.\n- A table listing partners and their requested funding amounts.\n\nThe document does list lead participants for each work package (e.g., Kalevra, Sundmark, Northbay, etc.), but it does not provide a budget table with funding amounts for these or any other partners. Without this specific table, I cannot extract the partner names and their requested amounts as required.\n\nTherefore, I cannot construct the requested JSON object because the necessary data is not present in the provided document.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 285,
+        "total_tokens": 20412,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 91.51,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0042762
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 2947905,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 42.75
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20319,
+          "completion_tokens": 192,
+          "estimated_cost": 0.00419436,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed all the provided pages. The document contains descriptions of work packages, deliverables, risks, and supplementary notes, but it does not contain a partner budget table or any information about the requested funding amounts for individual partners, the total requested grant, the project acronym, title, call identifier, or submission date. It also does not state the TRL or MCRL levels.\n\nTherefore, I cannot extract the required data for the JSON object as specified. All fields must be null.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 192,
+        "total_tokens": 20319,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 42.75,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00419436
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1129384,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 32.12
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 6386,
+          "total_tokens": 6545,
+          "completion_tokens": 159,
+          "estimated_cost": 0.00141712,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided pages. There is no partner budget table visible in any of the images. The text discusses project management, responsibilities, methods, and organisation, but it does not contain a table listing partner names and their requested funding amounts. Therefore, I cannot extract the required data to populate the JSON structure as specified.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 6386,
+        "completion_tokens": 159,
+        "total_tokens": 6545,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 32.12,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00141712
+      }
+    ]
+  }
+}

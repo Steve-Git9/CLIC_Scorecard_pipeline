@@ -1,0 +1,107 @@
+{
+  "arm": "C",
+  "model": "openai/gpt-oss-120b",
+  "provider": "groq",
+  "source_file": "CLIMACITIES.md",
+  "started_utc": "2026-10-30T12:24:08Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 2.4,
+  "attempts": 1,
+  "prompt_tokens": 19353,
+  "completion_tokens": 431,
+  "cost_usd": 0.003226,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-120b",
+  "parts": 1,
+  "output_file": "CLIMACITIES_20261030T122408Z.json",
+  "replies_file": "CLIMACITIES_20261030T122408Z.replies.json",
+  "total_seconds": 2.42,
+  "evaluation": {
+    "document": "CLIMACITIES",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\C\\CLIMACITIES_20261030T122408Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 115.02,
+      "docling_markdown_sha256": "949af8bd07e2436524f0435a30f6b88f5830c13a3397260c211a488094e2efbf"
+    },
+    "runner_wall_clock_seconds": 2.42,
+    "end_to_end_seconds": 117.44,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 19353,
+      "completion_tokens": 431,
+      "reasoning_tokens": 180,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.00316155,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-120b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-120b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 116950,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 2.4
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.247277704,
+          "prompt_tokens": 19353,
+          "prompt_time": 0.869507584,
+          "completion_tokens": 431,
+          "completion_time": 0.901307396,
+          "total_tokens": 19784,
+          "total_time": 1.77081498,
+          "completion_tokens_details": {
+            "reasoning_tokens": 180
+          }
+        },
+        "reply": "{\"proposal\":{\"proposal_acronym\":\"CLIMACITIES\",\"proposal_title\":\"Climate Intelligence for Equitable and Adaptive European Cities\",\"call_identifier\":\"HORIZON-MISS-2027-CLIMA-SYN-01\",\"submission_date\":null},\"proposal_facts\":{\"requested_total\":\"EUR 7,500,000\",\"trl_start\":null,\"trl_target\":null,\"mcrl_start\":null,\"mcrl_target\":null},\"partners\":[{\"partner_name\":\"NORDIC URBAN SYSTEMS INSTITUTE\",\"requested\":\"1,420,000\"},{\"partner_name\":\"RHEIN DATA LABS GMBH\",\"requested\":\"1,060,000\"},{\"partner_name\":\"ATLANTIC RESILIENCE CENTRE\",\"requested\":\"910,000\"},{\"partner_name\":\"CIVITAS ANALYTICS SL\",\"requested\":\"870,000\"},{\"partner_name\":\"DELTA WATER RESEARCH BV\",\"requested\":\"850,000\"},{\"partner_name\":\"BALTIC COMMUNITY LAB\",\"requested\":\"690,000\"},{\"partner_name\":\"ALPINE ENERGY INNOVATION SRL\",\"requested\":\"930,000\"},{\"partner_name\":\"URBAN FUTURES ASSOCIATION\",\"requested\":\"770,000\"}]}",
+        "reasoning": "We need proposal_acronym? Not given. Probably CLIMACITIES? Title is \"Climate Intelligence for Equitable and Adaptive European Cities\". Acronym maybe CLIMACITIES. Use that. call_identifier: Synthetic topic identifier: HORIZON-MISS-2027-CLIMA-SYN-01. submission_date not present -> null. requested_total: \"EUR 7,500,000\". TRL and MCRL not in doc. No values -> null. partners list with names and requested amounts from table. Use amounts with commas as in table? They have spaces. Use as written \"1,420,000\". Include currency? Table header EU request (EUR). So amounts are numbers without EUR. Probably include as written \"1,420,000\". But schema expects string. We'll copy as written. Could add EUR? Not in table. Use as is.",
+        "prompt_tokens": 19353,
+        "completion_tokens": 431,
+        "total_tokens": 19784,
+        "reasoning_tokens": 180,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 2.4,
+        "model_reported": "openai/gpt-oss-120b",
+        "finish_reason": "stop",
+        "cost_usd": 0.00316155
+      }
+    ]
+  }
+}

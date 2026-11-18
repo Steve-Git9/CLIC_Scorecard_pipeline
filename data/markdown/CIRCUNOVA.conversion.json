@@ -1,0 +1,27 @@
+{
+  "document": "CIRCUNOVA",
+  "pdf_file": "data\\raw\\CIRCUNOVA.pdf",
+  "pdf_sha256": "42665465f13c1bf7d5a4aebef6da3c60824a655d1ebd01b5af7063e614da7c31",
+  "pages": 146,
+  "started_utc": "2026-10-30T10:06:25Z",
+  "total_seconds": 648.98,
+  "ocr_used": false,
+  "tables": 131,
+  "pictures": 0,
+  "setup_seconds": 0.65,
+  "convert_seconds": 647.63,
+  "export_seconds": 0.68,
+  "seconds_per_page": 4.445,
+  "pages_per_minute": 13.5,
+  "markdown_file": "data\\markdown\\CIRCUNOVA.md",
+  "markdown_chars": 273909,
+  "markdown_sha256": "30e0bb02a25c571eeee7ce56163a12b9d6629152cbf564b24fc8b8334df35d5d",
+  "tool": "docling",
+  "docling_version": "2.130.0",
+  "machine": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 23 Model 160 Stepping 0, AuthenticAMD",
+    "cpu_count": 8,
+    "python": "3.13.2"
+  }
+}

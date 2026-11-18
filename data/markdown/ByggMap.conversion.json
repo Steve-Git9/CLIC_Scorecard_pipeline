@@ -1,0 +1,27 @@
+{
+  "document": "ByggMap",
+  "pdf_file": "data\\raw\\ByggMap.pdf",
+  "pdf_sha256": "06060eb78d7d9c1d16cd531783ddeb4454c384c034708d7daca9729f87cfb7e5",
+  "pages": 22,
+  "started_utc": "2026-10-30T10:03:04Z",
+  "total_seconds": 201.38,
+  "ocr_used": false,
+  "tables": 34,
+  "pictures": 6,
+  "setup_seconds": 0.47,
+  "convert_seconds": 200.8,
+  "export_seconds": 0.07,
+  "seconds_per_page": 9.154,
+  "pages_per_minute": 6.55,
+  "markdown_file": "data\\markdown\\ByggMap.md",
+  "markdown_chars": 81258,
+  "markdown_sha256": "a9a1a1fd0330ccc01da68daeca2f9ca711eb526cc4fea5838a2fd11475864769",
+  "tool": "docling",
+  "docling_version": "2.130.0",
+  "machine": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 23 Model 160 Stepping 0, AuthenticAMD",
+    "cpu_count": 8,
+    "python": "3.13.2"
+  }
+}

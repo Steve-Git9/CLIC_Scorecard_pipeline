@@ -1,0 +1,45 @@
+{
+  "proposal": {
+    "proposal_acronym": "RESENSE",
+    "proposal_title": "Adaptive Sensor Networks for Resource Efficient Process Monitoring",
+    "call_identifier": "RCF2027/6433",
+    "submission_date": null
+  },
+  "proposal_facts": {
+    "requested_total_cents": 97930000,
+    "trl_start": 1,
+    "trl_target": 4,
+    "mcrl_start": 1,
+    "mcrl_target": 4
+  },
+  "partners": [
+    {
+      "partner_name": "TMU",
+      "requested_cents": 21480
+    },
+    {
+      "partner_name": "HBU",
+      "requested_cents": 15980
+    },
+    {
+      "partner_name": "KPRI",
+      "requested_cents": 24120000
+    },
+    {
+      "partner_name": "OPS",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "VSS",
+      "requested_cents": 19640
+    },
+    {
+      "partner_name": "ORDEA",
+      "requested_cents": 0
+    }
+  ],
+  "metadata": {
+    "extraction_timestamp": "2026-10-30T12:40:43Z",
+    "source_file": "SP03B.md"
+  }
+}

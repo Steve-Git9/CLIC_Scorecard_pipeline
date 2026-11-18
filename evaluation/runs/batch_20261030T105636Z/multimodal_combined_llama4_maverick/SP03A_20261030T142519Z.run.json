@@ -1,0 +1,301 @@
+{
+  "arm": "multimodal_combined_llama4_maverick",
+  "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+  "provider": "novita",
+  "source_file": "SP03A.md",
+  "started_utc": "2026-10-30T14:25:19Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "duplicate partner 'Torvenmaa University' dropped",
+    "duplicate partner 'Haldeberg University of Applied Sciences and Regional Innovation Services' dropped",
+    "duplicate partner 'Kestrel Institute for Process Research' dropped",
+    "duplicate partner 'Ormenfield Process Systems Oy' dropped",
+    "duplicate partner 'Vantora Sensor Solutions Oy' dropped",
+    "duplicate partner 'Ostermark Regional Development Agency' dropped",
+    "duplicate partner 'Torvenmaa University' dropped",
+    "duplicate partner 'Haldeberg University of Applied Sciences and Regional Innovation Services' dropped",
+    "duplicate partner 'Kestrel Institute for Process Research' dropped",
+    "duplicate partner 'Ormenfield Process Systems Oy' dropped",
+    "duplicate partner 'Vantora Sensor Solutions Oy' dropped",
+    "duplicate partner 'Ostermark Regional Development Agency' dropped",
+    "duplicate partner 'Torvenmaa University' dropped",
+    "duplicate partner 'Haldeberg University of Applied Sciences and Regional Innovation Services' dropped",
+    "duplicate partner 'Kestrel Institute for Process Research' dropped",
+    "duplicate partner 'Ormenfield Process Systems Oy' dropped",
+    "duplicate partner 'Vantora Sensor Solutions Oy' dropped",
+    "duplicate partner 'Ostermark Regional Development Agency' dropped",
+    "sum of partner requested_cents (24194880) != requested_total_cents (97930000)"
+  ],
+  "batch_size": 10,
+  "overlap": 1,
+  "pages_total": 45,
+  "pages_with_images": 29,
+  "batches": 4,
+  "calls": 4,
+  "seconds": 83.72,
+  "attempts": 4,
+  "prompt_tokens": 77052,
+  "completion_tokens": 1914,
+  "cost_usd": 0.022432,
+  "finish_reason": "stop",
+  "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+  "context_splits": 0,
+  "output_file": "SP03A_20261030T142519Z.json",
+  "replies_file": "SP03A_20261030T142519Z.replies.json",
+  "total_seconds": 92.13,
+  "evaluation": {
+    "document": "SP03A",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\multimodal_combined_llama4_maverick\\SP03A_20261030T142519Z.run.json",
+    "input": "pdf",
+    "preparation": {
+      "native_text_seconds": 0.18
+    },
+    "runner_wall_clock_seconds": 92.32,
+    "end_to_end_seconds": 92.32,
+    "calls": 4,
+    "failed_calls": 0,
+    "attempts": 4,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 77052,
+      "completion_tokens": 1914,
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "cached_tokens": 1152
+    },
+    "calls_reporting": {
+      "prompt_tokens": 4,
+      "completion_tokens": 4,
+      "reasoning_tokens": 4,
+      "image_tokens": 4
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.02243094,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "novita",
+          "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+          "status": "verified",
+          "retrieved_on": "2026-10-23"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 2022006,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 23.78
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 19799,
+          "completion_tokens": 473,
+          "total_tokens": 20272,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 576,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "The partner budget table is located in section D.1 on page 21. Working through the rows:\n\n- TMU: 214,8\n- HBU: 159,8\n- KPRI: see E.2\n- OPS: 177,8\n- VSS: 196,4\n- ORDEA: 0,0\n\nNote: For KPRI, the requested funding is specified in section E.2 on page 26 as EUR 241 200.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"RESENSE\",\n    \"proposal_title\": \"Adaptive Sensor Networks for Resource Efficient Process Monitoring\",\n    \"call_identifier\": \"RCF2027/6433\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 979 300\",\n    \"trl_start\": 3,\n    \"trl_target\": 5,\n    \"mcrl_start\": 1,\n    \"mcrl_target\": 4\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Torvenmaa University\",\n      \"requested\": \"214,8\"\n    },\n    {\n      \"partner_name\": \"Haldeberg University of Applied Sciences and Regional Innovation Services\",\n      \"requested\": \"159,8\"\n    },\n    {\n      \"partner_name\": \"Kestrel Institute for Process Research\",\n      \"requested\": \"EUR 241 200\"\n    },\n    {\n      \"partner_name\": \"Ormenfield Process Systems Oy\",\n      \"requested\": \"177,8\"\n    },\n    {\n      \"partner_name\": \"Vantora Sensor Solutions Oy\",\n      \"requested\": \"196,4\"\n    },\n    {\n      \"partner_name\": \"Ostermark Regional Development Agency\",\n      \"requested\": \"0,0\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 19799,
+        "completion_tokens": 473,
+        "total_tokens": 20272,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 576,
+        "seconds": 23.78,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00574778
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 1978858,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 25.77
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 19799,
+          "completion_tokens": 508,
+          "total_tokens": 20307,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 576,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "The partner budget table is located in section D.1 on page 21. Working through the rows:\n- TMU: 214,8\n- HBU: 159,8\n- KPRI: see E.2\n- OPS: 167,1 (The image on page 21 shows a handwritten correction over 177,8 to 167,1)\n- VSS: 196,4\n- ORDEA: 0,0\n\nFor KPRI, section E.2 on page 26 explicitly states the requested funding is EUR 241 200.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"RESENSE\",\n    \"proposal_title\": \"Adaptive Sensor Networks for Resource Efficient Process Monitoring\",\n    \"call_identifier\": \"RCF2027/6433\",\n    \"submission_date\": \"2027-02-02\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 979 300\",\n    \"trl_start\": 3,\n    \"trl_target\": 5,\n    \"mcrl_start\": 1,\n    \"mcrl_target\": 4\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Torvenmaa University\",\n      \"requested\": \"214,8\"\n    },\n    {\n      \"partner_name\": \"Haldeberg University of Applied Sciences and Regional Innovation Services\",\n      \"requested\": \"159,8\"\n    },\n    {\n      \"partner_name\": \"Kestrel Institute for Process Research\",\n      \"requested\": \"EUR 241 200\"\n    },\n    {\n      \"partner_name\": \"Ormenfield Process Systems Oy\",\n      \"requested\": \"167,1\"\n    },\n    {\n      \"partner_name\": \"Vantora Sensor Solutions Oy\",\n      \"requested\": \"196,4\"\n    },\n    {\n      \"partner_name\": \"Ostermark Regional Development Agency\",\n      \"requested\": \"0,0\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 19799,
+        "completion_tokens": 508,
+        "total_tokens": 20307,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 576,
+        "seconds": 25.77,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00577753
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 1691622,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 17.54
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 19799,
+          "completion_tokens": 473,
+          "total_tokens": 20272,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "The partner budget table is located in section D.1 on page 21. Working through the rows:\n- TMU: 214,8\n- HBU: 159,8\n- KPRI: see E.2\n- OPS: 177,8\n- VSS: 196,4\n- ORDEA: 0,0\n\nNote: For KPRI, the requested funding is specified in section E.2 on page 26 as EUR 241 200.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"RESENSE\",\n    \"proposal_title\": \"Adaptive Sensor Networks for Resource Efficient Process Monitoring\",\n    \"call_identifier\": \"RCF2027/6433\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 979 300\",\n    \"trl_start\": 3,\n    \"trl_target\": 5,\n    \"mcrl_start\": 1,\n    \"mcrl_target\": 4\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Torvenmaa University\",\n      \"requested\": \"214,8\"\n    },\n    {\n      \"partner_name\": \"Haldeberg University of Applied Sciences and Regional Innovation Services\",\n      \"requested\": \"159,8\"\n    },\n    {\n      \"partner_name\": \"Kestrel Institute for Process Research\",\n      \"requested\": \"EUR 241 200\"\n    },\n    {\n      \"partner_name\": \"Ormenfield Process Systems Oy\",\n      \"requested\": \"177,8\"\n    },\n    {\n      \"partner_name\": \"Vantora Sensor Solutions Oy\",\n      \"requested\": \"196,4\"\n    },\n    {\n      \"partner_name\": \"Ostermark Regional Development Agency\",\n      \"requested\": \"0,0\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 19799,
+        "completion_tokens": 473,
+        "total_tokens": 20272,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "seconds": 17.54,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00574778
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 330546,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 16.63
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 17655,
+          "completion_tokens": 460,
+          "total_tokens": 18115,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "The partner budget table is located in section D.1 on page 21. Working through the rows:\n- TMU: 214,8\n- HBU: 159,8\n- KPRI: see E.2 (which is specified on page 26 as EUR 241 200)\n- OPS: 177,8\n- VSS: 196,4\n- ORDEA: 0,0\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"RESENSE\",\n    \"proposal_title\": \"Adaptive Sensor Networks for Resource Efficient Process Monitoring\",\n    \"call_identifier\": \"RCF2027/6433\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 979 300\",\n    \"trl_start\": 3,\n    \"trl_target\": 5,\n    \"mcrl_start\": 1,\n    \"mcrl_target\": 4\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Torvenmaa University\",\n      \"requested\": \"214,8\"\n    },\n    {\n      \"partner_name\": \"Haldeberg University of Applied Sciences and Regional Innovation Services\",\n      \"requested\": \"159,8\"\n    },\n    {\n      \"partner_name\": \"Kestrel Institute for Process Research\",\n      \"requested\": \"EUR 241 200\"\n    },\n    {\n      \"partner_name\": \"Ormenfield Process Systems Oy\",\n      \"requested\": \"177,8\"\n    },\n    {\n      \"partner_name\": \"Vantora Sensor Solutions Oy\",\n      \"requested\": \"196,4\"\n    },\n    {\n      \"partner_name\": \"Ostermark Regional Development Agency\",\n      \"requested\": \"0,0\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 17655,
+        "completion_tokens": 460,
+        "total_tokens": 18115,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "seconds": 16.63,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.00515785
+      }
+    ]
+  }
+}

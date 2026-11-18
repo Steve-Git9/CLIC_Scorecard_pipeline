@@ -1,0 +1,106 @@
+The document states the acronym, title, call identifier, and submission date in the header section. It states the readiness levels in section 4.2. It states the partner budget table in section 5.1.
+
+**Proposal Details:**
+*   **Acronym:** TIDEMESH
+*   **Title:** Adaptive Sensor Networks for Resilient Coastal Infrastructure
+*   **Call Identifier:** BF2026/93782
+*   **Submission Date:** 2 April 2026
+*   **TRL Start:** 1 (Found in section 4.2: "MCRL start: 1" - Note: The document uses MCRL for the start value in the specific line, but the prompt asks for TRL. Looking closely at section 4.2 header: "MCRL start: 1 MCRL target: 4". There is no explicit "TRL" value stated in the text provided, only MCRL. However, often in these documents TRL and MCRL are listed together. Let me re-read carefully. Section 4.2 says "MCRL start: 1 MCRL target: 4". There is no mention of TRL numbers in the text provided. I must use null if not stated.)
+    *   *Correction*: I will scan again for "TRL".
+    *   Scanning... No "TRL" found in the text. Only "MCRL".
+    *   Therefore, TRL_start and TRL_target are null.
+*   **MCRL Start:** 1
+*   **MCRL Target:** 4
+
+**Requested Total:**
+*   Section 5.3 states: "The total requested funding of the consortium is EUR 991,100."
+
+**Partners (from Section 5.1 Table 5.1):**
+*   NVS: 181.6 (EUR thousand) -> The prompt asks to copy the amount "as written". The table says "181.6".
+*   KTA: 190.9
+*   LMR: no funding requested
+*   HVU: shown in Figure 5.1 (Null)
+*   TMI: shown in Figure 5.1 (Null)
+
+Wait, the instruction says "Copy names and titles exactly as written". The table uses acronyms (NVS, KTA, etc.). The partner list in section 2.1 uses full names. The instruction for the `partners` array says "partner_name: the organisation name exactly as written." Usually, this implies the full name if available, or the name in the table if that's the only reference for the budget. However, the budget table lists "NVS", "KTA", etc. The prompt says "Work through that table row by row, writing each partner's name exactly as shown". This implies I should use the names *in the table* for the partner list if I am deriving it from the table.
+Let's re-read: "Work through that table row by row, writing each partner's name exactly as shown together with the amount on the same row."
+Okay, so for the `partners` array, I must use the names exactly as they appear in the budget table (Section 5.1).
+Table 5.1 Names: NVS, KTA, LMR, HVU, TMI.
+Amounts:
+*   NVS: 181.6
+*   KTA: 190.9
+*   LMR: no funding requested
+*   HVU: shown in Figure 5.1
+*   TMI: shown in Figure 5.1
+
+Since "shown in Figure 5.1" is not a number, and the rule says "Null if the document gives no amount for that partner", I will set those to null.
+For "no funding requested", the amount is effectively null or 0, but the text says "no funding requested". The rule says "Never use ... 0 ... for a missing value". Is "no funding requested" a missing value? Yes, it's not a grant amount. So null.
+
+Let's double check the TRL/MCRL.
+Section 4.2: "MCRL start: 1 MCRL target: 4".
+There is absolutely no "TRL" mentioned in the text.
+So TRL_start: null, TRL_target: null.
+MCRL_start: 1, MCRL_target: 4.
+
+Let's double check the requested total.
+Section 5.3: "EUR 991,100".
+
+Let's double check the submission date.
+"Document prepared: 2 April 2026".
+Format YYYY-MM-DD: 2026-04-02.
+
+Let's double check the partner names in the table.
+Row 1: NVS | 181.6
+Row 2: KTA | 190.9
+Row 3: LMR | no funding requested
+Row 4: HVU | shown in Figure 5.1
+Row 5: TMI | shown in Figure 5.1
+
+The instruction says "writing each partner's name exactly as shown".
+So names are: "NVS", "KTA", "LMR", "HVU", "TMI".
+
+One detail: "LMR ... no funding requested". The requested amount is not a number. It is a statement. So `requested` should be `null`.
+"HVU ... shown in Figure 5.1". No amount in text. `requested` should be `null`.
+"TMI ... shown in Figure 5.1". No amount in text. `requested` should be `null`.
+
+Final check on TRL. The prompt asks for "Technology Readiness Level". The text only has "Market Cluster Readiness Level" (MCRL). I cannot infer TRL. It must be null.
+
+```json
+{
+  "proposal": {
+    "proposal_acronym": "TIDEMESH",
+    "proposal_title": "Adaptive Sensor Networks for Resilient Coastal Infrastructure",
+    "call_identifier": "BF2026/93782",
+    "submission_date": "2026-04-02"
+  },
+  "proposal_facts": {
+    "requested_total": "EUR 991,100",
+    "trl_start": null,
+    "trl_target": null,
+    "mcrl_start": 1,
+    "mcrl_target": 4
+  },
+  "partners": [
+    {
+      "partner_name": "NVS",
+      "requested": "181.6"
+    },
+    {
+      "partner_name": "KTA",
+      "requested": "190.9"
+    },
+    {
+      "partner_name": "LMR",
+      "requested": null
+    },
+    {
+      "partner_name": "HVU",
+      "requested": null
+    },
+    {
+      "partner_name": "TMI",
+      "requested": null
+    }
+  ]
+}
+```

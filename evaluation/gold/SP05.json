@@ -1,0 +1,53 @@
+{
+    "proposal": {
+        "proposal_acronym": "NIVALIS",
+        "proposal_title": "Federated Data Spaces for Resilient Cold Climate Infrastructure Monitoring",
+        "call_identifier": null,
+        "submission_date": "2026-09-16"
+    },
+    "proposal_facts": {
+        "requested_total_cents": 382856100,
+        "trl_start": 3,
+        "trl_target": 7,
+        "mcrl_start": 2,
+        "mcrl_target": 5
+    },
+    "partners": [
+        {
+            "partner_name": "Nordvane Systems Oy",
+            "requested_cents": 87076593
+        },
+        {
+            "partner_name": "University of Teralund",
+            "requested_cents": 67949318
+        },
+        {
+            "partner_name": "Valoria Labs Oy",
+            "requested_cents": 59420574
+        },
+        {
+            "partner_name": "Hallavik Applied Research Centre",
+            "requested_cents": 64930003
+        },
+        {
+            "partner_name": "Arctic Sensor Systems Oy",
+            "requested_cents": 44983512
+        },
+        {
+            "partner_name": "Lumivara Edge Oy",
+            "requested_cents": 0
+        },
+        {
+            "partner_name": "Arctic Sensing Solutions Oy",
+            "requested_cents": 29800000
+        },
+        {
+            "partner_name": "Kaltio Regional Council",
+            "requested_cents": 19920000
+        }
+    ],
+    "metadata": {
+        "extraction_timestamp": null,
+        "source_file": "SP05.pdf"
+    }
+}

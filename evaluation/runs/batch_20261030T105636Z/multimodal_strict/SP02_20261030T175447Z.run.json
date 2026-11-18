@@ -1,0 +1,268 @@
+{
+  "arm": "multimodal_strict",
+  "strict": true,
+  "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "provider": "deepinfra",
+  "source_file": "SP02.pdf",
+  "started_utc": "2026-10-30T17:54:47Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "duplicate partner 'NVS' dropped",
+    "duplicate partner 'KTA' dropped",
+    "duplicate partner 'LMR' dropped",
+    "duplicate partner 'HVU' dropped",
+    "duplicate partner 'TMI' dropped"
+  ],
+  "batch_size": 10,
+  "overlap": 1,
+  "batches": 5,
+  "seconds": 275.96,
+  "attempts": 8,
+  "prompt_tokens": 90450,
+  "completion_tokens": 857,
+  "cost_usd": 0.018845,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "output_file": "SP02_20261030T175447Z.json",
+  "replies_file": "SP02_20261030T175447Z.replies.json",
+  "total_seconds": 281.51,
+  "evaluation": {
+    "document": "SP02",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\multimodal_strict\\SP02_20261030T175447Z.run.json",
+    "input": "pdf",
+    "preparation": {},
+    "runner_wall_clock_seconds": 281.52,
+    "end_to_end_seconds": 281.52,
+    "calls": 5,
+    "failed_calls": 0,
+    "attempts": 8,
+    "retries": 3,
+    "tokens": {
+      "prompt_tokens": 90450,
+      "completion_tokens": 857,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 5,
+      "completion_tokens": 5,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.01884416,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 4734286,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 59.72
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20288,
+          "completion_tokens": 235,
+          "estimated_cost": 0.0042174,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"TIDEMESH\",\n    \"proposal_title\": \"Adaptive Sensor Networks for Resilient Coastal Infrastructure\",\n    \"call_identifier\": \"BF2026/93782\",\n    \"submission_date\": \"2026-04-02\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2,003,400\",\n    \"trl_start\": 2,\n    \"trl_target\": 5,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NVS\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"KTA\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"LMR\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"HVU\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"TMI\",\n      \"requested\": null\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 235,
+        "total_tokens": 20288,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 59.72,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0042174
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 4798446,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 429,
+            "error": "HTTP 429: {\"error\":{\"message\":\"Model busy, retry later\",\"type\":\"invalid_request_error\",\"param\":null,\"code\":\"engine_overloaded\"}}",
+            "seconds": 1.57
+          },
+          {
+            "attempt": 2,
+            "http_status": 200,
+            "error": null,
+            "seconds": 55.94
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20287,
+          "completion_tokens": 234,
+          "estimated_cost": 0.0042165200000000005,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": 2,\n    \"trl_target\": 5,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Nordvalen Systems Oy (NVS)\",\n      \"requested\": \"EUR 230,000\"\n    },\n    {\n      \"partner_name\": \"Kaltiora Analytics Oy (KTA)\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Lumenthar Marine Oy (LMR)\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Havrenmaa University (HVU)\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Taimerra Research Institute (TMI)\",\n      \"requested\": null\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 234,
+        "total_tokens": 20287,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 59.52,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00421652
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 4517826,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 429,
+            "error": "HTTP 429: {\"error\":{\"message\":\"Model busy, retry later\",\"type\":\"invalid_request_error\",\"param\":null,\"code\":\"engine_overloaded\"}}",
+            "seconds": 2.33
+          },
+          {
+            "attempt": 2,
+            "http_status": 429,
+            "error": "HTTP 429: {\"error\":{\"message\":\"Model busy, retry later\",\"type\":\"invalid_request_error\",\"param\":null,\"code\":\"engine_overloaded\"}}",
+            "seconds": 1.45
+          },
+          {
+            "attempt": 3,
+            "http_status": 200,
+            "error": null,
+            "seconds": 28.91
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20143,
+          "completion_tokens": 90,
+          "estimated_cost": 0.0040898,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 90,
+        "total_tokens": 20143,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 38.69,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0040898
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 3276054,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 79.41
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20261,
+          "completion_tokens": 208,
+          "estimated_cost": 0.00419364,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 991,100\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": 1,\n    \"mcrl_target\": 4\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NVS\",\n      \"requested\": \"181.6\"\n    },\n    {\n      \"partner_name\": \"KTA\",\n      \"requested\": \"190.9\"\n    },\n    {\n      \"partner_name\": \"LMR\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"HVU\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"TMI\",\n      \"requested\": null\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 208,
+        "total_tokens": 20261,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 79.41,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00419364
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 1444067,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 38.62
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 10238,
+          "total_tokens": 10328,
+          "completion_tokens": 90,
+          "estimated_cost": 0.0021268000000000003,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}",
+        "reasoning": null,
+        "prompt_tokens": 10238,
+        "completion_tokens": 90,
+        "total_tokens": 10328,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 38.62,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0021268
+      }
+    ]
+  }
+}

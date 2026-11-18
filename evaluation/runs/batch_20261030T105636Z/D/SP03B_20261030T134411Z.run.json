@@ -1,0 +1,112 @@
+{
+  "arm": "D",
+  "model": "openai/gpt-oss-20b",
+  "provider": "groq",
+  "source_file": "SP03B.md",
+  "started_utc": "2026-10-30T13:44:11Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested[OPS]: could not parse amount '167,1x.k. 177.8'"
+  ],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 2.53,
+  "attempts": 1,
+  "prompt_tokens": 15448,
+  "completion_tokens": 322,
+  "cost_usd": 0.001706,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-20b",
+  "parts": 1,
+  "output_file": "SP03B_20261030T134411Z.json",
+  "replies_file": "SP03B_20261030T134411Z.replies.json",
+  "total_seconds": 2.55,
+  "evaluation": {
+    "document": "SP03B",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\D\\SP03B_20261030T134411Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 460.97,
+      "docling_markdown_sha256": "feda96f35bbc403b38b945c259e41f84ed7e62f84c65dfc8243d300540e793e2"
+    },
+    "runner_wall_clock_seconds": 2.55,
+    "end_to_end_seconds": 463.52,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 15448,
+      "completion_tokens": 322,
+      "reasoning_tokens": 148,
+      "image_tokens": null,
+      "cached_tokens": 15360
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.0006792,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-20b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-20b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 85011,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 2.53
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.482937432,
+          "prompt_tokens": 15448,
+          "prompt_time": 0.164330686,
+          "completion_tokens": 322,
+          "completion_time": 1.198876632,
+          "total_tokens": 15770,
+          "total_time": 1.363207318,
+          "prompt_tokens_details": {
+            "cached_tokens": 15360
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 148
+          }
+        },
+        "reply": "{\"proposal\":{\"proposal_acronym\":\"RESENSE\",\"proposal_title\":\"Adaptive Sensor Networks for Resource Efficient Process Monitoring\",\"call_identifier\":\"RCF2027/6433\",\"submission_date\":null},\"proposal_facts\":{\"requested_total\":\"EUR 979 300\",\"trl_start\":1,\"trl_target\":4,\"mcrl_start\":1,\"mcrl_target\":4},\"partners\":[{\"partner_name\":\"TMU\",\"requested\":\"214,8\"},{\"partner_name\":\"HBU\",\"requested\":\"159,8\"},{\"partner_name\":\"KPRI\",\"requested\":\"EUR 241 200\"},{\"partner_name\":\"OPS\",\"requested\":\"167,1x.k. 177.8\"},{\"partner_name\":\"VSS\",\"requested\":\"196,4\"},{\"partner_name\":\"ORDEA\",\"requested\":\"0,0\"}]}",
+        "reasoning": "Need proposal fields: acronym RESENSE, title, call_identifier RCF2027/6433, submission_date null. requested_total from D.2: EUR 979 300. trl_start/target from table: start 1, target 4. mcrl_start 1, mcrl_target 4. partners: list names with requested amounts: TMU 214,8? Actually requested funding column: TMU 214,8; HBU 159,8; KPRI see E.2: EUR 241 200; OPS 167,1x.k. 177.8 unclear; VSS 196,4; ORDEA 0,0. Use amounts as written.",
+        "prompt_tokens": 15448,
+        "completion_tokens": 322,
+        "total_tokens": 15770,
+        "reasoning_tokens": 148,
+        "image_tokens": null,
+        "cached_tokens": 15360,
+        "seconds": 2.53,
+        "model_reported": "openai/gpt-oss-20b",
+        "finish_reason": "stop",
+        "cost_usd": 0.0006792
+      }
+    ]
+  }
+}

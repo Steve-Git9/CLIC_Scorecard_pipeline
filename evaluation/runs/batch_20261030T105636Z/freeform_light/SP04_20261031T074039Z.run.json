@@ -1,0 +1,107 @@
+{
+  "arm": "freeform_light",
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "provider": "nscale",
+  "source_file": "SP04.md",
+  "started_utc": "2026-10-31T07:40:39Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested[Eskeby]: could not parse amount 'calculated at the funding rate'"
+  ],
+  "free_form": true,
+  "context_splits": 0,
+  "seconds": 22.45,
+  "attempts": 1,
+  "prompt_tokens": 24870,
+  "completion_tokens": 247,
+  "cost_usd": 0.000256,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-4B-Instruct-2507",
+  "parts": 1,
+  "freeform_file": "SP04_20261031T074039Z.freeform.txt",
+  "output_file": "SP04_20261031T074039Z.json",
+  "replies_file": "SP04_20261031T074039Z.replies.json",
+  "total_seconds": 22.48,
+  "evaluation": {
+    "document": "SP04",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\freeform_light\\SP04_20261031T074039Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 193.06,
+      "docling_markdown_sha256": "951b31c414cf23cb5b6509c461a804c7a170ca72fff157efdb3dcaa02845bdfb"
+    },
+    "runner_wall_clock_seconds": 22.48,
+    "end_to_end_seconds": 215.54,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 24870,
+      "completion_tokens": 247,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": {
+      "made": false,
+      "tokens": 0,
+      "note": "the free form reply is converted to JSON locally in Python; no model call"
+    },
+    "cost": {
+      "cost_usd": 0.00025611,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "nscale",
+          "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-4B-Instruct-2507",
+        "provider": "nscale",
+        "response_format": false,
+        "request_bytes": 138753,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 22.45
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 24870,
+          "total_tokens": 25117,
+          "completion_tokens": 247
+        },
+        "reply": "{\"proposal\": {\"proposal_acronym\": \"MAROFLOW\", \"proposal_title\": \"Marine Observation Flows for Shared Coastal Planning\", \"call_identifier\": \"BSR2026C41\", \"submission_date\": \"2026-08-10\"}, \"proposal_facts\": {\"requested_total\": \"EUR 2,946.1 thousand\", \"trl_start\": null, \"trl_target\": 6, \"mcrl_start\": 4, \"mcrl_target\": null}, \"partners\": [{\"partner_name\": \"Hallvik\", \"requested\": \"674.5\"}, {\"partner_name\": \"Orrenfjord\", \"requested\": \"568.8\"}, {\"partner_name\": \"Marovik\", \"requested\": \"592.8\"}, {\"partner_name\": \"Quenmark\", \"requested\": \"507.0\"}, {\"partner_name\": \"Ostrelund\", \"requested\": \"213.0\"}, {\"partner_name\": \"Brenvik\", \"requested\": \"0.0\"}, {\"partner_name\": \"Eskeby\", \"requested\": \"calculated at the funding rate\"}]}",
+        "reasoning": null,
+        "prompt_tokens": 24870,
+        "completion_tokens": 247,
+        "total_tokens": 25117,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 22.45,
+        "model_reported": "Qwen/Qwen3-4B-Instruct-2507",
+        "finish_reason": "stop",
+        "cost_usd": 0.00025611
+      }
+    ]
+  }
+}

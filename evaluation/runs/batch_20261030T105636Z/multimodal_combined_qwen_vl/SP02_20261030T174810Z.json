@@ -1,0 +1,41 @@
+{
+  "proposal": {
+    "proposal_acronym": "TIDEMESH",
+    "proposal_title": "Adaptive Sensor Networks for Resilient Coastal Infrastructure",
+    "call_identifier": "BF2026/93782",
+    "submission_date": "2026-04-02"
+  },
+  "proposal_facts": {
+    "requested_total_cents": 99110000,
+    "trl_start": 2,
+    "trl_target": 5,
+    "mcrl_start": 1,
+    "mcrl_target": 4
+  },
+  "partners": [
+    {
+      "partner_name": "Nordvalen Systems Oy (NVS)",
+      "requested_cents": 18160000
+    },
+    {
+      "partner_name": "Kaltiora Analytics Oy (KTA)",
+      "requested_cents": 19090000
+    },
+    {
+      "partner_name": "Lumenthar Marine Oy (LMR)",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "Havrenmaa University (HVU)",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "Taimerra Research Institute (TMI)",
+      "requested_cents": null
+    }
+  ],
+  "metadata": {
+    "extraction_timestamp": "2026-10-30T17:48:10Z",
+    "source_file": "SP02.pdf"
+  }
+}

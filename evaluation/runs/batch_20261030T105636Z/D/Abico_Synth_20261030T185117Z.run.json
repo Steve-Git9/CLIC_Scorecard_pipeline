@@ -1,0 +1,109 @@
+{
+  "arm": "D",
+  "model": "openai/gpt-oss-20b",
+  "provider": "groq",
+  "source_file": "Abico_Synth.md",
+  "started_utc": "2026-10-30T18:51:17Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "sum of partner requested_cents (221860000) != requested_total_cents (386000000)"
+  ],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 3.11,
+  "attempts": 1,
+  "prompt_tokens": 25269,
+  "completion_tokens": 319,
+  "cost_usd": 0.002686,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-20b",
+  "parts": 1,
+  "output_file": "Abico_Synth_20261030T185117Z.json",
+  "replies_file": "Abico_Synth_20261030T185117Z.replies.json",
+  "total_seconds": 3.15,
+  "evaluation": {
+    "document": "Abico_Synth",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\D\\Abico_Synth_20261030T185117Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 244.1,
+      "docling_markdown_sha256": "db2432c37da8bfa28fb0856593c407d8265b4ca2ce0ecca1fa21a414dcb13c5f"
+    },
+    "runner_wall_clock_seconds": 3.16,
+    "end_to_end_seconds": 247.26,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 25269,
+      "completion_tokens": 319,
+      "reasoning_tokens": 152,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.00199088,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-20b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-20b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 171234,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 3.11
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.243749839,
+          "prompt_tokens": 25269,
+          "prompt_time": 1.3331069740000001,
+          "completion_tokens": 319,
+          "completion_time": 0.328062749,
+          "total_tokens": 25588,
+          "total_time": 1.661169723,
+          "completion_tokens_details": {
+            "reasoning_tokens": 152
+          }
+        },
+        "reply": "{\"proposal\":{\"proposal_acronym\":\"ReCoSE\",\"proposal_title\":\"Renewable Composite Systems with Circular Engineering ReCoSE\",\"call_identifier\":null,\"submission_date\":null},\"proposal_facts\":{\"requested_total\":\"EUR 3.860 million\",\"trl_start\":null,\"trl_target\":null,\"mcrl_start\":null,\"mcrl_target\":null},\"partners\":[{\"partner_name\":\"NLUAS University of Applied Science\",\"requested\":\"487 200\"},{\"partner_name\":\"Lake District Technical University\",\"requested\":\"382 400\"},{\"partner_name\":\"Nordic Institute for Sustainable Materials NISM\",\"requested\":\"642 300\"},{\"partner_name\":\"Eastern Nordic University ENU\",\"requested\":\"369 500\"},{\"partner_name\":\"Coastal Finland University CFU\",\"requested\":\"337 200\"}]}",
+        "reasoning": "Need proposal_acronym: ReCoSE. title: Renewable Composite Systems with Circular Engineering ReCoSE. call_identifier? not given. submission_date? not given. requested_total: \"EUR 3.860 million\" but format? maybe \"EUR 3.860 million\". trl_start/target? not given. mcrl_start/target? not given. partners: list of organisations with requested amounts: from Table21 budgets: NLUAS 487 200, LDTU 382 400, NISM 642 300, ENU 369 500, CFU 337 200. Also companies: budgets? Table22 shows company contributions but not requested. Use those. So partners entries with requested amounts.",
+        "prompt_tokens": 25269,
+        "completion_tokens": 319,
+        "total_tokens": 25588,
+        "reasoning_tokens": 152,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 3.11,
+        "model_reported": "openai/gpt-oss-20b",
+        "finish_reason": "stop",
+        "cost_usd": 0.00199088
+      }
+    ]
+  }
+}

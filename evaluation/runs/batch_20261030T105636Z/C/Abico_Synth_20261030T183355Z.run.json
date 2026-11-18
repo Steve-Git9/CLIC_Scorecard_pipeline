@@ -1,0 +1,111 @@
+{
+  "arm": "C",
+  "model": "openai/gpt-oss-120b",
+  "provider": "groq",
+  "source_file": "Abico_Synth.md",
+  "started_utc": "2026-10-30T18:33:55Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested[PolyCycle]: could not parse amount 'In-kind'",
+    "requested[PolyNova Labs]: could not parse amount 'In-kind'",
+    "requested[SurfaceTech Nordic]: could not parse amount 'In-kind'"
+  ],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 3.73,
+  "attempts": 1,
+  "prompt_tokens": 25269,
+  "completion_tokens": 591,
+  "cost_usd": 0.004234,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-120b",
+  "parts": 1,
+  "output_file": "Abico_Synth_20261030T183355Z.json",
+  "replies_file": "Abico_Synth_20261030T183355Z.replies.json",
+  "total_seconds": 3.77,
+  "evaluation": {
+    "document": "Abico_Synth",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\C\\Abico_Synth_20261030T183355Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 244.1,
+      "docling_markdown_sha256": "db2432c37da8bfa28fb0856593c407d8265b4ca2ce0ecca1fa21a414dcb13c5f"
+    },
+    "runner_wall_clock_seconds": 3.78,
+    "end_to_end_seconds": 247.88,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 25269,
+      "completion_tokens": 591,
+      "reasoning_tokens": 290,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.00414495,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-120b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-120b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 171235,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 3.73
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.392732512,
+          "prompt_tokens": 25269,
+          "prompt_time": 1.508752592,
+          "completion_tokens": 591,
+          "completion_time": 1.252642195,
+          "total_tokens": 25860,
+          "total_time": 2.761394787,
+          "completion_tokens_details": {
+            "reasoning_tokens": 290
+          }
+        },
+        "reply": "{\"proposal\":{\"proposal_acronym\":\"ReCoSE\",\"proposal_title\":\"Renewable Composite Systems with Circular Engineering ReCoSE\",\"call_identifier\":null,\"submission_date\":null},\"proposal_facts\":{\"requested_total\":\"EUR 2.218.600\",\"trl_start\":null,\"trl_target\":null,\"mcrl_start\":null,\"mcrl_target\":null},\"partners\":[{\"partner_name\":\"NLUAS University of Applied Science\",\"requested\":\"487 200\"},{\"partner_name\":\"Lake District Technical University\",\"requested\":\"382 400\"},{\"partner_name\":\"Nordic Institute for Sustainable Materials NISM\",\"requested\":\"642 300\"},{\"partner_name\":\"Eastern Nordic University ENU\",\"requested\":\"369 500\"},{\"partner_name\":\"Coastal Finland University CFU\",\"requested\":\"337 200\"},{\"partner_name\":\"PolyCycle\",\"requested\":\"In-kind\"},{\"partner_name\":\"NorthGrid Energy WS\",\"requested\":\"20 000\"},{\"partner_name\":\"ForestLoop Fibre\",\"requested\":\"20 000\"},{\"partner_name\":\"CircuForm\",\"requested\":\"20 000\"},{\"partner_name\":\"BioCoat Solutions\",\"requested\":\"20 000\"},{\"partner_name\":\"NordWindow Group\",\"requested\":\"20 000\"},{\"partner_name\":\"Atmosense\",\"requested\":\"20 000\"},{\"partner_name\":\"Aurora Shipworks\",\"requested\":\"20 000\"},{\"partner_name\":\"PolyNova Labs\",\"requested\":\"In-kind\"},{\"partner_name\":\"SurfaceTech Nordic\",\"requested\":\"In-kind\"}]}",
+        "reasoning": "We need proposal_acronym? Not given. Title is \"Renewable Composite Systems with Circular Engineering ReCoSE\". Acronym maybe ReCoSE. Use that. call_identifier not present -> null. submission_date not present -> null. requested_total: total budget public joint research project EUR 2.218.600 and total budget EUR 3.860 million. Which is grant requested? Likely total requested = EUR 2.218.600 (public). Use as written \"EUR 2.218.600\". trl and mcrl not mentioned -> null. Partners list with requested amounts: from table 21 research institutes amounts, and table 22 company contributions, plus maybe others. Need order as in document. List research institutes first? Partners order appears in consortium section: NLUAS, LDTU, NISM, ENU, CFU, PolyCycle, NorthGrid Energy, ForestLoop, CircuForm, BioCoat Solutions, NordWindow Group, Atmosense, Aurora Shipworks, PolyNova Labs, SurfaceTech Nordic. Provide requested amounts where given: research institutes have amounts in table21. Companies have amounts in table22 (some in-kind). Use those. For those without amount, null. Provide amounts as written (e.g., \"487 200\" but need currency? Not specified. Probably EUR omitted. Use as \"487 200\". Might include €? Use as given.",
+        "prompt_tokens": 25269,
+        "completion_tokens": 591,
+        "total_tokens": 25860,
+        "reasoning_tokens": 290,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 3.73,
+        "model_reported": "openai/gpt-oss-120b",
+        "finish_reason": "stop",
+        "cost_usd": 0.00414495
+      }
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "proposal": {
+    "proposal_acronym": "ReCoSE",
+    "proposal_title": "Renewable Composite Systems with Circular Engineering ReCoSE",
+    "call_identifier": null,
+    "submission_date": null
+  },
+  "proposal_facts": {
+    "requested_total_cents": 386000000,
+    "trl_start": null,
+    "trl_target": null,
+    "mcrl_start": null,
+    "mcrl_target": null
+  },
+  "partners": [
+    {
+      "partner_name": "NLUAS",
+      "requested_cents": 48720000
+    },
+    {
+      "partner_name": "LDTU",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "NISM",
+      "requested_cents": 64230000
+    },
+    {
+      "partner_name": "ENU",
+      "requested_cents": 36950000
+    },
+    {
+      "partner_name": "CFU",
+      "requested_cents": 33720000
+    },
+    {
+      "partner_name": "PolyCycle",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "NorthGrid Energy WS",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "ForestLoop Fibre",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "CircuForm",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "BioCoat Solutions",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "NordWindow Group",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "Atmosense",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "Aurora Shipworks",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "PolyNova Labs",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "SurfaceTech Nordic",
+      "requested_cents": null
+    }
+  ],
+  "metadata": {
+    "extraction_timestamp": "2026-10-30T18:51:20Z",
+    "source_file": "Abico_Synth.pdf"
+  }
+}

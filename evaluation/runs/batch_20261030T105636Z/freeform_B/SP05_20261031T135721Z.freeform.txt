@@ -1,0 +1,81 @@
+The document states the following details:
+
+**Proposal Identification:**
+*   **Acronym:** NIVALIS
+*   **Title:** Federated Data Spaces for Resilient Cold Climate Infrastructure Monitoring
+*   **Call Identifier:** tobeconfirmed
+*   **Submission Date:** The document contains a signature page with dates of 2026-09-12, but it does not explicitly state a "submission date" field. Per the rules, I cannot infer the submission date from the signature date.
+
+**Readiness Levels:**
+*   **TRL Start:** TRL 3 (Found in Table 1.1 under "Integrated solution" -> "Current status" for Technology readiness).
+*   **TRL Target:** TRL 7 (Found in Section 1.5: "At the end of the project the integrated solution is planned to be demonstrated in an operational environment. This corresponds to a target of TRL 7.").
+*   **MCRL Start:** MCRL 2 (Found in Section 4.2: "At the start of the project the market readiness of the integrated solution is MCRL 2.").
+*   **MCRL Target:** The document mentions an interim checkpoint of MCRL 3 in Section 4.2, but does not explicitly state a final target MCRL number in the same way it does for TRL. Therefore, the target is null.
+
+**Partner Budget Table:**
+The budget is split between Section 5.1 (Part 1) and Annex C (Part 2).
+*   **Part 1 (Section 5.1):**
+    *   Nordvane: 870 765,93 €
+    *   Teralund University: 679 493,18 €
+    *   Valoria: 594 205,74 €
+    *   Hallavik: 649 300,03 €
+    *   Arctic Sensor: 449 835,12 €
+    *   Carried forward to Annex C: 3 243 600,00 € (This is a subtotal row, not a partner).
+*   **Part 2 (Annex C):**
+    *   Lumivara: 0.0 (The table shows "0.0" under Funding requested, and the text confirms the associated partner covers its own costs).
+    *   Arctic Sensing: 298.0
+    *   Kaltio Council: 199.2
+
+*Note on Formatting:* The Annex C table header says "(EUR thousand)". However, the instruction says to copy the amount "as written". The values in Annex C are written as "0.0", "298.0", "199.2". The values in Section 5.1 are written with full precision (e.g., "870 765,93 €"). I will copy them exactly as they appear in their respective tables.
+
+```json
+{
+  "proposal": {
+    "proposal_acronym": "NIVALIS",
+    "proposal_title": "Federated Data Spaces for Resilient Cold Climate Infrastructure Monitoring",
+    "call_identifier": "tobeconfirmed",
+    "submission_date": null
+  },
+  "proposal_facts": {
+    "requested_total": "3 828 561,00 €",
+    "trl_start": 3,
+    "trl_target": 7,
+    "mcrl_start": 2,
+    "mcrl_target": null
+  },
+  "partners": [
+    {
+      "partner_name": "Nordvane",
+      "requested": "870 765,93 €"
+    },
+    {
+      "partner_name": "Teralund University",
+      "requested": "679 493,18 €"
+    },
+    {
+      "partner_name": "Valoria",
+      "requested": "594 205,74 €"
+    },
+    {
+      "partner_name": "Hallavik",
+      "requested": "649 300,03 €"
+    },
+    {
+      "partner_name": "Arctic Sensor",
+      "requested": "449 835,12 €"
+    },
+    {
+      "partner_name": "Lumivara",
+      "requested": "0.0"
+    },
+    {
+      "partner_name": "Arctic Sensing",
+      "requested": "298.0"
+    },
+    {
+      "partner_name": "Kaltio Council",
+      "requested": "199.2"
+    }
+  ]
+}
+```

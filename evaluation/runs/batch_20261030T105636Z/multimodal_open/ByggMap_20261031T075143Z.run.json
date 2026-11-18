@@ -1,0 +1,172 @@
+{
+  "arm": "multimodal_open",
+  "strict": false,
+  "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "provider": "deepinfra",
+  "source_file": "ByggMap.pdf",
+  "started_utc": "2026-10-31T07:51:43Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [],
+  "batch_size": 10,
+  "overlap": 1,
+  "batches": 3,
+  "seconds": 82.0,
+  "attempts": 3,
+  "prompt_tokens": 48603,
+  "completion_tokens": 895,
+  "cost_usd": 0.010507,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "output_file": "ByggMap_20261031T075143Z.json",
+  "replies_file": "ByggMap_20261031T075143Z.replies.json",
+  "total_seconds": 83.51,
+  "evaluation": {
+    "document": "ByggMap",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\multimodal_open\\ByggMap_20261031T075143Z.run.json",
+    "input": "pdf",
+    "preparation": {},
+    "runner_wall_clock_seconds": 83.51,
+    "end_to_end_seconds": 83.51,
+    "calls": 3,
+    "failed_calls": 0,
+    "attempts": 3,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 48603,
+      "completion_tokens": 895,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 3,
+      "completion_tokens": 3,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.0105082,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 4871013,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 29.1
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20252,
+          "completion_tokens": 125,
+          "estimated_cost": 0.0041354,
+          "prompt_tokens_details": null
+        },
+        "reply": "```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"Bygg Map\",\n    \"proposal_title\": \"Bygg Map is an innovative, data-driven platform designed to assess and map building energy efficiency across European cities at unprecedented scale and resolution.\",\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": 5,\n    \"trl_target\": 6,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 125,
+        "total_tokens": 20252,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 29.1,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0041354
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 3192629,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 23.19
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20460,
+          "completion_tokens": 333,
+          "estimated_cost": 0.00431844,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided document pages. The document contains detailed descriptions of the project's work packages, tasks, milestones, and partner roles. However, after a thorough search across all pages, I cannot find a table that explicitly lists the partner budget, showing each partner's name alongside a specific monetary amount requested for their participation.\n\nThe document includes tables detailing the allocation of person-months (PMs) for each partner across different work packages and tasks. For example, on page 4, a table under \"Project Management\" shows PMs for MCI, TUCN, NTNU, U-I, SM, CGI, and CEE. Similar tables exist for other work packages (WP-02, WP-03, etc.). However, these tables only show effort in person-months, not financial amounts in currency.\n\nThere is no table or section that provides the requested grant amount for each partner. The document mentions the project's overall ambition and structure but does not contain the specific financial breakdown required to populate the `requested` field for each partner in the JSON output.\n\nTherefore, based on the explicit content of the document, I cannot provide the partner budget table as requested.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 333,
+        "total_tokens": 20460,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 23.19,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00431844
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1227307,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 29.71
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 8349,
+          "total_tokens": 8786,
+          "completion_tokens": 437,
+          "estimated_cost": 0.00205436,
+          "prompt_tokens_details": null
+        },
+        "reply": "MCI: € 590,625.00\nTUCN: € 465,625.00\nNTNU: € 748,625.00\nU-I: € 204,375.00\nSM: € 144,375.00\nCGI: € 195,000.00\nCEE: € 151,375.00\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"€ 2,500,000.00\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"MCI\",\n      \"requested\": \"€ 590,625.00\"\n    },\n    {\n      \"partner_name\": \"TUCN\",\n      \"requested\": \"€ 465,625.00\"\n    },\n    {\n      \"partner_name\": \"NTNU\",\n      \"requested\": \"€ 748,625.00\"\n    },\n    {\n      \"partner_name\": \"U-I\",\n      \"requested\": \"€ 204,375.00\"\n    },\n    {\n      \"partner_name\": \"SM\",\n      \"requested\": \"€ 144,375.00\"\n    },\n    {\n      \"partner_name\": \"CGI\",\n      \"requested\": \"€ 195,000.00\"\n    },\n    {\n      \"partner_name\": \"CEE\",\n      \"requested\": \"€ 151,375.00\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 8349,
+        "completion_tokens": 437,
+        "total_tokens": 8786,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 29.71,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00205436
+      }
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+The document states the acronym, title, call identifier, and submission date in the header section. It states the readiness levels in section 4.2. It states the partner budget table in section 5.1.
+
+**Proposal Acronym:** TIDEMESH
+**Proposal Title:** Adaptive Sensor Networks for Resilient Coastal Infrastructure
+**Call Identifier:** BF2026/93782
+**Submission Date:** 2026-04-02
+**TRL Start:** 1
+**TRL Target:** 4
+**MCRL Start:** 1
+**MCRL Target:** 4
+
+**Partner Budget Table (Section 5.1):**
+The table lists requested funding per partner in EUR thousand.
+- NVS: 181.6
+- KTA: 190.9
+- LMR: no funding requested
+- HVU: shown in Figure 5.1
+- TMI: shown in Figure 5.1
+
+**Requested Total:**
+Section 5.3 states: "The total requested funding of the consortium is EUR 991,100."
+
+```json
+{
+  "proposal": {
+    "proposal_acronym": "TIDEMESH",
+    "proposal_title": "Adaptive Sensor Networks for Resilient Coastal Infrastructure",
+    "call_identifier": "BF2026/93782",
+    "submission_date": "2026-04-02"
+  },
+  "proposal_facts": {
+    "requested_total": "EUR 991,100",
+    "trl_start": 1,
+    "trl_target": 4,
+    "mcrl_start": 1,
+    "mcrl_target": 4
+  },
+  "partners": [
+    {
+      "partner_name": "Nordvalen Systems Oy (NVS)",
+      "requested": "181.6"
+    },
+    {
+      "partner_name": "Kaltiora Analytics Oy (KTA)",
+      "requested": "190.9"
+    },
+    {
+      "partner_name": "Lumenthar Marine Oy (LMR)",
+      "requested": "no funding requested"
+    },
+    {
+      "partner_name": "Havrenmaa University (HVU)",
+      "requested": "shown in Figure 5.1"
+    },
+    {
+      "partner_name": "Taimerra Research Institute (TMI)",
+      "requested": "shown in Figure 5.1"
+    }
+  ]
+}
+```

@@ -1,0 +1,246 @@
+{
+  "arm": "multimodal_open",
+  "strict": false,
+  "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "provider": "deepinfra",
+  "source_file": "SP03A.pdf",
+  "started_utc": "2026-10-30T15:10:02Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested[KPRI]: could not parse amount 'see E.2'"
+  ],
+  "batch_size": 10,
+  "overlap": 1,
+  "batches": 5,
+  "seconds": 215.1,
+  "attempts": 5,
+  "prompt_tokens": 98672,
+  "completion_tokens": 1219,
+  "cost_usd": 0.020807,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "output_file": "SP03A_20261030T151002Z.json",
+  "replies_file": "SP03A_20261030T151002Z.replies.json",
+  "total_seconds": 219.37,
+  "evaluation": {
+    "document": "SP03A",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\multimodal_open\\SP03A_20261030T151002Z.run.json",
+    "input": "pdf",
+    "preparation": {},
+    "runner_wall_clock_seconds": 219.38,
+    "end_to_end_seconds": 219.38,
+    "calls": 5,
+    "failed_calls": 0,
+    "attempts": 5,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 98672,
+      "completion_tokens": 1219,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 5,
+      "completion_tokens": 5,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.02080712,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1805333,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 70.32
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20506,
+          "completion_tokens": 379,
+          "estimated_cost": 0.00435892,
+          "prompt_tokens_details": null
+        },
+        "reply": "The partner budget table is not present in the provided document. The document contains partner information sections (Part B) for six partners, but these sections do not include a budget table with requested funding amounts for each partner. The only financial information provided is in the letter of support from Vantora Sensor Solutions Ltd, which mentions an \"in kind support\" valued at \"EUR 24 000\", but this is not part of a formal budget table and is not a requested grant amount. Therefore, I cannot extract the requested funding amounts for each partner as required.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"RESENSE\",\n    \"proposal_title\": \"Adaptive Sensor Networks for Resource Efficient Process Monitoring\",\n    \"call_identifier\": \"RCF2027/6433\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Torvenmaa University\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Haldeberg University of Applied Sciences and Regional Innovation Services\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Kestrel Institute for Process Research\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Ormenfield Process Systems Oy\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Vantora Sensor Solutions Oy\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Ostermark Regional Development Agency\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 379,
+        "total_tokens": 20506,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 70.32,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00435892
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 2204329,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 38.04
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20320,
+          "completion_tokens": 193,
+          "estimated_cost": 0.00419524,
+          "prompt_tokens_details": null
+        },
+        "reply": "The partner budget table is not present in the provided document pages. The document contains sections on project description, methodology, work plan, evaluation, consortium roles, management, quality assurance, impact, dissemination, exploitation, risk assessment, ethical aspects, data management, technology readiness, market context, user involvement, open science, sustainability, training, cooperation, and contingency planning. However, there is no table listing partners and their requested funding amounts. Therefore, I cannot extract the partner budget information as requested.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 193,
+        "total_tokens": 20320,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 38.04,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00419524
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1898357,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 39.0
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20373,
+          "completion_tokens": 246,
+          "estimated_cost": 0.00424188,
+          "prompt_tokens_details": null
+        },
+        "reply": "```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 979 300\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"TMU\",\n      \"requested\": \"214,8\"\n    },\n    {\n      \"partner_name\": \"HBU\",\n      \"requested\": \"159,8\"\n    },\n    {\n      \"partner_name\": \"KPRI\",\n      \"requested\": \"see E.2\"\n    },\n    {\n      \"partner_name\": \"OPS\",\n      \"requested\": \"167,1\"\n    },\n    {\n      \"partner_name\": \"VSS\",\n      \"requested\": \"196,4\"\n    },\n    {\n      \"partner_name\": \"ORDEA\",\n      \"requested\": \"0,0\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 246,
+        "total_tokens": 20373,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 39.0,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00424188
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 2015737,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 31.25
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20304,
+          "completion_tokens": 177,
+          "estimated_cost": 0.00418116,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided pages. The document does not contain a partner budget table. The pages shown are from Part E (Justification of costs), Part F (Declarations and signature), and Annex A (Work package sheets). While the work package sheets list participants for each work package, they do not provide any funding amounts or budget details for any partner. Therefore, I cannot extract the requested partner budget information.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 177,
+        "total_tokens": 20304,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 31.25,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00418116
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1286218,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 36.49
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 18164,
+          "total_tokens": 18388,
+          "completion_tokens": 224,
+          "estimated_cost": 0.0038299200000000005,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed all the provided pages. The document contains Annex A (Work package sheets), Annex B (Deliverable list form), and Annex C (Risk register form). I have searched for a partner budget table as instructed.\n\nAfter a thorough review of all 45 pages, I can confirm that there is no table or section that lists the partners and their requested funding amounts. The document details work packages, deliverables, and risks, and mentions partner names in the context of leading work packages or owning risks, but it does not contain a budget table with financial allocations for each partner.\n\nTherefore, I cannot extract the requested partner budget data.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 18164,
+        "completion_tokens": 224,
+        "total_tokens": 18388,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 36.49,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00382992
+      }
+    ]
+  }
+}

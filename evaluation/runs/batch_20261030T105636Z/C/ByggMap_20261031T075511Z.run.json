@@ -1,0 +1,107 @@
+{
+  "arm": "C",
+  "model": "openai/gpt-oss-120b",
+  "provider": "groq",
+  "source_file": "ByggMap.md",
+  "started_utc": "2026-10-31T07:55:11Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 2.1,
+  "attempts": 1,
+  "prompt_tokens": 13275,
+  "completion_tokens": 358,
+  "cost_usd": 0.00226,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-120b",
+  "parts": 1,
+  "output_file": "ByggMap_20261031T075511Z.json",
+  "replies_file": "ByggMap_20261031T075511Z.replies.json",
+  "total_seconds": 2.12,
+  "evaluation": {
+    "document": "ByggMap",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\C\\ByggMap_20261031T075511Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 201.38,
+      "docling_markdown_sha256": "a9a1a1fd0330ccc01da68daeca2f9ca711eb526cc4fea5838a2fd11475864769"
+    },
+    "runner_wall_clock_seconds": 2.12,
+    "end_to_end_seconds": 203.5,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 13275,
+      "completion_tokens": 358,
+      "reasoning_tokens": 163,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.00220605,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-120b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-120b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 85135,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 2.1
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.150243332,
+          "prompt_tokens": 13275,
+          "prompt_time": 0.679671018,
+          "completion_tokens": 358,
+          "completion_time": 0.747744035,
+          "total_tokens": 13633,
+          "total_time": 1.427415053,
+          "completion_tokens_details": {
+            "reasoning_tokens": 163
+          }
+        },
+        "reply": "{\"proposal\":{\"proposal_acronym\":null,\"proposal_title\":null,\"call_identifier\":null,\"submission_date\":null},\"proposal_facts\":{\"requested_total\":\"€ 2,500,000.00\",\"trl_start\":4,\"trl_target\":6,\"mcrl_start\":null,\"mcrl_target\":null},\"partners\":[{\"partner_name\":\"MCI\",\"requested\":\"€ 590,625.00\"},{\"partner_name\":\"TUCN\",\"requested\":\"€ 465,625.00\"},{\"partner_name\":\"NTNU\",\"requested\":\"€ 748,625.00\"},{\"partner_name\":\"U-I\",\"requested\":\"€ 204,375.00\"},{\"partner_name\":\"SM\",\"requested\":\"€ 144,375.00\"},{\"partner_name\":\"CGI\",\"requested\":\"€ 195,000.00\"},{\"partner_name\":\"CEE\",\"requested\":\"€ 151,375.00\"}]}",
+        "reasoning": "We need fields. proposal_acronym? Not given. title? Not given. call_identifier? none. submission_date? none. So nulls.\n\nrequested_total: total grant € 2,500,000.00 as written. Include currency and separators: \"€ 2,500,000.00\". TRL start? Text says assume TRL4 start. trl_target? mentions TRL5 then TRL6 final. Probably target TRL6. So start 4, target 6.\n\nMCRL not mentioned => null.\n\nPartners list from budget table in order: MCI, TUCN, NTNU, U-I, SM, CGI, CEE. Requested amounts as written with currency: \"€ 590,625.00\", etc.\n\nReturn JSON.",
+        "prompt_tokens": 13275,
+        "completion_tokens": 358,
+        "total_tokens": 13633,
+        "reasoning_tokens": 163,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 2.1,
+        "model_reported": "openai/gpt-oss-120b",
+        "finish_reason": "stop",
+        "cost_usd": 0.00220605
+      }
+    ]
+  }
+}

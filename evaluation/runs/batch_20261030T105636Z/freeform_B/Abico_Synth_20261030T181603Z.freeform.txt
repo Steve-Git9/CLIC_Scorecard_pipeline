@@ -1,0 +1,96 @@
+The document states the project acronym is **ReCoSE**, the title is **Renewable Composite Systems with Circular Engineering ReCoSE**, the call identifier is not explicitly stated (only the funding source "National Innovation Agency" is mentioned), and the submission date is not explicitly stated (only the project timeline "1.4.2026-31.3.2028" is given). The readiness levels (TRL/MCR) are not stated in the document. The partner budget table is found in **Table 22** (Direct financial support of companies to research organisations) and **Table 21** (Budgets of research institutes).
+
+**Table 21** lists the requested amounts for the research institutes:
+*   NLUAS: 487 200
+*   Lake District Technical University: 382 400
+*   NISM: 642 300
+*   ENU: 369 500
+*   CFU: 337 200
+
+**Table 22** lists the requested amounts for the companies supporting the research organisations:
+*   NorthGrid Energy WS: 20 000 (Total column) - *Note: The table shows 15000 for LDTU and 5000 for ENU, summing to 20000.*
+*   ForestLoop Fibre: 20 000 (Total column) - *Note: The table shows 22 400 for NISM, but the Total column says 20000. Following the rule to copy the amount on the same row, I will use the Total column value "20000" as it represents the partner's total requested amount in that row context, or strictly the cell value. However, the instruction says "amount on the same row". The row for ForestLoop has "22 400" under NISM and "20000" under Total. Usually, the Total is the partner's total. I will use the Total column value "20000" as it is the explicit total for that partner row.*
+*   Atmosense: 20 000 (Total column)
+*   NordWindow Group: 20 000 (Total column)
+*   Aurora Shipworks: 20 000 (Total column)
+*   PolyNova Labs: In-kind (No monetary amount)
+*   Oerlikon Balzer: In-kind (No monetary amount)
+
+*Correction on Table 22 interpretation*: The prompt asks for "that partner's requested grant / funding". In Table 22, the rows are partners. The columns are the recipients. The "Total" column sums the contributions to the recipients.
+- Row "NorthGrid Energy WS": Contributes 15000 to LDTU and 5000 to ENU. Total requested from this partner is 20000.
+- Row "ForestLoop Fibre": Contributes 22 400 to NISM. Total requested from this partner is 20000 (as per the Total column).
+- Row "Atmosense": Contributes 5 600 to NLUAS and 17 000 to CFU. Total requested is 20000.
+- Row "NordWindow Group": Contributes 22 400 to NLUAS. Total requested is 20000.
+- Row "Aurora Shipworks": Contributes 11 200 to NISM and 11 200 to ENU. Total requested is 20000.
+- Row "PolyNova Labs": In-kind.
+- Row "Oerlikon Balzer": In-kind.
+
+I will list the partners in the order they appear in Table 22.
+
+```json
+{
+  "proposal": {
+    "proposal_acronym": "ReCoSE",
+    "proposal_title": "Renewable Composite Systems with Circular Engineering ReCoSE",
+    "call_identifier": null,
+    "submission_date": null
+  },
+  "proposal_facts": {
+    "requested_total": "EUR 3.860 million",
+    "trl_start": null,
+    "trl_target": null,
+    "mcrl_start": null,
+    "mcrl_target": null
+  },
+  "partners": [
+    {
+      "partner_name": "NLUAS",
+      "requested": "487 200"
+    },
+    {
+      "partner_name": "Lake District Technical University",
+      "requested": "382 400"
+    },
+    {
+      "partner_name": "NISM",
+      "requested": "642 300"
+    },
+    {
+      "partner_name": "ENU",
+      "requested": "369 500"
+    },
+    {
+      "partner_name": "CFU",
+      "requested": "337 200"
+    },
+    {
+      "partner_name": "NorthGrid Energy WS",
+      "requested": "20000"
+    },
+    {
+      "partner_name": "ForestLoop Fibre",
+      "requested": "20000"
+    },
+    {
+      "partner_name": "Atmosense",
+      "requested": "20000"
+    },
+    {
+      "partner_name": "NordWindow Group",
+      "requested": "20000"
+    },
+    {
+      "partner_name": "Aurora Shipworks",
+      "requested": "20000"
+    },
+    {
+      "partner_name": "PolyNova Labs",
+      "requested": null
+    },
+    {
+      "partner_name": "Oerlikon Balzer",
+      "requested": null
+    }
+  ]
+}
+```

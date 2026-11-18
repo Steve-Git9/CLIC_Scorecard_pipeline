@@ -1,0 +1,110 @@
+{
+  "arm": "D",
+  "model": "openai/gpt-oss-20b",
+  "provider": "groq",
+  "source_file": "SP04.md",
+  "started_utc": "2026-10-31T08:34:51Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 1.19,
+  "attempts": 1,
+  "prompt_tokens": 24735,
+  "completion_tokens": 374,
+  "cost_usd": 0.002661,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-20b",
+  "parts": 1,
+  "output_file": "SP04_20261031T083451Z.json",
+  "replies_file": "SP04_20261031T083451Z.replies.json",
+  "total_seconds": 1.21,
+  "evaluation": {
+    "document": "SP04",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\D\\SP04_20261031T083451Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 193.06,
+      "docling_markdown_sha256": "951b31c414cf23cb5b6509c461a804c7a170ca72fff157efdb3dcaa02845bdfb"
+    },
+    "runner_wall_clock_seconds": 1.21,
+    "end_to_end_seconds": 194.27,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 24735,
+      "completion_tokens": 374,
+      "reasoning_tokens": 177,
+      "image_tokens": null,
+      "cached_tokens": 24576
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.00104572,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-20b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-20b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 139372,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 1.19
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.074347111,
+          "prompt_tokens": 24735,
+          "prompt_time": 0.080640176,
+          "completion_tokens": 374,
+          "completion_time": 0.430756814,
+          "total_tokens": 25109,
+          "total_time": 0.51139699,
+          "prompt_tokens_details": {
+            "cached_tokens": 24576
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 177
+          }
+        },
+        "reply": "{\"proposal\":{\"proposal_acronym\":\"MAROFLOW\",\"proposal_title\":\"Marine Observation Flows for Shared Coastal Planning\",\"call_identifier\":\"BSR2026C41\",\"submission_date\":\"2026-08-10\"},\"proposal_facts\":{\"requested_total\":\"EUR 3,207,500\",\"trl_start\":null,\"trl_target\":6,\"mcrl_start\":null,\"mcrl_target\":4},\"partners\":[{\"partner_name\":\"Hallvik\",\"requested\":\"674.5k\"},{\"partner_name\":\"Orrenfjord\",\"requested\":\"568.8k\"},{\"partner_name\":\"Marovik\",\"requested\":\"592.8k\"},{\"partner_name\":\"Quenmark\",\"requested\":\"507.0k\"},{\"partner_name\":\"Ostrelund\",\"requested\":\"213.0k\"},{\"partner_name\":\"Brenvik\",\"requested\":\"0.0k\"},{\"partner_name\":\"Eskeby\",\"requested\":null}]}",
+        "reasoning": "Need TRL start/target from Annex B: start not given but earlier? In readiness assessment says start shown figure. Not explicit number. Target TRL 6. So trl_start null? mcrl_start 4? MCRL start not given. mcrl_target 4? Actually market readiness level at start? In 4.2 says start MCRL 4. target not given. So null. requested_total from executive summary: EUR 3,207,500. partners amounts from revised budget: Hallvik 674.5k, Orrenfjord 568.8k, Marovik 592.8k, Quenmark 507.0k, Ostrelund 213.0k, Brenvik 0.0k, Eskeby calculated at funding rate? not given. So null. Use null.",
+        "prompt_tokens": 24735,
+        "completion_tokens": 374,
+        "total_tokens": 25109,
+        "reasoning_tokens": 177,
+        "image_tokens": null,
+        "cached_tokens": 24576,
+        "seconds": 1.19,
+        "model_reported": "openai/gpt-oss-20b",
+        "finish_reason": "stop",
+        "cost_usd": 0.00104572
+      }
+    ]
+  }
+}

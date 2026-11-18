@@ -1,0 +1,444 @@
+{
+ "located": {
+  "proposal": [
+   {
+    "page": 1,
+    "score": 10.5
+   },
+   {
+    "page": 69,
+    "score": 7.75
+   },
+   {
+    "page": 70,
+    "score": 5.5
+   }
+  ],
+  "budget": [
+   {
+    "page": 42,
+    "score": 28.0
+   },
+   {
+    "page": 64,
+    "score": 23.25
+   },
+   {
+    "page": 3,
+    "score": 19.0
+   }
+  ],
+  "partners": [
+   {
+    "page": 16,
+    "score": 17.5
+   },
+   {
+    "page": 64,
+    "score": 17.0
+   },
+   {
+    "page": 47,
+    "score": 12.75
+   }
+  ],
+  "readiness": [
+   {
+    "page": 11,
+    "score": 5.5
+   },
+   {
+    "page": 37,
+    "score": 5.25
+   },
+   {
+    "page": 38,
+    "score": 2.75
+   }
+  ]
+ },
+ "tables": [
+  {
+   "page": 3,
+   "index": 0,
+   "rows": [
+    [
+     "Total project cost 5 482 300,00 €",
+     "Own contribution 1 653 739,00 €",
+     "Total requested funding 3 828 561,00 €"
+    ]
+   ],
+   "verification": {
+    "checks": [],
+    "columns": {},
+    "verified": false
+   }
+  },
+  {
+   "page": 3,
+   "index": 1,
+   "rows": [
+    [
+     "Project duration",
+     "36 months"
+    ],
+    [
+     "Number of partners",
+     "8"
+    ],
+    [
+     "Number of work packages",
+     "6"
+    ]
+   ],
+   "verification": {
+    "checks": [],
+    "columns": {},
+    "verified": false
+   }
+  },
+  {
+   "page": 16,
+   "index": 0,
+   "rows": [
+    [
+     "No.",
+     "Legal name",
+     "Short name",
+     "Acronym",
+     "Type",
+     "Role"
+    ],
+    [
+     "P1",
+     "Nordvane Systems Oy",
+     "Nordvane",
+     "NVS",
+     "Company",
+     "Coordinator"
+    ],
+    [
+     "P2",
+     "University of Teralund",
+     "Teralund University",
+     "TLU",
+     "University",
+     "Partner"
+    ],
+    [
+     "P3",
+     "Valoria Labs Oy",
+     "Valoria",
+     "VAL",
+     "Company",
+     "Partner"
+    ],
+    [
+     "P4",
+     "Hallavik Applied Research Centre",
+     "Hallavik",
+     "HARC",
+     "Research organisation",
+     "Partner"
+    ],
+    [
+     "P5",
+     "Arctic Sensor Systems Oy",
+     "Arctic Sensor",
+     "ARSS",
+     "Company",
+     "Partner"
+    ],
+    [
+     "P6",
+     "Lumivara Edge Oy",
+     "Lumivara",
+     "LVE",
+     "Company",
+     "Associated partner"
+    ],
+    [
+     "P7",
+     "Arctic Sensing Solutions Oy",
+     "Arctic Sensing",
+     "ARSL",
+     "Company",
+     "Partner"
+    ],
+    [
+     "P8",
+     "Kaltio Regional Council",
+     "Kaltio Council",
+     "KRC",
+     "Public body",
+     "Partner"
+    ]
+   ],
+   "verification": {
+    "checks": [],
+    "columns": {},
+    "verified": false
+   }
+  },
+  {
+   "page": 42,
+   "index": 0,
+   "rows": [
+    [
+     "Partner",
+     "Costs",
+     "",
+     "",
+     "",
+     "Total costs",
+     "Requested funding"
+    ],
+    [
+     "",
+     "Personnel",
+     "Equipment",
+     "Other direct costs",
+     "Indirect costs",
+     "",
+     ""
+    ],
+    [
+     "Nordvane",
+     "847 762,96 €",
+     "69 811,38 €",
+     "180 912,65 €",
+     "274 621,75 €",
+     "1 373 108,74 €",
+     "870 765,93 €"
+    ],
+    [
+     "Teralund University",
+     "478 040,37 €",
+     "60 300,15 €",
+     "101 324,49 €",
+     "159 916,25 €",
+     "799 581,26 €",
+     "679 493,18 €"
+    ],
+    [
+     "Valoria",
+     "495 307,34 €",
+     "41 675,08 €",
+     "146 924,50 €",
+     "170 976,73 €",
+     "854 883,65 €",
+     "594 205,74 €"
+    ],
+    [
+     "Hallavik",
+     "470 482,49 €",
+     "59 736,64 €",
+     "81 150,06 €",
+     "152 842,30 €",
+     "764 211,49 €",
+     "649 300,03 € of which subcontracting 108 270,00 €"
+    ],
+    [
+     "Arctic Sensor",
+     "441 006,84 €",
+     "55 876,75 €",
+     "90 388,30 €",
+     "146 842,97 €",
+     "734 114,86 €",
+     "449 835,12 €"
+    ],
+    [
+     "Carried forward to Annex C",
+     "2 732 600,00 €",
+     "287 400,00 €",
+     "600 700,00 €",
+     "905 200,00 €",
+     "4 525 900,00 €",
+     "3 243 600,00 €"
+    ]
+   ],
+   "verification": {
+    "checks": [
+     {
+      "kind": "row",
+      "column": 5,
+      "row": 2,
+      "expected": 137310874,
+      "found": 224387467,
+      "ok": false
+     },
+     {
+      "kind": "row",
+      "column": 5,
+      "row": 3,
+      "expected": 79958126,
+      "found": 147907444,
+      "ok": false
+     },
+     {
+      "kind": "row",
+      "column": 5,
+      "row": 4,
+      "expected": 85488365,
+      "found": 144908939,
+      "ok": false
+     },
+     {
+      "kind": "row",
+      "column": 5,
+      "row": 5,
+      "expected": 76421149,
+      "found": 76421149,
+      "ok": true
+     },
+     {
+      "kind": "row",
+      "column": 5,
+      "row": 6,
+      "expected": 73411486,
+      "found": 118394998,
+      "ok": false
+     },
+     {
+      "kind": "row",
+      "column": 5,
+      "row": 7,
+      "expected": 452590000,
+      "found": 776950000,
+      "ok": false
+     }
+    ],
+    "columns": {},
+    "verified": false
+   }
+  },
+  {
+   "page": 64,
+   "index": 0,
+   "rows": [
+    [
+     "Table 5.1 continued (EUR thousand)",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "Partner",
+     "Costs",
+     "",
+     "",
+     "",
+     "Total costs",
+     "Funding requested"
+    ],
+    [
+     "",
+     "Personnel",
+     "Equipment",
+     "Other direct costs",
+     "Indirect costs",
+     "",
+     ""
+    ],
+    [
+     "Brought forward",
+     "2,732.6",
+     "287.4",
+     "600.7",
+     "905.2",
+     "4,525.9",
+     "3,243.6"
+    ],
+    [
+     "Lumivara",
+     "157.6",
+     "10.0",
+     "15.9",
+     "45.9",
+     "229.4",
+     "0.0"
+    ],
+    [
+     "Arctic Sensing",
+     "294.9",
+     "26.3",
+     "56.7",
+     "94.5",
+     "472.4",
+     "298.0"
+    ],
+    [
+     "Kaltio Council",
+     "147.8",
+     "18.3",
+     "37.6",
+     "50.9",
+     "254.6",
+     "199.2"
+    ]
+   ],
+   "verification": {
+    "checks": [],
+    "columns": {},
+    "verified": false
+   }
+  }
+ ],
+ "partner_budget_table": null,
+ "identifier_hints": {
+  "cover_title": "NIVALIS",
+  "cover_page": 1,
+  "acronym_candidates": [
+   "NIVALIS"
+  ],
+  "labelled": {
+   "acronym": [],
+   "title": [],
+   "call": [
+    {
+     "page": 1,
+     "value": "to be confirmed"
+    }
+   ]
+  },
+  "call_ids": []
+ },
+ "page_map_sha256": "691dc86466ccfd6ad2ced00ccc66ce4d7ecf8059a54a7261f2ebdc1d03abcbbc",
+ "reconciliation": [
+  {
+   "partner_name": "Nordvane Systems Oy",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "University of Teralund",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "Valoria Labs Oy",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "Hallavik Applied Research Centre",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "Arctic Sensor Systems Oy",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "Lumivara Edge Oy",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "Arctic Sensing Solutions Oy",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "Kaltio Regional Council",
+   "status": "unchecked"
+  }
+ ]
+}

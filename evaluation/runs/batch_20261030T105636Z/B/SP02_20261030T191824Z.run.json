@@ -1,0 +1,105 @@
+{
+  "arm": "B",
+  "model": "Qwen/Qwen3.5-9B",
+  "provider": "deepinfra",
+  "source_file": "SP02.md",
+  "started_utc": "2026-10-30T19:18:24Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested[Nordvalen Systems Oy (NVS)] 'EUR 181,600' not found in the document",
+    "requested[Kaltiora Analytics Oy (KTA)] 'EUR 190,900' not found in the document"
+  ],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 5.9,
+  "attempts": 1,
+  "prompt_tokens": 22062,
+  "completion_tokens": 303,
+  "cost_usd": 0.002252,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3.5-9B",
+  "parts": 1,
+  "output_file": "SP02_20261030T191824Z.json",
+  "replies_file": "SP02_20261030T191824Z.replies.json",
+  "total_seconds": 5.93,
+  "evaluation": {
+    "document": "SP02",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\B\\SP02_20261030T191824Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 143.97,
+      "docling_markdown_sha256": "506d02b5ac82270a9644747e6f9c112fe37b6be752aae88b6e0c7df578edaed9"
+    },
+    "runner_wall_clock_seconds": 5.93,
+    "end_to_end_seconds": 149.9,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 22062,
+      "completion_tokens": 303,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.00225165,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3.5-9B",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3.5-9B",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 132881,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 5.9
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 22062,
+          "total_tokens": 22365,
+          "completion_tokens": 303,
+          "estimated_cost": 0.00225165,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"TIDEMESH\",\n    \"proposal_title\": \"Adaptive Sensor Networks for Resilient Coastal Infrastructure\",\n    \"call_identifier\": \"BF2026/93782\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 991,100\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": 1,\n    \"mcrl_target\": 4\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Nordvalen Systems Oy (NVS)\",\n      \"requested\": \"EUR 181,600\"\n    },\n    {\n      \"partner_name\": \"Kaltiora Analytics Oy (KTA)\",\n      \"requested\": \"EUR 190,900\"\n    },\n    {\n      \"partner_name\": \"Lumenthar Marine Oy (LMR)\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Havrenmaa University (HVU)\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Taimerra Research Institute (TMI)\",\n      \"requested\": null\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 22062,
+        "completion_tokens": 303,
+        "total_tokens": 22365,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 5.9,
+        "model_reported": "Qwen/Qwen3.5-9B",
+        "finish_reason": "stop",
+        "cost_usd": 0.00225165
+      }
+    ]
+  }
+}

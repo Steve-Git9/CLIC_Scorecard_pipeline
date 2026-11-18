@@ -1,0 +1,205 @@
+{
+  "arm": "targeted_multimodal",
+  "mode": "multimodal",
+  "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "provider": "deepinfra",
+  "source_file": "Abico_Synth.pdf",
+  "started_utc": "2026-10-30T17:17:21Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested_total 'EUR 2,177,600' not found in the document",
+    "requested[NLUAS University of Applied Science] 'EUR 487,200' not found in the document",
+    "requested[Lake District Technical University] 'EUR 382,400' not found in the document",
+    "requested[Nordic Institute for Sustainable Materials NISM] 'EUR 642,300' not found in the document",
+    "requested[Eastern Nordic University ENU] 'EUR 369,500' not found in the document",
+    "requested[Coastal Finland University CFU] 'EUR 337,200' not found in the document"
+  ],
+  "pages_total": 40,
+  "pages_sent": [
+    1,
+    6,
+    7,
+    27,
+    29,
+    30,
+    34,
+    35
+  ],
+  "scanned_pages": [],
+  "ocr_pages": [],
+  "images_sent": 6,
+  "located": {
+    "proposal": [
+      1,
+      6,
+      7
+    ],
+    "budget": [
+      34,
+      35
+    ],
+    "partners": [
+      29,
+      27,
+      30
+    ],
+    "readiness": []
+  },
+  "located_by": {
+    "proposal": "keywords",
+    "budget": "keywords",
+    "partners": "keywords"
+  },
+  "tables_found": 6,
+  "tables_verified": 2,
+  "page_map_cached": false,
+  "calls": 2,
+  "seconds": 132.62,
+  "attempts": 4,
+  "prompt_tokens": 19153,
+  "completion_tokens": 495,
+  "cost_usd": 0.004266,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "steps": {
+    "page_map": 13.2,
+    "locate": 0.01,
+    "identifier_hints": 0.28,
+    "tables": 1.63,
+    "locate_model_fallback": 21.58,
+    "text_and_ocr": 0.06,
+    "model": 111.81
+  },
+  "context_splits": 0,
+  "identifiers_filled": {},
+  "partners_confirmed_by_table": 5,
+  "output_file": "Abico_Synth_20261030T171721Z.json",
+  "replies_file": "Abico_Synth_20261030T171721Z.replies.json",
+  "total_seconds": 148.59,
+  "trace_file": "Abico_Synth_20261030T171721Z.trace.json",
+  "evaluation": {
+    "document": "Abico_Synth",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\targeted_multimodal\\Abico_Synth_20261030T171721Z.run.json",
+    "input": "pdf",
+    "preparation": {},
+    "runner_wall_clock_seconds": 148.6,
+    "end_to_end_seconds": 148.6,
+    "calls": 2,
+    "failed_calls": 0,
+    "attempts": 4,
+    "retries": 2,
+    "tokens": {
+      "prompt_tokens": 19153,
+      "completion_tokens": 495,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 2,
+      "completion_tokens": 2,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.0042662,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "page_pick",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 7241,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 429,
+            "error": "HTTP 429: {\"error\":{\"message\":\"Model busy, retry later\",\"type\":\"invalid_request_error\",\"param\":null,\"code\":\"engine_overloaded\"}}",
+            "seconds": 0.56
+          },
+          {
+            "attempt": 2,
+            "http_status": 429,
+            "error": "HTTP 429: {\"error\":{\"message\":\"Model busy, retry later\",\"type\":\"invalid_request_error\",\"param\":null,\"code\":\"engine_overloaded\"}}",
+            "seconds": 0.27
+          },
+          {
+            "attempt": 3,
+            "http_status": 200,
+            "error": null,
+            "seconds": 14.74
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 1797,
+          "total_tokens": 1807,
+          "completion_tokens": 10,
+          "estimated_cost": 0.0003682,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\"pages\": {\"readiness\": []}}",
+        "reasoning": null,
+        "prompt_tokens": 1797,
+        "completion_tokens": 10,
+        "total_tokens": 1807,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 21.58,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0003682
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 2061932,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 111.04
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 17356,
+          "total_tokens": 17841,
+          "completion_tokens": 485,
+          "estimated_cost": 0.0038980000000000004,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"ReCoSE\",\n    \"proposal_title\": \"Renewable Composite Systems with Circular Engineering ReCoSE\",\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2,177,600\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NLUAS University of Applied Science\",\n      \"requested\": \"EUR 487,200\"\n    },\n    {\n      \"partner_name\": \"Lake District Technical University\",\n      \"requested\": \"EUR 382,400\"\n    },\n    {\n      \"partner_name\": \"Nordic Institute for Sustainable Materials NISM\",\n      \"requested\": \"EUR 642,300\"\n    },\n    {\n      \"partner_name\": \"Eastern Nordic University ENU\",\n      \"requested\": \"EUR 369,500\"\n    },\n    {\n      \"partner_name\": \"Coastal Finland University CFU\",\n      \"requested\": \"EUR 337,200\"\n    },\n    {\n      \"partner_name\": \"PolyCycle\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"NorthGrid Energy WS\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"ForestLoop Fibre\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"CircuForm\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"BioCoat Solutions\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"NordWindow Group\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Atmosense\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Aurora Shipworks\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"PolyNova Labs\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"SurfaceTech Nordic\",\n      \"requested\": null\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 17356,
+        "completion_tokens": 485,
+        "total_tokens": 17841,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 111.04,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.003898
+      }
+    ]
+  }
+}

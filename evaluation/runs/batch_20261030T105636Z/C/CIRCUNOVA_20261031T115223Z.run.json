@@ -1,0 +1,107 @@
+{
+  "arm": "C",
+  "model": "openai/gpt-oss-120b",
+  "provider": "groq",
+  "source_file": "CIRCUNOVA.md",
+  "started_utc": "2026-10-31T11:52:23Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 5.69,
+  "attempts": 1,
+  "prompt_tokens": 44712,
+  "completion_tokens": 1520,
+  "cost_usd": 0.007847,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-120b",
+  "parts": 1,
+  "output_file": "CIRCUNOVA_20261031T115223Z.json",
+  "replies_file": "CIRCUNOVA_20261031T115223Z.replies.json",
+  "total_seconds": 5.75,
+  "evaluation": {
+    "document": "CIRCUNOVA",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\C\\CIRCUNOVA_20261031T115223Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 648.98,
+      "docling_markdown_sha256": "30e0bb02a25c571eeee7ce56163a12b9d6629152cbf564b24fc8b8334df35d5d"
+    },
+    "runner_wall_clock_seconds": 5.75,
+    "end_to_end_seconds": 654.73,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 44712,
+      "completion_tokens": 1520,
+      "reasoning_tokens": 799,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.0076188,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-120b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-120b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 283268,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 5.69
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.090713478,
+          "prompt_tokens": 44712,
+          "prompt_time": 1.8849510409999999,
+          "completion_tokens": 1520,
+          "completion_time": 3.141619722,
+          "total_tokens": 46232,
+          "total_time": 5.026570763,
+          "completion_tokens_details": {
+            "reasoning_tokens": 799
+          }
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": \"Circular Industry Networks for Regenerative Urban PVerials\",\n    \"call_identifier\": \"HORIZON-CL6-2026-01-two-stage\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"6,000,000 €\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NORDIC CIRCULAR SYSTEMS OY\",\n      \"requested\": \"666,700\"\n    },\n    {\n      \"partner_name\": \"VESTFJORD MUNICIPALITY\",\n      \"requested\": \"250,250\"\n    },\n    {\n      \"partner_name\": \"Vestfjord Enterprise Agency\",\n      \"requested\": \"430,000\"\n    },\n    {\n      \"partner_name\": \"Northbridge PVerials ApS\",\n      \"requested\": \"222,375\"\n    },\n    {\n      \"partner_name\": \"Morrow Resource CRTNvery ApS\",\n      \"requested\": \"209,562.5\"\n    },\n    {\n      \"partner_name\": \"RenewLoop Denmark\",\n      \"requested\": \"158,375\"\n    },\n    {\n      \"partner_name\": \"LAKELAND REGIONAL COUNCIL\",\n      \"requested\": \"149,350\"\n    },\n    {\n      \"partner_name\": \"TAMPEREEN KAUPUNKISEUDUN ELINKEINOJA KEHITYSYHTIO BUSINESS TAMPERE OY\",\n      \"requested\": \"303,250\"\n    },\n    {\n      \"partner_name\": \"GREEN PATHWAYS OY\",\n      \"requested\": \"431,875\"\n    },\n    {\n      \"partner_name\": \"LAKELAND RESOURCE SERVICES OY\",\n      \"requested\": \"335,300\"\n    },\n    {\n      \"partner_name\": \"MineralCarbon Solutions Oy\",\n      \"requested\": \"379,750\"\n    },\n    {\n      \"partner_name\": \"TerraForm Innovations Oy\",\n      \"requested\": \"384,562.5\"\n    },\n    {\n      \"partner_name\": \"BALTIC INSTITUTE OF TECHNOLOGY\",\n      \"requested\": \"366,500\"\n    },\n    {\n      \"partner_name\": \"City of Valmont\",\n      \"requested\": \"224,062.5\"\n    },\n    {\n      \"partner_name\": \"EUROPEAN INSTITUTE OF PVERIALS\",\n      \"requested\": \"215,625\"\n    },\n    {\n      \"partner_name\": \"AEGEAN REGIONAL INNOVATION FUND\",\n      \"requested\": \"135,875\"\n    },\n    {\n      \"partner_name\": \"MUNICIPALITY OF PORTO VERDE\",\n      \"requested\": \"222,062.5\"\n    },\n    {\n      \"partner_name\": \"UNIVERSITY OF HARZ TECHNOLOGY\",\n      \"requested\": \"571,500\"\n    },\n    {\n      \"partner_name\": \"SAIMAA UNIVERSITY OF APPLIED SCIENCES\",\n      \"requested\": \"343,025\"\n    },\n    {\n      \"partner_name\": \"CycleReturn ApS\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"AFL\",\n      \"requested\": null\n    }\n  ]\n}",
+        "reasoning": "We need fields: proposal_acronym CIRCUNOVA, title \"Circular Industry Networks for Regenerative Urban PVerials\". call_identifier HORIZON-CL6-2026-01-two-stage. submission_date not given -> null. requested_total? Not explicit total amount; budget shows total costs 6,628,950 but requested EU contribution 6,000,000 € . Likely requested_total is \"6,000,000 €\". Use as written. TRL start/target not found. mcrl not found. So null. Partners list with requested amounts from budget rows: need partner_name and requested. Use order from list. Map names to rows: 1 NORDIC CIRCULAR SYSTEMS OY -> requested 666,700 (EU contribution). 2 VESTFJORD MUNICIPALITY -> 250,250. 3 Vestfjord Enterprise Agency -> 430,000. 4 LAKELAND REGIONAL COUNCIL -> 222,375. 5 GREEN PATHWAYS OY -> 303,250. 6 EUROPEAN INSTITUTE OF PVERIALS -> 431,875. 7 AEGEAN REGIONAL INNOVATION FUND -> 149,350. 8 MUNICIPALITY OF PORTO VERDE -> 343,025? Wait check: row 19 is SUAS partner, but PV row 17 is 222,062. Actually PV row 17 is partner PV with requested 222,062. Row 19 SUAS 343,025. Row 20 CRTN associated 0. Row 21 AFL associated 0. Also other partners like LAKELAND etc. Need include all partners in document order list (21 entries). Provide requested amounts where available, else null.\n\nList order from table # list: we have 21 entries. Map each to budget row by name matching.\n\nLet's map:\n\n1 NORDIC CIRCULAR SYSTEMS OY -> 666,700\n2 VESTFJORD MUNICIPALITY -> 250,250\n3 Vestfjord Enterprise Agency -> 430,000\n4 Northbridge PVerials ApS -> 222,375 (partner NBM)\n5 Morrow Resource CRTNvery ApS -> 209,562.5? Actually MRR row 5 requested EU contribution 209,562.5\n6 RenewLoop Denmark -> 158,375\n7 LAKELAND REGIONAL COUNCIL -> 149,350\n8 TAMPEREEN KAUPUNKISEUDUN ELINKEINOJA KEHITYSYHTIO BUSINESS TAMPERE OY -> 303,250 (LBDA)\n9 GREEN PATHWAYS OY -> 431,875 (GPO)\n10 LAKELAND RESOURCE SERVICES OY -> 335,300? Actually LRS row 10 requested 335,300\n11 MineralCarbon Solutions Oy -> 379,750 (MCS)\n12 TerraForm Innovations Oy -> 384,562.5 (TFI)\n13 BALTIC INSTITUTE OF TECHNOLOGY -> 366,500 (BIT)\n14 City of Valmont -> 224,062.5 (VALM)\n15 EUROPEAN INSTITUTE OF PVERIALS -> 215,625 (EIM)\n16 AEGEAN REGIONAL INNOVATION FUND -> 135,875? Actually ARIF row 16 requested 135,875\n17 MUNICIPALITY OF PORTO VERDE -> 222,062.5 (PV)\n18 UNIVERSITY OF HARZ TECHNOLOGY -> 571,500 (UHT)\n19 SAIMAA UNIVERSITY OF APPLIED SCIENCES -> 343,025 (SUAS)\n20 CycleReturn ApS -> 0 (associated)\n21 AFL -> 0 (associated)\n\nCheck amounts: For ARIF row 16 requested EU contribution 135,875 (from table). Good.\n\nNow construct JSON.",
+        "prompt_tokens": 44712,
+        "completion_tokens": 1520,
+        "total_tokens": 46232,
+        "reasoning_tokens": 799,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 5.69,
+        "model_reported": "openai/gpt-oss-120b",
+        "finish_reason": "stop",
+        "cost_usd": 0.0076188
+      }
+    ]
+  }
+}

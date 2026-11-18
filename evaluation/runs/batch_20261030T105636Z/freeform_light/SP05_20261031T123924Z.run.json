@@ -1,0 +1,110 @@
+{
+  "arm": "freeform_light",
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "provider": "nscale",
+  "source_file": "SP05.md",
+  "started_utc": "2026-10-31T12:39:24Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "partner 'Valoria Labs Oy' not found verbatim in the document",
+    "requested[Arctic Sensing Solutions Oy] '298,00 €' not found in the document",
+    "requested[Kaltio Regional Council] '199,20 €' not found in the document",
+    "sum of partner requested_cents (324409720) != requested_total_cents (382856100)"
+  ],
+  "free_form": true,
+  "context_splits": 0,
+  "seconds": 51.39,
+  "attempts": 1,
+  "prompt_tokens": 46879,
+  "completion_tokens": 316,
+  "cost_usd": 0.000478,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-4B-Instruct-2507",
+  "parts": 1,
+  "freeform_file": "SP05_20261031T123924Z.freeform.txt",
+  "output_file": "SP05_20261031T123924Z.json",
+  "replies_file": "SP05_20261031T123924Z.replies.json",
+  "total_seconds": 51.45,
+  "evaluation": {
+    "document": "SP05",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\freeform_light\\SP05_20261031T123924Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 287.52,
+      "docling_markdown_sha256": "5d66b1ad0f8ae210974c7d76106a41dcbd81e13db0614cbc3c6a24b7316986a6"
+    },
+    "runner_wall_clock_seconds": 51.45,
+    "end_to_end_seconds": 338.97,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 46879,
+      "completion_tokens": 316,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": {
+      "made": false,
+      "tokens": 0,
+      "note": "the free form reply is converted to JSON locally in Python; no model call"
+    },
+    "cost": {
+      "cost_usd": 0.00047827,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "nscale",
+          "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-4B-Instruct-2507",
+        "provider": "nscale",
+        "response_format": false,
+        "request_bytes": 261106,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 51.39
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 46879,
+          "total_tokens": 47195,
+          "completion_tokens": 316
+        },
+        "reply": "{\"proposal\": {\"proposal_acronym\": \"NIVALIS\", \"proposal_title\": \"Federated Data Spaces for Resilient Cold Climate Infrastructure Monitoring\", \"call_identifier\": \"tobeconfirmed\", \"submission_date\": null}, \"proposal_facts\": {\"requested_total\": \"EUR 3,828,561.00\", \"trl_start\": 3, \"trl_target\": 7, \"mcrl_start\": 2, \"mcrl_target\": null}, \"partners\": [{\"partner_name\": \"Nordvane Systems Oy\", \"requested\": \"870 765,93 €\"}, {\"partner_name\": \"University of Teralund\", \"requested\": \"679 493,18 €\"}, {\"partner_name\": \"Valoria Labs Oy\", \"requested\": \"594 205,74 €\"}, {\"partner_name\": \"Hallavik Applied Research Centre\", \"requested\": \"649 300,03 €\"}, {\"partner_name\": \"Arctic Sensor Systems Oy\", \"requested\": \"449 835,12 €\"}, {\"partner_name\": \"Lumivara Edge Oy\", \"requested\": \"0,00 €\"}, {\"partner_name\": \"Arctic Sensing Solutions Oy\", \"requested\": \"298,00 €\"}, {\"partner_name\": \"Kaltio Regional Council\", \"requested\": \"199,20 €\"}]}",
+        "reasoning": null,
+        "prompt_tokens": 46879,
+        "completion_tokens": 316,
+        "total_tokens": 47195,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 51.39,
+        "model_reported": "Qwen/Qwen3-4B-Instruct-2507",
+        "finish_reason": "stop",
+        "cost_usd": 0.00047827
+      }
+    ]
+  }
+}

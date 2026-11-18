@@ -1,0 +1,102 @@
+{
+  "arm": "B",
+  "model": "Qwen/Qwen3.5-9B",
+  "provider": "deepinfra",
+  "source_file": "Abico_Synth.md",
+  "started_utc": "2026-10-30T18:56:26Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 3.91,
+  "attempts": 1,
+  "prompt_tokens": 26130,
+  "completion_tokens": 299,
+  "cost_usd": 0.002658,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3.5-9B",
+  "parts": 1,
+  "output_file": "Abico_Synth_20261030T185626Z.json",
+  "replies_file": "Abico_Synth_20261030T185626Z.replies.json",
+  "total_seconds": 3.94,
+  "evaluation": {
+    "document": "Abico_Synth",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\B\\Abico_Synth_20261030T185626Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 244.1,
+      "docling_markdown_sha256": "db2432c37da8bfa28fb0856593c407d8265b4ca2ce0ecca1fa21a414dcb13c5f"
+    },
+    "runner_wall_clock_seconds": 3.95,
+    "end_to_end_seconds": 248.05,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 26130,
+      "completion_tokens": 299,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.00265785,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3.5-9B",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3.5-9B",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 171261,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 3.91
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 26130,
+          "total_tokens": 26429,
+          "completion_tokens": 299,
+          "estimated_cost": 0.0026578500000000007,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"ReCoSE\",\n    \"proposal_title\": \"Renewable Composite Systems with Circular Engineering\",\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2.218.600\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NLUAS University of Applied Science\",\n      \"requested\": \"487 200\"\n    },\n    {\n      \"partner_name\": \"Lake District Technical University\",\n      \"requested\": \"382 400\"\n    },\n    {\n      \"partner_name\": \"Nordic Institute for Sustainable Materials NISM\",\n      \"requested\": \"642 300\"\n    },\n    {\n      \"partner_name\": \"Eastern Nordic University ENU\",\n      \"requested\": \"369 500\"\n    },\n    {\n      \"partner_name\": \"Coastal Finland University CFU\",\n      \"requested\": \"337 200\"\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 26130,
+        "completion_tokens": 299,
+        "total_tokens": 26429,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 3.91,
+        "model_reported": "Qwen/Qwen3.5-9B",
+        "finish_reason": "stop",
+        "cost_usd": 0.00265785
+      }
+    ]
+  }
+}

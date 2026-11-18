@@ -19,6 +19,10 @@ Every extracted partner that matches no gold partner is classified (rule 3):
                            half a supported and half an unsupported extra
         no_markdown        no Docling Markdown to check against: as partial_name
 
+Where a document's Markdown cannot be published, a DocumentTerms record (built from the Markdown
+by src.evaluation.document_terms) answers the same presence checks for the names of a batch, so
+the classes are the same as with the Markdown itself.
+
 A decision of the author (`decisions`, normalised name -> decision) replaces the half values
 of an unsure name: ("gold", <gold partner name>) is a certain match with that partner, or a
 duplicate when that partner is already matched in the run; ("supported_extra",) and
@@ -64,12 +68,34 @@ def normalise_document(markdown: str) -> str:
     return " ".join(text.split()).casefold()
 
 
-def _contains(haystack: str, needle: str) -> bool:
+class DocumentTerms:
+    """Stand in for a document's normalised Markdown: which terms (normalised names and their
+    distinctive words) occur in it, recorded from the Markdown for every name of a batch."""
+
+    def __init__(self, present: list[str], absent: list[str]):
+        self.present, self.absent = set(present), set(absent)
+
+    def contains(self, needle: str) -> bool:
+        if needle in self.present:
+            return True
+        if needle in self.absent:
+            return False
+        raise KeyError(f"term {needle!r} was not recorded from the document; rebuild its terms file")
+
+
+def _contains(haystack: str | DocumentTerms, needle: str) -> bool:
+    if isinstance(haystack, DocumentTerms):
+        return bool(needle) and haystack.contains(needle)
     return bool(needle) and re.search(rf"(?<!\w){re.escape(needle)}(?!\w)", haystack) is not None
 
 
+def distinctive_words(pred_key: str) -> list[str]:
+    """The words of a normalised name that can show, on their own, that it is in a document."""
+    return [w for w in re.findall(r"\w+", pred_key) if len(w) >= 4 and w not in _GENERIC_WORDS]
+
+
 def classify_unmatched(
-    pred_key: str, gold_keys: list[str], matched_gold: set[int], document: str | None
+    pred_key: str, gold_keys: list[str], matched_gold: set[int], document: str | DocumentTerms | None
 ) -> tuple[str, int | None, str, str | None]:
     """(class, index of the related gold partner or None, reason, unsure case or None)."""
     for g, gold_key in enumerate(gold_keys):
@@ -85,8 +111,7 @@ def classify_unmatched(
         return "unsure", None, "no Docling Markdown of the source document to check against", "no_markdown"
     if _contains(document, pred_key):
         return "supported_extra", None, "name appears in the Docling Markdown", None
-    distinctive = [w for w in re.findall(r"\w+", pred_key) if len(w) >= 4 and w not in _GENERIC_WORDS]
-    found = [w for w in distinctive if _contains(document, w)]
+    found = [w for w in distinctive_words(pred_key) if _contains(document, w)]
     if found:
         return "unsure", None, f"whole name not in the document, but {', '.join(found)} is", "partial_name"
     return "unsupported_extra", None, "name does not appear in the Docling Markdown", None
@@ -100,7 +125,7 @@ def score_partners(
     gold_partners: list[dict],
     pred_partners: list[dict],
     gold_total: int | None,
-    document_markdown: str | None,
+    document_markdown: str | DocumentTerms | None,
     decisions: dict[str, Decision] | None = None,
 ) -> dict[str, Any]:
     decisions = decisions or {}
@@ -111,7 +136,8 @@ def score_partners(
             raise ValueError(f"unknown decision {decision!r} for {name!r}, expected one of {DECISIONS}")
         if decision[0] == "gold" and normalise_name(decision[1]) not in gold_index:
             raise ValueError(f"decision for {name!r} names {decision[1]!r}, which is not a gold partner")
-    document = normalise_document(document_markdown) if document_markdown is not None else None
+    document = (normalise_document(document_markdown) if isinstance(document_markdown, str)
+                else document_markdown)
     entries: list[dict[str, Any]] = []
     matched_gold: set[int] = set()   # gold partners matched with certainty
     half_found: set[int] = set()     # gold partners half found through an unsure name

@@ -2,7 +2,7 @@
 
 Per CLAUDE.md hard rule 6, no value reaches dim_proposal/fact_proposal/fact_participation
 without having passed through extraction and review first - this module is that load step,
-called only after a human has seen the extraction (the review step in app/viewer.py).
+called only after a human has seen the extraction (the review and approval pages of webapp/main.py).
 
 Never overwrites: if a project with the same acronym already exists, DuplicateProposalError
 is raised and nothing is written. Partner names are matched against dim_partner by fuzzy

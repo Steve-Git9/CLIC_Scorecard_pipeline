@@ -1,0 +1,11 @@
+document,pdf_file,pages,started_utc,total_seconds,convert_seconds,seconds_per_page,pages_per_minute,ocr_used,tables,pictures,markdown_chars,docling_version,markdown_file
+Abico_Synth,data\raw\Abico_Synth.pdf,40,2026-10-30T09:59:00Z,244.1,221.44,6.102,9.83,False,36,7,166674,2.130.0,data\markdown\Abico_Synth.md
+ByggMap,data\raw\ByggMap.pdf,22,2026-10-30T10:03:04Z,201.38,200.8,9.154,6.55,False,34,6,81258,2.130.0,data\markdown\ByggMap.md
+CIRCUNOVA,data\raw\CIRCUNOVA.pdf,146,2026-10-30T10:06:25Z,648.98,647.63,4.445,13.5,False,131,0,273909,2.130.0,data\markdown\CIRCUNOVA.md
+CLIMACITIES,data\raw\CLIMACITIES.pdf,45,2026-10-30T10:17:14Z,115.02,114.25,2.556,23.47,False,2,16,111324,2.130.0,data\markdown\CLIMACITIES.md
+SP01,data\raw\SP01.pdf,66,2026-10-30T10:19:09Z,191.79,191.08,2.906,20.65,False,14,5,171589,2.130.0,data\markdown\SP01.md
+SP02,data\raw\SP02.pdf,41,2026-10-30T10:22:21Z,143.97,143.37,3.511,17.09,False,11,21,128660,2.130.0,data\markdown\SP02.md
+SP03A,data\raw\SP03A.pdf,45,2026-10-30T10:24:45Z,173.38,172.64,3.853,15.57,False,27,1,82736,2.130.0,data\markdown\SP03A.md
+SP03B,data\raw\SP03B.pdf,45,2026-10-30T10:27:39Z,460.97,460.23,10.244,5.86,True,22,3,80541,2.130.0,data\markdown\SP03B.md
+SP04,data\raw\SP04.pdf,63,2026-10-30T10:35:20Z,193.06,192.31,3.065,19.58,False,15,4,135226,2.130.0,data\markdown\SP04.md
+SP05,data\raw\SP05.pdf,78,2026-10-30T10:38:33Z,287.52,286.68,3.686,16.28,False,27,11,257111,2.130.0,data\markdown\SP05.md

@@ -1,0 +1,1697 @@
+{
+  "arm": "multimodal_combined_qwen_vl",
+  "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "provider": "deepinfra",
+  "source_file": "SP03B.md",
+  "started_utc": "2026-10-30T13:46:08Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "a 10-page batch was too large (413); split into 5 and 5 pages and retrying",
+    "a 5-page batch was too large (413); split into 2 and 3 pages and retrying",
+    "a 3-page batch was too large (413); split into 1 and 2 pages and retrying",
+    "a 5-page batch was too large (413); split into 2 and 3 pages and retrying",
+    "a 3-page batch was too large (413); split into 1 and 2 pages and retrying",
+    "a 10-page batch was too large (413); split into 5 and 5 pages and retrying",
+    "a 5-page batch was too large (413); split into 2 and 3 pages and retrying",
+    "a 3-page batch was too large (413); split into 1 and 2 pages and retrying",
+    "a 5-page batch was too large (413); split into 2 and 3 pages and retrying",
+    "a 3-page batch was too large (413); split into 1 and 2 pages and retrying",
+    "a 10-page batch was too large (413); split into 5 and 5 pages and retrying",
+    "a 5-page batch was too large (413); split into 2 and 3 pages and retrying",
+    "a 5-page batch was too large (413); split into 2 and 3 pages and retrying",
+    "a 3-page batch was too large (413); split into 1 and 2 pages and retrying",
+    "a 10-page batch was too large (413); split into 5 and 5 pages and retrying",
+    "a 5-page batch was too large (413); split into 2 and 3 pages and retrying",
+    "a 3-page batch was too large (413); split into 1 and 2 pages and retrying",
+    "a 5-page batch was too large (413); split into 2 and 3 pages and retrying",
+    "a 3-page batch was too large (413); split into 1 and 2 pages and retrying",
+    "a 9-page batch was too large (413); split into 4 and 5 pages and retrying",
+    "a 4-page batch was too large (413); split into 2 and 2 pages and retrying",
+    "a 5-page batch was too large (413); split into 2 and 3 pages and retrying",
+    "proposal_acronym 'RESENSE' not found verbatim in the document",
+    "proposal_title 'Adaptive Sensor Networks for Resource Efficient Process Monitoring' not found verbatim in the document",
+    "call_identifier 'RCF2027/6433' not found verbatim in the document",
+    "requested_total 'EUR 979 300' not found in the document",
+    "partner 'TMU' not found verbatim in the document",
+    "requested[TMU] '214,8' not found in the document",
+    "partner 'HBU' not found verbatim in the document",
+    "requested[HBU] '159,8' not found in the document",
+    "partner 'KPRI' not found verbatim in the document",
+    "requested[KPRI]: could not parse amount 'see E.2'",
+    "partner 'OPS' not found verbatim in the document",
+    "requested[OPS] '167,1' not found in the document",
+    "partner 'VSS' not found verbatim in the document",
+    "requested[VSS] '196,4' not found in the document",
+    "partner 'ORDEA' not found verbatim in the document",
+    "requested[ORDEA] '0,0' not found in the document",
+    "duplicate partner 'KPRI' dropped"
+  ],
+  "batch_size": 10,
+  "overlap": 1,
+  "pages_total": 45,
+  "pages_with_images": 45,
+  "batches": 5,
+  "calls": 27,
+  "seconds": 1141.99,
+  "attempts": 27,
+  "prompt_tokens": 120460,
+  "completion_tokens": 6150,
+  "cost_usd": 0.029504,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "context_splits": 0,
+  "output_file": "SP03B_20261030T134608Z.json",
+  "replies_file": "SP03B_20261030T134608Z.replies.json",
+  "total_seconds": 1198.06,
+  "evaluation": {
+    "document": "SP03B",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\multimodal_combined_qwen_vl\\SP03B_20261030T134608Z.run.json",
+    "input": "pdf",
+    "preparation": {
+      "native_text_seconds": 0.17
+    },
+    "runner_wall_clock_seconds": 1198.24,
+    "end_to_end_seconds": 1198.24,
+    "calls": 49,
+    "failed_calls": 22,
+    "attempts": 49,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 120460,
+      "completion_tokens": 6150,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 27,
+      "completion_tokens": 27,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.029504,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 19017453,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.31
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.31,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 8903586,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.12
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.12,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 3216349,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 42.39
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 4825,
+          "total_tokens": 5046,
+          "completion_tokens": 221,
+          "estimated_cost": 0.00115948,
+          "prompt_tokens_details": null
+        },
+        "reply": "The provided document text is empty, and the only visual information comes from the two image pages, which show a \"Letter of support for the project RESENSE\" from \"Vantora Sensor Solutions Ltd\". This letter confirms in-kind support valued at \"EUR 24 000\" but does not contain a partner budget table, a project acronym, a call identifier, a submission date, or any information about TRL/MCRL levels.\n\nSince the required partner budget table does not exist in the provided material, and no other fields from the JSON schema can be filled from the document, all values must be null.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 4825,
+        "completion_tokens": 221,
+        "total_tokens": 5046,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 42.39,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00115948
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 5691176,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.02
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.02,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1895890,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 45.57
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 2862,
+          "total_tokens": 3235,
+          "completion_tokens": 373,
+          "estimated_cost": 0.0009006400000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided document text and images. The text extraction for pages 1-45 is empty, but the image for page 3 (which corresponds to page 3 of 45 in the document) contains the necessary information.\n\nFrom the image of page 3, I can extract the following:\n\n- **Proposal acronym**: RESENSE\n- **Proposal title**: Adaptive Sensor Networks for Resource Efficient Process Monitoring\n- **Call identifier**: RCF2027/6433\n- **Submission date**: The field for \"Date of submission\" (A.7) is blank in the image. Therefore, it is missing.\n\nThe document does not contain a partner budget table or any information about partners, requested amounts per partner, TRL/MCRL levels, or the total requested grant amount. The \"Short description of the project\" (A.8) is present but does not contain any of the required financial or TRL/MCRL data.\n\nSince the partner budget table and the other required fields (requested_total, trl_start, trl_target, mcrl_start, mcrl_target) are not present in the provided document, I cannot populate them. I will use null for all missing values as per the rules.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"RESENSE\",\n    \"proposal_title\": \"Adaptive Sensor Networks for Resource Efficient Process Monitoring\",\n    \"call_identifier\": \"RCF2027/6433\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 2862,
+        "completion_tokens": 373,
+        "total_tokens": 3235,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 45.57,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00090064
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 3799225,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 59.08
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 4825,
+          "total_tokens": 5101,
+          "completion_tokens": 276,
+          "estimated_cost": 0.0012078800000000002,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided document text and images. The text extraction is completely empty, and the images provided are only pages 4 and 5 of the form, which contain partner information for \"Partner A\" (Torvenmaa University) and \"Partner B\" (Haldeberg University of Applied Sciences and Regional Innovation Services).\n\nHowever, the instructions require me to find the \"partner budget table\" and work through it row by row, listing each partner's name and amount. Neither the text nor the provided images contain a budget table or any funding amounts for the partners. The form sections shown (Part B) detail organizational information and roles, but not financial figures.\n\nSince no budget table or funding amounts are visible in the provided materials, I cannot fulfill the request to list partners with their amounts. Therefore, I will provide a JSON object with null values for all requested fields, as per the rules.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 4825,
+        "completion_tokens": 276,
+        "total_tokens": 5101,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 59.08,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00120788
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 10117806,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.19
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.19,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 3816053,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 32.94
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 4825,
+          "total_tokens": 5037,
+          "completion_tokens": 212,
+          "estimated_cost": 0.00115156,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided document text and images. The text extraction is empty for all pages, and the images provided only show Partner C and Partner D information forms (pages 6 and 7 of 45). There is no visible partner budget table in these images or in the extracted text. Without a budget table, I cannot identify any partner names or their corresponding funding amounts.\n\nSince the required information (the partner budget table) is not present in the provided materials, I cannot fulfill the request to list partners and their amounts row by row or to construct the JSON object as specified.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 4825,
+        "completion_tokens": 212,
+        "total_tokens": 5037,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 32.94,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00115156
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 6305692,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.0
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.0,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 2033486,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 34.0
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 2862,
+          "total_tokens": 3061,
+          "completion_tokens": 199,
+          "estimated_cost": 0.0007475200000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided document text and images. The text extraction is empty for all pages, and the only visible content is from the image of page 8, which shows Partner E information for \"Vantora Sensor Solutions Oy\". However, this page does not contain a partner budget table or any funding amounts for any partner.\n\nSince no partner budget table is visible in the provided text or images, and no funding amounts are stated for any partner, I cannot extract the required information to populate the JSON structure as requested.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 2862,
+        "completion_tokens": 199,
+        "total_tokens": 3061,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 34.0,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00074752
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 4276145,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 36.71
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 4825,
+          "total_tokens": 5067,
+          "completion_tokens": 242,
+          "estimated_cost": 0.00117796,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided document text and images. The text extraction is empty for all pages, and the images provided are only for page 9 and page 10. Page 9 shows Partner F information for \"Ostermark Regional Development Agency\" (ORDEA), which is marked as a public body and does not request funding. Page 10 contains project description sections (C.1, C.2, C.3) but does not contain the partner budget table or any funding amounts for partners.\n\nSince the partner budget table is not present in the provided text or images, I cannot extract the requested information for each partner's name and amount. Therefore, I cannot construct the required JSON object as per the instructions.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 4825,
+        "completion_tokens": 242,
+        "total_tokens": 5067,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 36.71,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00117796
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 19949701,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.3
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.3,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 10029942,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.13
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.13,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 4069245,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 44.25
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 4825,
+          "total_tokens": 5071,
+          "completion_tokens": 246,
+          "estimated_cost": 0.00118148,
+          "prompt_tokens_details": null
+        },
+        "reply": "The provided text extraction is completely empty, and the images show only pages 10 and 11 of a 45-page document, which contain sections C.1 through C.6 of \"Part C: Project description\". These sections describe the project's summary, background, objectives, methodology, work plan, and evaluation approach, but they do not contain the partner budget table or any of the required metadata (proposal acronym, call identifier, submission date, TRL/MCRL levels, or partner funding amounts).\n\nSince the partner budget table is not present in the provided text or images, and no other required fields can be located, I cannot construct the requested JSON object. All values must be null per the rules, as no information is available.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 4825,
+        "completion_tokens": 246,
+        "total_tokens": 5071,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 44.25,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00118148
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 5964636,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 0.93
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 0.93,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1846750,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 30.34
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 2862,
+          "total_tokens": 3060,
+          "completion_tokens": 198,
+          "estimated_cost": 0.0007466400000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "The provided document text is empty, and the single image shows only page 12 of 45, which contains sections C.7, C.8, and C.9 of a project description. This page does not contain a partner budget table, nor does it list any partner names or funding amounts. Without a visible partner budget table in the text or images, I cannot extract the required information to populate the JSON structure.\n\nTherefore, all fields in the JSON must be null, as no data is available.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 2862,
+        "completion_tokens": 198,
+        "total_tokens": 3060,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 30.34,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00074664
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 4121825,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 44.14
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 4825,
+          "total_tokens": 5073,
+          "completion_tokens": 248,
+          "estimated_cost": 0.00118324,
+          "prompt_tokens_details": null
+        },
+        "reply": "The provided document text is empty, and the images show only pages 13 and 14 of a 45-page document, which contain sections C.10, C.11, C.12, C.13, C.14, and C.15 of \"Part C, Project description\". These sections discuss expected impact, dissemination, exploitation, risk assessment, ethical/legal aspects, and data management. There is no mention of a partner budget table, project acronym, title, call identifier, submission date, requested total, TRL/MCRL levels, or partner names and funding amounts.\n\nSince the required information for the JSON output is not present in the provided text or images, all fields must be set to null.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 4825,
+        "completion_tokens": 248,
+        "total_tokens": 5073,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 44.14,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00118324
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 9923698,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.04
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.04,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 3805525,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 21.35
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 4825,
+          "total_tokens": 4966,
+          "completion_tokens": 141,
+          "estimated_cost": 0.00108908,
+          "prompt_tokens_details": null
+        },
+        "reply": "```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"RESENSE\",\n    \"proposal_title\": \"The central objective of RESENSE is to develop and demonstrate an adaptive monitoring approach that learns from operating conditions. The approach is intended to support everyday decisions in production environments without requiring specialist knowledge from the operator.\",\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": 3,\n    \"trl_target\": 5,\n    \"mcrl_start\": 1,\n    \"mcrl_target\": 4\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 4825,
+        "completion_tokens": 141,
+        "total_tokens": 4966,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 21.35,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00108908
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 6122112,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.08
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.08,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 2153306,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 13.4
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 2862,
+          "total_tokens": 2956,
+          "completion_tokens": 94,
+          "estimated_cost": 0.00065512,
+          "prompt_tokens_details": null
+        },
+        "reply": "```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 2862,
+        "completion_tokens": 94,
+        "total_tokens": 2956,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 13.4,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00065512
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 3972745,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 25.91
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 4825,
+          "total_tokens": 5072,
+          "completion_tokens": 247,
+          "estimated_cost": 0.0011823600000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "The provided document text is entirely empty, and the images show only pages 18 and 19 of a 45-page document, which contain sections C.23 to C.28 of \"Part C: Project description\" — covering training, cooperation, contingency, technical, organisational, and legal risks. There is no mention of a partner budget table, no partner names, no funding amounts, and no project metadata such as acronym, title, call identifier, submission date, or TRL/MCRL levels.\n\nSince the required information (partner budget table, proposal facts, etc.) is not present in either the text or the images, and I am instructed not to guess, infer, or fill gaps, all fields must be null.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 4825,
+        "completion_tokens": 247,
+        "total_tokens": 5072,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 25.91,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00118236
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 18219189,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.31
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.31,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 9163206,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.07
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.07,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 4382353,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 65.61
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 4825,
+          "total_tokens": 5080,
+          "completion_tokens": 255,
+          "estimated_cost": 0.0011894,
+          "prompt_tokens_details": null
+        },
+        "reply": "The provided document text is entirely empty, and the images show only pages 19 and 20 of a 45-page document, which contain sections C.26, C.27, C.28, C.29, C.30, and C.31 of “Part C: Project description”. These sections discuss technical, organisational, and legal risks, expected results, plans after the project, and additional information. There is no mention of a partner budget table, project acronym, title, call identifier, submission date, requested total, TRL/MCRL levels, or partner names and funding amounts.\n\nSince no partner budget table or any of the required fields are present in the provided text or images, I cannot extract or construct the requested JSON.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 4825,
+        "completion_tokens": 255,
+        "total_tokens": 5080,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 65.61,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0011894
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 4784792,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 41.16
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 6788,
+          "total_tokens": 7034,
+          "completion_tokens": 246,
+          "estimated_cost": 0.0015740800000000003,
+          "prompt_tokens_details": null
+        },
+        "reply": "```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 979 300\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"TMU\",\n      \"requested\": \"214,8\"\n    },\n    {\n      \"partner_name\": \"HBU\",\n      \"requested\": \"159,8\"\n    },\n    {\n      \"partner_name\": \"KPRI\",\n      \"requested\": \"see E.2\"\n    },\n    {\n      \"partner_name\": \"OPS\",\n      \"requested\": \"167,1\"\n    },\n    {\n      \"partner_name\": \"VSS\",\n      \"requested\": \"196,4\"\n    },\n    {\n      \"partner_name\": \"ORDEA\",\n      \"requested\": \"0,0\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 6788,
+        "completion_tokens": 246,
+        "total_tokens": 7034,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 41.16,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00157408
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 9059922,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.14
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.14,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 3463973,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 29.05
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 4825,
+          "total_tokens": 5003,
+          "completion_tokens": 178,
+          "estimated_cost": 0.00112164,
+          "prompt_tokens_details": null
+        },
+        "reply": "The provided document text is entirely empty, and the images show only descriptive text sections (Part D and Part E) related to budget and cost justification, but no actual budget table with partner names and funding amounts. Without a visible or extractable partner budget table, I cannot list any partner names or their associated funding amounts.\n\nTherefore, according to the rules, I must return null for all fields that cannot be explicitly stated.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 4825,
+        "completion_tokens": 178,
+        "total_tokens": 5003,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 29.05,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00112164
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 5599888,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.08
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.08,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1835754,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 53.17
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 2862,
+          "total_tokens": 3221,
+          "completion_tokens": 359,
+          "estimated_cost": 0.0008883200000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "The provided text extraction is entirely empty across all pages, and the only visual information comes from the single image of page 26. This page is from a \"Research Council of Finland, Form 7E\" and discusses the justification of costs for an organisation named \"KPRI\", which is requesting EUR 241,200.\n\nHowever, the task requires finding a \"partner budget table\" and working through it row by row to extract each partner's name and amount. The image provided does not contain a table with multiple partners; it only mentions one entity, KPRI, in a narrative text block under \"E.2 Requested funding of the research organisation\".\n\nSince no partner budget table is visible in the provided text or image, and no other partners are listed, it is impossible to fulfill the requirement to list partners row by row.\n\nTherefore, based on the explicit instruction to use only what the document states and to never guess or infer, the only partner that can be listed is KPRI, with the amount stated for it. All other fields, including the proposal metadata and other partners, must be null because they are not present in the document.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"KPRI\",\n      \"requested\": \"EUR 241 200\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 2862,
+        "completion_tokens": 359,
+        "total_tokens": 3221,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 53.17,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00088832
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 3768073,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 39.02
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 4825,
+          "total_tokens": 5043,
+          "completion_tokens": 218,
+          "estimated_cost": 0.0011568400000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "The provided document text and images do not contain a partner budget table, nor do they include any of the required fields such as proposal acronym, title, call identifier, submission date, requested total, TRL/MCRL levels, or partner names and requested amounts. The content shown is from \"Part E: Justification of costs\" and discusses cost monitoring, risks, and other justifications, but no financial breakdown or partner-specific funding amounts are present.\n\nTherefore, based on the explicit instruction to use only what the document states and not to guess, infer, calculate, or fill gaps, all values must be null.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 4825,
+        "completion_tokens": 218,
+        "total_tokens": 5043,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 39.02,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00115684
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 19432385,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.33
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.33,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 9584818,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.12
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.12,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 3374237,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 25.77
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 4825,
+          "total_tokens": 4988,
+          "completion_tokens": 163,
+          "estimated_cost": 0.00110844,
+          "prompt_tokens_details": null
+        },
+        "reply": "The provided document text and images do not contain a partner budget table or any explicit information about partner names and their requested funding amounts. The visible pages (28 and 29) discuss cost justification and declarations but do not list partners or financial figures. Without a visible table or explicit statements of partner funding, I cannot extract the required data.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 4825,
+        "completion_tokens": 163,
+        "total_tokens": 4988,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 25.77,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00110844
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 6214520,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 0.99
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 0.99,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 2037998,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 37.65
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 2862,
+          "total_tokens": 3070,
+          "completion_tokens": 208,
+          "estimated_cost": 0.00075544,
+          "prompt_tokens_details": null
+        },
+        "reply": "The provided document text is entirely empty, and the only visual information comes from the image of page 30, which shows Part F of a form (Declarations and signature) with a signature dated 2 February 2027 and a stamp. There is no mention of a partner budget table, no partner names, no funding amounts, no project acronym, title, call identifier, or TRL/MCRL levels.\n\nSince the required information for the JSON structure is not present in either the text or the image, all fields must be set to null.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 2862,
+        "completion_tokens": 208,
+        "total_tokens": 3070,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 37.65,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00075544
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 4180461,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 43.55
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 4825,
+          "total_tokens": 5052,
+          "completion_tokens": 227,
+          "estimated_cost": 0.00116476,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided document text and images. The text extraction is empty for all pages, and the images provided are only pages 31 and 32, which contain work package sheets for W.1 and W.2. These pages list participants (e.g., TMU, OPS, KPRI for W.1; ORDEA, KPRI, HBU for W.2) but do not contain a partner budget table or any funding amounts for partners.\n\nSince no partner budget table is visible in the provided text or images, and no funding amounts are stated for any partner, I cannot extract the required information to populate the JSON structure.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 4825,
+        "completion_tokens": 227,
+        "total_tokens": 5052,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 43.55,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00116476
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 9851506,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 0.45
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 0.45,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 4222085,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 49.72
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 4825,
+          "total_tokens": 5073,
+          "completion_tokens": 248,
+          "estimated_cost": 0.00118324,
+          "prompt_tokens_details": null
+        },
+        "reply": "The provided text extraction is completely empty, containing only page break markers. The images show two pages (33 and 34) of a \"Work package sheet\" from \"Annex A\" of a \"Research Council of Finland, Form 7G\" document. These pages detail Work Packages 3 and 4, listing participants by their short names (e.g., OPS, KPRI, HBU, TMU, VSS) but do not contain a partner budget table, a project acronym, a full title, a call identifier, a submission date, a requested total, or TRL/MCRL levels.\n\nSince the required information for the JSON output is not present in either the text or the images, all fields must be set to null.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 4825,
+        "completion_tokens": 248,
+        "total_tokens": 5073,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 49.72,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00118324
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 5633360,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.4
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.4,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1966730,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 51.21
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 2862,
+          "total_tokens": 3086,
+          "completion_tokens": 224,
+          "estimated_cost": 0.0007695200000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided document text and images. The text extraction is completely empty for all pages, and the only visual content available is from page 35, which shows a \"Work package sheet\" for Work Package 5. This page lists participants (TMU, KPRI, ORDEA, OPS, HBU) but does not contain a partner budget table or any funding amounts for any partner.\n\nSince no partner budget table is present in the provided text or images, I cannot extract any partner names with corresponding funding amounts.\n\nTherefore, I cannot construct the required JSON object as it relies on data that is not available in the document.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 2862,
+        "completion_tokens": 224,
+        "total_tokens": 3086,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 51.21,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00076952
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 3670569,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 61.78
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 4825,
+          "total_tokens": 5061,
+          "completion_tokens": 236,
+          "estimated_cost": 0.00117268,
+          "prompt_tokens_details": null
+        },
+        "reply": "The provided text extraction is empty for all pages, and the images show only two pages (36 and 37) of a \"Work package sheet\" for a project. These pages detail work packages 6 and 7, listing participants such as TMU, HBU, KPRI, OPS, and ORDEA, but they do not contain a partner budget table, the project acronym, title, call identifier, submission date, requested total, or TRL/MCRL levels.\n\nSince the required information for the JSON output is not present in the provided text or images, I cannot construct the requested JSON object. All fields must be null as per the rules, because no values are stated.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 4825,
+        "completion_tokens": 236,
+        "total_tokens": 5061,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 61.78,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00117268
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 15920618,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.17
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.17,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 7493835,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.03
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.03,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 3576373,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 68.06
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 4825,
+          "total_tokens": 5097,
+          "completion_tokens": 272,
+          "estimated_cost": 0.00120436,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided document text and images. The text extraction is empty for all pages, and the images provided are only for pages 37 and 38, which contain Work Package sheets for W7 and W8. These sheets list participants (e.g., ORDEA, HBU, TMU for W7; KPRI, OPS, HBU for W8) but do not contain a partner budget table or any funding amounts for individual partners.\n\nSince no partner budget table is visible in the provided text or images, I cannot extract any partner names with corresponding funding amounts. Therefore, I cannot fulfill the request to list partners and their requested amounts row by row.\n\nAs per the instructions, I must use only what the document explicitly states and cannot guess or infer. Since the required information is not present, I will return null for all fields in the JSON output.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 4825,
+        "completion_tokens": 272,
+        "total_tokens": 5097,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 68.06,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00120436
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 3921401,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 51.78
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 4825,
+          "total_tokens": 5020,
+          "completion_tokens": 195,
+          "estimated_cost": 0.0011366,
+          "prompt_tokens_details": null
+        },
+        "reply": "The provided document text is entirely empty across all pages, and the images show only Annex B (Deliverable list form) for pages 39 and 40. There is no partner budget table visible in the text or images. Without a partner budget table, I cannot extract partner names and their requested amounts as required.\n\nTherefore, I cannot fulfill the request to write out each partner's name and amount row by row, nor can I construct the required JSON object with partner data.\n\nFinal answer:\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 4825,
+        "completion_tokens": 195,
+        "total_tokens": 5020,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 51.78,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0011366
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 8430722,
+        "ok": false,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 413,
+            "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+            "seconds": 1.08
+          }
+        ],
+        "error": "HTTP 413: {\"error\":\"request entity too large\"}",
+        "usage": null,
+        "reply": null,
+        "reasoning": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.08,
+        "cost_usd": 0.0
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 3382981,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 53.21
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 4825,
+          "total_tokens": 5075,
+          "completion_tokens": 250,
+          "estimated_cost": 0.0011849999999999999,
+          "prompt_tokens_details": null
+        },
+        "reply": "The provided document text is completely empty, and the images show only a deliverable list (Annex B) for a project, listing deliverables by ID, title, work package, lead partner, type, level, and month. There is no partner budget table visible in the text or images. The deliverable list mentions partner acronyms (TMU, ORDEA, KPRI) as leads for specific deliverables, but it does not contain any funding amounts or budget allocations for partners.\n\nSince the partner budget table is not present in the document, I cannot extract any partner names with their corresponding funding amounts.\n\nTherefore, I cannot fulfill the request to list partners and their requested amounts row by row, nor can I construct the required JSON object with partner budget data.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 4825,
+        "completion_tokens": 250,
+        "total_tokens": 5075,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 53.21,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.001185
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 5051680,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 41.17
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 6788,
+          "total_tokens": 6962,
+          "completion_tokens": 174,
+          "estimated_cost": 0.0015107200000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "The provided document text is entirely empty, and the images show only a risk register (Annex C) with no partner budget table. There is no information available to identify the project acronym, title, call identifier, submission date, requested total, TRL/MCRL levels, or any partner names and their requested funding amounts.\n\nTherefore, all fields must be set to null as per the rules.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 6788,
+        "completion_tokens": 174,
+        "total_tokens": 6962,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 41.17,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00151072
+      }
+    ]
+  }
+}

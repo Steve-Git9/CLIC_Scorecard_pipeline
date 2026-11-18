@@ -1,0 +1,154 @@
+{
+  "arm": "targeted_text",
+  "mode": "text",
+  "model": "openai/gpt-oss-120b",
+  "provider": "groq",
+  "source_file": "SP03A.pdf",
+  "started_utc": "2026-10-30T13:23:06Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [],
+  "pages_total": 45,
+  "pages_sent": [
+    1,
+    3,
+    4,
+    6,
+    9,
+    15,
+    21
+  ],
+  "scanned_pages": [],
+  "ocr_pages": [],
+  "images_sent": 0,
+  "located": {
+    "proposal": [
+      1,
+      3
+    ],
+    "budget": [
+      21
+    ],
+    "partners": [
+      6,
+      9,
+      4
+    ],
+    "readiness": [
+      15
+    ]
+  },
+  "located_by": {
+    "proposal": "keywords",
+    "budget": "keywords",
+    "partners": "keywords",
+    "readiness": "keywords"
+  },
+  "tables_found": 5,
+  "tables_verified": 0,
+  "page_map_cached": false,
+  "calls": 1,
+  "seconds": 1.8,
+  "attempts": 1,
+  "prompt_tokens": 3585,
+  "completion_tokens": 537,
+  "cost_usd": 0.000941,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-120b",
+  "steps": {
+    "page_map": 6.16,
+    "locate": 0.0,
+    "identifier_hints": 0.11,
+    "tables": 0.63,
+    "text_and_ocr": 0.02,
+    "model": 1.8
+  },
+  "context_splits": 0,
+  "identifiers_filled": {},
+  "partners_confirmed_by_table": 0,
+  "output_file": "SP03A_20261030T132306Z.json",
+  "replies_file": "SP03A_20261030T132306Z.replies.json",
+  "total_seconds": 8.74,
+  "trace_file": "SP03A_20261030T132306Z.trace.json",
+  "evaluation": {
+    "document": "SP03A",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\targeted_text\\SP03A_20261030T132306Z.run.json",
+    "input": "pdf",
+    "preparation": {},
+    "runner_wall_clock_seconds": 8.74,
+    "end_to_end_seconds": 8.74,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 3585,
+      "completion_tokens": 537,
+      "reasoning_tokens": 265,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.00085995,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-120b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-120b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 16082,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 1.8
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.087885798,
+          "prompt_tokens": 3585,
+          "prompt_time": 0.159194461,
+          "completion_tokens": 537,
+          "completion_time": 1.120833187,
+          "total_tokens": 4122,
+          "total_time": 1.280027648,
+          "completion_tokens_details": {
+            "reasoning_tokens": 265
+          }
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"RESENSE\",\n    \"proposal_title\": \"Adaptive Sensor Networks for Resource Efficient Process Monitoring\",\n    \"call_identifier\": \"RCF2027/6433\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 979 300\",\n    \"trl_start\": 3,\n    \"trl_target\": 5,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Torvenmaa University\",\n      \"requested\": \"214,8\"\n    },\n    {\n      \"partner_name\": \"HBU\",\n      \"requested\": \"159,8\"\n    },\n    {\n      \"partner_name\": \"Kestrel Institute for Process Research\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"OPS\",\n      \"requested\": \"177,8\"\n    },\n    {\n      \"partner_name\": \"VSS\",\n      \"requested\": \"196,4\"\n    },\n    {\n      \"partner_name\": \"Ostermark Regional Development Agency\",\n      \"requested\": \"0,0\"\n    }\n  ]\n}",
+        "reasoning": "We need JSON. Extract data.\n\nproposal_acronym: RESENSE from page3. title: Adaptive Sensor Networks for Resource Efficient Process Monitoring. call_identifier: RCF2027/6433. submission_date? Not given; page3 has Date of submission \"Entered at submission.\" No date. So null.\n\nrequested_total: from D.2 table: \"EUR 979 300\". Keep as written.\n\nTRL start 3, target 5. mcrl not mentioned -> null.\n\nPartners: need each partner with requested amount. Use table: TMU 214,8 ; HBU 159,8 ; KPRI \"see E.2\" -> that's not a number, so requested null? It's not a numeric amount, so treat as null. OPS 177,8 ; VSS 196,4 ; ORDEA 0,0 (but they request no funding). Should we copy \"0,0\"? It's a number, so copy as written \"0,0\". Currency? Table is in 1 000 EUR, but amounts are numbers without EUR. We copy as written, e.g., \"214,8\". Probably keep as string.\n\nPartner order as in document: TMU, HBU, KPRI, OPS, VSS, ORDEA.\n\nReturn JSON.",
+        "prompt_tokens": 3585,
+        "completion_tokens": 537,
+        "total_tokens": 4122,
+        "reasoning_tokens": 265,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.8,
+        "model_reported": "openai/gpt-oss-120b",
+        "finish_reason": "stop",
+        "cost_usd": 0.00085995
+      }
+    ]
+  }
+}

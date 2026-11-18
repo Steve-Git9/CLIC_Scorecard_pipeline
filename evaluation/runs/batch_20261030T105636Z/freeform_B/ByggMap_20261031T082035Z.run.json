@@ -1,0 +1,107 @@
+{
+  "arm": "freeform_B",
+  "model": "Qwen/Qwen3.5-9B",
+  "provider": "deepinfra",
+  "source_file": "ByggMap.md",
+  "started_utc": "2026-10-31T08:20:35Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [],
+  "free_form": true,
+  "context_splits": 0,
+  "seconds": 44.73,
+  "attempts": 1,
+  "prompt_tokens": 14018,
+  "completion_tokens": 780,
+  "cost_usd": 0.001519,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3.5-9B",
+  "parts": 1,
+  "freeform_file": "ByggMap_20261031T082035Z.freeform.txt",
+  "output_file": "ByggMap_20261031T082035Z.json",
+  "replies_file": "ByggMap_20261031T082035Z.replies.json",
+  "total_seconds": 44.74,
+  "evaluation": {
+    "document": "ByggMap",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\freeform_B\\ByggMap_20261031T082035Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 201.38,
+      "docling_markdown_sha256": "a9a1a1fd0330ccc01da68daeca2f9ca711eb526cc4fea5838a2fd11475864769"
+    },
+    "runner_wall_clock_seconds": 44.74,
+    "end_to_end_seconds": 246.12,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 14018,
+      "completion_tokens": 780,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": {
+      "made": false,
+      "tokens": 0,
+      "note": "the free form reply is converted to JSON locally in Python; no model call"
+    },
+    "cost": {
+      "cost_usd": 0.0015188,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3.5-9B",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3.5-9B",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 84557,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 44.73
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 14018,
+          "total_tokens": 14798,
+          "completion_tokens": 780,
+          "estimated_cost": 0.0015187999999999998,
+          "prompt_tokens_details": null
+        },
+        "reply": "The document states the following details:\n- **Acronym**: Bygg Map\n- **Title**: Bygg Map is an innovative, data-driven platform designed to assess and map building energy efficiency across European cities at unprecedented scale and resolution. (Note: The full title is not explicitly separated from the abstract text, but the project name \"Bygg Map\" is used as the title throughout. The document does not provide a distinct \"Project Title\" line separate from the description, so the description serves as the title context).\n- **Call Identifier**: Not explicitly stated in the text provided.\n- **Submission Date**: Not explicitly stated in the text provided.\n- **Readiness Levels**:\n  - TRL Start: The text mentions \"We assume that the TRL4 can be a suitable label\" and later refers to evolving from a \"research prototype (TRL4)\".\n  - TRL Target: The text states the goal is to reach \"TRL6\" (market-ready solution).\n  - MCR Start: Not explicitly stated.\n  - MCR Target: Not explicitly stated.\n- **Partner Budget Table**: Found in \"Table 1 - Budget Allocation\" in the Appendix.\n\n**Partner Budget Table Row by Row:**\n1. MCI: € 590,625.00\n2. TUCN: € 465,625.00\n3. NTNU: € 748,625.00\n4. U-I: € 204,375.00\n5. SM: € 144,375.00\n6. CGI: € 195,000.00\n7. CEE: € 151,375.00\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"Bygg Map\",\n    \"proposal_title\": \"Bygg Map is an innovative, data-driven platform designed to assess and map building energy efficiency across European cities at unprecedented scale and resolution.\",\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"€ 2,500,000.00\",\n    \"trl_start\": 4,\n    \"trl_target\": 6,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"MCI\",\n      \"requested\": \"€ 590,625.00\"\n    },\n    {\n      \"partner_name\": \"TUCN\",\n      \"requested\": \"€ 465,625.00\"\n    },\n    {\n      \"partner_name\": \"NTNU\",\n      \"requested\": \"€ 748,625.00\"\n    },\n    {\n      \"partner_name\": \"U-I\",\n      \"requested\": \"€ 204,375.00\"\n    },\n    {\n      \"partner_name\": \"SM\",\n      \"requested\": \"€ 144,375.00\"\n    },\n    {\n      \"partner_name\": \"CGI\",\n      \"requested\": \"€ 195,000.00\"\n    },\n    {\n      \"partner_name\": \"CEE\",\n      \"requested\": \"€ 151,375.00\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 14018,
+        "completion_tokens": 780,
+        "total_tokens": 14798,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 44.73,
+        "model_reported": "Qwen/Qwen3.5-9B",
+        "finish_reason": "stop",
+        "cost_usd": 0.0015188
+      }
+    ]
+  }
+}

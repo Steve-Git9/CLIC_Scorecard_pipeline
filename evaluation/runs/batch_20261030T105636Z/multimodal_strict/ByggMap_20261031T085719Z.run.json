@@ -1,0 +1,175 @@
+{
+  "arm": "multimodal_strict",
+  "strict": true,
+  "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "provider": "deepinfra",
+  "source_file": "ByggMap.pdf",
+  "started_utc": "2026-10-31T08:57:19Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "duplicate partner 'Management Center Innsbruck - Austria' dropped",
+    "duplicate partner 'Technical University of Cluj-Napoca - Romania' dropped"
+  ],
+  "batch_size": 10,
+  "overlap": 1,
+  "batches": 3,
+  "seconds": 91.84,
+  "attempts": 3,
+  "prompt_tokens": 48381,
+  "completion_tokens": 773,
+  "cost_usd": 0.010356,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "output_file": "ByggMap_20261031T085719Z.json",
+  "replies_file": "ByggMap_20261031T085719Z.replies.json",
+  "total_seconds": 93.42,
+  "evaluation": {
+    "document": "ByggMap",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\multimodal_strict\\ByggMap_20261031T085719Z.run.json",
+    "input": "pdf",
+    "preparation": {},
+    "runner_wall_clock_seconds": 93.42,
+    "end_to_end_seconds": 93.42,
+    "calls": 3,
+    "failed_calls": 0,
+    "attempts": 3,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 48381,
+      "completion_tokens": 773,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 3,
+      "completion_tokens": 3,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.01035644,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 4871910,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 23.93
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20205,
+          "completion_tokens": 152,
+          "estimated_cost": 0.004144360000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"Bygg Map\",\n    \"proposal_title\": \"Bygg Map\",\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": 5,\n    \"trl_target\": 6,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Management Center Innsbruck - Austria\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Technical University of Cluj-Napoca - Romania\",\n      \"requested\": null\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 152,
+        "total_tokens": 20205,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 23.93,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00414436
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 3193526,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 33.46
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20352,
+          "completion_tokens": 299,
+          "estimated_cost": 0.00427372,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"Bygg Map\",\n    \"proposal_title\": \"Bygg Map: A public-interest-oriented technology platform designed to support evidence-based urban energy policy\",\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": 4,\n    \"trl_target\": 6,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Management Center Innsbruck - Austria\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Technical University of Cluj-Napoca - Romania\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Norwegian University of Science and Technology - Norway\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"National Institute for Research and Development in Construction, Urban Planning and Sustainable Spatial Development - Romania\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Sofia Municipality - Bulgaria\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"CGI Suomi Oy - Finland\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"CEE Bankwatch – Czech Republic\",\n      \"requested\": null\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 299,
+        "total_tokens": 20352,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 33.46,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00427372
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 1228204,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 34.45
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 8275,
+          "total_tokens": 8597,
+          "completion_tokens": 322,
+          "estimated_cost": 0.00193836,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2,500,000.00\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"MCI\",\n      \"requested\": \"EUR 590,625.00\"\n    },\n    {\n      \"partner_name\": \"TUCN\",\n      \"requested\": \"EUR 465,625.00\"\n    },\n    {\n      \"partner_name\": \"NTNU\",\n      \"requested\": \"EUR 748,625.00\"\n    },\n    {\n      \"partner_name\": \"U-I\",\n      \"requested\": \"EUR 204,375.00\"\n    },\n    {\n      \"partner_name\": \"SM\",\n      \"requested\": \"EUR 144,375.00\"\n    },\n    {\n      \"partner_name\": \"CGI\",\n      \"requested\": \"EUR 195,000.00\"\n    },\n    {\n      \"partner_name\": \"CEE\",\n      \"requested\": \"EUR 151,375.00\"\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 8275,
+        "completion_tokens": 322,
+        "total_tokens": 8597,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 34.45,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00193836
+      }
+    ]
+  }
+}

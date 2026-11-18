@@ -1,0 +1,107 @@
+{
+  "arm": "freeform_B",
+  "model": "Qwen/Qwen3.5-9B",
+  "provider": "deepinfra",
+  "source_file": "SP02.md",
+  "started_utc": "2026-10-30T19:18:33Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [],
+  "free_form": true,
+  "context_splits": 0,
+  "seconds": 36.67,
+  "attempts": 1,
+  "prompt_tokens": 22208,
+  "completion_tokens": 1550,
+  "cost_usd": 0.002453,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3.5-9B",
+  "parts": 1,
+  "freeform_file": "SP02_20261030T191833Z.freeform.txt",
+  "output_file": "SP02_20261030T191833Z.json",
+  "replies_file": "SP02_20261030T191833Z.replies.json",
+  "total_seconds": 36.7,
+  "evaluation": {
+    "document": "SP02",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\freeform_B\\SP02_20261030T191833Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 143.97,
+      "docling_markdown_sha256": "506d02b5ac82270a9644747e6f9c112fe37b6be752aae88b6e0c7df578edaed9"
+    },
+    "runner_wall_clock_seconds": 36.7,
+    "end_to_end_seconds": 180.67,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 22208,
+      "completion_tokens": 1550,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": {
+      "made": false,
+      "tokens": 0,
+      "note": "the free form reply is converted to JSON locally in Python; no model call"
+    },
+    "cost": {
+      "cost_usd": 0.0024533,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3.5-9B",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3.5-9B",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 132277,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 36.67
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 22208,
+          "total_tokens": 23758,
+          "completion_tokens": 1550,
+          "estimated_cost": 0.0024533000000000003,
+          "prompt_tokens_details": null
+        },
+        "reply": "The document states the acronym, title, call identifier, and submission date in the header section. It states the readiness levels in section 4.2. It states the partner budget table in section 5.1.\n\n**Proposal Details:**\n*   **Acronym:** TIDEMESH\n*   **Title:** Adaptive Sensor Networks for Resilient Coastal Infrastructure\n*   **Call Identifier:** BF2026/93782\n*   **Submission Date:** 2 April 2026\n*   **TRL Start:** 1 (Found in section 4.2: \"MCRL start: 1\" - Note: The document uses MCRL for the start value in the specific line, but the prompt asks for TRL. Looking closely at section 4.2 header: \"MCRL start: 1 MCRL target: 4\". There is no explicit \"TRL\" value stated in the text provided, only MCRL. However, often in these documents TRL and MCRL are listed together. Let me re-read carefully. Section 4.2 says \"MCRL start: 1 MCRL target: 4\". There is no mention of TRL numbers in the text provided. I must use null if not stated.)\n    *   *Correction*: I will scan again for \"TRL\".\n    *   Scanning... No \"TRL\" found in the text. Only \"MCRL\".\n    *   Therefore, TRL_start and TRL_target are null.\n*   **MCRL Start:** 1\n*   **MCRL Target:** 4\n\n**Requested Total:**\n*   Section 5.3 states: \"The total requested funding of the consortium is EUR 991,100.\"\n\n**Partners (from Section 5.1 Table 5.1):**\n*   NVS: 181.6 (EUR thousand) -> The prompt asks to copy the amount \"as written\". The table says \"181.6\".\n*   KTA: 190.9\n*   LMR: no funding requested\n*   HVU: shown in Figure 5.1 (Null)\n*   TMI: shown in Figure 5.1 (Null)\n\nWait, the instruction says \"Copy names and titles exactly as written\". The table uses acronyms (NVS, KTA, etc.). The partner list in section 2.1 uses full names. The instruction for the `partners` array says \"partner_name: the organisation name exactly as written.\" Usually, this implies the full name if available, or the name in the table if that's the only reference for the budget. However, the budget table lists \"NVS\", \"KTA\", etc. The prompt says \"Work through that table row by row, writing each partner's name exactly as shown\". This implies I should use the names *in the table* for the partner list if I am deriving it from the table.\nLet's re-read: \"Work through that table row by row, writing each partner's name exactly as shown together with the amount on the same row.\"\nOkay, so for the `partners` array, I must use the names exactly as they appear in the budget table (Section 5.1).\nTable 5.1 Names: NVS, KTA, LMR, HVU, TMI.\nAmounts:\n*   NVS: 181.6\n*   KTA: 190.9\n*   LMR: no funding requested\n*   HVU: shown in Figure 5.1\n*   TMI: shown in Figure 5.1\n\nSince \"shown in Figure 5.1\" is not a number, and the rule says \"Null if the document gives no amount for that partner\", I will set those to null.\nFor \"no funding requested\", the amount is effectively null or 0, but the text says \"no funding requested\". The rule says \"Never use ... 0 ... for a missing value\". Is \"no funding requested\" a missing value? Yes, it's not a grant amount. So null.\n\nLet's double check the TRL/MCRL.\nSection 4.2: \"MCRL start: 1 MCRL target: 4\".\nThere is absolutely no \"TRL\" mentioned in the text.\nSo TRL_start: null, TRL_target: null.\nMCRL_start: 1, MCRL_target: 4.\n\nLet's double check the requested total.\nSection 5.3: \"EUR 991,100\".\n\nLet's double check the submission date.\n\"Document prepared: 2 April 2026\".\nFormat YYYY-MM-DD: 2026-04-02.\n\nLet's double check the partner names in the table.\nRow 1: NVS | 181.6\nRow 2: KTA | 190.9\nRow 3: LMR | no funding requested\nRow 4: HVU | shown in Figure 5.1\nRow 5: TMI | shown in Figure 5.1\n\nThe instruction says \"writing each partner's name exactly as shown\".\nSo names are: \"NVS\", \"KTA\", \"LMR\", \"HVU\", \"TMI\".\n\nOne detail: \"LMR ... no funding requested\". The requested amount is not a number. It is a statement. So `requested` should be `null`.\n\"HVU ... shown in Figure 5.1\". No amount in text. `requested` should be `null`.\n\"TMI ... shown in Figure 5.1\". No amount in text. `requested` should be `null`.\n\nFinal check on TRL. The prompt asks for \"Technology Readiness Level\". The text only has \"Market Cluster Readiness Level\" (MCRL). I cannot infer TRL. It must be null.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"TIDEMESH\",\n    \"proposal_title\": \"Adaptive Sensor Networks for Resilient Coastal Infrastructure\",\n    \"call_identifier\": \"BF2026/93782\",\n    \"submission_date\": \"2026-04-02\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 991,100\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": 1,\n    \"mcrl_target\": 4\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NVS\",\n      \"requested\": \"181.6\"\n    },\n    {\n      \"partner_name\": \"KTA\",\n      \"requested\": \"190.9\"\n    },\n    {\n      \"partner_name\": \"LMR\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"HVU\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"TMI\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 22208,
+        "completion_tokens": 1550,
+        "total_tokens": 23758,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 36.67,
+        "model_reported": "Qwen/Qwen3.5-9B",
+        "finish_reason": "stop",
+        "cost_usd": 0.0024533
+      }
+    ]
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "arm": "D",
+  "model": "openai/gpt-oss-20b",
+  "provider": "groq",
+  "source_file": "SP05.md",
+  "started_utc": "2026-10-31T11:09:24Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested[Arctic Sensing] '298 000,00 €' not found in the document",
+    "requested[Kaltio Council] '199 200,00 €' not found in the document"
+  ],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 4.23,
+  "attempts": 1,
+  "prompt_tokens": 46458,
+  "completion_tokens": 429,
+  "cost_usd": 0.00486,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-20b",
+  "parts": 1,
+  "output_file": "SP05_20261031T110924Z.json",
+  "replies_file": "SP05_20261031T110924Z.replies.json",
+  "total_seconds": 4.26,
+  "evaluation": {
+    "document": "SP05",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\D\\SP05_20261031T110924Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 287.52,
+      "docling_markdown_sha256": "5d66b1ad0f8ae210974c7d76106a41dcbd81e13db0614cbc3c6a24b7316986a6"
+    },
+    "runner_wall_clock_seconds": 4.27,
+    "end_to_end_seconds": 291.79,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 46458,
+      "completion_tokens": 429,
+      "reasoning_tokens": 211,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.00361305,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-20b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-20b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 261725,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 4.23
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.170693192,
+          "prompt_tokens": 46458,
+          "prompt_time": 2.78373122,
+          "completion_tokens": 429,
+          "completion_time": 0.450374172,
+          "total_tokens": 46887,
+          "total_time": 3.234105392,
+          "completion_tokens_details": {
+            "reasoning_tokens": 211
+          }
+        },
+        "reply": "{\"proposal\":{\"proposal_acronym\":\"NIVALIS\",\"proposal_title\":\"Federated Data Spaces for Resilient Cold Climate Infrastructure Monitoring\",\"call_identifier\":\"tobeconfirmed\",\"submission_date\":null},\"proposal_facts\":{\"requested_total\":\"3 828 561,00 €\",\"trl_start\":3,\"trl_target\":7,\"mcrl_start\":2,\"mcrl_target\":null},\"partners\":[{\"partner_name\":\"Nordvane\",\"requested\":\"870 765,93 €\"},{\"partner_name\":\"Teralund University\",\"requested\":\"679 493,18 €\"},{\"partner_name\":\"Valoria\",\"requested\":\"594 205,74 €\"},{\"partner_name\":\"Hallavik\",\"requested\":\"649 300,03 €\"},{\"partner_name\":\"Arctic Sensor\",\"requested\":\"449 835,12 €\"},{\"partner_name\":\"Lumivara\",\"requested\":null},{\"partner_name\":\"Arctic Sensing\",\"requested\":\"298 000,00 €\"},{\"partner_name\":\"Kaltio Council\",\"requested\":\"199 200,00 €\"}]}",
+        "reasoning": "Need proposal_acronym: NIVALIS. title: Federated Data Spaces for Resilient Cold Climate Infrastructure Monitoring. call_identifier: tobeconfirmed. submission_date null. requested_total: 3 828 561,00 € (from key facts). trl_start: 3 (integrated solution current). trl_target: 7. mcrl_start: 2. mcrl_target: ? not stated; maybe 3? but not given. Use null. partners: list with requested funding amounts: from table5.1: Nordvane 870 765,93 €, Teralund University 679 493,18 €, Valoria 594 205,74 €, Hallavik 649 300,03 € (subcontracting 108 270,00 € but requested funding includes that). Arctic Sensor 449 835,12 €, Lumivara 0 (associated partner), Arctic Sensing 298 000,00 €, Kaltio Council 199 200,00 €.",
+        "prompt_tokens": 46458,
+        "completion_tokens": 429,
+        "total_tokens": 46887,
+        "reasoning_tokens": 211,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 4.23,
+        "model_reported": "openai/gpt-oss-20b",
+        "finish_reason": "stop",
+        "cost_usd": 0.00361305
+      }
+    ]
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "arm": "D",
+  "model": "openai/gpt-oss-20b",
+  "provider": "groq",
+  "source_file": "ByggMap.md",
+  "started_utc": "2026-10-31T07:40:37Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 1.64,
+  "attempts": 1,
+  "prompt_tokens": 13275,
+  "completion_tokens": 259,
+  "cost_usd": 0.001457,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-20b",
+  "parts": 1,
+  "output_file": "ByggMap_20261031T074037Z.json",
+  "replies_file": "ByggMap_20261031T074037Z.replies.json",
+  "total_seconds": 1.66,
+  "evaluation": {
+    "document": "ByggMap",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\D\\ByggMap_20261031T074037Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 201.38,
+      "docling_markdown_sha256": "a9a1a1fd0330ccc01da68daeca2f9ca711eb526cc4fea5838a2fd11475864769"
+    },
+    "runner_wall_clock_seconds": 1.66,
+    "end_to_end_seconds": 203.04,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 13275,
+      "completion_tokens": 259,
+      "reasoning_tokens": 64,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.00107332,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-20b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-20b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 85134,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 1.64
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.16873905,
+          "prompt_tokens": 13275,
+          "prompt_time": 0.782271848,
+          "completion_tokens": 259,
+          "completion_time": 0.267934044,
+          "total_tokens": 13534,
+          "total_time": 1.050205892,
+          "completion_tokens_details": {
+            "reasoning_tokens": 64
+          }
+        },
+        "reply": "{\"proposal\":{\"proposal_acronym\":null,\"proposal_title\":null,\"call_identifier\":null,\"submission_date\":null},\"proposal_facts\":{\"requested_total\":\"€ 2,500,000.00\",\"trl_start\":4,\"trl_target\":6,\"mcrl_start\":null,\"mcrl_target\":null},\"partners\":[{\"partner_name\":\"MCI\",\"requested\":\"€ 590,625.00\"},{\"partner_name\":\"TUCN\",\"requested\":\"€ 465,625.00\"},{\"partner_name\":\"NTNU\",\"requested\":\"€ 748,625.00\"},{\"partner_name\":\"U-I\",\"requested\":\"€ 204,375.00\"},{\"partner_name\":\"SM\",\"requested\":\"€ 144,375.00\"},{\"partner_name\":\"CGI\",\"requested\":\"€ 195,000.00\"},{\"partner_name\":\"CEE\",\"requested\":\"€ 151,375.00\"}]}",
+        "reasoning": "We need proposal_acronym, title, call_identifier, submission_date. Not present. So null. requested_total: € 2,500,000.00. trl_start 4, trl_target 6. mcrl_start/target not given -> null. partners list with requested amounts.",
+        "prompt_tokens": 13275,
+        "completion_tokens": 259,
+        "total_tokens": 13534,
+        "reasoning_tokens": 64,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.64,
+        "model_reported": "openai/gpt-oss-20b",
+        "finish_reason": "stop",
+        "cost_usd": 0.00107332
+      }
+    ]
+  }
+}

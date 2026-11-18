@@ -1,0 +1,110 @@
+{
+  "arm": "C",
+  "model": "openai/gpt-oss-120b",
+  "provider": "groq",
+  "source_file": "SP02.md",
+  "started_utc": "2026-10-30T18:51:39Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 3.25,
+  "attempts": 1,
+  "prompt_tokens": 21606,
+  "completion_tokens": 533,
+  "cost_usd": 0.003641,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-120b",
+  "parts": 1,
+  "output_file": "SP02_20261030T185139Z.json",
+  "replies_file": "SP02_20261030T185139Z.replies.json",
+  "total_seconds": 3.27,
+  "evaluation": {
+    "document": "SP02",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\C\\SP02_20261030T185139Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 143.97,
+      "docling_markdown_sha256": "506d02b5ac82270a9644747e6f9c112fe37b6be752aae88b6e0c7df578edaed9"
+    },
+    "runner_wall_clock_seconds": 3.28,
+    "end_to_end_seconds": 147.25,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 21606,
+      "completion_tokens": 533,
+      "reasoning_tokens": 346,
+      "image_tokens": null,
+      "cached_tokens": 512
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.0035223,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-120b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-120b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 132855,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 3.25
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.18197728,
+          "prompt_tokens": 21606,
+          "prompt_time": 1.124275897,
+          "completion_tokens": 533,
+          "completion_time": 1.120520223,
+          "total_tokens": 22139,
+          "total_time": 2.24479612,
+          "prompt_tokens_details": {
+            "cached_tokens": 512
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 346
+          }
+        },
+        "reply": "{\"proposal\":{\"proposal_acronym\":\"TIDEMESH\",\"proposal_title\":\"Adaptive Sensor Networks for Resilient Coastal Infrastructure\",\"call_identifier\":\"BF2026/93782\",\"submission_date\":\"2026-04-02\"},\"proposal_facts\":{\"requested_total\":\"EUR 991,100\",\"trl_start\":null,\"trl_target\":null,\"mcrl_start\":1,\"mcrl_target\":4},\"partners\":[{\"partner_name\":\"Nordvalen Systems Oy (NVS)\",\"requested\":null},{\"partner_name\":\"Kaltiora Analytics Oy (KTA)\",\"requested\":null},{\"partner_name\":\"Lumenthar Marine Oy (LMR)\",\"requested\":null},{\"partner_name\":\"Havrenmaa University (HVU)\",\"requested\":null},{\"partner_name\":\"Taimerra Research Institute (TMI)\",\"requested\":null}]}",
+        "reasoning": "We need extract fields. proposal_acronym TIDEMESH, title Adaptive Sensor Networks for Resilient Coastal Infrastructure. call BF2026/93782. submission_date from \"Document prepared: 2 April 2026\" => 2026-04-02.\n\nrequested_total: \"EUR 991,100\" from section 5.3. trl not mentioned -> null. mcrl start/target from market readiness: MCRL start: 1 MCRL target: 4. So mcrl_start 1, mcrl_target 4. partners list order as in consortium partners section: Nordvalen Systems Oy (NVS) requested? Not given directly in funding table: requested funding per partner table shows NVS 181.6 (EUR thousand). So amount is \"EUR 181,600\"? But table says (EUR thousand) value 181.6 meaning 181.6 thousand EUR. Should copy as written \"181.6\". But need include currency? Probably copy as written \"181.6\". However spec: copy as written including currency and separators. Since table header says Requestedfunding(EUR thousand). The entry is just number. Not clear. Could set null. Safer null. Kaltiora Analytics Oy: 190.9. Lumenthar Marine Oy: \"no funding requested\". So null. Havrenmaa University: \"shown in Figure 5.1\" null. Taimerra Research Institute: same null.\n\nThus partners array with requested null for those without explicit amount. For NVS and KTA maybe we could put \"EUR 181,600\" but not explicit. I'll set null.\n\nReturn JSON.",
+        "prompt_tokens": 21606,
+        "completion_tokens": 533,
+        "total_tokens": 22139,
+        "reasoning_tokens": 346,
+        "image_tokens": null,
+        "cached_tokens": 512,
+        "seconds": 3.25,
+        "model_reported": "openai/gpt-oss-120b",
+        "finish_reason": "stop",
+        "cost_usd": 0.0035223
+      }
+    ]
+  }
+}

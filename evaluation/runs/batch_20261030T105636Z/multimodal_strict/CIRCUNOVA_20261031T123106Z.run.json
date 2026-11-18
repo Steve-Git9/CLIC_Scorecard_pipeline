@@ -1,0 +1,699 @@
+{
+  "arm": "multimodal_strict",
+  "strict": true,
+  "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "provider": "deepinfra",
+  "source_file": "CIRCUNOVA.pdf",
+  "started_utc": "2026-10-31T12:31:06Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "duplicate partner 'VESTFJORD MUNICIPALITY' dropped",
+    "duplicate partner 'Vestfjord Enterprise Agency' dropped",
+    "duplicate partner 'Vestfjord Enterprise Agency' dropped",
+    "duplicate partner 'Northbridge PVerials ApS' dropped",
+    "duplicate partner 'LAKELAND REGIONAL COUNCIL' dropped",
+    "duplicate partner 'GREEN PATHWAYS OY' dropped",
+    "duplicate partner 'LAKELAND RESOURCE SERVICES OY' dropped",
+    "duplicate partner 'MineralCarbon Solutions Oy' dropped",
+    "duplicate partner 'TerraForm Innovations Oy' dropped",
+    "duplicate partner 'BALTIC INSTITUTE OF TECHNOLOGY' dropped",
+    "duplicate partner 'City of Valmont' dropped",
+    "duplicate partner 'EUROPEAN INSTITUTE OF PVERIALS' dropped",
+    "duplicate partner 'AEGEAN REGIONAL INNOVATION FUND' dropped",
+    "duplicate partner 'MUNICIPALITY OF PORTO VERDE' dropped",
+    "duplicate partner 'MUNICIPALITY OF PORTO VERDE' dropped",
+    "duplicate partner 'UNIVERSITY OF HARZ TECHNOLOGY' dropped",
+    "duplicate partner 'SAIMAA UNIVERSITY OF APPLIED SCIENCES' dropped",
+    "duplicate partner 'CycleReturn ApS' dropped",
+    "duplicate partner 'AFL' dropped",
+    "duplicate partner 'RenewLoop Denmark' dropped",
+    "duplicate partner 'LRS' dropped",
+    "duplicate partner 'AFL' dropped"
+  ],
+  "batch_size": 10,
+  "overlap": 1,
+  "batches": 17,
+  "seconds": 483.96,
+  "attempts": 17,
+  "prompt_tokens": 331006,
+  "completion_tokens": 3458,
+  "cost_usd": 0.069245,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "output_file": "CIRCUNOVA_20261031T123106Z.json",
+  "replies_file": "CIRCUNOVA_20261031T123106Z.replies.json",
+  "total_seconds": 497.16,
+  "evaluation": {
+    "document": "CIRCUNOVA",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\multimodal_strict\\CIRCUNOVA_20261031T123106Z.run.json",
+    "input": "pdf",
+    "preparation": {},
+    "runner_wall_clock_seconds": 497.17,
+    "end_to_end_seconds": 497.17,
+    "calls": 17,
+    "failed_calls": 0,
+    "attempts": 17,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 331006,
+      "completion_tokens": 3458,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 17,
+      "completion_tokens": 17,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.06924424,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 2051530,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 65.56
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20720,
+          "completion_tokens": 667,
+          "estimated_cost": 0.0045975600000000005,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": \"Circular Industry Networks for Regenerative Urban PVerials\",\n    \"call_identifier\": \"HORIZON-CL6-2026-01-CIRCBIO-02-two-stage\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NORDIC CIRCULAR SYSTEMS OY\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"VESTFJORD MUNICIPALITY\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Vestfjord Enterprise Agency\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Northbridge PVerials ApS\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Morrow Resource CRTNvery ApS\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"ReneeLoop Denmark\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"LAKELAND REGIONAL COUNCIL\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"TAMPEREEN KAUPUNKISEUDUN ELINKEINOJA KEHITYSYHTIO BUSINESS TAMPERE OY\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"GREEN PATHWAYS OY\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"LAKELAND RESOURCE SERVICES OY\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"MineralCarbon Solutions Oy\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"TerraForm Innovations Oy\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"BALTIC INSTITUTE OF TECHNOLOGY\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"City of Valmont\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"EUROPEAN INSTITUTE OF PVERIALS\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"AEGEAN REGIONAL INNOVATION FUND\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"MUNICIPALITY OF PORTO VERDE\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"UNIVERSITY OF HARZ TECHNOLOGY\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"SAIMAA UNIVERSITY OF APPLIED SCIENCES\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"CycleReturn ApS\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"AFL\",\n      \"requested\": null\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 667,
+        "total_tokens": 20720,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 65.56,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00459756
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 1885442,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 16.09
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20201,
+          "completion_tokens": 148,
+          "estimated_cost": 0.00414084,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"VESTFJORD MUNICIPALITY\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Vestfjord Enterprise Agency\",\n      \"requested\": null\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 148,
+        "total_tokens": 20201,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 16.09,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00414084
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 1310162,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 18.79
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20198,
+          "completion_tokens": 145,
+          "estimated_cost": 0.0041382,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Vestfjord Enterprise Agency\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Northbridge PVerials ApS\",\n      \"requested\": null\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 145,
+        "total_tokens": 20198,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 18.79,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0041382
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 1782754,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 15.74
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20148,
+          "completion_tokens": 95,
+          "estimated_cost": 0.0040942,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 95,
+        "total_tokens": 20148,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 15.74,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0040942
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 1459990,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 21.0
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20198,
+          "completion_tokens": 145,
+          "estimated_cost": 0.0041382,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"RenewLoop Denmark\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"LAKELAND REGIONAL COUNCIL\",\n      \"requested\": null\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 145,
+        "total_tokens": 20198,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 21.0,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0041382
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 1863454,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 19.55
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20178,
+          "completion_tokens": 125,
+          "estimated_cost": 0.0041206,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"LAKELAND BUSINESS DEVELOPMENT AGENCY OY\",\n      \"requested\": null\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 125,
+        "total_tokens": 20178,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 19.55,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0041206
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 1790578,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 23.9
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20197,
+          "completion_tokens": 144,
+          "estimated_cost": 0.004137320000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"GREEN PATHWAYS OY\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"LAKELAND RESOURCE SERVICES OY\",\n      \"requested\": null\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 144,
+        "total_tokens": 20197,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 23.9,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00413732
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 1540178,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 24.32
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20192,
+          "completion_tokens": 139,
+          "estimated_cost": 0.004132920000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"LRS\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"MineralCarbon Solutions Oy\",\n      \"requested\": null\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 139,
+        "total_tokens": 20192,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 24.32,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00413292
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 1635170,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 17.37
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20199,
+          "completion_tokens": 146,
+          "estimated_cost": 0.004139080000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"TerraForm Innovations Oy\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"BALTIC INSTITUTE OF TECHNOLOGY\",\n      \"requested\": null\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 146,
+        "total_tokens": 20199,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 17.37,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00413908
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 1579390,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 23.65
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20194,
+          "completion_tokens": 141,
+          "estimated_cost": 0.00413468,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"FinEst Centre for Smart Cities\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"City of Valmont\",\n      \"requested\": null\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 141,
+        "total_tokens": 20194,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 23.65,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00413468
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 2007934,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 19.65
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20178,
+          "completion_tokens": 125,
+          "estimated_cost": 0.0041206,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"EUROPEAN INSTITUTE OF PVERIALS\",\n      \"requested\": null\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 125,
+        "total_tokens": 20178,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 19.65,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0041206
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 1944078,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 24.67
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20207,
+          "completion_tokens": 154,
+          "estimated_cost": 0.0041461200000000005,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"AEGEAN REGIONAL INNOVATION FUND\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"MUNICIPALITY OF PORTO VERDE\",\n      \"requested\": null\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 154,
+        "total_tokens": 20207,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 24.67,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00414612
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 1616938,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 24.06
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20203,
+          "completion_tokens": 150,
+          "estimated_cost": 0.0041426,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"MUNICIPALITY OF PORTO VERDE\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"UNIVERSITY OF HARZ TECHNOLOGY\",\n      \"requested\": null\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 150,
+        "total_tokens": 20203,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 24.06,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0041426
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 1816966,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 29.68
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20206,
+          "completion_tokens": 153,
+          "estimated_cost": 0.00414524,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Department Sustainable Industrial Ecosystems, Institute of Geotechnology and Min\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"SAIMAA UNIVERSITY OF APPLIED SCIENCES\",\n      \"requested\": null\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 153,
+        "total_tokens": 20206,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 29.68,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00414524
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 1759026,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 20.87
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20190,
+          "completion_tokens": 137,
+          "estimated_cost": 0.00413116,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"CycleReturn ApS\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"AFL\",\n      \"requested\": null\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 137,
+        "total_tokens": 20190,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 20.87,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00413116
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 2468398,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 109.69
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 25862,
+          "total_tokens": 26611,
+          "completion_tokens": 749,
+          "estimated_cost": 0.00583152,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 6,000,000.00\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NCS\",\n      \"requested\": \"EUR 666,700.00\"\n    },\n    {\n      \"partner_name\": \"VEST\",\n      \"requested\": \"EUR 250,250.00\"\n    },\n    {\n      \"partner_name\": \"VEA\",\n      \"requested\": \"EUR 430,000.00\"\n    },\n    {\n      \"partner_name\": \"NBM\",\n      \"requested\": \"EUR 222,375.00\"\n    },\n    {\n      \"partner_name\": \"MRR\",\n      \"requested\": \"EUR 209,562.50\"\n    },\n    {\n      \"partner_name\": \"RenewLoop Denmark\",\n      \"requested\": \"EUR 158,375.00\"\n    },\n    {\n      \"partner_name\": \"LRC\",\n      \"requested\": \"EUR 149,350.00\"\n    },\n    {\n      \"partner_name\": \"LBDA\",\n      \"requested\": \"EUR 303,250.00\"\n    },\n    {\n      \"partner_name\": \"GPO\",\n      \"requested\": \"EUR 431,875.00\"\n    },\n    {\n      \"partner_name\": \"LRS\",\n      \"requested\": \"EUR 335,300.00\"\n    },\n    {\n      \"partner_name\": \"MCS\",\n      \"requested\": \"EUR 379,750.00\"\n    },\n    {\n      \"partner_name\": \"TFI\",\n      \"requested\": \"EUR 384,562.50\"\n    },\n    {\n      \"partner_name\": \"BIT\",\n      \"requested\": \"EUR 366,500.00\"\n    },\n    {\n      \"partner_name\": \"VALM\",\n      \"requested\": \"EUR 224,062.50\"\n    },\n    {\n      \"partner_name\": \"EIM\",\n      \"requested\": \"EUR 215,625.00\"\n    },\n    {\n      \"partner_name\": \"ARIF\",\n      \"requested\": \"EUR 135,875.00\"\n    },\n    {\n      \"partner_name\": \"PV\",\n      \"requested\": \"EUR 222,062.50\"\n    },\n    {\n      \"partner_name\": \"UHT\",\n      \"requested\": \"EUR 571,500.00\"\n    },\n    {\n      \"partner_name\": \"SUAS\",\n      \"requested\": \"EUR 343,025.00\"\n    },\n    {\n      \"partner_name\": \"CRTN\",\n      \"requested\": \"EUR 0.00\"\n    },\n    {\n      \"partner_name\": \"AFL\",\n      \"requested\": \"EUR 0.00\"\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 25862,
+        "completion_tokens": 749,
+        "total_tokens": 26611,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 109.69,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00583152
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 142614,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 9.37
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 4349,
+          "total_tokens": 4444,
+          "completion_tokens": 95,
+          "estimated_cost": 0.0009534000000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}",
+        "reasoning": null,
+        "prompt_tokens": 4349,
+        "completion_tokens": 95,
+        "total_tokens": 4444,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 9.37,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0009534
+      }
+    ]
+  }
+}

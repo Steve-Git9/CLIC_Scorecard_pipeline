@@ -1,0 +1,678 @@
+{
+  "arm": "multimodal_open",
+  "strict": false,
+  "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "provider": "deepinfra",
+  "source_file": "CIRCUNOVA.pdf",
+  "started_utc": "2026-10-31T14:30:10Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "a 10-page batch's reply is not valid JSON: no JSON object found in reply"
+  ],
+  "batch_size": 10,
+  "overlap": 1,
+  "batches": 17,
+  "seconds": 694.77,
+  "attempts": 17,
+  "prompt_tokens": 332264,
+  "completion_tokens": 3639,
+  "cost_usd": 0.069657,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "output_file": "CIRCUNOVA_20261031T143010Z.json",
+  "replies_file": "CIRCUNOVA_20261031T143010Z.replies.json",
+  "total_seconds": 707.96,
+  "evaluation": {
+    "document": "CIRCUNOVA",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\multimodal_open\\CIRCUNOVA_20261031T143010Z.run.json",
+    "input": "pdf",
+    "preparation": {},
+    "runner_wall_clock_seconds": 707.97,
+    "end_to_end_seconds": 707.97,
+    "calls": 17,
+    "failed_calls": 0,
+    "attempts": 17,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 332264,
+      "completion_tokens": 3639,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 17,
+      "completion_tokens": 17,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.06965512,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 2050633,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 16.31
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20259,
+          "completion_tokens": 132,
+          "estimated_cost": 0.00414156,
+          "prompt_tokens_details": null
+        },
+        "reply": "```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": \"Circular Industry Networks for Regenerative Urban PVerials\",\n    \"call_identifier\": \"HORIZON-CL6-2026-01-CIRCBIO-02-two-stage\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 132,
+        "total_tokens": 20259,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 16.31,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00414156
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1884545,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 37.81
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20359,
+          "completion_tokens": 232,
+          "estimated_cost": 0.00422956,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided pages. The partner budget table, which would list each partner's name and their requested funding amount, is not present in any of the provided images. The document contains administrative forms for individual partners (like VESTFJORD MUNICIPALITY and Vestfjord Enterprise Agency) and lists of previous projects, but it does not contain the consolidated budget table required to extract the partner names and their funding amounts.\n\nTherefore, I cannot fulfill the request to list each partner's name and amount row by row, nor can I construct the final JSON object as specified, because the necessary data is not available in the provided document pages.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 232,
+        "total_tokens": 20359,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 37.81,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00422956
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1309265,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 33.35
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20338,
+          "completion_tokens": 211,
+          "estimated_cost": 0.004211080000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided pages. The partner budget table, which is required to list each partner's name and their requested funding amount, is not present in any of the images provided. The document contains administrative forms for two organizations (VEA and NBM), including their contact details, legal status, and roles, but it does not contain a table that specifies the requested funding amount for each partner.\n\nTherefore, I cannot extract the partner budget table as requested. I will now provide the JSON output with null values for the requested fields, as per the instructions.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 211,
+        "total_tokens": 20338,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 33.35,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00421108
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1781857,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 35.64
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20312,
+          "completion_tokens": 185,
+          "estimated_cost": 0.0041882,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided pages. The partner budget table, which would list each partner's name and their requested funding amount, is not present in any of the provided images. The documents shown are administrative forms for individual partners (Morrow Resource CRTNvery ApS and RenewLoop Denmark) and do not contain a consolidated budget table for the entire project.\n\nTherefore, I cannot extract the partner names and their corresponding amounts as requested.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 185,
+        "total_tokens": 20312,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 35.64,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0041882
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1459093,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 28.81
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20303,
+          "completion_tokens": 176,
+          "estimated_cost": 0.00418028,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided pages. The document does not contain a partner budget table. The pages shown are administrative forms for individual partners (RenewLoop Denmark and Lakeland Regional Council), detailing their organization data, contact persons, and roles, but no table listing all partners with their requested funding amounts is present. Therefore, I cannot extract the required data for the partners' requested amounts.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 176,
+        "total_tokens": 20303,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 28.81,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00418028
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1862557,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 29.17
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20307,
+          "completion_tokens": 180,
+          "estimated_cost": 0.0041838000000000005,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided pages. The document does not contain a partner budget table. The pages shown are administrative forms for a single organization, \"LAKELAND BUSINESS DEVELOPMENT AGENCY OY\", detailing its role, contact information, and previous activities. There is no table listing multiple partners and their requested funding amounts.\n\nTherefore, I cannot extract the required data for the partners' budget as requested.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 180,
+        "total_tokens": 20307,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 29.17,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0041838
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1789681,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 19.47
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20258,
+          "completion_tokens": 131,
+          "estimated_cost": 0.00414068,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided pages and cannot locate the partner budget table. The pages contain administrative forms for individual partners (GPO and LRS), including their organization data, departments, and roles, but there is no table that lists all partners with their requested funding amounts. Without this specific table, I cannot extract the required partner budget information.\n\nTherefore, I cannot provide the requested JSON object as it is impossible to fulfill the requirement to list each partner's name and amount from a non-existent table. I will return null for the entire structure as per the rules, since the required data is not present in the provided images.\n\n```json\nnull\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 131,
+        "total_tokens": 20258,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 19.47,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00414068
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1539281,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 37.39
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20317,
+          "completion_tokens": 190,
+          "estimated_cost": 0.0041926,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided pages. The document does not contain a partner budget table. The pages shown are administrative forms for individual organizations (LRS and MCS) and do not list the partners of the project or their requested funding amounts. Without a partner budget table, I cannot extract the required data for the partners' names and requested amounts.\n\nTherefore, I cannot construct the requested JSON object as it requires data that is not present in the provided document images.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 190,
+        "total_tokens": 20317,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 37.39,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0041926
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1634273,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 30.39
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20319,
+          "completion_tokens": 192,
+          "estimated_cost": 0.00419436,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided pages. The partner budget table, which would list each partner's name and their requested funding amount, is not present in any of the provided images. The document contains administrative forms for individual partners (MCS, TFI, BIT), including their organizational data, roles, and achievements, but it does not contain a consolidated table that lists all partners and their respective requested funding amounts.\n\nTherefore, I cannot extract the partner budget table as requested.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 192,
+        "total_tokens": 20319,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 30.39,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00419436
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1578493,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 48.12
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20318,
+          "completion_tokens": 191,
+          "estimated_cost": 0.00419348,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided pages. The partner budget table, which would list each partner's name and their requested funding amount, is not present in any of the images provided. The document contains administrative forms for individual partners (FinEst Centre for Smart Cities and City of Valmont), including contact information and roles, but it does not contain a consolidated table that lists all partners and their respective funding requests.\n\nTherefore, I cannot extract the partner budget table as requested.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 191,
+        "total_tokens": 20318,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 48.12,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00419348
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 2007037,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 30.82
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20283,
+          "completion_tokens": 156,
+          "estimated_cost": 0.00416268,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided pages. The document does not contain a partner budget table. The pages shown are administrative forms for individual organizations (VALM and EIM) and do not list multiple partners with their requested funding amounts. Therefore, I cannot extract the partner budget table as requested.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 156,
+        "total_tokens": 20283,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 30.82,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00416268
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1943181,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 37.57
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20334,
+          "completion_tokens": 207,
+          "estimated_cost": 0.00420756,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided pages. The partner budget table, which would list each partner's name and their requested funding amount, is not present in any of the images. The document contains administrative forms for individual partners (like AEGEAN REGIONAL INNOVATION FUND and MUNICIPALITY OF PORTO VERDE) and sections on publications, infrastructure, and roles, but it does not contain a consolidated table that lists all partners and their funding requests.\n\nTherefore, I cannot extract the partner budget information as requested.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 207,
+        "total_tokens": 20334,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 37.57,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00420756
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1616041,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 31.69
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20309,
+          "completion_tokens": 182,
+          "estimated_cost": 0.00418556,
+          "prompt_tokens_details": null
+        },
+        "reply": "The provided document pages do not contain a partner budget table. The pages shown are administrative forms for individual participating organisations (MUNICIPALITY OF PORTO VERDE and UNIVERSITY OF HARZ TECHNOLOGY), detailing their organisation data, contact persons, roles, and previous achievements. There is no table listing all partners and their requested funding amounts. Therefore, it is not possible to extract the requested partner budget information.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 182,
+        "total_tokens": 20309,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 31.69,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00418556
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1816069,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 54.25
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20376,
+          "completion_tokens": 249,
+          "estimated_cost": 0.00424452,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided document images. The document contains administrative forms for a proposal with the acronym \"CIRCUNOVA\". I have searched for a partner budget table as instructed.\n\nAfter a thorough review of all 10 pages, I can confirm that there is no table listing the partners and their requested funding amounts. The document includes sections for the main contact person, researchers involved, the role of the participating organisation, and organisation data, but it does not contain the specific \"partner budget table\" required to extract the partner names and their funding amounts.\n\nTherefore, I cannot fulfill the request to list partners and their amounts row by row, nor can I construct the required JSON object, as the necessary data is not present in the provided document.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 249,
+        "total_tokens": 20376,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 54.25,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00424452
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 1758129,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 36.28
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20127,
+          "total_tokens": 20301,
+          "completion_tokens": 174,
+          "estimated_cost": 0.00417852,
+          "prompt_tokens_details": null
+        },
+        "reply": "I have reviewed the provided pages. The document does not contain a partner budget table. The pages shown are administrative forms for individual participating organisations (SUAS, CRTN, AFL), detailing their roles, previous achievements, infrastructure, and organisational data. There is no table listing all partners and their requested funding amounts.\n\nTherefore, I cannot extract the partner budget table as requested.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 20127,
+        "completion_tokens": 174,
+        "total_tokens": 20301,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 36.28,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00417852
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 2467501,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 149.62
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 25936,
+          "total_tokens": 26610,
+          "completion_tokens": 674,
+          "estimated_cost": 0.005780320000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"CIRCUNOVA\",\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 6,000,000\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NCS\",\n      \"requested\": \"666,700 €\"\n    },\n    {\n      \"partner_name\": \"VEST\",\n      \"requested\": \"250,250 €\"\n    },\n    {\n      \"partner_name\": \"VEA\",\n      \"requested\": \"430,000 €\"\n    },\n    {\n      \"partner_name\": \"NBM\",\n      \"requested\": \"222,375 €\"\n    },\n    {\n      \"partner_name\": \"MRR\",\n      \"requested\": \"209,562.5 €\"\n    },\n    {\n      \"partner_name\": \"RenewLoop Denmark\",\n      \"requested\": \"158,375 €\"\n    },\n    {\n      \"partner_name\": \"LRC\",\n      \"requested\": \"149,350 €\"\n    },\n    {\n      \"partner_name\": \"LBDA\",\n      \"requested\": \"303,250 €\"\n    },\n    {\n      \"partner_name\": \"GPO\",\n      \"requested\": \"431,875 €\"\n    },\n    {\n      \"partner_name\": \"LRS\",\n      \"requested\": \"335,300 €\"\n    },\n    {\n      \"partner_name\": \"MCS\",\n      \"requested\": \"379,750 €\"\n    },\n    {\n      \"partner_name\": \"TFI\",\n      \"requested\": \"384,562.5 €\"\n    },\n    {\n      \"partner_name\": \"BIT\",\n      \"requested\": \"366,500 €\"\n    },\n    {\n      \"partner_name\": \"VALM\",\n      \"requested\": \"224,062.5 €\"\n    },\n    {\n      \"partner_name\": \"EIM\",\n      \"requested\": \"215,625 €\"\n    },\n    {\n      \"partner_name\": \"ARIF\",\n      \"requested\": \"135,875 €\"\n    },\n    {\n      \"partner_name\": \"PV\",\n      \"requested\": \"222,062.5 €\"\n    },\n    {\n      \"partner_name\": \"UHT\",\n      \"requested\": \"571,500 €\"\n    },\n    {\n      \"partner_name\": \"SUAS\",\n      \"requested\": \"343,025 €\"\n    },\n    {\n      \"partner_name\": \"CRTN\",\n      \"requested\": \"0 €\"\n    },\n    {\n      \"partner_name\": \"AFL\",\n      \"requested\": \"0 €\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 25936,
+        "completion_tokens": 674,
+        "total_tokens": 26610,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 149.62,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00578032
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 141717,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 38.08
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 4423,
+          "total_tokens": 4600,
+          "completion_tokens": 177,
+          "estimated_cost": 0.0010403600000000002,
+          "prompt_tokens_details": null
+        },
+        "reply": "The provided document pages do not contain a partner budget table or any of the required data fields such as proposal title, call identifier, submission date, requested total, TRL/MCRL levels, or partner funding amounts. The pages are administrative forms related to security self-assessment and two-stage calls, with no financial or partner-specific data visible.\n\nTherefore, no data can be extracted to populate the requested JSON structure.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 4423,
+        "completion_tokens": 177,
+        "total_tokens": 4600,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 38.08,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00104036
+      }
+    ]
+  }
+}

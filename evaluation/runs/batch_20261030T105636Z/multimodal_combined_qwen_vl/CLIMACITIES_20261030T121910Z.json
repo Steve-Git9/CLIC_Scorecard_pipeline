@@ -1,0 +1,53 @@
+{
+  "proposal": {
+    "proposal_acronym": "CLIMACITIES",
+    "proposal_title": "Climate Intelligence for Equitable and Adaptive European Cities",
+    "call_identifier": "HORIZON-MISS-2027-CLIMA-SYN-01",
+    "submission_date": null
+  },
+  "proposal_facts": {
+    "requested_total_cents": 750000000,
+    "trl_start": null,
+    "trl_target": null,
+    "mcrl_start": null,
+    "mcrl_target": null
+  },
+  "partners": [
+    {
+      "partner_name": "NORDIC URBAN SYSTEMS INSTITUTE",
+      "requested_cents": 142000000
+    },
+    {
+      "partner_name": "RHEIN DATA LABS GMBH",
+      "requested_cents": 106000000
+    },
+    {
+      "partner_name": "ATLANTIC RESILIENCE CENTRE",
+      "requested_cents": 91000000
+    },
+    {
+      "partner_name": "CIVITAS ANALYTICS SL",
+      "requested_cents": 87000000
+    },
+    {
+      "partner_name": "DELTA WATER RESEARCH BV",
+      "requested_cents": 85000000
+    },
+    {
+      "partner_name": "BALTIC COMMUNITY LAB",
+      "requested_cents": 69000000
+    },
+    {
+      "partner_name": "ALPINE ENERGY INNOVATION SRL",
+      "requested_cents": 93000000
+    },
+    {
+      "partner_name": "URBAN FUTURES ASSOCIATION",
+      "requested_cents": 77000000
+    }
+  ],
+  "metadata": {
+    "extraction_timestamp": "2026-10-30T12:19:10Z",
+    "source_file": "CLIMACITIES.pdf"
+  }
+}

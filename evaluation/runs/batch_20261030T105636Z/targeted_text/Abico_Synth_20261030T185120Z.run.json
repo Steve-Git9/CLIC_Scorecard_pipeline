@@ -1,0 +1,206 @@
+{
+  "arm": "targeted_text",
+  "mode": "text",
+  "model": "openai/gpt-oss-120b",
+  "provider": "groq",
+  "source_file": "Abico_Synth.pdf",
+  "started_utc": "2026-10-30T18:51:20Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested[NLUAS] filled from the verified table on page 34 ('487 200'); the model gave no amount",
+    "requested[NISM] filled from the verified table on page 34 ('642 300'); the model gave no amount",
+    "requested[ENU] filled from the verified table on page 34 ('369 500'); the model gave no amount",
+    "requested[CFU] filled from the verified table on page 34 ('337 200'); the model gave no amount"
+  ],
+  "pages_total": 40,
+  "pages_sent": [
+    1,
+    4,
+    6,
+    27,
+    29,
+    30,
+    34,
+    35
+  ],
+  "scanned_pages": [],
+  "ocr_pages": [],
+  "images_sent": 0,
+  "located": {
+    "proposal": [
+      1,
+      6,
+      7
+    ],
+    "budget": [
+      34,
+      35
+    ],
+    "partners": [
+      29,
+      27,
+      30
+    ],
+    "readiness": [
+      4,
+      7,
+      10
+    ]
+  },
+  "located_by": {
+    "proposal": "keywords",
+    "budget": "keywords",
+    "partners": "keywords",
+    "readiness": "model"
+  },
+  "tables_found": 6,
+  "tables_verified": 2,
+  "page_map_cached": false,
+  "calls": 2,
+  "seconds": 2.72,
+  "attempts": 2,
+  "prompt_tokens": 7498,
+  "completion_tokens": 789,
+  "cost_usd": 0.001716,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-120b",
+  "steps": {
+    "page_map": 13.28,
+    "locate": 0.0,
+    "identifier_hints": 0.28,
+    "tables": 1.62,
+    "locate_model_fallback": 0.6,
+    "text_and_ocr": 0.06,
+    "model": 2.12
+  },
+  "context_splits": 0,
+  "identifiers_filled": {},
+  "partners_confirmed_by_table": 4,
+  "output_file": "Abico_Synth_20261030T185120Z.json",
+  "replies_file": "Abico_Synth_20261030T185120Z.replies.json",
+  "total_seconds": 17.98,
+  "trace_file": "Abico_Synth_20261030T185120Z.trace.json",
+  "evaluation": {
+    "document": "Abico_Synth",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\targeted_text\\Abico_Synth_20261030T185120Z.run.json",
+    "input": "pdf",
+    "preparation": {},
+    "runner_wall_clock_seconds": 17.99,
+    "end_to_end_seconds": 17.99,
+    "calls": 2,
+    "failed_calls": 0,
+    "attempts": 2,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 7498,
+      "completion_tokens": 789,
+      "reasoning_tokens": 503,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 2,
+      "completion_tokens": 2,
+      "reasoning_tokens": 2,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.0015981,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-120b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "page_pick",
+        "model": "openai/gpt-oss-120b",
+        "provider": "groq",
+        "response_format": false,
+        "request_bytes": 7250,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 0.6
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.07399186,
+          "prompt_tokens": 1773,
+          "prompt_time": 0.069445674,
+          "completion_tokens": 102,
+          "completion_time": 0.216756035,
+          "total_tokens": 1875,
+          "total_time": 0.286201709,
+          "completion_tokens_details": {
+            "reasoning_tokens": 70
+          }
+        },
+        "reply": "{\n  \"pages\": {\n    \"readiness\": [4, 7, 10]\n  }\n}",
+        "reasoning": "Need pages with TRL and MCRL. Look for keywords TRL or MCRL not present. Likely in sections about readiness maybe not indexed. Choose pages likely: introduction, objectives, work content, maybe appendix. Choose up to 3: p4 (intro), p7 (objectives), p10 (work content).",
+        "prompt_tokens": 1773,
+        "completion_tokens": 102,
+        "total_tokens": 1875,
+        "reasoning_tokens": 70,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 0.6,
+        "model_reported": "openai/gpt-oss-120b",
+        "finish_reason": "stop",
+        "cost_usd": 0.00032715
+      },
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-120b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 26874,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 2.12
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.143419116,
+          "prompt_tokens": 5725,
+          "prompt_time": 0.276462983,
+          "completion_tokens": 687,
+          "completion_time": 1.431217156,
+          "total_tokens": 6412,
+          "total_time": 1.707680139,
+          "completion_tokens_details": {
+            "reasoning_tokens": 433
+          }
+        },
+        "reply": "{\"proposal\":{\"proposal_acronym\":\"ReCoSE\",\"proposal_title\":\"Renewable Composite Systems with Circular Engineering ReCoSE\",\"call_identifier\":null,\"submission_date\":null},\"proposal_facts\":{\"requested_total\":\"EUR 3.860 million\",\"trl_start\":null,\"trl_target\":null,\"mcrl_start\":null,\"mcrl_target\":null},\"partners\":[{\"partner_name\":\"NLUAS\",\"requested\":null},{\"partner_name\":\"LDTU\",\"requested\":null},{\"partner_name\":\"NISM\",\"requested\":null},{\"partner_name\":\"ENU\",\"requested\":null},{\"partner_name\":\"CFU\",\"requested\":null},{\"partner_name\":\"PolyCycle\",\"requested\":null},{\"partner_name\":\"NorthGrid Energy WS\",\"requested\":null},{\"partner_name\":\"ForestLoop Fibre\",\"requested\":null},{\"partner_name\":\"CircuForm\",\"requested\":null},{\"partner_name\":\"BioCoat Solutions\",\"requested\":null},{\"partner_name\":\"NordWindow Group\",\"requested\":null},{\"partner_name\":\"Atmosense\",\"requested\":null},{\"partner_name\":\"Aurora Shipworks\",\"requested\":null},{\"partner_name\":\"PolyNova Labs\",\"requested\":null},{\"partner_name\":\"SurfaceTech Nordic\",\"requested\":null}]}",
+        "reasoning": "We need proposal fields. Title from cover: \"Renewable Composite Systems with Circular Engineering ReCoSE\". Acronym ReCoSE. Call identifier not present => null. Submission date not given => null.\n\nRequested_total: look for total budget requested. Probably total budget of project: EUR 3.860 million mentioned in text but also tables show totals. Use reliable table? Table 1 page 35 not verified. But page 34 says total budget EUR 3.860 million. That's explicit. Use that string \"EUR 3.860 million\". requested_total copy.\n\nTRL and MCRL not mentioned => null.\n\nPartners: need each organisation and its requested grant. Which table gives partner-specific budgets? Table 1 page 34 gives research institutes budgets (their own contributions?). That's budgets of research institutes, not requested grant. Table 2 page 34 gives direct financial support of companies to research organisations. That's amounts companies give to research orgs, not their own request. Table 1 page 35 shows funding applied etc but not per partner. No clear partner requested amounts. Might be none => null for each partner.\n\nWe need list of partners in document order. From Table 18 and page 30 list. Combine all partners: NLUAS, LDTU, NISM, ENU, CFU, PolyCycle, NorthGrid Energy WS, ForestLoop Fibre, CircuForm, BioCoat Solutions, NordWindow Group, Atmosense, Aurora Shipworks, PolyNova Labs, SurfaceTech Nordic, etc. Also Aurora, PolyNova, SurfaceTech Nordic from page 30. Also maybe others like \"Nordic Institute for Sustainable Materials NISM\". We'll list as appears in Table 18 then page 30 additional. Order: NLUAS, LDTU, NISM, ENU, CFU, PolyCycle, NorthGrid Energy WS, ForestLoop Fibre, CircuForm, BioCoat Solutions, NordWindow Group, Atmosense, Aurora Shipworks, PolyNova Labs, SurfaceTech Nordic. Also maybe \"Nordic Institute for Sustainable Materials\" already NISM. Provide requested null.\n\nReturn JSON.",
+        "prompt_tokens": 5725,
+        "completion_tokens": 687,
+        "total_tokens": 6412,
+        "reasoning_tokens": 433,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 2.12,
+        "model_reported": "openai/gpt-oss-120b",
+        "finish_reason": "stop",
+        "cost_usd": 0.00127095
+      }
+    ]
+  }
+}

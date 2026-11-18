@@ -1,0 +1,244 @@
+{
+  "validity": {
+    "first_attempt": true,
+    "first_attempt_reason": null,
+    "after_repair": true,
+    "after_repair_problems": []
+  },
+  "scalars": [
+    {
+      "field": "proposal.proposal_acronym",
+      "gold": "TIDEMESH",
+      "extracted": "TIDEMESH",
+      "outcome": "correct"
+    },
+    {
+      "field": "proposal.proposal_title",
+      "gold": "Adaptive Sensor Networks for Resilient Coastal Infrastructure",
+      "extracted": "Adaptive Sensor Networks for Resilient Coastal Infrastructure",
+      "outcome": "correct"
+    },
+    {
+      "field": "proposal.call_identifier",
+      "gold": "BF2026/93782",
+      "extracted": "BF2026/93782",
+      "outcome": "correct"
+    },
+    {
+      "field": "proposal.submission_date",
+      "gold": null,
+      "extracted": "2026-04-02",
+      "outcome": "unsupported"
+    },
+    {
+      "field": "proposal_facts.requested_total_cents",
+      "gold": 99110000,
+      "extracted": 99110000,
+      "outcome": "correct"
+    },
+    {
+      "field": "proposal_facts.trl_start",
+      "gold": 2,
+      "extracted": null,
+      "outcome": "miss"
+    },
+    {
+      "field": "proposal_facts.trl_target",
+      "gold": 5,
+      "extracted": null,
+      "outcome": "miss"
+    },
+    {
+      "field": "proposal_facts.mcrl_start",
+      "gold": 1,
+      "extracted": 1,
+      "outcome": "correct"
+    },
+    {
+      "field": "proposal_facts.mcrl_target",
+      "gold": 4,
+      "extracted": 4,
+      "outcome": "correct"
+    }
+  ],
+  "scalar_accuracy": 0.6666666666666666,
+  "partners": {
+    "entries": [
+      {
+        "partner_name": "Nordvalen Systems Oy (NVS)",
+        "class": "matched",
+        "gold_partner": "Nordvalen Systems Oy",
+        "reason": "author's decision: gold:Nordvalen Systems Oy",
+        "unsure_case": null,
+        "decided": true,
+        "requested_cents": 18160000,
+        "amount_outcome": "correct",
+        "amount_weight": 1.0,
+        "weights": {
+          "matched": 1.0,
+          "duplicate": 0.0,
+          "supported_extra": 0.0,
+          "unsupported_extra": 0.0
+        },
+        "extra_weight": 0.0
+      },
+      {
+        "partner_name": "Kaltiora Analytics Oy (KTA)",
+        "class": "matched",
+        "gold_partner": "Kaltiora Analytics Oy",
+        "reason": "author's decision: gold:Kaltiora Analytics Oy",
+        "unsure_case": null,
+        "decided": true,
+        "requested_cents": 19090000,
+        "amount_outcome": "correct",
+        "amount_weight": 1.0,
+        "weights": {
+          "matched": 1.0,
+          "duplicate": 0.0,
+          "supported_extra": 0.0,
+          "unsupported_extra": 0.0
+        },
+        "extra_weight": 0.0
+      },
+      {
+        "partner_name": "Lumenthar Marine Oy (LMR)",
+        "class": "matched",
+        "gold_partner": "Lumenthar Marine Oy",
+        "reason": "author's decision: gold:Lumenthar Marine Oy",
+        "unsure_case": null,
+        "decided": true,
+        "requested_cents": null,
+        "amount_outcome": "miss",
+        "amount_weight": 1.0,
+        "weights": {
+          "matched": 1.0,
+          "duplicate": 0.0,
+          "supported_extra": 0.0,
+          "unsupported_extra": 0.0
+        },
+        "extra_weight": 0.0
+      },
+      {
+        "partner_name": "Havrenmaa University (HVU)",
+        "class": "matched",
+        "gold_partner": "Havrenmaa University",
+        "reason": "author's decision: gold:Havrenmaa University",
+        "unsure_case": null,
+        "decided": true,
+        "requested_cents": 25360000,
+        "amount_outcome": "correct",
+        "amount_weight": 1.0,
+        "weights": {
+          "matched": 1.0,
+          "duplicate": 0.0,
+          "supported_extra": 0.0,
+          "unsupported_extra": 0.0
+        },
+        "extra_weight": 0.0
+      },
+      {
+        "partner_name": "Taimerra Research Institute (TMI)",
+        "class": "matched",
+        "gold_partner": "Taimerra Research Institute",
+        "reason": "author's decision: gold:Taimerra Research Institute",
+        "unsure_case": null,
+        "decided": true,
+        "requested_cents": 36500000,
+        "amount_outcome": "correct",
+        "amount_weight": 1.0,
+        "weights": {
+          "matched": 1.0,
+          "duplicate": 0.0,
+          "supported_extra": 0.0,
+          "unsupported_extra": 0.0
+        },
+        "extra_weight": 0.0
+      }
+    ],
+    "gold_status": [
+      {
+        "partner_name": "Nordvalen Systems Oy",
+        "requested_cents": 18160000,
+        "found": 1.0,
+        "unsure": false
+      },
+      {
+        "partner_name": "Kaltiora Analytics Oy",
+        "requested_cents": 19090000,
+        "found": 1.0,
+        "unsure": false
+      },
+      {
+        "partner_name": "Lumenthar Marine Oy",
+        "requested_cents": 0,
+        "found": 1.0,
+        "unsure": false
+      },
+      {
+        "partner_name": "Havrenmaa University",
+        "requested_cents": 25360000,
+        "found": 1.0,
+        "unsure": false
+      },
+      {
+        "partner_name": "Taimerra Research Institute",
+        "requested_cents": 36500000,
+        "found": 1.0,
+        "unsure": false
+      }
+    ],
+    "gold_count": 5,
+    "matched_count": 5.0,
+    "missed_gold": [],
+    "missed_weight": 0.0,
+    "recall": 1.0,
+    "amount_accuracy": 0.8,
+    "amount_outcomes": {
+      "correct": 4.0,
+      "miss": 1.0
+    },
+    "classes": {
+      "matched": 5.0,
+      "duplicate": 0.0,
+      "supported_extra": 0.0,
+      "unsupported_extra": 0.0
+    },
+    "extracted_count": 5,
+    "extra_weight": 0.0,
+    "unsure": [],
+    "unsure_error_weight": 0,
+    "sum_check": {
+      "stated_total_cents": 99110000,
+      "matched_sum_cents": 99110000,
+      "matched_without_amount": 1,
+      "matched_sum_equals_total": null,
+      "supported_extras_sum_cents": 0,
+      "sum_with_supported_extras_cents": 99110000,
+      "sum_with_supported_extras_equals_total": null,
+      "supported_extras_make_sum_deviate": null
+    }
+  },
+  "errors": {
+    "misses": 3.0,
+    "wrong_values": 0.0,
+    "unsupported_values": 1.0,
+    "unsupported_extras": 0.0,
+    "duplicates": 0.0,
+    "total": 4.0,
+    "from_unsure_names": 0,
+    "certain": 4.0
+  },
+  "unsupported_values_including_extras": 1.0,
+  "reviewer_decisions": {
+    "supported_extras": 0.0,
+    "unsure_names": 0
+  },
+  "contains_unsure": false,
+  "fully_correct": 0.0,
+  "run_file": "SP02_20261030T185418Z.run.json",
+  "configuration": "targeted_multimodal",
+  "document": "SP02",
+  "protocol": "schema",
+  "run_status": "ok",
+  "markdown_available": true
+}

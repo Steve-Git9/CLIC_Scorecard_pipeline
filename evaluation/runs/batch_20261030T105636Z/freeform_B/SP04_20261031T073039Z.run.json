@@ -1,0 +1,107 @@
+{
+  "arm": "freeform_B",
+  "model": "Qwen/Qwen3.5-9B",
+  "provider": "deepinfra",
+  "source_file": "SP04.md",
+  "started_utc": "2026-10-31T07:30:39Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [],
+  "free_form": true,
+  "context_splits": 0,
+  "seconds": 59.97,
+  "attempts": 1,
+  "prompt_tokens": 25375,
+  "completion_tokens": 729,
+  "cost_usd": 0.002647,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3.5-9B",
+  "parts": 1,
+  "freeform_file": "SP04_20261031T073039Z.freeform.txt",
+  "output_file": "SP04_20261031T073039Z.json",
+  "replies_file": "SP04_20261031T073039Z.replies.json",
+  "total_seconds": 59.99,
+  "evaluation": {
+    "document": "SP04",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\freeform_B\\SP04_20261031T073039Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 193.06,
+      "docling_markdown_sha256": "951b31c414cf23cb5b6509c461a804c7a170ca72fff157efdb3dcaa02845bdfb"
+    },
+    "runner_wall_clock_seconds": 59.99,
+    "end_to_end_seconds": 253.05,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 25375,
+      "completion_tokens": 729,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": {
+      "made": false,
+      "tokens": 0,
+      "note": "the free form reply is converted to JSON locally in Python; no model call"
+    },
+    "cost": {
+      "cost_usd": 0.00264685,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3.5-9B",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3.5-9B",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 138795,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 59.97
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 25375,
+          "total_tokens": 26104,
+          "completion_tokens": 729,
+          "estimated_cost": 0.0026468500000000005,
+          "prompt_tokens_details": null
+        },
+        "reply": "The document states the acronym, title, call identifier, and submission date in the header section. It describes the readiness levels in sections 1.2 and Annex B. It presents the partner budget table in section 5.2 (Revised budget).\n\n**Proposal Details:**\n- **Acronym:** MAROFLOW\n- **Title:** Marine Observation Flows for Shared Coastal Planning\n- **Call Identifier:** BSR2026C41\n- **Submission Date:** 10 August 2026\n\n**Readiness Levels:**\n- **TRL Start:** The document mentions a starting position in Figure 1.2 but does not explicitly state the integer value in the text. It only states the target is 6. Therefore, the start value is null based on the explicit text rule.\n- **TRL Target:** 6 (Table B2)\n- **MCRL Start:** 4 (Section 4.2)\n- **MCRL Target:** The document states the partners will \"keep the market situation under observation\" but does not explicitly state a target integer for MCRL. Therefore, the target is null.\n\n**Partner Budget Table (Section 5.2):**\nThe table lists partners with their requested funding.\n- Hallvik: 674.5\n- Orrenfjord: 568.8\n- Marovik: 592.8\n- Quenmark: 507.0\n- Ostrelund: 213.0\n- Brenvik: 0.0\n- Eskeby: calculated at the funding rate (No specific number given)\n\n**Total Requested:**\nThe text explicitly states: \"The total requested funding of the revised budget is EUR 2,946.1 thousand.\"\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"MAROFLOW\",\n    \"proposal_title\": \"Marine Observation Flows for Shared Coastal Planning\",\n    \"call_identifier\": \"BSR2026C41\",\n    \"submission_date\": \"2026-08-10\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2,946.1 thousand\",\n    \"trl_start\": null,\n    \"trl_target\": 6,\n    \"mcrl_start\": 4,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Hallvik\",\n      \"requested\": \"674.5\"\n    },\n    {\n      \"partner_name\": \"Orrenfjord\",\n      \"requested\": \"568.8\"\n    },\n    {\n      \"partner_name\": \"Marovik\",\n      \"requested\": \"592.8\"\n    },\n    {\n      \"partner_name\": \"Quenmark\",\n      \"requested\": \"507.0\"\n    },\n    {\n      \"partner_name\": \"Ostrelund\",\n      \"requested\": \"213.0\"\n    },\n    {\n      \"partner_name\": \"Brenvik\",\n      \"requested\": \"0.0\"\n    },\n    {\n      \"partner_name\": \"Eskeby\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 25375,
+        "completion_tokens": 729,
+        "total_tokens": 26104,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 59.97,
+        "model_reported": "Qwen/Qwen3.5-9B",
+        "finish_reason": "stop",
+        "cost_usd": 0.00264685
+      }
+    ]
+  }
+}

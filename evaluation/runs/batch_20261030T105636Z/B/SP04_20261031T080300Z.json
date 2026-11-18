@@ -1,0 +1,49 @@
+{
+  "proposal": {
+    "proposal_acronym": "MAROFLOW",
+    "proposal_title": "Marine Observation Flows for Shared Coastal Planning",
+    "call_identifier": "BSR2026C41",
+    "submission_date": "2026-08-10"
+  },
+  "proposal_facts": {
+    "requested_total_cents": 294610000,
+    "trl_start": null,
+    "trl_target": 6,
+    "mcrl_start": 4,
+    "mcrl_target": null
+  },
+  "partners": [
+    {
+      "partner_name": "Hallvik University",
+      "requested_cents": 67450
+    },
+    {
+      "partner_name": "Orrenfjord Marine Systems Ltd (formerly Kellmar Technologies Ltd)",
+      "requested_cents": 56880
+    },
+    {
+      "partner_name": "Marovik Research Institute",
+      "requested_cents": 59280
+    },
+    {
+      "partner_name": "Quenmark Sensor Works Ltd",
+      "requested_cents": 50700
+    },
+    {
+      "partner_name": "Ostrelund Regional Development Agency",
+      "requested_cents": 21300
+    },
+    {
+      "partner_name": "Brenvik Port Logistics Ltd",
+      "requested_cents": 0
+    },
+    {
+      "partner_name": "Eskeby Technical University",
+      "requested_cents": null
+    }
+  ],
+  "metadata": {
+    "extraction_timestamp": "2026-10-31T08:03:00Z",
+    "source_file": "SP04.md"
+  }
+}

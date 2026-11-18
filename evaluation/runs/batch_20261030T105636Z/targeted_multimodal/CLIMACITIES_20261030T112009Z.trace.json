@@ -1,0 +1,115 @@
+{
+ "located": {
+  "proposal": [
+   {
+    "page": 1,
+    "score": 12.75
+   },
+   {
+    "page": 3,
+    "score": 9.75
+   },
+   {
+    "page": 45,
+    "score": 12.0
+   }
+  ],
+  "budget": [
+   {
+    "page": 43,
+    "score": 13.25
+   },
+   {
+    "page": 45,
+    "score": 10.25
+   },
+   {
+    "page": 1,
+    "score": 7.0
+   }
+  ],
+  "partners": [
+   {
+    "page": 40,
+    "score": 8.25
+   },
+   {
+    "page": 41,
+    "score": 8.25
+   },
+   {
+    "page": 42,
+    "score": 8.0
+   }
+  ],
+  "readiness": [
+   {
+    "page": 3,
+    "score": 2.25
+   },
+   {
+    "page": 6,
+    "score": 2.25
+   },
+   {
+    "page": 9,
+    "score": 2.25
+   }
+  ]
+ },
+ "tables": [],
+ "partner_budget_table": null,
+ "identifier_hints": {
+  "cover_title": "CLIMACITIES",
+  "cover_page": 1,
+  "acronym_candidates": [
+   "CLIMACITIES"
+  ],
+  "labelled": {
+   "acronym": [],
+   "title": [],
+   "call": []
+  },
+  "call_ids": [
+   {
+    "id": "HORIZON-MISS-2027-CLIMA-SYN-01",
+    "page": 1
+   }
+  ]
+ },
+ "page_map_sha256": "de4e0b55d65974111cc28c99c9f03adf74fcb0e9eea3e27eaa32fb6c6211bc83",
+ "reconciliation": [
+  {
+   "partner_name": "NORDIC URBAN SYSTEMS INSTITUTE",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "RHEIN DATA LABS GMBH",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "ATLANTIC RESILIENCE CENTRE",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "CIVITAS ANALYTICS SL",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "DELTA WATER RESEARCH BV",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "BALTIC COMMUNITY LAB",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "ALPINE ENERGY INNOVATION SRL",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "URBAN FUTURES ASSOCIATION",
+   "status": "unchecked"
+  }
+ ]
+}

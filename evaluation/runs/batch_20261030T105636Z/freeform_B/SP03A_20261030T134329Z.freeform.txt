@@ -1,0 +1,62 @@
+The document states the following details:
+*   **Acronym:** RESENSE
+*   **Title:** Adaptive Sensor Networks for Resource Efficient Process Monitoring
+*   **Call Identifier:** RCF2027/6433
+*   **Submission Date:** The document contains a "Dateofsubmission" field in the General Information table (A.7) which is empty. The only date present is the signature date (2 February 2027) and the project start date (15.3.2027). Therefore, the submission date is not explicitly stated.
+*   **Readiness Levels:**
+    *   TRL Start: 3 (Section C.17.1)
+    *   TRL Target: 5 (Section C.17.2)
+    *   MCRL Start: 1 (Section C.19.1)
+    *   MCRL Target: 4 (Section C.19.2)
+*   **Partner Budget Table:** Located in Part D, Section D.1.
+    *   TMU: 214,8 (1 000 EUR)
+    *   HBU: 159,8 (1 000 EUR)
+    *   KPRI: see E.2 (No numeric amount in the table row)
+    *   OPS: 177,8 (1 000 EUR)
+    *   VSS: 196,4 (1 000 EUR)
+    *   ORDEA: 0,0 (1 000 EUR)
+    *   Total: 979,3 (1 000 EUR) -> Converted to EUR 979,300 in D.2.
+
+```json
+{
+  "proposal": {
+    "proposal_acronym": "RESENSE",
+    "proposal_title": "Adaptive Sensor Networks for Resource Efficient Process Monitoring",
+    "call_identifier": "RCF2027/6433",
+    "submission_date": null
+  },
+  "proposal_facts": {
+    "requested_total": "EUR 979300",
+    "trl_start": 3,
+    "trl_target": 5,
+    "mcrl_start": 1,
+    "mcrl_target": 4
+  },
+  "partners": [
+    {
+      "partner_name": "Torvenmaa University",
+      "requested": "214,8"
+    },
+    {
+      "partner_name": "Haldeberg University of Applied Sciences and Regional Innovation Services",
+      "requested": "159,8"
+    },
+    {
+      "partner_name": "Kestrel Institute for Process Research",
+      "requested": null
+    },
+    {
+      "partner_name": "Ormenfield Process Systems Oy",
+      "requested": "177,8"
+    },
+    {
+      "partner_name": "Vantora Sensor Solutions Oy",
+      "requested": "196,4"
+    },
+    {
+      "partner_name": "Ostermark Regional Development Agency",
+      "requested": "0,0"
+    }
+  ]
+}
+```

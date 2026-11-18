@@ -1,0 +1,362 @@
+{
+  "arm": "multimodal_strict",
+  "strict": true,
+  "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "provider": "deepinfra",
+  "source_file": "SP01.pdf",
+  "started_utc": "2026-10-30T11:02:20Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "duplicate partner 'Kalevra Innovation Cluster Oy' dropped",
+    "duplicate partner 'Northbay Materials Oy' dropped",
+    "duplicate partner 'Corvane Polymer Systems AB' dropped",
+    "duplicate partner 'Tessilo Process Engineering GmbH' dropped",
+    "duplicate partner 'Rauvik University' dropped",
+    "duplicate partner 'Elvaris University of Technology' dropped",
+    "duplicate partner 'Sundmark Applied Research Institute' dropped",
+    "duplicate partner 'Brenvik Institute for Sustainable Process Engineering' dropped",
+    "duplicate partner 'Lindfors Regional Development Agency' dropped"
+  ],
+  "batch_size": 10,
+  "overlap": 1,
+  "batches": 8,
+  "seconds": 264.77,
+  "attempts": 8,
+  "prompt_tokens": 146683,
+  "completion_tokens": 1251,
+  "cost_usd": 0.030438,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "output_file": "SP01_20261030T110220Z.json",
+  "replies_file": "SP01_20261030T110220Z.replies.json",
+  "total_seconds": 271.68,
+  "evaluation": {
+    "document": "SP01",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\multimodal_strict\\SP01_20261030T110220Z.run.json",
+    "input": "pdf",
+    "preparation": {},
+    "runner_wall_clock_seconds": 271.7,
+    "end_to_end_seconds": 271.7,
+    "calls": 8,
+    "failed_calls": 0,
+    "attempts": 8,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 146683,
+      "completion_tokens": 1251,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 8,
+      "completion_tokens": 8,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.03043748,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 3079546,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 25.14
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20196,
+          "completion_tokens": 143,
+          "estimated_cost": 0.00413644,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"LOOPWEAVE\",\n    \"proposal_title\": \"Circular Weaving of Recycled Fibre Value Chains\",\n    \"call_identifier\": \"INNO-2027-03-CIRCFIBRE-04\",\n    \"submission_date\": \"2027-03-06\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 4,789,800\",\n    \"trl_start\": 5,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 143,
+        "total_tokens": 20196,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 25.14,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00413644
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 3578762,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 20.61
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20143,
+          "completion_tokens": 90,
+          "estimated_cost": 0.0040898,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 90,
+        "total_tokens": 20143,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 20.61,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0040898
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 3622334,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 17.67
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20143,
+          "completion_tokens": 90,
+          "estimated_cost": 0.0040898,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 90,
+        "total_tokens": 20143,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 17.67,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0040898
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 3522310,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 60.69
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20354,
+          "completion_tokens": 301,
+          "estimated_cost": 0.004275480000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Kalevra Innovation Cluster Oy\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Northbay Materials Oy\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Corvane Polymer Systems AB\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Tessilo Process Engineering GmbH\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Rauvik University\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Elvaris University of Technology\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Sundmark Applied Research Institute\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Brenvik Institute for Sustainable Process Engineering\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Lindfors Regional Development Agency\",\n      \"requested\": null\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 301,
+        "total_tokens": 20354,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 60.69,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00427548
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 3147998,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 67.19
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20410,
+          "completion_tokens": 357,
+          "estimated_cost": 0.00432476,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 4,789.8\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Kalevra Innovation Cluster Oy\",\n      \"requested\": \"575.6\"\n    },\n    {\n      \"partner_name\": \"Northbay Materials Oy\",\n      \"requested\": \"466.6\"\n    },\n    {\n      \"partner_name\": \"Corvane Polymer Systems AB\",\n      \"requested\": \"578.0\"\n    },\n    {\n      \"partner_name\": \"Tessilo Process Engineering GmbH\",\n      \"requested\": \"EUR 552,100\"\n    },\n    {\n      \"partner_name\": \"Rauvik University\",\n      \"requested\": \"643.9\"\n    },\n    {\n      \"partner_name\": \"Elvaris University of Technology\",\n      \"requested\": \"735.9\"\n    },\n    {\n      \"partner_name\": \"Sundmark Applied Research Institute\",\n      \"requested\": \"553.2\"\n    },\n    {\n      \"partner_name\": \"Brenvik Institute for Sustainable Process Engineering\",\n      \"requested\": \"684.5\"\n    },\n    {\n      \"partner_name\": \"Lindfors Regional Development Agency\",\n      \"requested\": \"0.0\"\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 357,
+        "total_tokens": 20410,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 67.19,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00432476
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 3057126,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 20.81
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20143,
+          "completion_tokens": 90,
+          "estimated_cost": 0.0040898,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 90,
+        "total_tokens": 20143,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 20.81,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0040898
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 2948802,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 29.7
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20143,
+          "completion_tokens": 90,
+          "estimated_cost": 0.0040898,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 90,
+        "total_tokens": 20143,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 29.7,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0040898
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 1130281,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 22.96
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 6312,
+          "total_tokens": 6402,
+          "completion_tokens": 90,
+          "estimated_cost": 0.0013416000000000003,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": null,\n    \"proposal_title\": null,\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}",
+        "reasoning": null,
+        "prompt_tokens": 6312,
+        "completion_tokens": 90,
+        "total_tokens": 6402,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 22.96,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0013416
+      }
+    ]
+  }
+}

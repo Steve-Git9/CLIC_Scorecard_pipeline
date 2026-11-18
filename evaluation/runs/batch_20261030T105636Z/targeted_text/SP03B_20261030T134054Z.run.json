@@ -1,0 +1,179 @@
+{
+  "arm": "targeted_text",
+  "mode": "text",
+  "model": "openai/gpt-oss-120b",
+  "provider": "groq",
+  "source_file": "SP03B.pdf",
+  "started_utc": "2026-10-30T13:40:54Z",
+  "status": "failed",
+  "error": "could not read or OCR the located pages: No module named 'rapidocr'",
+  "warnings": [],
+  "pages_total": 45,
+  "pages_sent": [
+    1,
+    2
+  ],
+  "scanned_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45
+  ],
+  "ocr_pages": [],
+  "images_sent": 0,
+  "located": {
+    "proposal": [
+      1,
+      2
+    ],
+    "budget": [],
+    "partners": [],
+    "readiness": []
+  },
+  "located_by": {
+    "proposal": "keywords"
+  },
+  "tables_found": 0,
+  "tables_verified": 0,
+  "page_map_cached": false,
+  "calls": 1,
+  "seconds": 0.64,
+  "attempts": 1,
+  "prompt_tokens": 576,
+  "completion_tokens": 47,
+  "cost_usd": 0.000122,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-120b",
+  "steps": {
+    "page_map": 0.25,
+    "locate": 0.0,
+    "identifier_hints": 0.11,
+    "tables": 0.0,
+    "locate_model_fallback": 0.64
+  },
+  "replies_file": "SP03B_20261030T134054Z.replies.json",
+  "total_seconds": 1.02,
+  "trace_file": "SP03B_20261030T134054Z.trace.json",
+  "evaluation": {
+    "document": "SP03B",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\targeted_text\\SP03B_20261030T134054Z.run.json",
+    "input": "pdf",
+    "preparation": {},
+    "runner_wall_clock_seconds": 1.02,
+    "end_to_end_seconds": 1.02,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 576,
+      "completion_tokens": 47,
+      "reasoning_tokens": 13,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.0001146,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-120b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "page_pick",
+        "model": "openai/gpt-oss-120b",
+        "provider": "groq",
+        "response_format": false,
+        "request_bytes": 1687,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 0.64
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.244313214,
+          "prompt_tokens": 576,
+          "prompt_time": 0.052955828,
+          "completion_tokens": 47,
+          "completion_time": 0.097356128,
+          "total_tokens": 623,
+          "total_time": 0.150311956,
+          "completion_tokens_details": {
+            "reasoning_tokens": 13
+          }
+        },
+        "reply": "{\n  \"pages\": {\n    \"budget\": [],\n    \"partners\": [],\n    \"readiness\": []\n  }\n}",
+        "reasoning": "All scans empty, so no info. Return empty lists.",
+        "prompt_tokens": 576,
+        "completion_tokens": 47,
+        "total_tokens": 623,
+        "reasoning_tokens": 13,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 0.64,
+        "model_reported": "openai/gpt-oss-120b",
+        "finish_reason": "stop",
+        "cost_usd": 0.0001146
+      }
+    ]
+  }
+}

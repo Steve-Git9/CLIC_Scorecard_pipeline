@@ -1,0 +1,74 @@
+The document states the acronym, title, call identifier, and submission date in the header section. It describes the readiness levels in sections 1.2 and Annex B. It presents the partner budget table in section 5.2 (Revised budget).
+
+**Proposal Details:**
+- **Acronym:** MAROFLOW
+- **Title:** Marine Observation Flows for Shared Coastal Planning
+- **Call Identifier:** BSR2026C41
+- **Submission Date:** 10 August 2026
+
+**Readiness Levels:**
+- **TRL Start:** The document mentions a starting position in Figure 1.2 but does not explicitly state the integer value in the text. It only states the target is 6. Therefore, the start value is null based on the explicit text rule.
+- **TRL Target:** 6 (Table B2)
+- **MCRL Start:** 4 (Section 4.2)
+- **MCRL Target:** The document states the partners will "keep the market situation under observation" but does not explicitly state a target integer for MCRL. Therefore, the target is null.
+
+**Partner Budget Table (Section 5.2):**
+The table lists partners with their requested funding.
+- Hallvik: 674.5
+- Orrenfjord: 568.8
+- Marovik: 592.8
+- Quenmark: 507.0
+- Ostrelund: 213.0
+- Brenvik: 0.0
+- Eskeby: calculated at the funding rate (No specific number given)
+
+**Total Requested:**
+The text explicitly states: "The total requested funding of the revised budget is EUR 2,946.1 thousand."
+
+```json
+{
+  "proposal": {
+    "proposal_acronym": "MAROFLOW",
+    "proposal_title": "Marine Observation Flows for Shared Coastal Planning",
+    "call_identifier": "BSR2026C41",
+    "submission_date": "2026-08-10"
+  },
+  "proposal_facts": {
+    "requested_total": "EUR 2,946.1 thousand",
+    "trl_start": null,
+    "trl_target": 6,
+    "mcrl_start": 4,
+    "mcrl_target": null
+  },
+  "partners": [
+    {
+      "partner_name": "Hallvik",
+      "requested": "674.5"
+    },
+    {
+      "partner_name": "Orrenfjord",
+      "requested": "568.8"
+    },
+    {
+      "partner_name": "Marovik",
+      "requested": "592.8"
+    },
+    {
+      "partner_name": "Quenmark",
+      "requested": "507.0"
+    },
+    {
+      "partner_name": "Ostrelund",
+      "requested": "213.0"
+    },
+    {
+      "partner_name": "Brenvik",
+      "requested": "0.0"
+    },
+    {
+      "partner_name": "Eskeby",
+      "requested": null
+    }
+  ]
+}
+```

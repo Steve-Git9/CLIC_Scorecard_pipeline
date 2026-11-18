@@ -1,0 +1,61 @@
+The document states the following details:
+- **Acronym**: RESENSE (found in the letter of support and Part A table).
+- **Title**: Adaptive Sensor Networks for Resource Efficient Process Monitoring (found in Part A table).
+- **Call Identifier**: RCF2027/6433 (found in Part A table).
+- **Submission Date**: The document contains a date "2 February 2027" under the letter of support and in the signature block, but the specific "Date of submission" field in Part A (A.7) is empty. Per the rules, if the specific field is missing or cannot be exact, use null.
+- **Readiness Levels**:
+    - TRL Start: The table C.17.1 asks for the level but the cell contains a symbol "ε" (epsilon) and no integer.
+    - TRL Target: The table C.17.2 asks for the level but the cell is empty.
+    - MCRL Start: Table C.19.1 shows the value "1".
+    - MCRL Target: Table C.19.2 shows the value "4".
+- **Partner Budget Table**: Found in Part D, D.1.
+    - TMU: 214,8 (in 1 000 EUR column "Requested funding")
+    - HBU: 159,8
+    - KPRI: "see E.2" (no amount in the table row itself)
+    - OPS: 167,1x.k. 177.8 (The cell contains this text string).
+    - VSS: 196,4
+    - ORDEA: 0,0
+
+```json
+{
+  "proposal": {
+    "proposal_acronym": "RESENSE",
+    "proposal_title": "Adaptive Sensor Networks for Resource Efficient Process Monitoring",
+    "call_identifier": "RCF2027/6433",
+    "submission_date": null
+  },
+  "proposal_facts": {
+    "requested_total": "EUR 979 300",
+    "trl_start": null,
+    "trl_target": null,
+    "mcrl_start": 1,
+    "mcrl_target": 4
+  },
+  "partners": [
+    {
+      "partner_name": "Torvenmaa University",
+      "requested": "214,8"
+    },
+    {
+      "partner_name": "Haldeberg University of Applied Sciences and Regional Innovation Services",
+      "requested": "159,8"
+    },
+    {
+      "partner_name": "Kestrel Institute for ProcessResearch",
+      "requested": null
+    },
+    {
+      "partner_name": "Ormenfield Process Systems Oy",
+      "requested": "167,1x.k. 177.8"
+    },
+    {
+      "partner_name": "Vantora Sensor Solutions Oy",
+      "requested": "196,4"
+    },
+    {
+      "partner_name": "Ostermark Regional Development Agency",
+      "requested": "0,0"
+    }
+  ]
+}
+```

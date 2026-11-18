@@ -1,0 +1,68 @@
+The document states the acronym is LOOPWEAVE, the title is Circular Weaving of Recycled Fibre Value Chains, the call identifier is INNO-2027-03-CIRCFIBRE-04, and the submission date is 6 March 2027. The readiness levels are stated as starting at TRL 5 and targeting TRL 7 (5 plus two). The partner budget table lists nine partners with their requested contributions.
+
+Here is the row-by-row breakdown of the partner budget table:
+1. KalevraInnovationClusterOy: 575.6
+2. NorthbayMaterialsOy: 466.6
+3. CorvanePolymerSystemsAB: 578.0
+4. TessiloProcessEngineeringGmbH: 552,100 (stated in Note 3 as the full figure agreed after table layout was fixed, while the table cell says "seenote3")
+5. RauvikUniversity: 643.9
+6. ElvarisUniversityofTechnology: 735.9
+7. SundmarkAppliedResearchInstitute: 553.2
+8. BrenvikInstituteforSustainableProcess Engineering: 684.5
+9. LindforsRegionalDevelopmentAgency: 0.0
+
+```json
+{
+  "proposal": {
+    "proposal_acronym": "LOOPWEAVE",
+    "proposal_title": "Circular Weaving of Recycled Fibre Value Chains",
+    "call_identifier": "INNO-2027-03-CIRCFIBRE-04",
+    "submission_date": "2027-03-06"
+  },
+  "proposal_facts": {
+    "requested_total": "EUR 4,789,800",
+    "trl_start": 5,
+    "trl_target": 7,
+    "mcrl_start": null,
+    "mcrl_target": null
+  },
+  "partners": [
+    {
+      "partner_name": "KalevraInnovationClusterOy",
+      "requested": "575.6"
+    },
+    {
+      "partner_name": "NorthbayMaterialsOy",
+      "requested": "466.6"
+    },
+    {
+      "partner_name": "CorvanePolymerSystemsAB",
+      "requested": "578.0"
+    },
+    {
+      "partner_name": "TessiloProcessEngineeringGmbH",
+      "requested": "552,100"
+    },
+    {
+      "partner_name": "RauvikUniversity",
+      "requested": "643.9"
+    },
+    {
+      "partner_name": "ElvarisUniversityofTechnology",
+      "requested": "735.9"
+    },
+    {
+      "partner_name": "SundmarkAppliedResearchInstitute",
+      "requested": "553.2"
+    },
+    {
+      "partner_name": "BrenvikInstituteforSustainableProcess Engineering",
+      "requested": "684.5"
+    },
+    {
+      "partner_name": "LindforsRegionalDevelopmentAgency",
+      "requested": "0.0"
+    }
+  ]
+}
+```

@@ -1,3 +1,8 @@
+# Copy to config.yaml (never committed) and adjust if needed. The values below are the ones used
+# for the evaluated batch. Models, providers and prompts are not set here: they are part of the
+# code (Second_step_CLICpipeline/clic_extract/arms.json and the configuration modules), so that a
+# batch manifest can record them with the code commit.
+
 paths:
   raw: data/raw
   markdown: data/markdown
@@ -6,33 +11,14 @@ paths:
   database: data/clic.db
 
 conversion:
-  tool: pymupdf4llm          # or docling
-  ocr_fallback: true
+  # Docling converts every PDF; OCR is switched on only when a page has fewer characters than this
+  # in its embedded text layer (image only pages, such as a scanned copy).
   ocr_min_chars_per_page: 100
-  keep_page_markers: true
-
-extraction:
-  prompt_version: v1
-  max_attempts: 3
-  configurations:
-    local_default:
-      provider: ollama
-      model_name: qwen2.5:14b
-      is_local: true
-      temperature: 0
-    cloud_default:
-      provider: anthropic
-      model_name: claude-sonnet-4-6
-      is_local: false
-      temperature: 0
-
-review:
-  auto_accept: false          # nothing bypasses human review
 
 evaluation:
   gold: evaluation/gold
   markdown: data/markdown              # Docling Markdown, <document>.md, for the extra partner check
-  prices: provider_prices.csv          # provider price list, used for the cost of each run
+  prices: provider_prices(1).csv       # provider price list, used for the cost of each run
   protocols:                           # where the answer sits in a raw reply, see src/evaluation/validity.py
     B: schema
     C: schema

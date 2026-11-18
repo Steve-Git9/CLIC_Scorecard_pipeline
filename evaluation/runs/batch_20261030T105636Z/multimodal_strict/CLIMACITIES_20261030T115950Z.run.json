@@ -1,0 +1,253 @@
+{
+  "arm": "multimodal_strict",
+  "strict": true,
+  "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "provider": "deepinfra",
+  "source_file": "CLIMACITIES.pdf",
+  "started_utc": "2026-10-30T11:59:50Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "duplicate partner 'NORDIC URBAN SYSTEMS INSTITUTE' dropped",
+    "duplicate partner 'RHEIN DATA LABS GMBH' dropped",
+    "duplicate partner 'ATLANTIC RESILIENCE CENTRE' dropped",
+    "duplicate partner 'CIVITAS ANALYTICS SL' dropped",
+    "duplicate partner 'DELTA WATER RESEARCH BV' dropped",
+    "duplicate partner 'BALTIC COMMUNITY LAB' dropped",
+    "duplicate partner 'ALPINE ENERGY INNOVATION SRL' dropped",
+    "duplicate partner 'URBAN FUTURES ASSOCIATION' dropped"
+  ],
+  "batch_size": 10,
+  "overlap": 1,
+  "batches": 5,
+  "seconds": 146.74,
+  "attempts": 5,
+  "prompt_tokens": 98302,
+  "completion_tokens": 1122,
+  "cost_usd": 0.020648,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "output_file": "CLIMACITIES_20261030T115950Z.json",
+  "replies_file": "CLIMACITIES_20261030T115950Z.replies.json",
+  "total_seconds": 151.28,
+  "evaluation": {
+    "document": "CLIMACITIES",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\multimodal_strict\\CLIMACITIES_20261030T115950Z.run.json",
+    "input": "pdf",
+    "preparation": {},
+    "runner_wall_clock_seconds": 151.29,
+    "end_to_end_seconds": 151.29,
+    "calls": 5,
+    "failed_calls": 0,
+    "attempts": 5,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 98302,
+      "completion_tokens": 1122,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 5,
+      "completion_tokens": 5,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.02064776,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 2526458,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 33.45
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20450,
+          "completion_tokens": 397,
+          "estimated_cost": 0.00435996,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"CLIMACITIES\",\n    \"proposal_title\": \"Climate Intelligence for Equitable and Adaptive European Cities\",\n    \"call_identifier\": \"HORIZON-MISS-2027-CLIMA-SYN-01\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 7,500,000\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NORDIC URBAN SYSTEMS INSTITUTE\",\n      \"requested\": \"1,420,000\"\n    },\n    {\n      \"partner_name\": \"RHEIN DATA LABS GMBH\",\n      \"requested\": \"1,060,000\"\n    },\n    {\n      \"partner_name\": \"ATLANTIC RESILIENCE CENTRE\",\n      \"requested\": \"910,000\"\n    },\n    {\n      \"partner_name\": \"CIVITAS ANALYTICS SL\",\n      \"requested\": \"870,000\"\n    },\n    {\n      \"partner_name\": \"DELTA WATER RESEARCH BV\",\n      \"requested\": \"850,000\"\n    },\n    {\n      \"partner_name\": \"BALTIC COMMUNITY LAB\",\n      \"requested\": \"690,000\"\n    },\n    {\n      \"partner_name\": \"ALPINE ENERGY INNOVATION SRL\",\n      \"requested\": \"930,000\"\n    },\n    {\n      \"partner_name\": \"URBAN FUTURES ASSOCIATION\",\n      \"requested\": \"770,000\"\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 397,
+        "total_tokens": 20450,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 33.45,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00435996
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 2681306,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 20.28
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20164,
+          "completion_tokens": 111,
+          "estimated_cost": 0.004108280000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"CLIMACITIES\",\n    \"proposal_title\": \"SYNTHETIC RESEARCH PROPOSAL\",\n    \"call_identifier\": \"Horizon Europe-style | RIA\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 111,
+        "total_tokens": 20164,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 20.28,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00410828
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 2689558,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 17.58
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20165,
+          "completion_tokens": 112,
+          "estimated_cost": 0.00410916,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"CLIMACITIES\",\n    \"proposal_title\": \"CLIMACITIES | SYNTHETIC RESEARCH PROPOSAL\",\n    \"call_identifier\": \"Horizon Europe-style\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 112,
+        "total_tokens": 20165,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 17.58,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00410916
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 2685910,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 25.65
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 20053,
+          "total_tokens": 20168,
+          "completion_tokens": 115,
+          "estimated_cost": 0.0041118000000000005,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"CLIMACITIES\",\n    \"proposal_title\": \"CLIMACITIES | SYNTHETIC RESEARCH PROPOSAL\",\n    \"call_identifier\": \"Horizon Europe-style | RIA\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": null,\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": []\n}",
+        "reasoning": null,
+        "prompt_tokens": 20053,
+        "completion_tokens": 115,
+        "total_tokens": 20168,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 25.65,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0041118
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 2132771,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 49.78
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 18090,
+          "total_tokens": 18477,
+          "completion_tokens": 387,
+          "estimated_cost": 0.00395856,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"CLIMACITIES\",\n    \"proposal_title\": \"SYNTHETIC RESEARCH PROPOSAL\",\n    \"call_identifier\": \"Horizon Europe-style | RIA\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 7,500,000\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NORDIC URBAN SYSTEMS INSTITUTE\",\n      \"requested\": \"1,420,000\"\n    },\n    {\n      \"partner_name\": \"RHEIN DATA LABS GMBH\",\n      \"requested\": \"1,060,000\"\n    },\n    {\n      \"partner_name\": \"ATLANTIC RESILIENCE CENTRE\",\n      \"requested\": \"910,000\"\n    },\n    {\n      \"partner_name\": \"CIVITAS ANALYTICS SL\",\n      \"requested\": \"870,000\"\n    },\n    {\n      \"partner_name\": \"DELTA WATER RESEARCH BV\",\n      \"requested\": \"850,000\"\n    },\n    {\n      \"partner_name\": \"BALTIC COMMUNITY LAB\",\n      \"requested\": \"690,000\"\n    },\n    {\n      \"partner_name\": \"ALPINE ENERGY INNOVATION SRL\",\n      \"requested\": \"930,000\"\n    },\n    {\n      \"partner_name\": \"URBAN FUTURES ASSOCIATION\",\n      \"requested\": \"770,000\"\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 18090,
+        "completion_tokens": 387,
+        "total_tokens": 18477,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 49.78,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00395856
+      }
+    ]
+  }
+}

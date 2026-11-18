@@ -1,0 +1,109 @@
+{
+  "arm": "C",
+  "model": "openai/gpt-oss-120b",
+  "provider": "groq",
+  "source_file": "SP01.md",
+  "started_utc": "2026-10-30T11:59:46Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "sum of partner requested_cents (55633770) != requested_total_cents (478980000)"
+  ],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 4.16,
+  "attempts": 1,
+  "prompt_tokens": 31313,
+  "completion_tokens": 860,
+  "cost_usd": 0.005342,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-120b",
+  "parts": 1,
+  "output_file": "SP01_20261030T115946Z.json",
+  "replies_file": "SP01_20261030T115946Z.replies.json",
+  "total_seconds": 4.19,
+  "evaluation": {
+    "document": "SP01",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\C\\SP01_20261030T115946Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 191.79,
+      "docling_markdown_sha256": "3336f13127c448debbfd443b496945784e43f599d594d395b5a365d056687338"
+    },
+    "runner_wall_clock_seconds": 4.19,
+    "end_to_end_seconds": 195.98,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 31313,
+      "completion_tokens": 860,
+      "reasoning_tokens": 475,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.00521295,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-120b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-120b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 176188,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 4.16
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.247949928,
+          "prompt_tokens": 31313,
+          "prompt_time": 1.311666457,
+          "completion_tokens": 860,
+          "completion_time": 1.795513978,
+          "total_tokens": 32173,
+          "total_time": 3.107180435,
+          "completion_tokens_details": {
+            "reasoning_tokens": 475
+          }
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"LOOPWEAVE\",\n    \"proposal_title\": \"Circular Weaving of Recycled Fibre Value Chains\",\n    \"call_identifier\": \"INNO-2027-03-CIRCFIBRE-04\",\n    \"submission_date\": \"2027-03-06\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 4,789,800\",\n    \"trl_start\": 5,\n    \"trl_target\": 7,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"KalevraInnovationClusterOy\",\n      \"requested\": \"575.6\"\n    },\n    {\n      \"partner_name\": \"NorthbayMaterialsOy\",\n      \"requested\": \"466.6\"\n    },\n    {\n      \"partner_name\": \"CorvanePolymerSystemsAB\",\n      \"requested\": \"578.0\"\n    },\n    {\n      \"partner_name\": \"TessiloProcessEngineeringGmbH\",\n      \"requested\": \"EUR 552,100\"\n    },\n    {\n      \"partner_name\": \"RauvikUniversity\",\n      \"requested\": \"643.9\"\n    },\n    {\n      \"partner_name\": \"ElvarisUniversityofTechnology\",\n      \"requested\": \"735.9\"\n    },\n    {\n      \"partner_name\": \"SundmarkAppliedResearchInstitute\",\n      \"requested\": \"553.2\"\n    },\n    {\n      \"partner_name\": \"BrenvikInstituteforSustainableProcessEngineering\",\n      \"requested\": \"684.5\"\n    },\n    {\n      \"partner_name\": \"LindforsRegionalDevelopmentAgency\",\n      \"requested\": \"0.0\"\n    }\n  ]\n}",
+        "reasoning": "We need extract fields. proposal_acronym: LOOPWEAVE. title same. call_identifier: INNO-2027-03-CIRCFIBRE-04. submission_date: 6 March 2027 -> format YYYY-MM-DD = 2027-03-06.\n\nrequested_total: from executive summary: \"total cost of EUR 6,142,900\". That's total cost, but requested total likely grant requested = partners request total contribution of EUR 4,789,800. However requested_total is total amount requested (grant). Likely the contribution amount. Use \"EUR 4,789,800\". Keep as written.\n\ntrl_start: from concept: \"project starts from technology readiness level (TRL) 5.\" So trl_start 5. trl_target: target is start plus two => 7. (also later says target TRL at end is level defined plus two). So 7.\n\nmcrl_start / mcrl_target not mentioned. So null.\n\nPartners list with requested amounts. From budget table: Requested contribution column. Need each partner name exactly as in table legal name. Values: For KalevraInnovationClusterOy: 575.6 (but currency? Table amounts are in EUR thousand? Actually amounts in EUR thousand. But requested contribution column shows 575.6 (presumably thousand EUR). Should we include currency? Not specified. Use as written \"575.6\". But maybe need \"EUR 575.6\". Not in text. We'll copy as written. For NorthbayMaterialsOy: 466.6. CorvanePolymerSystemsAB: 578.0. TessiloProcessEngineeringGmbH: note says requested contribution amounts to EUR 552,100. In note: \"EUR 552,100\". So use that string. For RauvikUniversity: 643.9. ElvarisUniversityofTechnology: 735.9. SundmarkAppliedResearchInstitute: 553.2. BrenvikInstituteforSustainableProcessEngineering: 684.5. LindforsRegionalDevelopmentAgency: 0.0 (since associated partner no contribution). Also note associated partner takes part at own cost and does not request any contribution. So requested null? Table shows 0.0. Use \"0.0\". Provide as string.\n\nReturn JSON.",
+        "prompt_tokens": 31313,
+        "completion_tokens": 860,
+        "total_tokens": 32173,
+        "reasoning_tokens": 475,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 4.16,
+        "model_reported": "openai/gpt-oss-120b",
+        "finish_reason": "stop",
+        "cost_usd": 0.00521295
+      }
+    ]
+  }
+}

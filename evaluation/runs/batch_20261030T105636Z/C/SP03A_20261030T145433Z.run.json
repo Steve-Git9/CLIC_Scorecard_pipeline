@@ -1,0 +1,109 @@
+{
+  "arm": "C",
+  "model": "openai/gpt-oss-120b",
+  "provider": "groq",
+  "source_file": "SP03A.md",
+  "started_utc": "2026-10-30T14:54:33Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested_total: could not parse amount 'EUR979300'"
+  ],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 2.37,
+  "attempts": 1,
+  "prompt_tokens": 15554,
+  "completion_tokens": 469,
+  "cost_usd": 0.002685,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-120b",
+  "parts": 1,
+  "output_file": "SP03A_20261030T145433Z.json",
+  "replies_file": "SP03A_20261030T145433Z.replies.json",
+  "total_seconds": 2.4,
+  "evaluation": {
+    "document": "SP03A",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\C\\SP03A_20261030T145433Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 173.38,
+      "docling_markdown_sha256": "bb9c15239f31ac16ec78dbded8bc281a5b593adc1fc90262cf4b0d7c24cdf39c"
+    },
+    "runner_wall_clock_seconds": 2.4,
+    "end_to_end_seconds": 175.78,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 15554,
+      "completion_tokens": 469,
+      "reasoning_tokens": 278,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.0026145,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-120b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-120b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 87142,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 2.37
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.086942071,
+          "prompt_tokens": 15554,
+          "prompt_time": 0.81752059,
+          "completion_tokens": 469,
+          "completion_time": 0.994520572,
+          "total_tokens": 16023,
+          "total_time": 1.8120411619999999,
+          "completion_tokens_details": {
+            "reasoning_tokens": 278
+          }
+        },
+        "reply": "{\"proposal\":{\"proposal_acronym\":\"RESENSE\",\"proposal_title\":\"Adaptive Sensor Networks for Resource Efficient Process Monitoring\",\"call_identifier\":\"RCF2027/6433\",\"submission_date\":null},\"proposal_facts\":{\"requested_total\":\"EUR979300\",\"trl_start\":3,\"trl_target\":5,\"mcrl_start\":1,\"mcrl_target\":4},\"partners\":[{\"partner_name\":\"Torvenmaa University\",\"requested\":\"214,8\"},{\"partner_name\":\"Haldeberg University of Applied Sciences and Regional Innovation Services\",\"requested\":\"159,8\"},{\"partner_name\":\"Kestrel Institute for Process Research\",\"requested\":null},{\"partner_name\":\"Ormenfield Process Systems Oy\",\"requested\":\"177,8\"},{\"partner_name\":\"Vantora Sensor Solutions Oy\",\"requested\":\"196,4\"},{\"partner_name\":\"Ostermark Regional Development Agency\",\"requested\":\"0,0\"}]}",
+        "reasoning": "We need JSON with proposal, proposal_facts, partners. Extract values.\n\nproposal_acronym: RESENSE. title: Adaptive Sensor Networks for Resource Efficient Process Monitoring. call_identifier: RCF2027/6433. submission_date: A.7 empty, so null.\n\nrequested_total: from D.2 \"EUR979300\". Keep as written \"EUR979300\". trl_start 3, trl_target 5. mcrl_start 1, mcrl_target 4.\n\nPartners list in order: Partner A? Actually Partner A is Torvenmaa University (TMU). Then B: Haldeberg University... (HBU). C: Kestrel Institute... (KPRI). D: Ormenfield Process Systems Oy (OPS). E: Vantora Sensor Solutions Oy (VSS). F: Ostermark Regional Development Agency (ORDEA). Need requested per partner from budget table: TMU 214,8 (but note currency? Table shows numbers with comma decimal? It's \"214,8\". Should copy as written. Probably \"214,8\". HBU 159,8. KPRI \"see E.2\" -> not a number, so null. OPS 177,8. VSS 196,4. ORDEA 0,0.\n\nReturn null for KPRI requested.\n\nNow construct JSON.",
+        "prompt_tokens": 15554,
+        "completion_tokens": 469,
+        "total_tokens": 16023,
+        "reasoning_tokens": 278,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 2.37,
+        "model_reported": "openai/gpt-oss-120b",
+        "finish_reason": "stop",
+        "cost_usd": 0.0026145
+      }
+    ]
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "arm": "freeform_light",
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "provider": "nscale",
+  "source_file": "SP02.md",
+  "started_utc": "2026-10-30T18:56:08Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested[Nordvalen Systems Oy (NVS)] 'EUR 181,600' not found in the document",
+    "requested[Kaltiora Analytics Oy (KTA)] 'EUR 190,900' not found in the document",
+    "requested[Lumenthar Marine Oy (LMR)]: could not parse amount 'no funding requested'"
+  ],
+  "free_form": true,
+  "context_splits": 0,
+  "seconds": 17.88,
+  "attempts": 1,
+  "prompt_tokens": 21786,
+  "completion_tokens": 228,
+  "cost_usd": 0.000225,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-4B-Instruct-2507",
+  "parts": 1,
+  "freeform_file": "SP02_20261030T185608Z.freeform.txt",
+  "output_file": "SP02_20261030T185608Z.json",
+  "replies_file": "SP02_20261030T185608Z.replies.json",
+  "total_seconds": 17.91,
+  "evaluation": {
+    "document": "SP02",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\freeform_light\\SP02_20261030T185608Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 143.97,
+      "docling_markdown_sha256": "506d02b5ac82270a9644747e6f9c112fe37b6be752aae88b6e0c7df578edaed9"
+    },
+    "runner_wall_clock_seconds": 17.91,
+    "end_to_end_seconds": 161.88,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 21786,
+      "completion_tokens": 228,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": {
+      "made": false,
+      "tokens": 0,
+      "note": "the free form reply is converted to JSON locally in Python; no model call"
+    },
+    "cost": {
+      "cost_usd": 0.0002247,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "nscale",
+          "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-4B-Instruct-2507",
+        "provider": "nscale",
+        "response_format": false,
+        "request_bytes": 132235,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 17.88
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 21786,
+          "total_tokens": 22014,
+          "completion_tokens": 228
+        },
+        "reply": "{\"proposal\": {\"proposal_acronym\": \"TIDEMESH\", \"proposal_title\": \"Adaptive Sensor Networks for Resilient Coastal Infrastructure\", \"call_identifier\": \"BF2026/93782\", \"submission_date\": null}, \"proposal_facts\": {\"requested_total\": \"EUR 991,100\", \"trl_start\": null, \"trl_target\": null, \"mcrl_start\": 1, \"mcrl_target\": 4}, \"partners\": [{\"partner_name\": \"Nordvalen Systems Oy (NVS)\", \"requested\": \"EUR 181,600\"}, {\"partner_name\": \"Kaltiora Analytics Oy (KTA)\", \"requested\": \"EUR 190,900\"}, {\"partner_name\": \"Lumenthar Marine Oy (LMR)\", \"requested\": \"no funding requested\"}, {\"partner_name\": \"Havrenmaa University (HVU)\", \"requested\": null}, {\"partner_name\": \"Taimerra Research Institute (TMI)\", \"requested\": null}]}",
+        "reasoning": null,
+        "prompt_tokens": 21786,
+        "completion_tokens": 228,
+        "total_tokens": 22014,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 17.88,
+        "model_reported": "Qwen/Qwen3-4B-Instruct-2507",
+        "finish_reason": "stop",
+        "cost_usd": 0.0002247
+      }
+    ]
+  }
+}

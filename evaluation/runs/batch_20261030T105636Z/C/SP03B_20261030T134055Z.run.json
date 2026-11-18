@@ -1,0 +1,109 @@
+{
+  "arm": "C",
+  "model": "openai/gpt-oss-120b",
+  "provider": "groq",
+  "source_file": "SP03B.md",
+  "started_utc": "2026-10-30T13:40:55Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested[Ormenfield Process Systems Oy]: could not parse amount '167,1x.k. 177.8'"
+  ],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 3.19,
+  "attempts": 1,
+  "prompt_tokens": 15448,
+  "completion_tokens": 852,
+  "cost_usd": 0.002956,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-120b",
+  "parts": 1,
+  "output_file": "SP03B_20261030T134055Z.json",
+  "replies_file": "SP03B_20261030T134055Z.replies.json",
+  "total_seconds": 3.22,
+  "evaluation": {
+    "document": "SP03B",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\C\\SP03B_20261030T134055Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 460.97,
+      "docling_markdown_sha256": "feda96f35bbc403b38b945c259e41f84ed7e62f84c65dfc8243d300540e793e2"
+    },
+    "runner_wall_clock_seconds": 3.22,
+    "end_to_end_seconds": 464.19,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 15448,
+      "completion_tokens": 852,
+      "reasoning_tokens": 648,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.0028284,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-120b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-120b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 85012,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 3.19
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.173586088,
+          "prompt_tokens": 15448,
+          "prompt_time": 0.706409807,
+          "completion_tokens": 852,
+          "completion_time": 1.814113099,
+          "total_tokens": 16300,
+          "total_time": 2.520522906,
+          "completion_tokens_details": {
+            "reasoning_tokens": 648
+          }
+        },
+        "reply": "{\"proposal\":{\"proposal_acronym\":\"RESENSE\",\"proposal_title\":\"Adaptive Sensor Networks for Resource Efficient Process Monitoring\",\"call_identifier\":\"RCF2027/6433\",\"submission_date\":null},\"proposal_facts\":{\"requested_total\":\"EUR 979 300\",\"trl_start\":null,\"trl_target\":null,\"mcrl_start\":1,\"mcrl_target\":4},\"partners\":[{\"partner_name\":\"Torvenmaa University\",\"requested\":\"214,8\"},{\"partner_name\":\"Haldeberg University of Applied Sciences and Regional Innovation Services\",\"requested\":\"159,8\"},{\"partner_name\":\"Kestrel Institute for ProcessResearch\",\"requested\":\"EUR 241 200\"},{\"partner_name\":\"Ormenfield Process Systems Oy\",\"requested\":\"167,1x.k. 177.8\"},{\"partner_name\":\"Vantora Sensor Solutions Oy\",\"requested\":\"196,4\"},{\"partner_name\":\"Ostermark Regional Development Agency\",\"requested\":\"0,0\"}]}",
+        "reasoning": "We need JSON with proposal, facts, partners. Extract values.\n\nproposal_acronym: RESENSE. title: Adaptive Sensor Networks for Resource Efficient Process Monitoring. call_identifier: RCF2027/6433. submission_date: field A.7 empty -> null.\n\nrequested_total: from D.2 \"EUR 979 300\". Keep as written including space? It's \"EUR 979 300\". Use that.\n\nTRL start/target: look for C.17.1 and C.17.2 but values not given. Table shows placeholders but no numbers. So null.\n\nMCRL start/target: from C.19.1 =1, C.19.2 =4.\n\nPartners list in order of appearance: Partner A? Actually partner info sections: Partner A (TMU), Partner B (HBU), Partner C (KPRI), Partner D? Not given details maybe missing. Partner E (VSS), Partner F (ORDEA). Also maybe OPS is partner? Actually OPS appears as partner B? Wait partner list: after Partner B, there is a section with no label but seems Partner C (KPRI). Then Partner D? Not detailed. Then Partner E (VSS). Then Partner F (ORDEA). Also OPS appears as partner earlier under Partner? In partner list, after Partner B, there is a block with no heading but seems Partner C? Actually earlier after Partner B, there is \"- B.7 Role...\" then later \"- B.7 Role of the organisation...\" then \"- B.1 Organisation name ... Kestrel Institute...\" That's Partner C (KPRI). Then later Partner D missing? Then Partner E VSS. Then Partner F ORDEA. Also OPS appears as partner earlier under \"Partner information, Partner D\"? Wait there is a section \"Partner information, Partner D\" but no details, then later \"Partner information, Partner E\" is VSS, then later \"Partner information, Partner F\" is ORDEA. However OPS appears earlier as partner under \"Partner information, Partner D\"? Actually earlier after Partner C, there is a block with \"Ormenfield Process Systems Oy\" which is OPS, labelled as partner? That seems Partner D (though heading says Partner D later blank). So order: TMU, HBU, KPRI, OPS, VSS, ORDEA.\n\nNow requested amounts per partner from budget table D.1. For each partner:\n\nTMU requested funding 214,8 (in 1 000 EUR). Keep as written \"214,8\". Probably need currency? Not given. Use as string.\n\nHBU: 159,8\n\nKPRI: see E.2 requested funding EUR 241 200. Also budget table shows \"see E.2\". Use the explicit amount from E.2: \"EUR 241 200\". So requested = \"EUR 241 200\".\n\nOPS: requested funding \"167,1x.k. 177.8\" weird. Use as written \"167,1x.k. 177.8\". Probably ambiguous but copy.\n\nVSS: requested funding 196,4\n\nORDEA: requested funding 0,0\n\nNow construct JSON.\n\n",
+        "prompt_tokens": 15448,
+        "completion_tokens": 852,
+        "total_tokens": 16300,
+        "reasoning_tokens": 648,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 3.19,
+        "model_reported": "openai/gpt-oss-120b",
+        "finish_reason": "stop",
+        "cost_usd": 0.0028284
+      }
+    ]
+  }
+}

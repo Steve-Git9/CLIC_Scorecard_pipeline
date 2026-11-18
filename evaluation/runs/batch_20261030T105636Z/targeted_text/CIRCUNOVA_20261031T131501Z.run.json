@@ -1,0 +1,157 @@
+{
+  "arm": "targeted_text",
+  "mode": "text",
+  "model": "openai/gpt-oss-120b",
+  "provider": "groq",
+  "source_file": "CIRCUNOVA.pdf",
+  "started_utc": "2026-10-31T13:15:01Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "sum of partner requested_cents (397225000) != requested_total_cents (600000000)"
+  ],
+  "pages_total": 146,
+  "pages_sent": [
+    1,
+    2,
+    4,
+    10,
+    42,
+    100,
+    139
+  ],
+  "scanned_pages": [],
+  "ocr_pages": [],
+  "images_sent": 0,
+  "located": {
+    "proposal": [
+      1,
+      2,
+      10
+    ],
+    "budget": [
+      139
+    ],
+    "partners": [
+      139,
+      100,
+      4
+    ],
+    "readiness": [
+      42
+    ]
+  },
+  "located_by": {
+    "proposal": "keywords",
+    "budget": "keywords",
+    "partners": "keywords",
+    "readiness": "keywords"
+  },
+  "tables_found": 3,
+  "tables_verified": 1,
+  "page_map_cached": false,
+  "calls": 1,
+  "seconds": 2.81,
+  "attempts": 1,
+  "prompt_tokens": 9283,
+  "completion_tokens": 744,
+  "cost_usd": 0.00195,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-120b",
+  "steps": {
+    "page_map": 35.75,
+    "locate": 0.0,
+    "identifier_hints": 0.31,
+    "tables": 2.4,
+    "text_and_ocr": 0.05,
+    "model": 2.81
+  },
+  "context_splits": 0,
+  "identifiers_filled": {},
+  "partners_confirmed_by_table": 0,
+  "output_file": "CIRCUNOVA_20261031T131501Z.json",
+  "replies_file": "CIRCUNOVA_20261031T131501Z.replies.json",
+  "total_seconds": 41.33,
+  "trace_file": "CIRCUNOVA_20261031T131501Z.trace.json",
+  "evaluation": {
+    "document": "CIRCUNOVA",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\targeted_text\\CIRCUNOVA_20261031T131501Z.run.json",
+    "input": "pdf",
+    "preparation": {},
+    "runner_wall_clock_seconds": 41.34,
+    "end_to_end_seconds": 41.34,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 9283,
+      "completion_tokens": 744,
+      "reasoning_tokens": 494,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.00183885,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-120b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-120b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 31995,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 2.81
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.185408512,
+          "prompt_tokens": 9283,
+          "prompt_time": 0.485759351,
+          "completion_tokens": 744,
+          "completion_time": 1.547322058,
+          "total_tokens": 10027,
+          "total_time": 2.033081409,
+          "completion_tokens_details": {
+            "reasoning_tokens": 494
+          }
+        },
+        "reply": "{\"proposal\":{\"proposal_acronym\":\"CIRCUNOVA\",\"proposal_title\":\"Circular Industry Networks for Regenerative Urban PVerials\",\"call_identifier\":\"HORIZON-CL6-2026-01-two-stage\",\"submission_date\":null},\"proposal_facts\":{\"requested_total\":\"6,000,000 €\",\"trl_start\":null,\"trl_target\":null,\"mcrl_start\":null,\"mcrl_target\":null},\"partners\":[{\"partner_name\":\"NCS\",\"requested\":\"666,700 €\"},{\"partner_name\":\"VEST\",\"requested\":\"250,250 €\"},{\"partner_name\":\"LRC\",\"requested\":\"149,350 €\"},{\"partner_name\":\"LBDA\",\"requested\":\"303,250 €\"},{\"partner_name\":\"LRS\",\"requested\":\"335,300 €\"},{\"partner_name\":\"MCS\",\"requested\":\"379,750 €\"},{\"partner_name\":\"TFI\",\"requested\":\"384,562.5 €\"},{\"partner_name\":\"BIT\",\"requested\":\"366,500 €\"},{\"partner_name\":\"PV\",\"requested\":\"222,062.5 €\"},{\"partner_name\":\"UHT\",\"requested\":\"571,500 €\"},{\"partner_name\":\"SUAS\",\"requested\":\"343,025 €\"}]}",
+        "reasoning": "We need JSON. Extract proposal info: acronym CIRCUNOVA, title from page2: \"Circular Industry Networks for Regenerative Urban PVerials\". call identifier: from page1 call: HORIZON-CL6-2026-01-two-stage (or full). Use that. submission_date not given -> null.\n\nrequested_total from budget table: Total requested contribution: 6,000,000 € . copy as written \"6,000,000 €\". trl and mcrl not present -> null.\n\nPartners: need partner_name and requested from table column \"Requested EU contribution\". For each row order 1-19 (excluding associated with zero). Use Legal Name column. Some rows have missing Legal Name (blank). Use as empty? But need name exactly as written; blank means unknown -> null? Probably skip? But need entry per organisation taking part in document order. Use list from participants earlier with names, but matching table. Better use table rows where Legal Name present. For blanks, we cannot fill requested, but still need partner entry? Might set partner_name null? Probably skip those rows. We'll include rows with name.\n\nExtract:\n\n1: NCS requested 666,700 €\n2: VEST requested 250,250 €\n3: (blank) requested 430,000 € -> partner_name null? skip.\n4: (blank) 222,375 €\n5: (blank) 209,562.5 €\n6: (blank) 158,375 €\n7: LRC requested 149,350 €\n8: LBDA requested 303,250 €\n9: (blank) 431,875 €\n10: LRS requested 335,300 €\n11: MCS requested 379,750 €\n12: TFI requested 384,562.5 €\n13: BIT requested 366,500 €\n14: (blank) 224,062.5 €\n15: (blank) 215,625 €\n16: (blank) 135,875 €\n17: PV requested 222,062.5 €\n18: UHT requested 571,500 €\n19: SUAS requested 343,025 €\n20,21 have zero.\n\nWe'll include entries with null name? Probably better to include with partner_name null and requested amount. But schema requires partner_name string. So cannot be null. So skip rows without name.\n\nThus list of partners as above with names.\n\nReturn JSON.",
+        "prompt_tokens": 9283,
+        "completion_tokens": 744,
+        "total_tokens": 10027,
+        "reasoning_tokens": 494,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 2.81,
+        "model_reported": "openai/gpt-oss-120b",
+        "finish_reason": "stop",
+        "cost_usd": 0.00183885
+      }
+    ]
+  }
+}

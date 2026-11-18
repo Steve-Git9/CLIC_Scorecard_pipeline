@@ -1,0 +1,246 @@
+{
+  "arm": "multimodal_combined_llama4_maverick",
+  "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+  "provider": "novita",
+  "source_file": "SP05.md",
+  "started_utc": "2026-10-31T13:58:14Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "duplicate partner 'Nordvane Systems Oy' dropped",
+    "duplicate partner 'University of Teralund' dropped",
+    "duplicate partner 'Valoria Labs Oy' dropped",
+    "duplicate partner 'Hallavik Applied Research Centre' dropped",
+    "duplicate partner 'Arctic Sensor Systems Oy' dropped",
+    "duplicate partner 'Lumivara Edge Oy' dropped",
+    "duplicate partner 'Arctic Sensing Solutions Oy' dropped",
+    "duplicate partner 'Kaltio Regional Council' dropped",
+    "duplicate partner 'Nordvane Systems Oy' dropped",
+    "duplicate partner 'University of Teralund' dropped",
+    "duplicate partner 'Valoria Labs Oy' dropped",
+    "duplicate partner 'Hallavik Applied Research Centre' dropped",
+    "duplicate partner 'Arctic Sensor Systems Oy' dropped",
+    "duplicate partner 'Lumivara Edge Oy' dropped",
+    "duplicate partner 'Arctic Sensing Solutions Oy' dropped",
+    "duplicate partner 'Kaltio Regional Council' dropped",
+    "sum of partner requested_cents (324409720) != requested_total_cents (382856100)"
+  ],
+  "batch_size": 10,
+  "overlap": 1,
+  "pages_total": 78,
+  "pages_with_images": 21,
+  "batches": 3,
+  "calls": 3,
+  "seconds": 167.02,
+  "attempts": 3,
+  "prompt_tokens": 161138,
+  "completion_tokens": 1870,
+  "cost_usd": 0.045097,
+  "finish_reason": "stop",
+  "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+  "context_splits": 0,
+  "output_file": "SP05_20261031T135814Z.json",
+  "replies_file": "SP05_20261031T135814Z.replies.json",
+  "total_seconds": 184.61,
+  "evaluation": {
+    "document": "SP05",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\multimodal_combined_llama4_maverick\\SP05_20261031T135814Z.run.json",
+    "input": "pdf",
+    "preparation": {
+      "native_text_seconds": 0.29
+    },
+    "runner_wall_clock_seconds": 184.91,
+    "end_to_end_seconds": 184.91,
+    "calls": 3,
+    "failed_calls": 0,
+    "attempts": 3,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 161138,
+      "completion_tokens": 1870,
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "cached_tokens": 0
+    },
+    "calls_reporting": {
+      "prompt_tokens": 3,
+      "completion_tokens": 3,
+      "reasoning_tokens": 3,
+      "image_tokens": 3
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.04509676,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "novita",
+          "model_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+          "status": "verified",
+          "retrieved_on": "2026-10-23"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 3487835,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 61.35
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 54338,
+          "completion_tokens": 622,
+          "total_tokens": 54960,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "I have analyzed the budget tables in the document. The budget is split across Table 5.1 (page 42) and its continuation in Annex C (page 64).\n\n- Nordvane: 870 765,93 €\n- Teralund University: 679 493,18 €\n- Valoria: 594 205,74 €\n- Hallavik: 649 300,03 €\n- Arctic Sensor: 449 835,12 €\n- Lumivara: 0.0\n- Arctic Sensing: 298.0 (stated in EUR thousand in Annex C)\n- Kaltio Council: 199.2 (stated in EUR thousand in Annex C)\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"NIVALIS\",\n    \"proposal_title\": \"Federated Data Spaces for Resilient Cold Climate Infrastructure Monitoring\",\n    \"call_identifier\": null,\n    \"submission_date\": \"2026-09-16\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"3 828 561,00 €\",\n    \"trl_start\": 3,\n    \"trl_target\": 7,\n    \"mcrl_start\": 2,\n    \"mcrl_target\": 5\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Nordvane Systems Oy\",\n      \"requested\": \"870 765,93 €\"\n    },\n    {\n      \"partner_name\": \"University of Teralund\",\n      \"requested\": \"679 493,18 €\"\n    },\n    {\n      \"partner_name\": \"Valoria Labs Oy\",\n      \"requested\": \"594 205,74 €\"\n    },\n    {\n      \"partner_name\": \"Hallavik Applied Research Centre\",\n      \"requested\": \"649 300,03 €\"\n    },\n    {\n      \"partner_name\": \"Arctic Sensor Systems Oy\",\n      \"requested\": \"449 835,12 €\"\n    },\n    {\n      \"partner_name\": \"Lumivara Edge Oy\",\n      \"requested\": \"0.0\"\n    },\n    {\n      \"partner_name\": \"Arctic Sensing Solutions Oy\",\n      \"requested\": \"298.0\"\n    },\n    {\n      \"partner_name\": \"Kaltio Regional Council\",\n      \"requested\": \"199.2\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 54338,
+        "completion_tokens": 622,
+        "total_tokens": 54960,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "seconds": 61.35,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.01519996
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 3903095,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 56.28
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 54338,
+          "completion_tokens": 636,
+          "total_tokens": 54974,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "To find the partner budget, I will examine Table 5.1 on page 42 and its continuation in Annex C on page 64.\n\n- Nordvane: 870 765,93 €\n- Teralund University: 679 493,18 €\n- Valoria: 594 205,74 €\n- Hallavik: 764 211,49 €\n- Arctic Sensor: 449 835,12 €\n- Lumivara: 0.0 (stated as 0.0 in Annex C, and noted as an associated partner covering its own costs)\n- Arctic Sensing: 298.0 (stated in EUR thousand in Annex C)\n- Kaltio Council: 199.2 (stated in EUR thousand in Annex C)\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"NIVALIS\",\n    \"proposal_title\": \"Federated Data Spaces for Resilient Cold Climate Infrastructure Monitoring\",\n    \"call_identifier\": null,\n    \"submission_date\": \"2026-09-16\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"3 828 561,00 €\",\n    \"trl_start\": 3,\n    \"trl_target\": 7,\n    \"mcrl_start\": 2,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Nordvane Systems Oy\",\n      \"requested\": \"870 765,93 €\"\n    },\n    {\n      \"partner_name\": \"University of Teralund\",\n      \"requested\": \"679 493,18 €\"\n    },\n    {\n      \"partner_name\": \"Valoria Labs Oy\",\n      \"requested\": \"594 205,74 €\"\n    },\n    {\n      \"partner_name\": \"Hallavik Applied Research Centre\",\n      \"requested\": \"764 211,49 €\"\n    },\n    {\n      \"partner_name\": \"Arctic Sensor Systems Oy\",\n      \"requested\": \"449 835,12 €\"\n    },\n    {\n      \"partner_name\": \"Lumivara Edge Oy\",\n      \"requested\": \"0.0\"\n    },\n    {\n      \"partner_name\": \"Arctic Sensing Solutions Oy\",\n      \"requested\": \"298.0\"\n    },\n    {\n      \"partner_name\": \"Kaltio Regional Council\",\n      \"requested\": \"199.2\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 54338,
+        "completion_tokens": 636,
+        "total_tokens": 54974,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "seconds": 56.28,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.01521186
+      },
+      {
+        "purpose": "extraction",
+        "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "provider": "novita",
+        "response_format": false,
+        "request_bytes": 912130,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 49.39
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 52462,
+          "completion_tokens": 612,
+          "total_tokens": 53074,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          },
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": 0,
+            "image_tokens": 0,
+            "video_tokens": 0
+          }
+        },
+        "reply": "The partner budget is split across Table 5.1 (page 42) and its continuation in Annex C (page 64).\n\n- Nordvane: 870 765,93 €\n- Teralund University: 679 493,18 €\n- Valoria: 594 205,74 €\n- Hallavik: 764 211,49 €\n- Arctic Sensor: 449 835,12 €\n- Lumivara: 0.0\n- Arctic Sensing: 298.0 (stated in EUR thousand in Annex C)\n- Kaltio Council: 199.2 (stated in EUR thousand in Annex C)\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"NIVALIS\",\n    \"proposal_title\": \"Federated Data Spaces for Resilient Cold Climate Infrastructure Monitoring\",\n    \"call_identifier\": null,\n    \"submission_date\": \"2026-09-16\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"3 828 561,00 €\",\n    \"trl_start\": 3,\n    \"trl_target\": 7,\n    \"mcrl_start\": 2,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Nordvane Systems Oy\",\n      \"requested\": \"870 765,93 €\"\n    },\n    {\n      \"partner_name\": \"University of Teralund\",\n      \"requested\": \"679 493,18 €\"\n    },\n    {\n      \"partner_name\": \"Valoria Labs Oy\",\n      \"requested\": \"594 205,74 €\"\n    },\n    {\n      \"partner_name\": \"Hallavik Applied Research Centre\",\n      \"requested\": \"764 211,49 €\"\n    },\n    {\n      \"partner_name\": \"Arctic Sensor Systems Oy\",\n      \"requested\": \"449 835,12 €\"\n    },\n    {\n      \"partner_name\": \"Lumivara Edge Oy\",\n      \"requested\": \"0.0\"\n    },\n    {\n      \"partner_name\": \"Arctic Sensing Solutions Oy\",\n      \"requested\": \"298.0\"\n    },\n    {\n      \"partner_name\": \"Kaltio Regional Council\",\n      \"requested\": \"199.2\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 52462,
+        "completion_tokens": 612,
+        "total_tokens": 53074,
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "seconds": 49.39,
+        "model_reported": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+        "finish_reason": "stop",
+        "cost_usd": 0.01468494
+      }
+    ]
+  }
+}

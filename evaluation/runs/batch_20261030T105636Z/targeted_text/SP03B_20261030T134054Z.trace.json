@@ -1,0 +1,31 @@
+{
+ "located": {
+  "proposal": [
+   {
+    "page": 1,
+    "score": 3.0
+   },
+   {
+    "page": 2,
+    "score": 1.5
+   }
+  ],
+  "budget": null,
+  "partners": null,
+  "readiness": null
+ },
+ "tables": [],
+ "partner_budget_table": null,
+ "identifier_hints": {
+  "cover_title": null,
+  "cover_page": null,
+  "acronym_candidates": [],
+  "labelled": {
+   "acronym": [],
+   "title": [],
+   "call": []
+  },
+  "call_ids": []
+ },
+ "page_map_sha256": "bfa4cb89bbfd9f0016ec7935be7e2a9a277cf96a1d0cbde395c739926c49dd0d"
+}

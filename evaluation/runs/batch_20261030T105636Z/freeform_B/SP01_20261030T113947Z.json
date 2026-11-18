@@ -1,0 +1,57 @@
+{
+  "proposal": {
+    "proposal_acronym": "LOOPWEAVE",
+    "proposal_title": "Circular Weaving of Recycled Fibre Value Chains",
+    "call_identifier": "INNO-2027-03-CIRCFIBRE-04",
+    "submission_date": "2027-03-06"
+  },
+  "proposal_facts": {
+    "requested_total_cents": 478980,
+    "trl_start": 5,
+    "trl_target": 7,
+    "mcrl_start": null,
+    "mcrl_target": null
+  },
+  "partners": [
+    {
+      "partner_name": "KalevraInnovationClusterOy",
+      "requested_cents": 57560
+    },
+    {
+      "partner_name": "NorthbayMaterialsOy",
+      "requested_cents": 46660
+    },
+    {
+      "partner_name": "CorvanePolymerSystemsAB",
+      "requested_cents": 57800
+    },
+    {
+      "partner_name": "TessiloProcessEngineeringGmbH",
+      "requested_cents": 55210
+    },
+    {
+      "partner_name": "RauvikUniversity",
+      "requested_cents": 64390
+    },
+    {
+      "partner_name": "ElvarisUniversityofTechnology",
+      "requested_cents": 73590
+    },
+    {
+      "partner_name": "SundmarkAppliedResearchInstitute",
+      "requested_cents": 55320
+    },
+    {
+      "partner_name": "BrenvikInstituteforSustainableProcess Engineering",
+      "requested_cents": 68450
+    },
+    {
+      "partner_name": "LindforsRegionalDevelopmentAgency",
+      "requested_cents": 0
+    }
+  ],
+  "metadata": {
+    "extraction_timestamp": "2026-10-30T11:39:47Z",
+    "source_file": "SP01.md"
+  }
+}

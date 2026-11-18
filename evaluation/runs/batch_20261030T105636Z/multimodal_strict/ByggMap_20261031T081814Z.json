@@ -1,0 +1,77 @@
+{
+  "proposal": {
+    "proposal_acronym": "Bygg Map",
+    "proposal_title": "Bygg Map",
+    "call_identifier": null,
+    "submission_date": null
+  },
+  "proposal_facts": {
+    "requested_total_cents": 250000000,
+    "trl_start": 5,
+    "trl_target": 6,
+    "mcrl_start": null,
+    "mcrl_target": null
+  },
+  "partners": [
+    {
+      "partner_name": "Management Center Innsbruck - Austria",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "Technical University of Cluj-Napoca - Romania",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "Norwegian University of Science and Technology - Norway",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "National Institute for Research and Development in Construction, Urban Planning and Sustainable Spatial Development - Romania",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "Sofia Municipality - Bulgaria",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "CGI Suomi Oy - Finland",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "CEE Bankwatch – Czech Republic",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "MCI",
+      "requested_cents": 59062500
+    },
+    {
+      "partner_name": "TUCN",
+      "requested_cents": 46562500
+    },
+    {
+      "partner_name": "NTNU",
+      "requested_cents": 74862500
+    },
+    {
+      "partner_name": "U-I",
+      "requested_cents": 20437500
+    },
+    {
+      "partner_name": "SM",
+      "requested_cents": 14437500
+    },
+    {
+      "partner_name": "CGI",
+      "requested_cents": 19500000
+    },
+    {
+      "partner_name": "CEE",
+      "requested_cents": 15137500
+    }
+  ],
+  "metadata": {
+    "extraction_timestamp": "2026-10-31T08:18:14Z",
+    "source_file": "ByggMap.pdf"
+  }
+}

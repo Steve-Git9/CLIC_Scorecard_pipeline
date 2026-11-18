@@ -1,0 +1,109 @@
+{
+  "arm": "freeform_B",
+  "model": "Qwen/Qwen3.5-9B",
+  "provider": "deepinfra",
+  "source_file": "SP05.md",
+  "started_utc": "2026-10-31T13:08:29Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "sum of partner requested_cents (324409720) != requested_total_cents (382856100)"
+  ],
+  "free_form": true,
+  "context_splits": 0,
+  "seconds": 69.77,
+  "attempts": 1,
+  "prompt_tokens": 47492,
+  "completion_tokens": 948,
+  "cost_usd": 0.004891,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3.5-9B",
+  "parts": 1,
+  "freeform_file": "SP05_20261031T130829Z.freeform.txt",
+  "output_file": "SP05_20261031T130829Z.json",
+  "replies_file": "SP05_20261031T130829Z.replies.json",
+  "total_seconds": 69.82,
+  "evaluation": {
+    "document": "SP05",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\freeform_B\\SP05_20261031T130829Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 287.52,
+      "docling_markdown_sha256": "5d66b1ad0f8ae210974c7d76106a41dcbd81e13db0614cbc3c6a24b7316986a6"
+    },
+    "runner_wall_clock_seconds": 69.82,
+    "end_to_end_seconds": 357.34,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 47492,
+      "completion_tokens": 948,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": {
+      "made": false,
+      "tokens": 0,
+      "note": "the free form reply is converted to JSON locally in Python; no model call"
+    },
+    "cost": {
+      "cost_usd": 0.0048914,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3.5-9B",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3.5-9B",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 261148,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 69.77
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 47492,
+          "total_tokens": 48440,
+          "completion_tokens": 948,
+          "estimated_cost": 0.004891400000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "The document states the following details:\n\n**Proposal Identification:**\n*   **Acronym:** NIVALIS\n*   **Title:** Federated Data Spaces for Resilient Cold Climate Infrastructure Monitoring\n*   **Call Identifier:** tobeconfirmed\n*   **Submission Date:** The document contains a signature page with dates of 2026-09-12, but it does not explicitly state a \"submission date\" field. Per the rules, I cannot infer the submission date from the signature date, so this value is null.\n\n**Readiness Levels:**\n*   **TRL Start:** TRL 3 (found in Table 1.1 under \"Current status\" for Integrated solution).\n*   **TRL Target:** TRL 7 (found in Section 1.5 \"Target readiness at the end of the project\").\n*   **MCRL Start:** MCRL 2 (found in Section 4.2 \"Market readiness at the start\").\n*   **MCRL Target:** The document mentions an interim checkpoint of MCRL 3 but does not explicitly state a final target MCRL number in the text or tables. Therefore, this is null.\n\n**Partner Budget Table:**\nThe budget is split between Table 5.1 (Part 1) and Annex C (Part 2).\n*   **Part 1 (Table 5.1):**\n    *   Nordvane: 870 765,93 €\n    *   Teralund University: 679 493,18 €\n    *   Valoria: 594 205,74 €\n    *   Hallavik: 649 300,03 €\n    *   Arctic Sensor: 449 835,12 €\n    *   (Carried forward row is not a partner)\n*   **Part 2 (Annex C):**\n    *   Lumivara: 0.0 (The table shows \"0.0\" under Funding requested).\n    *   Arctic Sensing: 298.0\n    *   Kaltio Council: 199.2\n\nNote: The currency in the tables is \"EUR thousand\" (e.g., 870 765,93 represents 870,765.93 EUR), but the instruction requires copying the amount \"as written\". I will copy the string exactly as it appears in the \"Requested funding\" column of the tables.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"NIVALIS\",\n    \"proposal_title\": \"Federated Data Spaces for Resilient Cold Climate Infrastructure Monitoring\",\n    \"call_identifier\": \"tobeconfirmed\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"3 828 561,00 €\",\n    \"trl_start\": 3,\n    \"trl_target\": 7,\n    \"mcrl_start\": 2,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Nordvane\",\n      \"requested\": \"870 765,93 €\"\n    },\n    {\n      \"partner_name\": \"Teralund University\",\n      \"requested\": \"679 493,18 €\"\n    },\n    {\n      \"partner_name\": \"Valoria\",\n      \"requested\": \"594 205,74 €\"\n    },\n    {\n      \"partner_name\": \"Hallavik\",\n      \"requested\": \"649 300,03 €\"\n    },\n    {\n      \"partner_name\": \"Arctic Sensor\",\n      \"requested\": \"449 835,12 €\"\n    },\n    {\n      \"partner_name\": \"Lumivara\",\n      \"requested\": \"0.0\"\n    },\n    {\n      \"partner_name\": \"Arctic Sensing\",\n      \"requested\": \"298.0\"\n    },\n    {\n      \"partner_name\": \"Kaltio Council\",\n      \"requested\": \"199.2\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 47492,
+        "completion_tokens": 948,
+        "total_tokens": 48440,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 69.77,
+        "model_reported": "Qwen/Qwen3.5-9B",
+        "finish_reason": "stop",
+        "cost_usd": 0.0048914
+      }
+    ]
+  }
+}

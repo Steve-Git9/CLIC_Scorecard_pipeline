@@ -1,0 +1,35 @@
+document,partner_name,cases,related_gold_partners,runs,author_mark,decision
+Abico_Synth,Coastal Finland University CFU,variant,Coastal Finland University,18,y,gold:Coastal Finland University
+Abico_Synth,Eastern Nordic University ENU,variant,Eastern Nordic University,18,y,gold:Eastern Nordic University
+Abico_Synth,NISM Nordic Institute for Sustainable Materials,variant,Nordic Institute for Sustainable Materials,2,y,gold:Nordic Institute for Sustainable Materials
+Abico_Synth,Nordic Institute for Sustainable Materials NISM,variant,Nordic Institute for Sustainable Materials,18,y,gold:Nordic Institute for Sustainable Materials
+ByggMap,CEE,variant,CEE Bankwatch,25,y,gold:CEE Bankwatch
+ByggMap,CEE Bankwatch – Czech Republic,variant,CEE Bankwatch,7,y,gold:CEE Bankwatch
+ByggMap,CGI,variant,CGI Suomi Oy,25,y,gold:CGI Suomi Oy
+ByggMap,CGI Suomi Oy - Finland,variant,CGI Suomi Oy,7,y,gold:CGI Suomi Oy
+ByggMap,Management Center Innsbruck - Austria,variant,Management Center Innsbruck,7,y,gold:Management Center Innsbruck
+ByggMap,"National Institute for Research and Development in Construction, Urban Planning and Sustainable Spatial Development - Romania",variant,"National Institute for Research and Development in Construction, Urban Planning and Sustainable Spatial Development",7,y,"gold:National Institute for Research and Development in Construction, Urban Planning and Sustainable Spatial Development"
+ByggMap,Norwegian University of Science and Technology - Norway,variant,Norwegian University of Science and Technology,7,y,gold:Norwegian University of Science and Technology
+ByggMap,Sofia Municipality - Bulgaria,variant,Sofia Municipality,7,y,gold:Sofia Municipality
+ByggMap,Technical University of Cluj-Napoca - Romania,variant,Technical University of Cluj-Napoca,7,y,gold:Technical University of Cluj-Napoca
+CIRCUNOVA,ReneeLoop Denmark,partial_name,,5,x,unsupported_extra
+CIRCUNOVA,TAMPEREEN KAUPUNKISEUDUN ELINKEINOJA KEHITYSYHTIO BUSINES TAMPERE OY,partial_name,,1,x,unsupported_extra
+SP02,Havrenmaa University (HVU),variant,Havrenmaa University,30,y,gold:Havrenmaa University
+SP02,Kaltiora Analytics Oy (KTA),variant,Kaltiora Analytics Oy,30,y,gold:Kaltiora Analytics Oy
+SP02,Lumenthar Marine Oy (LMR),variant,Lumenthar Marine Oy,30,y,gold:Lumenthar Marine Oy
+SP02,Nordvalen Systems Oy (NVS),variant,Nordvalen Systems Oy,30,y,gold:Nordvalen Systems Oy
+SP02,Taimerra Research Institute (TMI),variant,Taimerra Research Institute,30,y,gold:Taimerra Research Institute
+SP04,Brenvik,variant,Brenvik Port Logistics Ltd,12,y,gold:Brenvik Port Logistics Ltd
+SP04,Eskeby,variant,Eskeby Technical University,11,y,gold:Eskeby Technical University
+SP04,Hallvik,variant,Hallvik University,12,y,gold:Hallvik University
+SP04,Marovik,variant,Marovik Research Institute,12,y,gold:Marovik Research Institute
+SP04,Orrenfjord,variant,Orrenfjord Marine Systems Ltd,20,y,gold:Orrenfjord Marine Systems Ltd
+SP04,Orrenfjord Marine Systems Ltd (formerly Kellmar Technologies Ltd),"contains_matched, variant",Orrenfjord Marine Systems Ltd,21,y,gold:Orrenfjord Marine Systems Ltd
+SP04,Ostrelund,variant,Ostrelund Regional Development Agency,12,y,gold:Ostrelund Regional Development Agency
+SP04,Quenmark,variant,Quenmark Sensor Works Ltd,12,y,gold:Quenmark Sensor Works Ltd
+SP05,Arctic Sensing,variant,Arctic Sensing Solutions Oy,7,y,gold:Arctic Sensing Solutions Oy
+SP05,Arctic Sensor,variant,Arctic Sensor Systems Oy,7,y,gold:Arctic Sensor Systems Oy
+SP05,Hallavik,variant,Hallavik Applied Research Centre,7,y,gold:Hallavik Applied Research Centre
+SP05,Lumivara,variant,Lumivara Edge Oy,7,y,gold:Lumivara Edge Oy
+SP05,Nordvane,variant,Nordvane Systems Oy,7,y,gold:Nordvane Systems Oy
+SP05,Valoria,variant,Valoria Labs Oy,9,y,gold:Valoria Labs Oy

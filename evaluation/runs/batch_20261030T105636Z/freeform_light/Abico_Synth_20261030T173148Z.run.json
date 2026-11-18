@@ -1,0 +1,108 @@
+{
+  "arm": "freeform_light",
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "provider": "nscale",
+  "source_file": "Abico_Synth.md",
+  "started_utc": "2026-10-30T17:31:48Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested[PolyNova Labs]: could not parse amount 'In-kind'",
+    "requested[Oerlikon Balzer]: could not parse amount 'In-kind'"
+  ],
+  "free_form": true,
+  "context_splits": 0,
+  "seconds": 30.9,
+  "attempts": 1,
+  "prompt_tokens": 25787,
+  "completion_tokens": 332,
+  "cost_usd": 0.000268,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-4B-Instruct-2507",
+  "parts": 1,
+  "freeform_file": "Abico_Synth_20261030T173148Z.freeform.txt",
+  "output_file": "Abico_Synth_20261030T173148Z.json",
+  "replies_file": "Abico_Synth_20261030T173148Z.replies.json",
+  "total_seconds": 30.94,
+  "evaluation": {
+    "document": "Abico_Synth",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\freeform_light\\Abico_Synth_20261030T173148Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 244.1,
+      "docling_markdown_sha256": "db2432c37da8bfa28fb0856593c407d8265b4ca2ce0ecca1fa21a414dcb13c5f"
+    },
+    "runner_wall_clock_seconds": 30.94,
+    "end_to_end_seconds": 275.04,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 25787,
+      "completion_tokens": 332,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": {
+      "made": false,
+      "tokens": 0,
+      "note": "the free form reply is converted to JSON locally in Python; no model call"
+    },
+    "cost": {
+      "cost_usd": 0.00026783,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "nscale",
+          "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-4B-Instruct-2507",
+        "provider": "nscale",
+        "response_format": false,
+        "request_bytes": 170615,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 30.9
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 25787,
+          "total_tokens": 26119,
+          "completion_tokens": 332
+        },
+        "reply": "{\"proposal\": {\"proposal_acronym\": \"ReCoSE\", \"proposal_title\": \"Renewable Composite Systems with Circular Engineering ReCoSE\", \"call_identifier\": null, \"submission_date\": null}, \"proposal_facts\": {\"requested_total\": \"EUR 2.218.600\", \"trl_start\": null, \"trl_target\": null, \"mcrl_start\": null, \"mcrl_target\": null}, \"partners\": [{\"partner_name\": \"NLUAS\", \"requested\": \"487 200\"}, {\"partner_name\": \"Lake District Technical University\", \"requested\": \"382 400\"}, {\"partner_name\": \"NISM\", \"requested\": \"642 300\"}, {\"partner_name\": \"ENU\", \"requested\": \"369 500\"}, {\"partner_name\": \"CFU\", \"requested\": \"337 200\"}, {\"partner_name\": \"NorthGrid Energy WS\", \"requested\": \"20000\"}, {\"partner_name\": \"ForestLoop Fibre\", \"requested\": \"20000\"}, {\"partner_name\": \"Atmosense\", \"requested\": \"20000\"}, {\"partner_name\": \"NordWindow Group\", \"requested\": \"20000\"}, {\"partner_name\": \"Aurora Shipworks\", \"requested\": \"20000\"}, {\"partner_name\": \"PolyNova Labs\", \"requested\": \"In-kind\"}, {\"partner_name\": \"Oerlikon Balzer\", \"requested\": \"In-kind\"}]}",
+        "reasoning": null,
+        "prompt_tokens": 25787,
+        "completion_tokens": 332,
+        "total_tokens": 26119,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 30.9,
+        "model_reported": "Qwen/Qwen3-4B-Instruct-2507",
+        "finish_reason": "stop",
+        "cost_usd": 0.00026783
+      }
+    ]
+  }
+}

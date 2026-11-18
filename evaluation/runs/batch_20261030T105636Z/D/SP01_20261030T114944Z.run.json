@@ -1,0 +1,116 @@
+{
+  "arm": "D",
+  "model": "openai/gpt-oss-20b",
+  "provider": "groq",
+  "source_file": "SP01.md",
+  "started_utc": "2026-10-30T11:49:44Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested[KalevraInnovationClusterOy] 'EUR 575,600' not found in the document",
+    "requested[NorthbayMaterialsOy] 'EUR 466,600' not found in the document",
+    "requested[CorvanePolymerSystemsAB] 'EUR 578,000' not found in the document",
+    "requested[RauvikUniversity] 'EUR 643,900' not found in the document",
+    "requested[ElvarisUniversityofTechnology] 'EUR 735,900' not found in the document",
+    "requested[SundmarkAppliedResearchInstitute] 'EUR 553,200' not found in the document",
+    "requested[BrenvikInstituteforSustainableProcessEngineering] 'EUR 684,500' not found in the document",
+    "sum of partner requested_cents (478980000) != requested_total_cents (614290000)"
+  ],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 3.57,
+  "attempts": 1,
+  "prompt_tokens": 31313,
+  "completion_tokens": 675,
+  "cost_usd": 0.003469,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-20b",
+  "parts": 1,
+  "output_file": "SP01_20261030T114944Z.json",
+  "replies_file": "SP01_20261030T114944Z.replies.json",
+  "total_seconds": 3.6,
+  "evaluation": {
+    "document": "SP01",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\D\\SP01_20261030T114944Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 191.79,
+      "docling_markdown_sha256": "3336f13127c448debbfd443b496945784e43f599d594d395b5a365d056687338"
+    },
+    "runner_wall_clock_seconds": 3.61,
+    "end_to_end_seconds": 195.4,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 31313,
+      "completion_tokens": 675,
+      "reasoning_tokens": 402,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.00255098,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-20b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-20b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 176187,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 3.57
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.086049168,
+          "prompt_tokens": 31313,
+          "prompt_time": 1.876985161,
+          "completion_tokens": 675,
+          "completion_time": 0.688238094,
+          "total_tokens": 31988,
+          "total_time": 2.5652232550000003,
+          "completion_tokens_details": {
+            "reasoning_tokens": 402
+          }
+        },
+        "reply": "{\"proposal\":{\"proposal_acronym\":\"LOOPWEAVE\",\"proposal_title\":\"Circular Weaving of Recycled Fibre Value Chains\",\"call_identifier\":\"INNO-2027-03-CIRCFIBRE-04\",\"submission_date\":\"2027-03-06\"},\"proposal_facts\":{\"requested_total\":\"EUR 6,142,900\",\"trl_start\":5,\"trl_target\":7,\"mcrl_start\":null,\"mcrl_target\":null},\"partners\":[{\"partner_name\":\"KalevraInnovationClusterOy\",\"requested\":\"EUR 575,600\"},{\"partner_name\":\"NorthbayMaterialsOy\",\"requested\":\"EUR 466,600\"},{\"partner_name\":\"CorvanePolymerSystemsAB\",\"requested\":\"EUR 578,000\"},{\"partner_name\":\"TessiloProcessEngineeringGmbH\",\"requested\":\"EUR 552,100\"},{\"partner_name\":\"RauvikUniversity\",\"requested\":\"EUR 643,900\"},{\"partner_name\":\"ElvarisUniversityofTechnology\",\"requested\":\"EUR 735,900\"},{\"partner_name\":\"SundmarkAppliedResearchInstitute\",\"requested\":\"EUR 553,200\"},{\"partner_name\":\"BrenvikInstituteforSustainableProcessEngineering\",\"requested\":\"EUR 684,500\"},{\"partner_name\":\"LindforsRegionalDevelopmentAgency\",\"requested\":\"EUR 0.0\"}]}",
+        "reasoning": "Need proposal fields. Acronym LOOPWEAVE, title same. call_identifier INNO-2027-03-CIRCFIBRE-04. submission_date 2027-03-06. requested_total: total cost EUR 6,142,900. trl_start 5, trl_target? target TRL defined as section 1.3 plus two. Section 1.3 says starts from TRL 5. plus two => 7. mcrl_start and target not given. null. partners list: 9 partners with requested amounts: from budget table: Kalevra 575.6, Northbay 466.6, Corvane 578.0, Tessilo seenote3? note says amount EUR 552,100. So requested 552.1? but table shows \"seenote3\" placeholder. Use note: 552.1? Actually note says EUR 552,100. So requested 552.1? but keep as string \"EUR 552,100\". Rauvik 663.9? Wait table shows 663.9? Actually for Rauvik: 663.9? Table shows 663.9? It shows 663.9? Let's parse: For Rauvik: 478.5 personnel, 6.6 subcontracting, 47.3 other, 131.5 indirect, total eligible 663.9, requested 643.9. So requested 643.9. Elvaris: 794.7 eligible, requested 735.9. Sundmark: 591.2 eligible, requested 553.2. Brenvik: 711.4 eligible, requested 684.5. Lindfors: 179.1 eligible, requested 0.0. Total requested 4,789.8. So partner list with requested amounts. Use strings with currency. For those with 0.0 maybe \"EUR 0.0\". Provide all.",
+        "prompt_tokens": 31313,
+        "completion_tokens": 675,
+        "total_tokens": 31988,
+        "reasoning_tokens": 402,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 3.57,
+        "model_reported": "openai/gpt-oss-20b",
+        "finish_reason": "stop",
+        "cost_usd": 0.00255098
+      }
+    ]
+  }
+}

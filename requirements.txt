@@ -1,13 +1,32 @@
-pyyaml
-python-dotenv
-pymupdf
-pymupdf4llm
-docling
-pytesseract
-pdf2image
-jsonschema
-pandas
-openpyxl
-streamlit
-plotly
-pytest
+# Python 3.13. Exact versions of the project environment (.venv) used for the Docling conversion,
+# the tests and the scoring checks; see README.md, "Environment", for the batch run.
+
+# Document conversion and PDF handling
+docling==2.130.0
+PyMuPDF==1.28.2
+rapidocr==3.9.2
+onnxruntime==1.30.0
+
+# Configuration, validation, matching
+PyYAML==6.0.3
+python-dotenv==1.2.3
+jsonschema==4.26.0
+rapidfuzz==3.14.6
+
+# Web application (pilot interface)
+fastapi==0.143.0
+uvicorn==0.54.0
+Jinja2==3.1.6
+python-multipart==0.0.32
+
+# Local SDG suggestions
+sentence-transformers==6.1.0
+scikit-learn==1.9.1
+torch==2.14.0
+
+# Evaluation outputs (frontier plot)
+matplotlib==3.10.0
+
+# Tests
+pytest==9.1.1
+httpx==0.28.1

@@ -1,0 +1,357 @@
+{
+  "arm": "multimodal_combined_qwen_vl",
+  "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "provider": "deepinfra",
+  "source_file": "SP04.md",
+  "started_utc": "2026-10-31T08:59:08Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "duplicate partner 'Hallvik University' dropped",
+    "duplicate partner 'Orrenfjord Marine Systems Ltd (formerly Kellmar Technologies Ltd)' dropped",
+    "duplicate partner 'Marovik Research Institute' dropped",
+    "duplicate partner 'Quenmark Sensor Works Ltd' dropped",
+    "duplicate partner 'Ostrelund Regional Development Agency' dropped",
+    "duplicate partner 'Brenvik Port Logistics Ltd' dropped",
+    "duplicate partner 'Eskeby Technical University' dropped",
+    "duplicate partner 'Hallvik University' dropped",
+    "duplicate partner 'Orrenfjord Marine Systems Ltd (formerly Kellmar Technologies Ltd)' dropped",
+    "duplicate partner 'Marovik Research Institute' dropped",
+    "duplicate partner 'Quenmark Sensor Works Ltd' dropped",
+    "duplicate partner 'Ostrelund Regional Development Agency' dropped",
+    "duplicate partner 'Brenvik Port Logistics Ltd' dropped",
+    "duplicate partner 'Eskeby Technical University' dropped",
+    "duplicate partner 'Hallvik' dropped",
+    "duplicate partner 'Orrenfjord' dropped",
+    "duplicate partner 'Marovik' dropped",
+    "duplicate partner 'Quenmark' dropped",
+    "duplicate partner 'Ostrelund' dropped",
+    "duplicate partner 'Brenvik' dropped",
+    "duplicate partner 'Eskeby' dropped",
+    "duplicate partner 'Hallvik' dropped",
+    "duplicate partner 'Orrenfjord' dropped",
+    "duplicate partner 'Marovik' dropped",
+    "duplicate partner 'Quenmark' dropped",
+    "duplicate partner 'Ostrelund' dropped",
+    "duplicate partner 'Brenvik' dropped",
+    "duplicate partner 'Eskeby' dropped",
+    "duplicate partner 'Hallvik University' dropped",
+    "duplicate partner 'Orrenfjord Marine Systems Ltd (formerly Kellmar Technologies Ltd)' dropped",
+    "duplicate partner 'Marovik Research Institute' dropped",
+    "duplicate partner 'Quenmark Sensor Works Ltd' dropped",
+    "duplicate partner 'Ostrelund Regional Development Agency' dropped",
+    "duplicate partner 'Brenvik Port Logistics Ltd' dropped",
+    "duplicate partner 'Eskeby Technical University' dropped"
+  ],
+  "batch_size": 10,
+  "overlap": 1,
+  "pages_total": 63,
+  "pages_with_images": 63,
+  "batches": 7,
+  "calls": 7,
+  "seconds": 796.38,
+  "attempts": 7,
+  "prompt_tokens": 327618,
+  "completion_tokens": 4805,
+  "cost_usd": 0.069752,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "context_splits": 0,
+  "output_file": "SP04_20261031T085908Z.json",
+  "replies_file": "SP04_20261031T085908Z.replies.json",
+  "total_seconds": 800.03,
+  "evaluation": {
+    "document": "SP04",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\multimodal_combined_qwen_vl\\SP04_20261031T085908Z.run.json",
+    "input": "pdf",
+    "preparation": {
+      "native_text_seconds": 0.11
+    },
+    "runner_wall_clock_seconds": 800.14,
+    "end_to_end_seconds": 800.14,
+    "calls": 7,
+    "failed_calls": 0,
+    "attempts": 7,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 327618,
+      "completion_tokens": 4805,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 7,
+      "completion_tokens": 7,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.069752,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 2636580,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 45.15
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 47083,
+          "total_tokens": 47444,
+          "completion_tokens": 361,
+          "estimated_cost": 0.009734280000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"MAROFLOW\",\n    \"proposal_title\": \"Marine Observation Flows for Shared Coastal Planning\",\n    \"call_identifier\": \"BSR2026C41\",\n    \"submission_date\": \"2026-08-10\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2,946.1 thousand\",\n    \"trl_start\": 3,\n    \"trl_target\": 6,\n    \"mcrl_start\": 4,\n    \"mcrl_target\": 6\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Hallvik University\",\n      \"requested\": \"EUR 674.5 thousand\"\n    },\n    {\n      \"partner_name\": \"Orrenfjord Marine Systems Ltd (formerly Kellmar Technologies Ltd)\",\n      \"requested\": \"EUR 568.8 thousand\"\n    },\n    {\n      \"partner_name\": \"Marovik Research Institute\",\n      \"requested\": \"EUR 592.8 thousand\"\n    },\n    {\n      \"partner_name\": \"Quenmark Sensor Works Ltd\",\n      \"requested\": \"EUR 507.0 thousand\"\n    },\n    {\n      \"partner_name\": \"Ostrelund Regional Development Agency\",\n      \"requested\": \"EUR 213.0 thousand\"\n    },\n    {\n      \"partner_name\": \"Brenvik Port Logistics Ltd\",\n      \"requested\": \"EUR 0.0 thousand\"\n    },\n    {\n      \"partner_name\": \"Eskeby Technical University\",\n      \"requested\": \"EUR 390.0 thousand\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 47083,
+        "completion_tokens": 361,
+        "total_tokens": 47444,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 45.15,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00973428
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 2762340,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 104.83
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 47083,
+          "total_tokens": 47907,
+          "completion_tokens": 824,
+          "estimated_cost": 0.01014172,
+          "prompt_tokens_details": null
+        },
+        "reply": "First, I will find the partner budget table and work through it row by row, writing out each partner's name exactly as shown, together with the amount on that same row.\n\nThe revised budget table is on page 50 (text) and page 50 (image). The table is titled \"Table 5.2 Revised budget by partner. All amounts in EUR thousand.\" and lists partners by their short names. The requested funding is in the last column.\n\nI will match the short names from Table 5.2 to the legal names from Table 2.1 on page 19 (text) and page 19 (image) to get the exact legal names as required.\n\n- Hallvik (short name) corresponds to Hallvik University (legal name) in Table 2.1. The requested funding is 674.5 (in EUR thousand).\n- Orrenfjord (short name) corresponds to Orrenfjord Marine Systems Ltd (formerly Kellmar Technologies Ltd) (legal name) in Table 2.1. The requested funding is 568.8 (in EUR thousand).\n- Marovik (short name) corresponds to Marovik Research Institute (legal name) in Table 2.1. The requested funding is 592.8 (in EUR thousand).\n- Quenmark (short name) corresponds to Quenmark Sensor Works Ltd (legal name) in Table 2.1. The requested funding is 507.0 (in EUR thousand).\n- Ostrelund (short name) corresponds to Ostrelund Regional Development Agency (legal name) in Table 2.1. The requested funding is 213.0 (in EUR thousand).\n- Brenvik (short name) corresponds to Brenvik Port Logistics Ltd (legal name) in Table 2.1. The requested funding is 0.0 (in EUR thousand).\n- Eskeby (short name) corresponds to Eskeby Technical University (legal name) in Table 2.1. The requested funding is \"calculated at the funding rate\" in the table, which is not a specific amount. Therefore, I will use null for this partner's requested amount.\n\nNow, I will write the final answer as a JSON object.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"MAROFLOW\",\n    \"proposal_title\": \"Marine Observation Flows for Shared Coastal Planning\",\n    \"call_identifier\": \"BSR2026C41\",\n    \"submission_date\": \"2026-08-10\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2,946.1 thousand\",\n    \"trl_start\": 3,\n    \"trl_target\": 6,\n    \"mcrl_start\": 4,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Hallvik University\",\n      \"requested\": \"EUR 674.5 thousand\"\n    },\n    {\n      \"partner_name\": \"Orrenfjord Marine Systems Ltd (formerly Kellmar Technologies Ltd)\",\n      \"requested\": \"EUR 568.8 thousand\"\n    },\n    {\n      \"partner_name\": \"Marovik Research Institute\",\n      \"requested\": \"EUR 592.8 thousand\"\n    },\n    {\n      \"partner_name\": \"Quenmark Sensor Works Ltd\",\n      \"requested\": \"EUR 507.0 thousand\"\n    },\n    {\n      \"partner_name\": \"Ostrelund Regional Development Agency\",\n      \"requested\": \"EUR 213.0 thousand\"\n    },\n    {\n      \"partner_name\": \"Brenvik Port Logistics Ltd\",\n      \"requested\": \"EUR 0.0 thousand\"\n    },\n    {\n      \"partner_name\": \"Eskeby Technical University\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 47083,
+        "completion_tokens": 824,
+        "total_tokens": 47907,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 104.83,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.01014172
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 2587600,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 54.73
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 47083,
+          "total_tokens": 47444,
+          "completion_tokens": 361,
+          "estimated_cost": 0.009734280000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"MAROFLOW\",\n    \"proposal_title\": \"Marine Observation Flows for Shared Coastal Planning\",\n    \"call_identifier\": \"BSR2026C41\",\n    \"submission_date\": \"2026-08-10\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2,946.1 thousand\",\n    \"trl_start\": 3,\n    \"trl_target\": 6,\n    \"mcrl_start\": 4,\n    \"mcrl_target\": 6\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Hallvik University\",\n      \"requested\": \"EUR 674.5 thousand\"\n    },\n    {\n      \"partner_name\": \"Orrenfjord Marine Systems Ltd (formerly Kellmar Technologies Ltd)\",\n      \"requested\": \"EUR 568.8 thousand\"\n    },\n    {\n      \"partner_name\": \"Marovik Research Institute\",\n      \"requested\": \"EUR 592.8 thousand\"\n    },\n    {\n      \"partner_name\": \"Quenmark Sensor Works Ltd\",\n      \"requested\": \"EUR 507.0 thousand\"\n    },\n    {\n      \"partner_name\": \"Ostrelund Regional Development Agency\",\n      \"requested\": \"EUR 213.0 thousand\"\n    },\n    {\n      \"partner_name\": \"Brenvik Port Logistics Ltd\",\n      \"requested\": \"EUR 0.0 thousand\"\n    },\n    {\n      \"partner_name\": \"Eskeby Technical University\",\n      \"requested\": \"EUR 390.0 thousand\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 47083,
+        "completion_tokens": 361,
+        "total_tokens": 47444,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 54.73,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00973428
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 2918144,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 113.82
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 47083,
+          "total_tokens": 47693,
+          "completion_tokens": 610,
+          "estimated_cost": 0.0099534,
+          "prompt_tokens_details": null
+        },
+        "reply": "I will now find the partner budget table and work through it row by row, writing out each partner's name exactly as shown, together with the amount on that same row.\n\nThe revised budget table is on page 50 (text) and is titled \"Table 5.2 Revised budget by partner. All amounts in EUR thousand.\"\n\nI will go through each row:\n\n1. Partner: Hallvik. Requested funding: 674.5\n2. Partner: Orrenfjord. Requested funding: 568.8\n3. Partner: Marovik. Requested funding: 592.8\n4. Partner: Quenmark. Requested funding: 507.0\n5. Partner: Ostrelund. Requested funding: 213.0\n6. Partner: Brenvik. Requested funding: 0.0\n7. Partner: Eskeby. Requested funding: \"calculated at the funding rate\" — this is not a specific amount, so I will use null for the requested amount.\n\nThe text also states on page 50: \"The total requested funding of the revised budget is EUR 2,946.1 thousand.\" This is the sum of the requested funding for the funded partners.\n\nNow, I will write the final answer as a JSON object.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"MAROFLOW\",\n    \"proposal_title\": \"Marine Observation Flows for Shared Coastal Planning\",\n    \"call_identifier\": \"BSR2026C41\",\n    \"submission_date\": \"2026-08-10\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2,946.1 thousand\",\n    \"trl_start\": 3,\n    \"trl_target\": 6,\n    \"mcrl_start\": 4,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Hallvik\",\n      \"requested\": \"EUR 674.5 thousand\"\n    },\n    {\n      \"partner_name\": \"Orrenfjord\",\n      \"requested\": \"EUR 568.8 thousand\"\n    },\n    {\n      \"partner_name\": \"Marovik\",\n      \"requested\": \"EUR 592.8 thousand\"\n    },\n    {\n      \"partner_name\": \"Quenmark\",\n      \"requested\": \"EUR 507.0 thousand\"\n    },\n    {\n      \"partner_name\": \"Ostrelund\",\n      \"requested\": \"EUR 213.0 thousand\"\n    },\n    {\n      \"partner_name\": \"Brenvik\",\n      \"requested\": \"EUR 0.0 thousand\"\n    },\n    {\n      \"partner_name\": \"Eskeby\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 47083,
+        "completion_tokens": 610,
+        "total_tokens": 47693,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 113.82,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0099534
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 3001840,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 203.55
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 47083,
+          "total_tokens": 47873,
+          "completion_tokens": 790,
+          "estimated_cost": 0.010111799999999999,
+          "prompt_tokens_details": null
+        },
+        "reply": "First, I will find the partner budget table and work through it row by row, writing out each partner's name exactly as shown, together with the amount on that same row.\n\nThe relevant table is Table 5.2, titled \"Revised budget by partner,\" found on page 50 of the text (and visually on page 4 of the images). This table lists the partners and their requested funding for the current proposal. The text explicitly states that this is the budget requested in this proposal.\n\nI will go through each row of Table 5.2:\n\n- Partner: Hallvik. Requested funding: 674.5 (in EUR thousand, as stated in the table header).\n- Partner: Orrenfjord. Requested funding: 568.8 (in EUR thousand).\n- Partner: Marovik. Requested funding: 592.8 (in EUR thousand).\n- Partner: Quenmark. Requested funding: 507.0 (in EUR thousand).\n- Partner: Ostrelund. Requested funding: 213.0 (in EUR thousand).\n- Partner: Brenvik. Requested funding: 0.0 (in EUR thousand). The table also notes \"n/a\" for the funding rate, which is consistent with it being an associated partner not requesting funding.\n- Partner: Eskeby. Requested funding: \"calculated at the funding rate\". The text does not provide a specific number for Eskeby's requested funding in this table. The total requested funding is given as 2,946.1 thousand, but the individual amount for Eskeby is not stated. Therefore, I must use null for Eskeby's requested amount.\n\nThe text on page 52 (Table 5.3) shows a change for Eskeby of 390.0 (in EUR thousand), but this is the change from the earlier budget, not the absolute requested amount for the revised budget. The absolute amount is not provided in Table 5.2.\n\nNow, I will write the final answer as one JSON object.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"MAROFLOW\",\n    \"proposal_title\": \"Marine Observation Flows for Shared Coastal Planning\",\n    \"call_identifier\": \"BSR2026C41\",\n    \"submission_date\": \"2026-08-10\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2,946,100.00\",\n    \"trl_start\": 3,\n    \"trl_target\": 6,\n    \"mcrl_start\": 4,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Hallvik\",\n      \"requested\": \"EUR 674,500.00\"\n    },\n    {\n      \"partner_name\": \"Orrenfjord\",\n      \"requested\": \"EUR 568,800.00\"\n    },\n    {\n      \"partner_name\": \"Marovik\",\n      \"requested\": \"EUR 592,800.00\"\n    },\n    {\n      \"partner_name\": \"Quenmark\",\n      \"requested\": \"EUR 507,000.00\"\n    },\n    {\n      \"partner_name\": \"Ostrelund\",\n      \"requested\": \"EUR 213,000.00\"\n    },\n    {\n      \"partner_name\": \"Brenvik\",\n      \"requested\": \"EUR 0.00\"\n    },\n    {\n      \"partner_name\": \"Eskeby\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 47083,
+        "completion_tokens": 790,
+        "total_tokens": 47873,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 203.55,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0101118
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 2406752,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 124.17
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 47083,
+          "total_tokens": 47974,
+          "completion_tokens": 891,
+          "estimated_cost": 0.01020068,
+          "prompt_tokens_details": null
+        },
+        "reply": "First, I will find the partner budget table and work through it row by row, writing out each partner's name exactly as shown, together with the amount on that same row.\n\nThe partner budget table is Table 5.2, titled \"Revised budget by partner,\" found on page 50 of the text and visually confirmed on image 5. The table lists partners by their short names and provides their requested funding.\n\nI will go through each row:\n\n1.  **Partner:** Hallvik. The \"Requested funding\" column shows \"674.5\". The text specifies \"All amounts in EUR thousand.\" So, the amount is EUR 674,500.00.\n2.  **Partner:** Orrenfjord. The \"Requested funding\" column shows \"568.8\". This is EUR 568,800.00.\n3.  **Partner:** Marovik. The \"Requested funding\" column shows \"592.8\". This is EUR 592,800.00.\n4.  **Partner:** Quenmark. The \"Requested funding\" column shows \"507.0\". This is EUR 507,000.00.\n5.  **Partner:** Ostrelund. The \"Requested funding\" column shows \"213.0\". This is EUR 213,000.00.\n6.  **Partner:** Brenvik. The \"Requested funding\" column shows \"0.0\". This is EUR 0.00.\n7.  **Partner:** Eskeby. The \"Requested funding\" column shows \"calculated at the funding rate\". The text does not provide a specific number for Eskeby's requested funding in this table. The total requested funding is given as 2,946.1 thousand, but the individual amount for Eskeby is not explicitly stated. Therefore, I must use null for this value.\n\nThe text on page 52 (Table 5.3) confirms the change for Eskeby is +390.0 thousand, but this is the change from the earlier budget, not the absolute requested amount for the revised budget. The table on page 50 is the definitive source for the requested funding per partner in the revised budget, and it does not provide a number for Eskeby, only a note that it is \"calculated at the funding rate\". Therefore, I cannot state the amount for Eskeby.\n\nNow, I will write the final answer as a JSON object.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"MAROFLOW\",\n    \"proposal_title\": \"Marine Observation Flows for Shared Coastal Planning\",\n    \"call_identifier\": \"BSR2026C41\",\n    \"submission_date\": \"2026-08-10\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2,946,100.00\",\n    \"trl_start\": 3,\n    \"trl_target\": 6,\n    \"mcrl_start\": 4,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Hallvik\",\n      \"requested\": \"EUR 674,500.00\"\n    },\n    {\n      \"partner_name\": \"Orrenfjord\",\n      \"requested\": \"EUR 568,800.00\"\n    },\n    {\n      \"partner_name\": \"Marovik\",\n      \"requested\": \"EUR 592,800.00\"\n    },\n    {\n      \"partner_name\": \"Quenmark\",\n      \"requested\": \"EUR 507,000.00\"\n    },\n    {\n      \"partner_name\": \"Ostrelund\",\n      \"requested\": \"EUR 213,000.00\"\n    },\n    {\n      \"partner_name\": \"Brenvik\",\n      \"requested\": \"EUR 0.00\"\n    },\n    {\n      \"partner_name\": \"Eskeby\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 47083,
+        "completion_tokens": 891,
+        "total_tokens": 47974,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 124.17,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.01020068
+      },
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 2071733,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 150.13
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 45120,
+          "total_tokens": 46088,
+          "completion_tokens": 968,
+          "estimated_cost": 0.009875840000000002,
+          "prompt_tokens_details": null
+        },
+        "reply": "First, I will find the partner budget table and work through it row by row, writing out each partner's name exactly as shown, together with the amount on that same row.\n\nThe revised budget table is on page 50 (text) and corresponds to Table 5.2. The table lists partners by their short names, and their legal names are given in section 2.1 (page 19). I will use the legal names as specified in the instructions for the `partner_name` field.\n\nFrom Table 5.2 on page 50:\n- Partner: Hallvik → Legal name: Hallvik University → Requested funding: 674.5 (in EUR thousand, so \"EUR 674,500.00\")\n- Partner: Orrenfjord → Legal name: Orrenfjord Marine Systems Ltd (formerly Kellmar Technologies Ltd) → Requested funding: 568.8 → \"EUR 568,800.00\"\n- Partner: Marovik → Legal name: Marovik Research Institute → Requested funding: 592.8 → \"EUR 592,800.00\"\n- Partner: Quenmark → Legal name: Quenmark Sensor Works Ltd → Requested funding: 507.0 → \"EUR 507,000.00\"\n- Partner: Ostrelund → Legal name: Ostrelund Regional Development Agency → Requested funding: 213.0 → \"EUR 213,000.00\"\n- Partner: Brenvik → Legal name: Brenvik Port Logistics Ltd → Requested funding: 0.0 → \"EUR 0.00\" (but note: associated partner, no funding requested, so null? However, the table shows 0.0, so I will use \"EUR 0.00\" as written. But the instruction says: \"If a value is not stated or you are not sure, use null.\" The table states 0.0, so I will use \"EUR 0.00\".)\n- Partner: Eskeby → Legal name: Eskeby Technical University → Requested funding: \"calculated at the funding rate\" → This is not a number, so I will use null.\n\nWait, let me re-read the instruction: \"COPIED AS WRITTEN with currency and separators.\" The table says \"calculated at the funding rate\" for Eskeby. That is not a number, so I should use null.\n\nAlso, note that the table says \"All amounts in EUR thousand.\" So 674.5 means 674,500.00 EUR.\n\nNow, let's write the final answer in the required JSON format.\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"MAROFLOW\",\n    \"proposal_title\": \"Marine Observation Flows for Shared Coastal Planning\",\n    \"call_identifier\": \"BSR2026C41\",\n    \"submission_date\": \"2026-08-10\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 2,946,100.00\",\n    \"trl_start\": 3,\n    \"trl_target\": 6,\n    \"mcrl_start\": 4,\n    \"mcrl_target\": 5\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Hallvik University\",\n      \"requested\": \"EUR 674,500.00\"\n    },\n    {\n      \"partner_name\": \"Orrenfjord Marine Systems Ltd (formerly Kellmar Technologies Ltd)\",\n      \"requested\": \"EUR 568,800.00\"\n    },\n    {\n      \"partner_name\": \"Marovik Research Institute\",\n      \"requested\": \"EUR 592,800.00\"\n    },\n    {\n      \"partner_name\": \"Quenmark Sensor Works Ltd\",\n      \"requested\": \"EUR 507,000.00\"\n    },\n    {\n      \"partner_name\": \"Ostrelund Regional Development Agency\",\n      \"requested\": \"EUR 213,000.00\"\n    },\n    {\n      \"partner_name\": \"Brenvik Port Logistics Ltd\",\n      \"requested\": \"EUR 0.00\"\n    },\n    {\n      \"partner_name\": \"Eskeby Technical University\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 45120,
+        "completion_tokens": 968,
+        "total_tokens": 46088,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 150.13,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.00987584
+      }
+    ]
+  }
+}

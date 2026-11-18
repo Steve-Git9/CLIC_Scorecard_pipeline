@@ -1,0 +1,112 @@
+{
+  "arm": "C",
+  "model": "openai/gpt-oss-120b",
+  "provider": "groq",
+  "source_file": "SP04.md",
+  "started_utc": "2026-10-31T07:59:24Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested[Eskeby Technical University]: could not parse amount 'calculated at the funding rate'"
+  ],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 3.06,
+  "attempts": 1,
+  "prompt_tokens": 24735,
+  "completion_tokens": 640,
+  "cost_usd": 0.00419,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-120b",
+  "parts": 1,
+  "output_file": "SP04_20261031T075924Z.json",
+  "replies_file": "SP04_20261031T075924Z.replies.json",
+  "total_seconds": 3.08,
+  "evaluation": {
+    "document": "SP04",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\C\\SP04_20261031T075924Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 193.06,
+      "docling_markdown_sha256": "951b31c414cf23cb5b6509c461a804c7a170ca72fff157efdb3dcaa02845bdfb"
+    },
+    "runner_wall_clock_seconds": 3.08,
+    "end_to_end_seconds": 196.14,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 24735,
+      "completion_tokens": 640,
+      "reasoning_tokens": 318,
+      "image_tokens": null,
+      "cached_tokens": 24576
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.00225105,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-120b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-120b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 139373,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 3.06
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.088910298,
+          "prompt_tokens": 24735,
+          "prompt_time": 0.029027255,
+          "completion_tokens": 640,
+          "completion_time": 1.316725706,
+          "total_tokens": 25375,
+          "total_time": 1.345752961,
+          "prompt_tokens_details": {
+            "cached_tokens": 24576
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 318
+          }
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"MAROFLOW\",\n    \"proposal_title\": \"Marine Observation Flows for Shared Coastal Planning\",\n    \"call_identifier\": \"BSR2026C41\",\n    \"submission_date\": \"2026-08-10\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 3,207,500\",\n    \"trl_start\": null,\n    \"trl_target\": 6,\n    \"mcrl_start\": 4,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Hallvik University\",\n      \"requested\": \"674.5\"\n    },\n    {\n      \"partner_name\": \"Orrenfjord Marine Systems Ltd (formerly Kellmar Technologies Ltd)\",\n      \"requested\": \"568.8\"\n    },\n    {\n      \"partner_name\": \"Marovik Research Institute\",\n      \"requested\": \"592.8\"\n    },\n    {\n      \"partner_name\": \"Quenmark Sensor Works Ltd\",\n      \"requested\": \"507.0\"\n    },\n    {\n      \"partner_name\": \"Ostrelund Regional Development Agency\",\n      \"requested\": \"213.0\"\n    },\n    {\n      \"partner_name\": \"Brenvik Port Logistics Ltd\",\n      \"requested\": \"0.0\"\n    },\n    {\n      \"partner_name\": \"Eskeby Technical University\",\n      \"requested\": \"calculated at the funding rate\"\n    }\n  ]\n}",
+        "reasoning": "We need fields. proposal_acronym = MAROFLOW. title = Marine Observation Flows for Shared Coastal Planning. call_identifier = BSR2026C41. submission_date = 2026-08-10. proposal_facts: requested_total = \"EUR 3,207,500\" from executive summary. trl_start? Not given explicitly. Only target TRL 6 at end. start not stated. So null. trl_target = 6. mcrl_start = 4 (from market uptake start). mcrl_target? Not given. maybe target not stated. So null. partners list in order from table 2.1: Hallvik University, Orrenfjord Marine Systems Ltd (formerly Kellmar Technologies Ltd), Marovik Research Institute, Quenmark Sensor Works Ltd, Ostrelund Regional Development Agency, Brenvik Port Logistics Ltd, Eskeby Technical University. Requested amounts: from revised budget table 5.2 for each partner. Hallvik: \"674.5\" but need currency and format as in document? It shows \"674.5\" without EUR. Probably amount in EUR thousand? But requested_total earlier is EUR 3,207,500. For partners, we copy as written: \"674.5\". For Orrenfjord: \"568.8\". Marovik: \"592.8\". Quenmark: \"507.0\". Ostrelund: \"213.0\". Brenvik: \"0.0\". Eskeby: \"calculated at the funding rate\". Use exactly.",
+        "prompt_tokens": 24735,
+        "completion_tokens": 640,
+        "total_tokens": 25375,
+        "reasoning_tokens": 318,
+        "image_tokens": null,
+        "cached_tokens": 24576,
+        "seconds": 3.06,
+        "model_reported": "openai/gpt-oss-120b",
+        "finish_reason": "stop",
+        "cost_usd": 0.00225105
+      }
+    ]
+  }
+}

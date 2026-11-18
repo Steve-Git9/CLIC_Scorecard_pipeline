@@ -1,0 +1,162 @@
+{
+  "arm": "targeted_text",
+  "mode": "text",
+  "model": "openai/gpt-oss-120b",
+  "provider": "groq",
+  "source_file": "SP05.pdf",
+  "started_utc": "2026-10-31T13:10:15Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested[Hallavik Applied Research Centre]: could not parse amount '649 300,03 € of which subcontracting 108 270,00 €'"
+  ],
+  "pages_total": 78,
+  "pages_sent": [
+    1,
+    3,
+    11,
+    16,
+    42,
+    47,
+    64,
+    69
+  ],
+  "scanned_pages": [],
+  "ocr_pages": [],
+  "images_sent": 0,
+  "located": {
+    "proposal": [
+      1,
+      69,
+      70
+    ],
+    "budget": [
+      42,
+      64,
+      3
+    ],
+    "partners": [
+      16,
+      64,
+      47
+    ],
+    "readiness": [
+      11,
+      37,
+      38
+    ]
+  },
+  "located_by": {
+    "proposal": "keywords",
+    "budget": "keywords",
+    "partners": "keywords",
+    "readiness": "keywords"
+  },
+  "tables_found": 5,
+  "tables_verified": 0,
+  "page_map_cached": false,
+  "calls": 1,
+  "seconds": 1.95,
+  "attempts": 1,
+  "prompt_tokens": 5541,
+  "completion_tokens": 596,
+  "cost_usd": 0.001278,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-120b",
+  "steps": {
+    "page_map": 14.76,
+    "locate": 0.0,
+    "identifier_hints": 0.3,
+    "tables": 0.92,
+    "text_and_ocr": 0.02,
+    "model": 1.96
+  },
+  "context_splits": 0,
+  "identifiers_filled": {},
+  "partners_confirmed_by_table": 0,
+  "output_file": "SP05_20261031T131015Z.json",
+  "replies_file": "SP05_20261031T131015Z.replies.json",
+  "total_seconds": 17.97,
+  "trace_file": "SP05_20261031T131015Z.trace.json",
+  "evaluation": {
+    "document": "SP05",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\targeted_text\\SP05_20261031T131015Z.run.json",
+    "input": "pdf",
+    "preparation": {},
+    "runner_wall_clock_seconds": 17.99,
+    "end_to_end_seconds": 17.99,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 5541,
+      "completion_tokens": 596,
+      "reasoning_tokens": 346,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.00118875,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-120b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-120b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 24595,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 1.95
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.087309455,
+          "prompt_tokens": 5541,
+          "prompt_time": 0.23639513,
+          "completion_tokens": 596,
+          "completion_time": 1.246765388,
+          "total_tokens": 6137,
+          "total_time": 1.483160518,
+          "completion_tokens_details": {
+            "reasoning_tokens": 346
+          }
+        },
+        "reply": "{\"proposal\":{\"proposal_acronym\":\"NIVALIS\",\"proposal_title\":\"NIVALIS Federated Data Spaces for Resilient Cold Climate Infrastructure Monitoring\",\"call_identifier\":null,\"submission_date\":\"2026-09-16\"},\"proposal_facts\":{\"requested_total\":\"3 828 561,00 €\",\"trl_start\":null,\"trl_target\":null,\"mcrl_start\":null,\"mcrl_target\":null},\"partners\":[{\"partner_name\":\"Nordvane Systems Oy\",\"requested\":\"870 765,93 €\"},{\"partner_name\":\"University of Teralund\",\"requested\":\"679 493,18 €\"},{\"partner_name\":\"Valoria Labs Oy\",\"requested\":\"594 205,74 €\"},{\"partner_name\":\"Hallavik Applied Research Centre\",\"requested\":\"649 300,03 € of which subcontracting 108 270,00 €\"},{\"partner_name\":\"Arctic Sensor Systems Oy\",\"requested\":\"449 835,12 €\"},{\"partner_name\":\"Lumivara Edge Oy\",\"requested\":null},{\"partner_name\":\"Arctic Sensing Solutions Oy\",\"requested\":\"298.0\"},{\"partner_name\":\"Kaltio Regional Council\",\"requested\":\"199.2\"}]}",
+        "reasoning": "We need extract fields. proposal_acronym = NIVALIS, title also NIVALIS? Actually title line: \"NIVALIS Federated Data Spaces for Resilient Cold Climate Infrastructure Monitoring\". Likely full title is that line. Use that. call_identifier = null (label says to be confirmed). submission_date = 2026-09-16.\n\nrequested_total from key facts table: Total requested funding 3 828 561,00 € copy exactly.\n\nTRL start/target not found. No values, so null.\n\nMCRL not found, null.\n\nPartners: need requested funding per partner. Use Table 5.1 (page 42) column Requested funding. For each partner (excluding associated partner). Values:\n\nNordvane: 870 765,93 €\nTeralund University: 679 493,18 €\nValoria: 594 205,74 €\nHallavik: 649 300,03 € of which subcontracting 108 270,00 € (copy whole cell)\nArctic Sensor: 449 835,12 €\nLumivara is associated partner, does not request funding -> null.\nArctic Sensing: from continuation table page64 Funding requested 298.0 (EUR thousand). Need format as in table: \"298,0\"? Actually table shows 298.0 with dot. Keep as written \"298.0\". But currency? Not specified. Probably EUR thousand. We'll copy \"298.0\". Kaltio Council: 199.2.\n\nAlso Carried forward not a partner.\n\nOrder as document order from consortium list (P1..P8). Include all 8 with requested values.\n\nThus produce JSON.",
+        "prompt_tokens": 5541,
+        "completion_tokens": 596,
+        "total_tokens": 6137,
+        "reasoning_tokens": 346,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 1.95,
+        "model_reported": "openai/gpt-oss-120b",
+        "finish_reason": "stop",
+        "cost_usd": 0.00118875
+      }
+    ]
+  }
+}

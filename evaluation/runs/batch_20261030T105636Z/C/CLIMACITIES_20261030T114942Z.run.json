@@ -1,0 +1,107 @@
+{
+  "arm": "C",
+  "model": "openai/gpt-oss-120b",
+  "provider": "groq",
+  "source_file": "CLIMACITIES.md",
+  "started_utc": "2026-10-30T11:49:42Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 2.5,
+  "attempts": 1,
+  "prompt_tokens": 19353,
+  "completion_tokens": 479,
+  "cost_usd": 0.003262,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-120b",
+  "parts": 1,
+  "output_file": "CLIMACITIES_20261030T114942Z.json",
+  "replies_file": "CLIMACITIES_20261030T114942Z.replies.json",
+  "total_seconds": 2.52,
+  "evaluation": {
+    "document": "CLIMACITIES",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\C\\CLIMACITIES_20261030T114942Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 115.02,
+      "docling_markdown_sha256": "949af8bd07e2436524f0435a30f6b88f5830c13a3397260c211a488094e2efbf"
+    },
+    "runner_wall_clock_seconds": 2.52,
+    "end_to_end_seconds": 117.54,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 19353,
+      "completion_tokens": 479,
+      "reasoning_tokens": 228,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.00319035,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-120b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-120b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 116950,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 2.5
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.086689086,
+          "prompt_tokens": 19353,
+          "prompt_time": 0.873563262,
+          "completion_tokens": 479,
+          "completion_time": 0.997362668,
+          "total_tokens": 19832,
+          "total_time": 1.8709259299999998,
+          "completion_tokens_details": {
+            "reasoning_tokens": 228
+          }
+        },
+        "reply": "{\"proposal\":{\"proposal_acronym\":\"CLIMACITIES\",\"proposal_title\":\"Climate Intelligence for Equitable and Adaptive European Cities\",\"call_identifier\":\"HORIZON-MISS-2027-CLIMA-SYN-01\",\"submission_date\":null},\"proposal_facts\":{\"requested_total\":\"EUR 7,500,000\",\"trl_start\":null,\"trl_target\":null,\"mcrl_start\":null,\"mcrl_target\":null},\"partners\":[{\"partner_name\":\"NORDIC URBAN SYSTEMS INSTITUTE\",\"requested\":\"1,420,000\"},{\"partner_name\":\"RHEIN DATA LABS GMBH\",\"requested\":\"1,060,000\"},{\"partner_name\":\"ATLANTIC RESILIENCE CENTRE\",\"requested\":\"910,000\"},{\"partner_name\":\"CIVITAS ANALYTICS SL\",\"requested\":\"870,000\"},{\"partner_name\":\"DELTA WATER RESEARCH BV\",\"requested\":\"850,000\"},{\"partner_name\":\"BALTIC COMMUNITY LAB\",\"requested\":\"690,000\"},{\"partner_name\":\"ALPINE ENERGY INNOVATION SRL\",\"requested\":\"930,000\"},{\"partner_name\":\"URBAN FUTURES ASSOCIATION\",\"requested\":\"770,000\"}]}",
+        "reasoning": "We need proposal_acronym? Not given. Probably CLIMACITIES? That's title. Acronym maybe CLIMACITIES. Use that. proposal_title: Climate Intelligence for Equitable and Adaptive European Cities. call_identifier: Synthetic topic identifier: HORIZON-MISS-2027-CLIMA-SYN-01. submission_date not present -> null. requested_total: EUR 7,500,000. TRL and MCRL not mentioned. So null. partners list with names and requested amounts from table. Use amounts with commas as in table: \"1,420,000\" but need include currency? In table header EU request (EUR). So amount is 1,420,000 but we should include currency? Probably \"EUR 1,420,000\". But earlier requested_total includes currency. For partner requested, copy as written with currency and separators. Table shows just number without EUR. But earlier in financial annex shows same numbers without EUR. So we copy as written: \"1,420,000\". No currency. We'll follow rule: copy as written. So partner entries.\n\nReturn JSON.",
+        "prompt_tokens": 19353,
+        "completion_tokens": 479,
+        "total_tokens": 19832,
+        "reasoning_tokens": 228,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 2.5,
+        "model_reported": "openai/gpt-oss-120b",
+        "finish_reason": "stop",
+        "cost_usd": 0.00319035
+      }
+    ]
+  }
+}

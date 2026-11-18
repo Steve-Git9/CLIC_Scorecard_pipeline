@@ -1,0 +1,45 @@
+{
+  "proposal": {
+    "proposal_acronym": "RESENSE",
+    "proposal_title": "Adaptive Sensor Networks for Resource Efficient Process Monitoring",
+    "call_identifier": "RCF2027/6433",
+    "submission_date": null
+  },
+  "proposal_facts": {
+    "requested_total_cents": 97930000,
+    "trl_start": 3,
+    "trl_target": 5,
+    "mcrl_start": null,
+    "mcrl_target": null
+  },
+  "partners": [
+    {
+      "partner_name": "Torvenmaa University",
+      "requested_cents": 21480
+    },
+    {
+      "partner_name": "HBU",
+      "requested_cents": 15980
+    },
+    {
+      "partner_name": "Kestrel Institute for Process Research",
+      "requested_cents": null
+    },
+    {
+      "partner_name": "OPS",
+      "requested_cents": 17780
+    },
+    {
+      "partner_name": "VSS",
+      "requested_cents": 19640
+    },
+    {
+      "partner_name": "Ostermark Regional Development Agency",
+      "requested_cents": 0
+    }
+  ],
+  "metadata": {
+    "extraction_timestamp": "2026-10-30T13:44:13Z",
+    "source_file": "SP03A.pdf"
+  }
+}

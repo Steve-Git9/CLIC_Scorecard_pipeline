@@ -1,0 +1,112 @@
+{
+  "arm": "freeform_light",
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "provider": "nscale",
+  "source_file": "SP03B.md",
+  "started_utc": "2026-10-30T13:23:15Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested[Torvenmaa University] '214,8000' not found in the document",
+    "requested[Haldeberg University of Applied Sciences and Regional Innovation Services] '159,8000' not found in the document",
+    "partner 'Kestrel Institute for Process Research' not found verbatim in the document",
+    "requested[Kestrel Institute for Process Research]: could not parse amount 'see E.2'",
+    "requested[Ormenfield Process Systems Oy]: could not parse amount '167,1x.k. 177.8'",
+    "requested[Vantora Sensor Solutions Oy] '196,4000' not found in the document"
+  ],
+  "free_form": true,
+  "context_splits": 0,
+  "seconds": 15.39,
+  "attempts": 1,
+  "prompt_tokens": 15493,
+  "completion_tokens": 258,
+  "cost_usd": 0.000163,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-4B-Instruct-2507",
+  "parts": 1,
+  "freeform_file": "SP03B_20261030T132315Z.freeform.txt",
+  "output_file": "SP03B_20261030T132315Z.json",
+  "replies_file": "SP03B_20261030T132315Z.replies.json",
+  "total_seconds": 15.42,
+  "evaluation": {
+    "document": "SP03B",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\freeform_light\\SP03B_20261030T132315Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 460.97,
+      "docling_markdown_sha256": "feda96f35bbc403b38b945c259e41f84ed7e62f84c65dfc8243d300540e793e2"
+    },
+    "runner_wall_clock_seconds": 15.42,
+    "end_to_end_seconds": 476.39,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 15493,
+      "completion_tokens": 258,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": {
+      "made": false,
+      "tokens": 0,
+      "note": "the free form reply is converted to JSON locally in Python; no model call"
+    },
+    "cost": {
+      "cost_usd": 0.00016267,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "nscale",
+          "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-4B-Instruct-2507",
+        "provider": "nscale",
+        "response_format": false,
+        "request_bytes": 84392,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 15.39
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 15493,
+          "total_tokens": 15751,
+          "completion_tokens": 258
+        },
+        "reply": "{\"proposal\": {\"proposal_acronym\": \"RESENSE\", \"proposal_title\": \"Adaptive Sensor Networks for Resource Efficient Process Monitoring\", \"call_identifier\": \"RCF2027/6433\", \"submission_date\": null}, \"proposal_facts\": {\"requested_total\": \"EUR 979 300\", \"trl_start\": null, \"trl_target\": null, \"mcrl_start\": 1, \"mcrl_target\": 4}, \"partners\": [{\"partner_name\": \"Torvenmaa University\", \"requested\": \"214,8000\"}, {\"partner_name\": \"Haldeberg University of Applied Sciences and Regional Innovation Services\", \"requested\": \"159,8000\"}, {\"partner_name\": \"Kestrel Institute for Process Research\", \"requested\": \"see E.2\"}, {\"partner_name\": \"Ormenfield Process Systems Oy\", \"requested\": \"167,1x.k. 177.8\"}, {\"partner_name\": \"Vantora Sensor Solutions Oy\", \"requested\": \"196,4000\"}, {\"partner_name\": \"Ostermark Regional Development Agency\", \"requested\": \"0,0\"}]}",
+        "reasoning": null,
+        "prompt_tokens": 15493,
+        "completion_tokens": 258,
+        "total_tokens": 15751,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 15.39,
+        "model_reported": "Qwen/Qwen3-4B-Instruct-2507",
+        "finish_reason": "stop",
+        "cost_usd": 0.00016267
+      }
+    ]
+  }
+}

@@ -23,7 +23,7 @@
                 <img src="/static/CLIClogo.png" alt="CLIC" class="h-6 w-auto">
                 <span class="font-semibold text-slate-800">extraction</span>
             </a>
-            {% for href, label in [("/", "Extract"), ("/multimodal", "Multimodal"), ("/projects", "Projects"), ("/partners", "Partners"), ("/dashboard", "Dashboard"), ("/scorecard", "Scorecard")] %}
+            {% for href, label in [("/", "Extract"), ("/projects", "Projects"), ("/partners", "Partners"), ("/dashboard", "Dashboard"), ("/scorecard", "Scorecard")] %}
             <a href="{{ href }}" class="text-sm {{ 'text-[#236543] font-semibold' if request.url.path == href else 'text-slate-600 hover:text-[#236543]' }}">{{ label }}</a>
             {% endfor %}
             <span class="text-xs text-slate-400 ml-auto">Local only</span>

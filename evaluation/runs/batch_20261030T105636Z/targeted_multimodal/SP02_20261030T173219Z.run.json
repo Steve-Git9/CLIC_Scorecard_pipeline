@@ -1,0 +1,162 @@
+{
+  "arm": "targeted_multimodal",
+  "mode": "multimodal",
+  "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "provider": "deepinfra",
+  "source_file": "SP02.pdf",
+  "started_utc": "2026-10-30T17:32:19Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested[Nordvalen Systems Oy (NVS)] 'EUR 181,600' not found in the document",
+    "requested[Kaltiora Analytics Oy (KTA)] 'EUR 190,900' not found in the document",
+    "requested[Havrenmaa University (HVU)] 'EUR 253,600' not found in the document",
+    "requested[Taimerra Research Institute (TMI)] 'EUR 365,000' not found in the document"
+  ],
+  "pages_total": 41,
+  "pages_sent": [
+    1,
+    13,
+    17,
+    22,
+    30,
+    33,
+    34,
+    35
+  ],
+  "scanned_pages": [],
+  "ocr_pages": [],
+  "images_sent": 6,
+  "located": {
+    "proposal": [
+      1
+    ],
+    "budget": [
+      33,
+      35,
+      34
+    ],
+    "partners": [
+      17,
+      22,
+      13
+    ],
+    "readiness": [
+      30
+    ]
+  },
+  "located_by": {
+    "proposal": "keywords",
+    "budget": "keywords",
+    "partners": "keywords",
+    "readiness": "keywords"
+  },
+  "tables_found": 0,
+  "tables_verified": 0,
+  "page_map_cached": false,
+  "calls": 1,
+  "seconds": 86.56,
+  "attempts": 2,
+  "prompt_tokens": 16951,
+  "completion_tokens": 305,
+  "cost_usd": 0.003659,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+  "steps": {
+    "page_map": 5.67,
+    "locate": 0.0,
+    "identifier_hints": 0.18,
+    "tables": 0.83,
+    "text_and_ocr": 0.03,
+    "model": 87.38
+  },
+  "context_splits": 0,
+  "identifiers_filled": {},
+  "partners_confirmed_by_table": 0,
+  "output_file": "SP02_20261030T173219Z.json",
+  "replies_file": "SP02_20261030T173219Z.replies.json",
+  "total_seconds": 94.1,
+  "trace_file": "SP02_20261030T173219Z.trace.json",
+  "evaluation": {
+    "document": "SP02",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\targeted_multimodal\\SP02_20261030T173219Z.run.json",
+    "input": "pdf",
+    "preparation": {},
+    "runner_wall_clock_seconds": 94.1,
+    "end_to_end_seconds": 94.1,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 2,
+    "retries": 1,
+    "tokens": {
+      "prompt_tokens": 16951,
+      "completion_tokens": 305,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.0036586,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "provider": "deepinfra",
+        "response_format": true,
+        "request_bytes": 2385757,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 429,
+            "error": "HTTP 429: {\"error\":{\"message\":\"Model busy, retry later\",\"type\":\"invalid_request_error\",\"param\":null,\"code\":\"engine_overloaded\"}}",
+            "seconds": 1.45
+          },
+          {
+            "attempt": 2,
+            "http_status": 200,
+            "error": null,
+            "seconds": 83.11
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 16951,
+          "total_tokens": 17256,
+          "completion_tokens": 305,
+          "estimated_cost": 0.0036586,
+          "prompt_tokens_details": null
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"TIDEMESH\",\n    \"proposal_title\": \"Adaptive Sensor Networks for Resilient Coastal Infrastructure\",\n    \"call_identifier\": \"BF2026/93782\",\n    \"submission_date\": \"2026-04-02\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 991,100\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": 1,\n    \"mcrl_target\": 4\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"Nordvalen Systems Oy (NVS)\",\n      \"requested\": \"EUR 181,600\"\n    },\n    {\n      \"partner_name\": \"Kaltiora Analytics Oy (KTA)\",\n      \"requested\": \"EUR 190,900\"\n    },\n    {\n      \"partner_name\": \"Lumenthar Marine Oy (LMR)\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Havrenmaa University (HVU)\",\n      \"requested\": \"EUR 253,600\"\n    },\n    {\n      \"partner_name\": \"Taimerra Research Institute (TMI)\",\n      \"requested\": \"EUR 365,000\"\n    }\n  ]\n}",
+        "reasoning": null,
+        "prompt_tokens": 16951,
+        "completion_tokens": 305,
+        "total_tokens": 17256,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 86.56,
+        "model_reported": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "finish_reason": "stop",
+        "cost_usd": 0.0036586
+      }
+    ]
+  }
+}

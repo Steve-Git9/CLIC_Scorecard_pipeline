@@ -1,0 +1,107 @@
+{
+  "arm": "D",
+  "model": "openai/gpt-oss-20b",
+  "provider": "groq",
+  "source_file": "CLIMACITIES.md",
+  "started_utc": "2026-10-30T11:49:48Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 2.22,
+  "attempts": 1,
+  "prompt_tokens": 19353,
+  "completion_tokens": 353,
+  "cost_usd": 0.002112,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-20b",
+  "parts": 1,
+  "output_file": "CLIMACITIES_20261030T114948Z.json",
+  "replies_file": "CLIMACITIES_20261030T114948Z.replies.json",
+  "total_seconds": 2.24,
+  "evaluation": {
+    "document": "CLIMACITIES",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\D\\CLIMACITIES_20261030T114948Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 115.02,
+      "docling_markdown_sha256": "949af8bd07e2436524f0435a30f6b88f5830c13a3397260c211a488094e2efbf"
+    },
+    "runner_wall_clock_seconds": 2.24,
+    "end_to_end_seconds": 117.26,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 19353,
+      "completion_tokens": 353,
+      "reasoning_tokens": 102,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.00155737,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-20b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-20b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 116949,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 2.22
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.082720882,
+          "prompt_tokens": 19353,
+          "prompt_time": 1.007110302,
+          "completion_tokens": 353,
+          "completion_time": 0.365648986,
+          "total_tokens": 19706,
+          "total_time": 1.3727592880000001,
+          "completion_tokens_details": {
+            "reasoning_tokens": 102
+          }
+        },
+        "reply": "{\"proposal\":{\"proposal_acronym\":\"CLIMACITIES\",\"proposal_title\":\"Climate Intelligence for Equitable and Adaptive European Cities\",\"call_identifier\":\"HORIZON-MISS-2027-CLIMA-SYN-01\",\"submission_date\":null},\"proposal_facts\":{\"requested_total\":\"EUR 7,500,000\",\"trl_start\":null,\"trl_target\":null,\"mcrl_start\":null,\"mcrl_target\":null},\"partners\":[{\"partner_name\":\"NORDIC URBAN SYSTEMS INSTITUTE\",\"requested\":\"1,420,000\"},{\"partner_name\":\"RHEIN DATA LABS GMBH\",\"requested\":\"1,060,000\"},{\"partner_name\":\"ATLANTIC RESILIENCE CENTRE\",\"requested\":\"910,000\"},{\"partner_name\":\"CIVITAS ANALYTICS SL\",\"requested\":\"870,000\"},{\"partner_name\":\"DELTA WATER RESEARCH BV\",\"requested\":\"850,000\"},{\"partner_name\":\"BALTIC COMMUNITY LAB\",\"requested\":\"690,000\"},{\"partner_name\":\"ALPINE ENERGY INNOVATION SRL\",\"requested\":\"930,000\"},{\"partner_name\":\"URBAN FUTURES ASSOCIATION\",\"requested\":\"770,000\"}]}",
+        "reasoning": "We need proposal_acronym: CLIMACITIES? title: Climate Intelligence for Equitable and Adaptive European Cities. call_identifier: HORIZON-MISS-2027-CLIMA-SYN-01. submission_date not given. requested_total: EUR 7,500,000. trl_start/target? not provided. mcrl_start/target? not provided. partners list with requested amounts. All amounts given. So null for trl/mcrl. submission_date null.",
+        "prompt_tokens": 19353,
+        "completion_tokens": 353,
+        "total_tokens": 19706,
+        "reasoning_tokens": 102,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 2.22,
+        "model_reported": "openai/gpt-oss-20b",
+        "finish_reason": "stop",
+        "cost_usd": 0.00155737
+      }
+    ]
+  }
+}

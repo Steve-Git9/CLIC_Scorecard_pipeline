@@ -1,0 +1,157 @@
+{
+  "arm": "targeted_text",
+  "mode": "text",
+  "model": "openai/gpt-oss-120b",
+  "provider": "groq",
+  "source_file": "CIRCUNOVA.pdf",
+  "started_utc": "2026-10-31T11:52:29Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "sum of partner requested_cents (397225000) != requested_total_cents (600000000)"
+  ],
+  "pages_total": 146,
+  "pages_sent": [
+    1,
+    2,
+    4,
+    10,
+    42,
+    100,
+    139
+  ],
+  "scanned_pages": [],
+  "ocr_pages": [],
+  "images_sent": 0,
+  "located": {
+    "proposal": [
+      1,
+      2,
+      10
+    ],
+    "budget": [
+      139
+    ],
+    "partners": [
+      139,
+      100,
+      4
+    ],
+    "readiness": [
+      42
+    ]
+  },
+  "located_by": {
+    "proposal": "keywords",
+    "budget": "keywords",
+    "partners": "keywords",
+    "readiness": "keywords"
+  },
+  "tables_found": 3,
+  "tables_verified": 1,
+  "page_map_cached": false,
+  "calls": 1,
+  "seconds": 2.74,
+  "attempts": 1,
+  "prompt_tokens": 9283,
+  "completion_tokens": 766,
+  "cost_usd": 0.001967,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-120b",
+  "steps": {
+    "page_map": 36.61,
+    "locate": 0.0,
+    "identifier_hints": 0.34,
+    "tables": 2.5,
+    "text_and_ocr": 0.05,
+    "model": 2.74
+  },
+  "context_splits": 0,
+  "identifiers_filled": {},
+  "partners_confirmed_by_table": 0,
+  "output_file": "CIRCUNOVA_20261031T115229Z.json",
+  "replies_file": "CIRCUNOVA_20261031T115229Z.replies.json",
+  "total_seconds": 42.26,
+  "trace_file": "CIRCUNOVA_20261031T115229Z.trace.json",
+  "evaluation": {
+    "document": "CIRCUNOVA",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\targeted_text\\CIRCUNOVA_20261031T115229Z.run.json",
+    "input": "pdf",
+    "preparation": {},
+    "runner_wall_clock_seconds": 42.26,
+    "end_to_end_seconds": 42.26,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 9283,
+      "completion_tokens": 766,
+      "reasoning_tokens": 507,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.00185205,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-120b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-120b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 31995,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 2.74
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.247069131,
+          "prompt_tokens": 9283,
+          "prompt_time": 0.486512137,
+          "completion_tokens": 766,
+          "completion_time": 1.601539721,
+          "total_tokens": 10049,
+          "total_time": 2.088051858,
+          "completion_tokens_details": {
+            "reasoning_tokens": 507
+          }
+        },
+        "reply": "{\"proposal\":{\"proposal_acronym\":\"CIRCUNOVA\",\"proposal_title\":\"Circular Industry Networks for Regenerative Urban PVerials\",\"call_identifier\":\"HORIZON-CL6-2026-01-two-stage\",\"submission_date\":null},\"proposal_facts\":{\"requested_total\":\"6,000,000 €\",\"trl_start\":null,\"trl_target\":null,\"mcrl_start\":null,\"mcrl_target\":null},\"partners\":[{\"partner_name\":\"NCS\",\"requested\":\"666,700\"},{\"partner_name\":\"VEST\",\"requested\":\"250,250\"},{\"partner_name\":\"LRC\",\"requested\":\"149,350\"},{\"partner_name\":\"LBDA\",\"requested\":\"303,250\"},{\"partner_name\":\"LRS\",\"requested\":\"335,300\"},{\"partner_name\":\"MCS\",\"requested\":\"379,750\"},{\"partner_name\":\"TFI\",\"requested\":\"384,562.5\"},{\"partner_name\":\"BIT\",\"requested\":\"366,500\"},{\"partner_name\":\"PV\",\"requested\":\"222,062.5\"},{\"partner_name\":\"UHT\",\"requested\":\"571,500\"},{\"partner_name\":\"SUAS\",\"requested\":\"343,025\"},{\"partner_name\":\"CRTN\",\"requested\":\"0\"},{\"partner_name\":\"AFL\",\"requested\":\"0\"}]}",
+        "reasoning": "We need JSON. Extract proposal info: acronym CIRCUNOVA, title from page2: \"Circular Industry Networks for Regenerative Urban PVerials\". call identifier: from page1 call: HORIZON-CL6-2026-01-two-stage (or full). Use that. submission_date not given -> null.\n\nrequested_total from budget table: Total requested contribution: 6,000,000 € . copy as written \"6,000,000 €\". trl and mcrl not present -> null.\n\nPartners: need partner_name and requested from table column \"Requested EU contribution\". For each row order 1-19 (excluding associated with zero). Use Legal Name column. Some rows have blank Legal Name; need name from participants list? But we have only table. For blank, we cannot infer, so null? But partner_name must be exactly as written; blank means missing, maybe null? Probably skip? But need entry per organisation taking part in document order. We have list earlier page4 with names. But mapping unknown. Better use table rows where Legal Name present. Provide those. We'll include rows with empty name but still include partner_name as null? Schema requires string. So maybe skip those rows. We'll include only rows with a name.\n\nList rows with names:\n1 NCS\n2 VEST\n3 (blank) skip\n4 (blank) skip\n5 (blank) skip\n6 (blank) skip\n7 LRC\n8 LBDA\n9 (blank) skip\n10 LRS\n11 MCS\n12 TFI\n13 BIT\n14 (blank) skip\n15 (blank) skip\n16 (blank) skip\n17 PV\n18 UHT\n19 SUAS\n20 CRTN (Associated) name present\n21 AFL\n\nInclude all with name. Provide requested from column \"Requested EU contribution\". Values: row1 666,700 ; row2 250,250 ; row7 149,350 ; row8 303,250 ; row10 335,300 ; row11 379,750 ; row12 384,562.5 ; row13 366,500 ; row17 222,062.5 ; row18 571,500 ; row19 343,025 ; row20 0 ; row21 0.\n\nProvide as strings with €? Table shows numbers without € sign. Use as written \"666,700\". Probably include €? Not in table. Keep as written.\n\nReturn JSON.",
+        "prompt_tokens": 9283,
+        "completion_tokens": 766,
+        "total_tokens": 10049,
+        "reasoning_tokens": 507,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 2.74,
+        "model_reported": "openai/gpt-oss-120b",
+        "finish_reason": "stop",
+        "cost_usd": 0.00185205
+      }
+    ]
+  }
+}

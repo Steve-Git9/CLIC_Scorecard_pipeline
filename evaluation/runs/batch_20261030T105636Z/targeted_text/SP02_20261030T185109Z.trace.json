@@ -1,0 +1,80 @@
+{
+ "located": {
+  "proposal": [
+   {
+    "page": 1,
+    "score": 13.0
+   }
+  ],
+  "budget": [
+   {
+    "page": 33,
+    "score": 14.0
+   },
+   {
+    "page": 35,
+    "score": 10.25
+   },
+   {
+    "page": 34,
+    "score": 9.5
+   }
+  ],
+  "partners": [
+   {
+    "page": 17,
+    "score": 16.75
+   },
+   {
+    "page": 22,
+    "score": 15.0
+   },
+   {
+    "page": 13,
+    "score": 13.25
+   }
+  ],
+  "readiness": [
+   {
+    "page": 30,
+    "score": 7.75
+   }
+  ]
+ },
+ "tables": [],
+ "partner_budget_table": null,
+ "identifier_hints": {
+  "cover_title": "Adaptive Sensor Networks for Resilient Coastal Infrastructure",
+  "cover_page": 1,
+  "acronym_candidates": [],
+  "labelled": {
+   "acronym": [],
+   "title": [],
+   "call": []
+  },
+  "call_ids": []
+ },
+ "page_map_sha256": "564f504f00e9854b47aeacaf472e671e6295725f4f5d0245361018f1e54a9b95",
+ "reconciliation": [
+  {
+   "partner_name": "Nordvalen Systems Oy",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "Kaltiora Analytics Oy",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "Lumenthar Marine Oy",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "Havrenmaa University",
+   "status": "unchecked"
+  },
+  {
+   "partner_name": "Taimerra Research Institute",
+   "status": "unchecked"
+  }
+ ]
+}

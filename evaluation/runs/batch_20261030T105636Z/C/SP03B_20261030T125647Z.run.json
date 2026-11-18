@@ -1,0 +1,109 @@
+{
+  "arm": "C",
+  "model": "openai/gpt-oss-120b",
+  "provider": "groq",
+  "source_file": "SP03B.md",
+  "started_utc": "2026-10-30T12:56:47Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested[Ormenfield Process Systems Oy]: could not parse amount '167,1x.k. 177.8'"
+  ],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 2.65,
+  "attempts": 1,
+  "prompt_tokens": 15448,
+  "completion_tokens": 542,
+  "cost_usd": 0.002724,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-120b",
+  "parts": 1,
+  "output_file": "SP03B_20261030T125647Z.json",
+  "replies_file": "SP03B_20261030T125647Z.replies.json",
+  "total_seconds": 2.67,
+  "evaluation": {
+    "document": "SP03B",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\C\\SP03B_20261030T125647Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 460.97,
+      "docling_markdown_sha256": "feda96f35bbc403b38b945c259e41f84ed7e62f84c65dfc8243d300540e793e2"
+    },
+    "runner_wall_clock_seconds": 2.67,
+    "end_to_end_seconds": 463.64,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 15448,
+      "completion_tokens": 542,
+      "reasoning_tokens": 342,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.0026424,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-120b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-120b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 85012,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 2.65
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.212505012,
+          "prompt_tokens": 15448,
+          "prompt_time": 0.631205644,
+          "completion_tokens": 542,
+          "completion_time": 1.132179678,
+          "total_tokens": 15990,
+          "total_time": 1.763385322,
+          "completion_tokens_details": {
+            "reasoning_tokens": 342
+          }
+        },
+        "reply": "{\"proposal\":{\"proposal_acronym\":\"RESENSE\",\"proposal_title\":\"Adaptive Sensor Networks for Resource Efficient Process Monitoring\",\"call_identifier\":\"RCF2027/6433\",\"submission_date\":null},\"proposal_facts\":{\"requested_total\":\"EUR 979 300\",\"trl_start\":null,\"trl_target\":null,\"mcrl_start\":1,\"mcrl_target\":4},\"partners\":[{\"partner_name\":\"Torvenmaa University\",\"requested\":\"214,8\"},{\"partner_name\":\"Haldeberg University of Applied Sciences and Regional Innovation Services\",\"requested\":\"159,8\"},{\"partner_name\":\"Kestrel Institute for ProcessResearch\",\"requested\":null},{\"partner_name\":\"Ormenfield Process Systems Oy\",\"requested\":\"167,1x.k. 177.8\"},{\"partner_name\":\"Vantora Sensor Solutions Oy\",\"requested\":\"196,4\"},{\"partner_name\":\"Ostermark Regional Development Agency\",\"requested\":\"0,0\"}]}",
+        "reasoning": "We need JSON with proposal, facts, partners. Extract values.\n\nproposal_acronym: RESENSE. title: Adaptive Sensor Networks for Resource Efficient Process Monitoring. call_identifier: RCF2027/6433. submission_date: field A.7 empty -> null.\n\nrequested_total: from D.2 \"EUR 979 300\". Keep as written: \"EUR 979 300\". trl_start/target: look for C.17.1 and C.17.2 but values missing? Table shows placeholders but no numbers. So null.\n\nmcrl_start: C.19.1 value 1. mcrl_target: C.19.2 value 4.\n\nPartners list in order of appearance: Partner A? Actually Partner A is TMU (coordinator). Then Partner B: HBU. Partner C: KPRI. Partner D? Not given? There's Partner D blank. Partner E: VSS (Vantora Sensor Solutions Oy). Partner F: ORDEA. Also OPS is partner (company) appears after HBU. Order: TMU, HBU, KPRI, OPS, VSS, ORDEA. Need requested per partner from budget table: TMU 214,8 (EUR? but table shows numbers without currency, but requested funding column). Keep as written \"214,8\". HBU 159,8. KPRI see \"see E.2\" so null. OPS \"167,1x.k. 177.8\" weird; take as written \"167,1x.k. 177.8\". VSS (vSs) 196,4. ORDEA 0,0.\n\nReturn JSON.",
+        "prompt_tokens": 15448,
+        "completion_tokens": 542,
+        "total_tokens": 15990,
+        "reasoning_tokens": 342,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 2.65,
+        "model_reported": "openai/gpt-oss-120b",
+        "finish_reason": "stop",
+        "cost_usd": 0.0026424
+      }
+    ]
+  }
+}

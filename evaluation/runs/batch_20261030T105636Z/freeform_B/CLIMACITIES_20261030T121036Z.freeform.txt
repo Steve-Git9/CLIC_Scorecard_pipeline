@@ -1,0 +1,63 @@
+The document states the acronym is CLIMACITIES, the title is Climate Intelligence for Equitable and Adaptive European Cities, the call identifier is HORIZON-MISS-2027-CLIMA-SYN-01, and the submission date is not stated. The readiness levels are not stated in the text. The partner budget table is found in the "Financial annex and extraction challenge" section (pages 43-45) under the heading "Consolidated partner budget and financial definitions".
+
+The partners and their requested amounts are:
+- NORDIC URBAN SYSTEMS INSTITUTE: 1,420,000
+- RHEIN DATA LABS GMBH: 1,060,000
+- ATLANTIC RESILIENCE CENTRE: 910,000
+- CIVITAS ANALYTICS SL: 870,000
+- DELTA WATER RESEARCH BV: 850,000
+- BALTIC COMMUNITY LAB: 690,000
+- ALPINE ENERGY INNOVATION SRL: 930,000
+- URBAN FUTURES ASSOCIATION: 770,000
+
+```json
+{
+  "proposal": {
+    "proposal_acronym": "CLIMACITIES",
+    "proposal_title": "Climate Intelligence for Equitable and Adaptive European Cities",
+    "call_identifier": "HORIZON-MISS-2027-CLIMA-SYN-01",
+    "submission_date": null
+  },
+  "proposal_facts": {
+    "requested_total": "EUR 7,500,000",
+    "trl_start": null,
+    "trl_target": null,
+    "mcrl_start": null,
+    "mcrl_target": null
+  },
+  "partners": [
+    {
+      "partner_name": "NORDIC URBAN SYSTEMS INSTITUTE",
+      "requested": "1,420,000"
+    },
+    {
+      "partner_name": "RHEIN DATA LABS GMBH",
+      "requested": "1,060,000"
+    },
+    {
+      "partner_name": "ATLANTIC RESILIENCE CENTRE",
+      "requested": "910,000"
+    },
+    {
+      "partner_name": "CIVITAS ANALYTICS SL",
+      "requested": "870,000"
+    },
+    {
+      "partner_name": "DELTA WATER RESEARCH BV",
+      "requested": "850,000"
+    },
+    {
+      "partner_name": "BALTIC COMMUNITY LAB",
+      "requested": "690,000"
+    },
+    {
+      "partner_name": "ALPINE ENERGY INNOVATION SRL",
+      "requested": "930,000"
+    },
+    {
+      "partner_name": "URBAN FUTURES ASSOCIATION",
+      "requested": "770,000"
+    }
+  ]
+}
+```

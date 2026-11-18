@@ -1,0 +1,109 @@
+{
+  "arm": "freeform_B",
+  "model": "Qwen/Qwen3.5-9B",
+  "provider": "deepinfra",
+  "source_file": "SP01.md",
+  "started_utc": "2026-10-30T11:39:47Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested[TessiloProcessEngineeringGmbH] '552.1' not found in the document"
+  ],
+  "free_form": true,
+  "context_splits": 0,
+  "seconds": 29.25,
+  "attempts": 1,
+  "prompt_tokens": 32121,
+  "completion_tokens": 865,
+  "cost_usd": 0.003342,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3.5-9B",
+  "parts": 1,
+  "freeform_file": "SP01_20261030T113947Z.freeform.txt",
+  "output_file": "SP01_20261030T113947Z.json",
+  "replies_file": "SP01_20261030T113947Z.replies.json",
+  "total_seconds": 29.28,
+  "evaluation": {
+    "document": "SP01",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\freeform_B\\SP01_20261030T113947Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 191.79,
+      "docling_markdown_sha256": "3336f13127c448debbfd443b496945784e43f599d594d395b5a365d056687338"
+    },
+    "runner_wall_clock_seconds": 29.28,
+    "end_to_end_seconds": 221.07,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 32121,
+      "completion_tokens": 865,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": {
+      "made": false,
+      "tokens": 0,
+      "note": "the free form reply is converted to JSON locally in Python; no model call"
+    },
+    "cost": {
+      "cost_usd": 0.00334185,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3.5-9B",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3.5-9B",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 175610,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 29.25
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 32121,
+          "total_tokens": 32986,
+          "completion_tokens": 865,
+          "estimated_cost": 0.003341850000000001,
+          "prompt_tokens_details": null
+        },
+        "reply": "The document states the acronym, title, call identifier and submission date, the readiness levels, and the partner budget table as follows:\n\n*   **Acronym:** LOOPWEAVE\n*   **Title:** Circular Weaving of Recycled Fibre Value Chains\n*   **Call Identifier:** INNO-2027-03-CIRCFIBRE-04\n*   **Submission Date:** 6 March 2027\n*   **Readiness Levels:** The project starts at Technology Readiness Level (TRL) 5. The target TRL at the end of the project is the start level plus two (TRL 7). The document does not explicitly state a Market Cluster Readiness Level (MCRL) start or target value.\n*   **Partner Budget Table:** The table lists 9 partners with their requested contributions. Note 3 clarifies that partner 4 (Tessilo) has a requested contribution of EUR 552,100, which is written as \"552.1\" in the table (amounts are in EUR thousand). Partner 9 (Lindfors) has a requested contribution of 0.0.\n\n**Partner Budget Table Details:**\n1.  KalevraInnovationClusterOy: 575.6\n2.  NorthbayMaterialsOy: 466.6\n3.  CorvanePolymerSystemsAB: 578.0\n4.  TessiloProcessEngineeringGmbH: 552.1 (per Note 3)\n5.  RauvikUniversity: 643.9\n6.  ElvarisUniversityofTechnology: 735.9\n7.  SundmarkAppliedResearchInstitute: 553.2\n8.  BrenvikInstituteforSustainableProcess Engineering: 684.5\n9.  LindforsRegionalDevelopmentAgency: 0.0\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"LOOPWEAVE\",\n    \"proposal_title\": \"Circular Weaving of Recycled Fibre Value Chains\",\n    \"call_identifier\": \"INNO-2027-03-CIRCFIBRE-04\",\n    \"submission_date\": \"2027-03-06\"\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"4,789.8\",\n    \"trl_start\": 5,\n    \"trl_target\": 7,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"KalevraInnovationClusterOy\",\n      \"requested\": \"575.6\"\n    },\n    {\n      \"partner_name\": \"NorthbayMaterialsOy\",\n      \"requested\": \"466.6\"\n    },\n    {\n      \"partner_name\": \"CorvanePolymerSystemsAB\",\n      \"requested\": \"578.0\"\n    },\n    {\n      \"partner_name\": \"TessiloProcessEngineeringGmbH\",\n      \"requested\": \"552.1\"\n    },\n    {\n      \"partner_name\": \"RauvikUniversity\",\n      \"requested\": \"643.9\"\n    },\n    {\n      \"partner_name\": \"ElvarisUniversityofTechnology\",\n      \"requested\": \"735.9\"\n    },\n    {\n      \"partner_name\": \"SundmarkAppliedResearchInstitute\",\n      \"requested\": \"553.2\"\n    },\n    {\n      \"partner_name\": \"BrenvikInstituteforSustainableProcess Engineering\",\n      \"requested\": \"684.5\"\n    },\n    {\n      \"partner_name\": \"LindforsRegionalDevelopmentAgency\",\n      \"requested\": \"0.0\"\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 32121,
+        "completion_tokens": 865,
+        "total_tokens": 32986,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 29.25,
+        "model_reported": "Qwen/Qwen3.5-9B",
+        "finish_reason": "stop",
+        "cost_usd": 0.00334185
+      }
+    ]
+  }
+}

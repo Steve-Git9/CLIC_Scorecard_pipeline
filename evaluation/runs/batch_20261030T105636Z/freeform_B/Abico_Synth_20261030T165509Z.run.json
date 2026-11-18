@@ -1,0 +1,107 @@
+{
+  "arm": "freeform_B",
+  "model": "Qwen/Qwen3.5-9B",
+  "provider": "deepinfra",
+  "source_file": "Abico_Synth.md",
+  "started_utc": "2026-10-30T16:55:09Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [],
+  "free_form": true,
+  "context_splits": 0,
+  "seconds": 44.16,
+  "attempts": 1,
+  "prompt_tokens": 26276,
+  "completion_tokens": 1110,
+  "cost_usd": 0.002794,
+  "finish_reason": "stop",
+  "model_reported": "Qwen/Qwen3.5-9B",
+  "parts": 1,
+  "freeform_file": "Abico_Synth_20261030T165509Z.freeform.txt",
+  "output_file": "Abico_Synth_20261030T165509Z.json",
+  "replies_file": "Abico_Synth_20261030T165509Z.replies.json",
+  "total_seconds": 44.22,
+  "evaluation": {
+    "document": "Abico_Synth",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\freeform_B\\Abico_Synth_20261030T165509Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 244.1,
+      "docling_markdown_sha256": "db2432c37da8bfa28fb0856593c407d8265b4ca2ce0ecca1fa21a414dcb13c5f"
+    },
+    "runner_wall_clock_seconds": 44.22,
+    "end_to_end_seconds": 288.32,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 26276,
+      "completion_tokens": 1110,
+      "reasoning_tokens": null,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "conversion_call": {
+      "made": false,
+      "tokens": 0,
+      "note": "the free form reply is converted to JSON locally in Python; no model call"
+    },
+    "cost": {
+      "cost_usd": 0.0027941,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "deepinfra",
+          "model_id": "Qwen/Qwen3.5-9B",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "Qwen/Qwen3.5-9B",
+        "provider": "deepinfra",
+        "response_format": false,
+        "request_bytes": 170657,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 44.16
+          }
+        ],
+        "error": null,
+        "usage": {
+          "prompt_tokens": 26276,
+          "total_tokens": 27386,
+          "completion_tokens": 1110,
+          "estimated_cost": 0.0027941000000000003,
+          "prompt_tokens_details": null
+        },
+        "reply": "The document states the project acronym is **ReCoSE**, the title is **Renewable Composite Systems with Circular Engineering ReCoSE**, the call identifier is not explicitly stated (only the funding source \"National Innovation Agency\" is mentioned), and the submission date is not explicitly stated (only the project timeline \"1.4.2026-31.3.2028\" is given). The readiness levels (TRL/MCR) are not stated in the document. The partner budget table is found in **Table 22** (Direct financial support of companies to research organisations) and **Table 21** (Budgets of research institutes).\n\n**Table 21** lists the requested amounts for the research institutes:\n*   NLUAS: 487 200\n*   Lake District Technical University: 382 400\n*   NISM: 642 300\n*   ENU: 369 500\n*   CFU: 337 200\n\n**Table 22** lists the requested amounts for the companies supporting the research organisations:\n*   NorthGrid Energy WS: 20 000 (Total column) - *Note: The table shows 15000 for LDTU and 5000 for ENU, summing to 20000.*\n*   ForestLoop Fibre: 20 000 (Total column) - *Note: The table shows 22 400 for NISM, but the Total column says 20000. Following the rule to copy the amount on the same row, I will use the Total column value \"20000\" as it represents the partner's total requested amount in that row context, or strictly the cell value. However, the instruction says \"amount on the same row\". The row for ForestLoop has \"22 400\" under NISM and \"20000\" under Total. Usually, the Total is the partner's total. I will use the Total column value \"20000\" as it is the explicit total for that partner row.*\n*   Atmosense: 20 000 (Total column)\n*   NordWindow Group: 20 000 (Total column)\n*   Aurora Shipworks: 20 000 (Total column)\n*   PolyNova Labs: In-kind (No monetary amount)\n*   Oerlikon Balzer: In-kind (No monetary amount)\n\n*Correction on Table 22 interpretation*: The prompt asks for \"that partner's requested grant / funding\". In Table 22, the rows are partners. The columns are the institutes they support. The \"Total\" column sums their contribution. I will use the \"Total\" column value for the partner's requested amount.\n\n**Final Answer:**\n\n```json\n{\n  \"proposal\": {\n    \"proposal_acronym\": \"ReCoSE\",\n    \"proposal_title\": \"Renewable Composite Systems with Circular Engineering ReCoSE\",\n    \"call_identifier\": null,\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"EUR 3.860 million\",\n    \"trl_start\": null,\n    \"trl_target\": null,\n    \"mcrl_start\": null,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NLUAS\",\n      \"requested\": \"487 200\"\n    },\n    {\n      \"partner_name\": \"Lake District Technical University\",\n      \"requested\": \"382 400\"\n    },\n    {\n      \"partner_name\": \"NISM\",\n      \"requested\": \"642 300\"\n    },\n    {\n      \"partner_name\": \"ENU\",\n      \"requested\": \"369 500\"\n    },\n    {\n      \"partner_name\": \"CFU\",\n      \"requested\": \"337 200\"\n    },\n    {\n      \"partner_name\": \"NorthGrid Energy WS\",\n      \"requested\": \"20000\"\n    },\n    {\n      \"partner_name\": \"ForestLoop Fibre\",\n      \"requested\": \"20000\"\n    },\n    {\n      \"partner_name\": \"Atmosense\",\n      \"requested\": \"20000\"\n    },\n    {\n      \"partner_name\": \"NordWindow Group\",\n      \"requested\": \"20000\"\n    },\n    {\n      \"partner_name\": \"Aurora Shipworks\",\n      \"requested\": \"20000\"\n    },\n    {\n      \"partner_name\": \"PolyNova Labs\",\n      \"requested\": null\n    },\n    {\n      \"partner_name\": \"Oerlikon Balzer\",\n      \"requested\": null\n    }\n  ]\n}\n```",
+        "reasoning": null,
+        "prompt_tokens": 26276,
+        "completion_tokens": 1110,
+        "total_tokens": 27386,
+        "reasoning_tokens": null,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 44.16,
+        "model_reported": "Qwen/Qwen3.5-9B",
+        "finish_reason": "stop",
+        "cost_usd": 0.0027941
+      }
+    ]
+  }
+}

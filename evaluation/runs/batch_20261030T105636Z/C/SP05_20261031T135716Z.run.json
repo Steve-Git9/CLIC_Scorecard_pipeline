@@ -1,0 +1,109 @@
+{
+  "arm": "C",
+  "model": "openai/gpt-oss-120b",
+  "provider": "groq",
+  "source_file": "SP05.md",
+  "started_utc": "2026-10-31T13:57:16Z",
+  "status": "ok",
+  "error": null,
+  "warnings": [
+    "requested[HallavikAppliedResearchCentre]: could not parse amount '649 300,03 € of which subcontracting 108 270,00 €'"
+  ],
+  "free_form": false,
+  "context_splits": 0,
+  "seconds": 4.51,
+  "attempts": 1,
+  "prompt_tokens": 46458,
+  "completion_tokens": 762,
+  "cost_usd": 0.00754,
+  "finish_reason": "stop",
+  "model_reported": "openai/gpt-oss-120b",
+  "parts": 1,
+  "output_file": "SP05_20261031T135716Z.json",
+  "replies_file": "SP05_20261031T135716Z.replies.json",
+  "total_seconds": 4.57,
+  "evaluation": {
+    "document": "SP05",
+    "run_file": "evaluation\\runs\\batch_20261030T105636Z\\C\\SP05_20261031T135716Z.run.json",
+    "input": "docling_markdown",
+    "preparation": {
+      "docling_conversion_seconds": 287.52,
+      "docling_markdown_sha256": "5d66b1ad0f8ae210974c7d76106a41dcbd81e13db0614cbc3c6a24b7316986a6"
+    },
+    "runner_wall_clock_seconds": 4.57,
+    "end_to_end_seconds": 292.09,
+    "calls": 1,
+    "failed_calls": 0,
+    "attempts": 1,
+    "retries": 0,
+    "tokens": {
+      "prompt_tokens": 46458,
+      "completion_tokens": 762,
+      "reasoning_tokens": 400,
+      "image_tokens": null,
+      "cached_tokens": null
+    },
+    "calls_reporting": {
+      "prompt_tokens": 1,
+      "completion_tokens": 1,
+      "reasoning_tokens": 1,
+      "image_tokens": 0
+    },
+    "conversion_call": null,
+    "cost": {
+      "cost_usd": 0.0074259,
+      "problems": [],
+      "price_rows": [
+        {
+          "provider": "groq",
+          "model_id": "openai/gpt-oss-120b",
+          "status": "verified",
+          "retrieved_on": "2026-10-22"
+        }
+      ]
+    },
+    "call_log": [
+      {
+        "purpose": "extraction",
+        "model": "openai/gpt-oss-120b",
+        "provider": "groq",
+        "response_format": true,
+        "request_bytes": 261726,
+        "ok": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "http_status": 200,
+            "error": null,
+            "seconds": 4.51
+          }
+        ],
+        "error": null,
+        "usage": {
+          "queue_time": 0.159775169,
+          "prompt_tokens": 46458,
+          "prompt_time": 2.083685558,
+          "completion_tokens": 762,
+          "completion_time": 1.596724945,
+          "total_tokens": 47220,
+          "total_time": 3.680410503,
+          "completion_tokens_details": {
+            "reasoning_tokens": 400
+          }
+        },
+        "reply": "{\n  \"proposal\": {\n    \"proposal_acronym\": \"NIVALIS\",\n    \"proposal_title\": \"Federated Data Spaces for Resilient Cold Climate Infrastructure Monitoring\",\n    \"call_identifier\": \"tobeconfirmed\",\n    \"submission_date\": null\n  },\n  \"proposal_facts\": {\n    \"requested_total\": \"3 828 561,00 €\",\n    \"trl_start\": 3,\n    \"trl_target\": 7,\n    \"mcrl_start\": 2,\n    \"mcrl_target\": null\n  },\n  \"partners\": [\n    {\n      \"partner_name\": \"NordvaneSystemsOy\",\n      \"requested\": \"870 765,93 €\"\n    },\n    {\n      \"partner_name\": \"UniversityofTeralund\",\n      \"requested\": \"679 493,18 €\"\n    },\n    {\n      \"partner_name\": \"ValoriaLabsOy\",\n      \"requested\": \"594 205,74 €\"\n    },\n    {\n      \"partner_name\": \"HallavikAppliedResearchCentre\",\n      \"requested\": \"649 300,03 € of which subcontracting 108 270,00 €\"\n    },\n    {\n      \"partner_name\": \"ArcticSensorSystemsOy\",\n      \"requested\": \"449 835,12 €\"\n    },\n    {\n      \"partner_name\": \"LumivaraEdgeOy\",\n      \"requested\": \"0.0 €\"\n    },\n    {\n      \"partner_name\": \"ArcticSensingSolutionsOy\",\n      \"requested\": \"298.0 €\"\n    },\n    {\n      \"partner_name\": \"KaltioRegionalCouncil\",\n      \"requested\": \"199.2 €\"\n    }\n  ]\n}",
+        "reasoning": "We need fields: proposal_acronym? Not given. Probably NIVALIS? Title is \"Federated Data Spaces for Resilient Cold Climate Infrastructure Monitoring\". Acronym maybe NIVALIS? Actually NIVALIS appears as heading. Use that as acronym. call_identifier: \"tobeconfirmed\". submission_date not given -> null. requested_total: from key facts total requested funding 3 828 561,00 € but note formatting with comma and space. Use as written \"3 828 561,00 €\". trl_start: from starting point table TRL 3. trl_target: target TRL 7. mcrl_start: from market readiness start MCRL 2. mcrl_target: not explicit final? maybe target? Not given. Could infer but not allowed. So null. Partners list with requested amounts: from budget table. For each partner: Nordvane 870 765,93 €; Teralund University 679 493,18 €; Valoria 594 205,74 €; Hallavik 649 300,03 € (of which subcontracting 108 270,00 €) but requested funding column includes that note. Use full string. Arctic Sensor 449 835,12 €; Lumivara? In part1 not listed, but in annex C: Lumivara requested 0.0 € (0.0). Use \"0.0 €\"? Actually shows 0.0. Use \"0.0 €\". Arctic Sensing 298.0 €; Kaltio Council 199.2 €. Also associated partner Lumivara has no requested funding. Use null? It says 0.0 € so it's explicit. Use that string. Ensure order as document order: list from consortium list order P1..P8. So include all eight with requested amounts as above. For Lumivara, requested \"0.0 €\". Provide.",
+        "prompt_tokens": 46458,
+        "completion_tokens": 762,
+        "total_tokens": 47220,
+        "reasoning_tokens": 400,
+        "image_tokens": null,
+        "cached_tokens": null,
+        "seconds": 4.51,
+        "model_reported": "openai/gpt-oss-120b",
+        "finish_reason": "stop",
+        "cost_usd": 0.0074259
+      }
+    ]
+  }
+}

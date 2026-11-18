@@ -1,0 +1,41 @@
+{
+  "proposal": {
+    "proposal_acronym": "ReCoSE",
+    "proposal_title": "Renewable Composite Systems with Circular Engineering",
+    "call_identifier": "7421_18_2026",
+    "submission_date": null
+  },
+  "proposal_facts": {
+    "requested_total_cents": 221860000,
+    "trl_start": null,
+    "trl_target": null,
+    "mcrl_start": null,
+    "mcrl_target": null
+  },
+  "partners": [
+    {
+      "partner_name": "Northern Lakes University of Applied Sciences",
+      "requested_cents": 48720000
+    },
+    {
+      "partner_name": "Lake District Technical University",
+      "requested_cents": 38240000
+    },
+    {
+      "partner_name": "Nordic Institute for Sustainable Materials",
+      "requested_cents": 64230000
+    },
+    {
+      "partner_name": "Eastern Nordic University",
+      "requested_cents": 36950000
+    },
+    {
+      "partner_name": "Coastal Finland University",
+      "requested_cents": 33720000
+    }
+  ],
+  "metadata": {
+    "extraction_timestamp": null,
+    "source_file": "ABiCo_Synthetic_Confidentiality_Safe 4.docx"
+  }
+}

@@ -123,11 +123,13 @@ This calls the models and costs money (the evaluated batch cost USD 4.54). A new
 
 ## Versions used for the thesis
 
-| Step | Commit |
-|---|---|
-| Runs of the evaluated batch (30 and 31 October 2026) | `1380dc7` |
-| First pass scoring (31 October 2026) | `bc3d42b` |
-| Final scoring (9 November 2026) | `86e6d71` |
+| Step | Tag | Commit |
+|---|---|---|
+| Runs of the evaluated batch (30 and 31 October 2026) | [`thesis-runs`](https://github.com/Steve-Git9/CLIC_Scorecard_pipeline/tree/thesis-runs) | [`1380dc7`](https://github.com/Steve-Git9/CLIC_Scorecard_pipeline/tree/1380dc76546f8846585b33d7337068e54683a213) |
+| First pass scoring (31 October 2026) | [`thesis-first-pass`](https://github.com/Steve-Git9/CLIC_Scorecard_pipeline/tree/thesis-first-pass) | [`bc3d42b`](https://github.com/Steve-Git9/CLIC_Scorecard_pipeline/tree/bc3d42b70cb8bba066f287de0143eb8750aa806c) |
+| Final scoring (9 November 2026) | [`thesis-scoring`](https://github.com/Steve-Git9/CLIC_Scorecard_pipeline/tree/thesis-scoring) | [`86e6d71`](https://github.com/Steve-Git9/CLIC_Scorecard_pipeline/tree/86e6d7108157d0fc48a654cafff7afef4447f088) |
+
+Each link opens the repository as it was at that step. The tags are also listed under Tags on GitHub, and `git checkout thesis-runs` (or any other tag) gives the same code locally.
 
 The extraction code (`Second_step_CLICpipeline/clic_extract/`) is unchanged since the runs. Each manifest records the commit that produced or scored it, with the digests of the prompts, the price file, the gold sets and the Markdown.
 
